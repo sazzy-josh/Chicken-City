@@ -131,7 +131,9 @@ const Header = () => {
        animate={{ opacity: 1}}
        transition={{ duration: 0.5 }}
         className='transition-all ease-in-out duration-300'>
-              <p className='border bg-slate-100 rounded flex justify-center items-center mx-2 text-sm p-1 px-3 absolute right-5  w-1/6 transition-all ease-in-out duration-600 font-semibold hover:bg-slate-300 cursor-pointer  mt-8' onClick={googleAuth } >Login <span className='px-1'><TbLogin/></span> </p>
+              <p className='border bg-slate-100 rounded flex justify-center items-center  text-sm p-1 px-1 absolute right-5  w-1/6 transition-all ease-in-out duration-600 font-semibold m-2  mt-8' onClick={googleAuth }>
+                <p className=' flex justify-center rounded hover:bg-slate-300 cursor-pointer p-1 items-center w-full'>Login <span className='px-1'><TbLogin/></span> </p>
+              </p>
         </motion.div>}
           {/* When User is Authenticated*/}
         </div>
