@@ -200,7 +200,7 @@ const Header = () => {
           {/* User not yet Authenticated  */}
         {!openMenu && !User &&  <motion.ul 
         initial={{ opacity: 0.9, x:100  }}
-        animate={{ opacity: 1 , x: -10 }}
+        animate={{ opacity: 1 , x: 0 }}
         transition={{ ease: "easeInOut", duration: 0.0009 }}
         className='transition-all flex flex-col justify-center w-screen h-screen ease-in-out duration-300 border border-slate-500 rounded absolute top-0  right-0 left-0 bottom-0 bg-slate-50 shadow-xl  font-semibold p-1 '>
               <li className=' flex justify-center items-center gap-x-3 text-sm p-8 px-2 transition-all rounded ease-in-out duration-600 hover:bg-slate-200 cursor-pointer hover:rounded   hover:border-gray-400 ' onClick={googleAuth } > <TbLogin/>Login <span 
@@ -238,7 +238,7 @@ const Header = () => {
         <div>
         {!openMenu && User && <motion.ul
          initial={{ opacity: 0.9, x:100  }}
-         animate={{ opacity: 1 , x: -10 }}
+         animate={{ opacity: 1 , x: 0 }}
          transition={{ ease: "easeInOut", duration: 0.0009 }}
         className='transition-all font-semibold bg-slate-100 top-0 bottom-0 right-0 left-0 absolute text-sm flex flex-col ease-in-out duration-300 border-2 border-slate-400 rounded justify-center  w-screen h-screen' >
           
