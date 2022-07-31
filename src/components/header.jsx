@@ -127,7 +127,7 @@ const Header = () => {
         </div>}
         <div>
         {!openMenu && !User &&  <motion.div 
-       initial={{ opacity: 0.7,  }}
+       initial={{ opacity: 0.9,  }}
        animate={{ opacity: 1}}
        transition={{ duration: 0.5 }}
         className='transition-all ease-in-out duration-300'>
@@ -143,10 +143,10 @@ const Header = () => {
         </div>}
         <div>
         {!openMenu && User && <motion.div
-        initial={{ opacity: 0.8,  }}
-        animate={{ opacity: 1}}
-        transition={{ duration: 0.3 }}
-        className='transition-all font-semibold bg-slate-100 absolute right-2 w-2/12 -bottom-4 text-sm flex flex-col ease-in-out duration-300 border-2 border-slate-300 rounded ' >
+        initial={{ opacity: 0.9, y:-10  }}
+        animate={{ opacity: 1 , y: 0 }}
+        transition={{ ease: "easeInOut", duration: 0.0009 }}
+        className='transition-all font-semibold bg-slate-100 absolute right-6 w-2/12 top-16 mt-2  text-sm flex flex-col ease-in-out duration-300 border-2 border-slate-300 rounded ' >
           
           {User && User.email === "idahosajoshua61@gmail.com" && <p className='flex m-1 justify-center p-1 rounded items-center cursor-pointer hover:bg-slate-300' >New Item <span className='mx-1'><IoIosAdd/></span> </p> }
          <hr />
