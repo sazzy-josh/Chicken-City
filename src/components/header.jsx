@@ -65,7 +65,7 @@ const Header = () => {
  }
 
   return (
-    <header className='h-auto w-screen  mb-3 '>
+    <header className='h-auto w-screen mb-3 sticky top-0 '>
     {/* Desktop && Tablet View  */}
     <div className="hidden sm:flex bg-slate-50 pl-5 px-5 p-3 justify-between">
       <div className='w-3/5'>
