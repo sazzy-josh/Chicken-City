@@ -138,7 +138,7 @@ const Header = () => {
           {/* When User is Authenticated*/}
         </div>
         {User && <div className='flex justify-center items-center  cursor-pointer' onClick={() => setOpenMenu(prev => !prev) }>
-            <motion.img src={User.providerData[0].photoURL} whileTap={{scale:0.7}} className="w-8 h-8 cursor-pointer hover:border-2 rounded-full hover:shadow-lg  border-cyan-600 " alt="Avatar" />
+            <motion.img src={User.providerData[0].photoURL} whileTap={{scale:0.7}} className="w-8 h-8 cursor-pointer hover:border-2 rounded-full hover:shadow-lg  border-cyan-600 " alt="" />
             {openMenu ? <BiChevronDown  className='min-w-[12px]' /> : <BiChevronUp  className='min-w-[12px]'/> }
         </div>}
         <div>
@@ -146,7 +146,7 @@ const Header = () => {
         initial={{ opacity: 0.8,  }}
         animate={{ opacity: 1}}
         transition={{ duration: 0.3 }}
-        className='transition-all font-semibold bg-slate-100 absolute right-2 w-2/12 -bottom-4 text-sm flex flex-col ease-in-out duration-300 border-2 border-slate-400 rounded ' >
+        className='transition-all font-semibold bg-slate-100 absolute right-2 w-2/12 -bottom-4 text-sm flex flex-col ease-in-out duration-300 border-2 border-slate-300 rounded ' >
           
           {User && User.email === "idahosajoshua61@gmail.com" && <p className='flex m-1 justify-center p-1 rounded items-center cursor-pointer hover:bg-slate-300' >New Item <span className='mx-1'><IoIosAdd/></span> </p> }
          <hr />
@@ -159,7 +159,7 @@ const Header = () => {
         {/* Welcome Guest or User Here */}
         </div>
         <div className='text-xs text-emerald-900" overflow-hidden max-w-[134px] max-h-[20px] flex justify-center  absolute top-12 p-1 font-semibold right-18 '>
-          Hi, {User? User.displayName.slice(0,8) + "." : "Guest"}!
+          {User? " Hi,"+ User.displayName.slice(0,8) + "." : "Welcome, Guest"}!
         </div>
         </div>
       </div>
