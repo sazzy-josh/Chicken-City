@@ -127,9 +127,9 @@ const Header = () => {
         </div>}
         <div>
         {!openMenu && !User &&  <motion.div 
-       initial={{ opacity: 0.9,  }}
-       animate={{ opacity: 1}}
-       transition={{ duration: 0.5 }}
+      initial={{ opacity: 0.9, x:100  }}
+         animate={{ opacity: 1 , x: 0 }}
+         transition={{ ease: "easeInOut", duration: 0.0009 }}
         className='transition-all ease-in-out duration-300'>
               <p className='border bg-slate-100 rounded flex justify-center items-center  text-sm p-1 px-1 absolute right-5  w-1/6 transition-all ease-in-out duration-600 font-semibold m-2  mt-8' onClick={googleAuth }>
                 <p className=' flex justify-center rounded hover:bg-slate-300 cursor-pointer p-1 items-center w-full'>Login <span className='px-1'><TbLogin/></span> </p>
@@ -192,10 +192,12 @@ const Header = () => {
            {openMenu ? <BiChevronDown  className='min-w-[12px]'/> : <BiChevronUp /> }
         </div>}
         <div>
+
+          {/* User not yet Authenticated  */}
         {!openMenu && !User &&  <motion.ul 
-       initial={{ opacity: 0.7,  }}
-       animate={{ opacity: 1}}
-       transition={{ duration: 0.5 }}
+        initial={{ opacity: 0.9, x:100  }}
+        animate={{ opacity: 1 , x: -10 }}
+        transition={{ ease: "easeInOut", duration: 0.0009 }}
         className='transition-all w-5/12 ease-in-out duration-300 border border-slate-500 rounded absolute right-4 bg-slate-50 shadow-xl mt-6 top-12 font-semibold p-1 '>
               <li className=' flex justify-center items-center gap-x-3 text-sm p-2 px-2 transition-all rounded ease-in-out duration-600 hover:bg-slate-200 cursor-pointer hover:rounded   hover:border-gray-400 ' onClick={googleAuth } > <TbLogin/>Login <span 
               ></span> </li>
@@ -228,9 +230,9 @@ const Header = () => {
         </div>}
         <div>
         {!openMenu && User && <motion.ul
-        initial={{ opacity: 0.8,  }}
-        animate={{ opacity: 1}}
-        transition={{ duration: 0.3 }}
+         initial={{ opacity: 0.9, x:100  }}
+         animate={{ opacity: 1 , x: -10 }}
+         transition={{ ease: "easeInOut", duration: 0.0009 }}
         className='transition-all font-semibold bg-slate-100 absolute right-1 -bottom-19 -mb-12 text-sm flex flex-col ease-in-out duration-300 border-2 border-slate-400 rounded move w-2/3' >
           
           {User && User.email === "idahosajoshua61@gmail.com" && <li className='flex m-1 justify-center p-1 rounded items-center cursor-pointer hover:bg-slate-300' >New Item <span className='mx-1'><IoIosAdd/></span> </li> }
