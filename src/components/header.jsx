@@ -271,7 +271,7 @@ const Header = () => {
         </motion.ul>}
         
         </div>
-        <div className='text-xs text-emerald-900" overflow-hidden max-w-[134px] max-h-[20px] flex justify-center  absolute top-12 p-1 font-semibold right-2 '>
+        <div className='text-[8px] overflow-hidden max-w-[134px] max-h-[20px] flex justify-center  absolute top-12 p-1 font-semibold right-2 '>
           Hi, {User? User.displayName.slice(0,9) + "." : "Guest"}!
         </div>
         </div>
