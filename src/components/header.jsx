@@ -231,7 +231,7 @@ const Header = () => {
         </motion.ul>}
           {/* When User is Authenticated*/}
         </div>
-        {User && <div className='flex justify-center items-center cursor-pointer'  onClick={() => setOpenMenu(prev => !prev) }>
+        {User && <div className='flex justify-center items-center cursor-pointer z-10'  onClick={() => setOpenMenu(prev => !prev) }>
             <motion.img src={User.providerData[0].photoURL} whileTap={{scale:0.7}} className="w-8 h-8 cursor-pointer hover:border-2 rounded-full hover:shadow-lg  border-cyan-600 " alt="Avatar" />
             {openMenu ? <BiChevronDown /> : <BiChevronUp /> }
         </div>}
@@ -240,31 +240,33 @@ const Header = () => {
          initial={{ opacity: 0.9, x:100  }}
          animate={{ opacity: 1 , x: -10 }}
          transition={{ ease: "easeInOut", duration: 0.0009 }}
-        className='transition-all font-semibold bg-slate-100 absolute right-1 -bottom-19 -mb-12 text-sm flex flex-col ease-in-out duration-300 border-2 border-slate-400 rounded move w-2/3' >
+        className='transition-all font-semibold bg-slate-100 top-0  left-0 absolute text-sm flex flex-col ease-in-out duration-300 border-2 border-slate-400 rounded justify-center  w-screen h-screen' >
           
-          {User && User.email === "idahosajoshua61@gmail.com" && <li className='flex m-1 justify-center p-1 rounded items-center cursor-pointer hover:bg-slate-300' >New Item <span className='mx-1'><IoIosAdd/></span> </li> }
+          {User && User.email === "idahosajoshua61@gmail.com" && <li className='flex m-1 justify-center p-8 rounded items-center cursor-pointer hover:bg-slate-300' >New Item <span className='mx-1'><IoIosAdd/></span> </li> }
          <hr />
          <Link to="/">
             <li 
-               className=' flex justify-center m-1 items-center gap-x-4  text-sm p-1 px-2 transition-all rounded ease-in-out duration-600 hover:bg-slate-300 cursor-pointer   hover:border-gray-400 '
+               className=' flex justify-center m-1 items-center gap-x-4  text-sm p-8 px-2 transition-all rounded ease-in-out duration-600 hover:bg-slate-300 cursor-pointer   hover:border-gray-400 '
             ><FaHome />  Home </li>
          </Link> 
          <hr />
          <Link to="/menu">
             <li
-            className=' flex justify-center items-center m-1 gap-x-4 text-sm p-2 px-2 transition-all rounded ease-in-out duration-600 hover:bg-slate-300 cursor-pointer   hover:border-gray-400 '
+            className=' flex justify-center items-center m-1 gap-x-4 text-sm p-8 px-2 transition-all rounded ease-in-out duration-600 hover:bg-slate-300 cursor-pointer   hover:border-gray-400 '
             >< MdRestaurantMenu />  Menu  </li>
          </Link>
          <hr />
          <Link to="/aboutus">
            <li
-           className=' flex justify-center m-1 items-center gap-x-2 text-sm p-2 px-3 transition-all rounded ease-in-out duration-600 hover:bg-slate-300 cursor-pointer   hover:border-gray-400 '
+           className=' flex justify-center m-1 items-center gap-x-2 text-sm p-8 px-3 transition-all rounded ease-in-out duration-600 hover:bg-slate-300 cursor-pointer   hover:border-gray-400 '
            > <SiInformatica /> About Us</li>
          </Link>
          <hr />
 
-         <li className='flex m-1 items-center justify-center p-1 gap-x-3 rounded cursor-pointer hover:bg-slate-300'  onClick={LogOut} > <span ><MdOutlineLogout/></span>Logout  </li>
+         <li className='flex m-1 items-center justify-center p-8 gap-x-3 rounded cursor-pointer hover:bg-slate-300'  onClick={LogOut} > <span ><MdOutlineLogout/></span>Logout  </li>
           
+           {/* //Remove menu items from screen */}
+         <div onClick={Remove} className='absolute cursor-pointer top-5 left-6 text-4xl rotate-45 font-light border-2 rounded-full w-10 h-10 flex justify-center items-center border-slate-400 hover:border-red-300 hover:text-red-300 bg-slate-100'>+</div>
              
         </motion.ul>}
         
