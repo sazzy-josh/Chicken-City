@@ -47,6 +47,10 @@ const Header = () => {
   };
  }, []);
 
+ const Remove = () => {
+  setOpenMenu(prev => !prev)
+ }
+
  const googleAuth = async(e) => {
      e.preventDefault()
      setOpenMenu(prev => !prev)
@@ -187,9 +191,9 @@ const Header = () => {
         {/*Authentication section goes here for  small and mobile screens*/}
 
         <div className='flex'>
-        {!User && <div className='flex justify-center relative cursor-pointer items-center' onClick={() => setOpenMenu(prev => !prev) }>
-            <motion.img src={Avatar} whileTap={{scale:0.8}} className="w-9 h-9 cursor-pointer hover:border-2 rounded-full hover:shadow-lg  border-cyan-600 " alt="Avatar"  />
-           {openMenu ? <BiChevronDown  className='min-w-[12px]'/> : <BiChevronUp /> }
+        {!User && <div className='flex justify-center relative cursor-pointer items-center z-1' onClick={() => setOpenMenu(prev => !prev) }>
+            <motion.img src={Avatar} whileTap={{scale:0.8}} className="w-9 h-9 cursor-pointer hover:border-2 rounded-full hover:shadow-lg  border-cyan-600 z-10" alt="Avatar"  />
+           {openMenu ? <BiChevronDown  className='min-w-[12px] z-99'/> : <BiChevronUp className='z-10' /> }
         </div>}
         <div>
 
@@ -198,28 +202,31 @@ const Header = () => {
         initial={{ opacity: 0.9, x:100  }}
         animate={{ opacity: 1 , x: -10 }}
         transition={{ ease: "easeInOut", duration: 0.0009 }}
-        className='transition-all w-5/12 ease-in-out duration-300 border border-slate-500 rounded absolute right-4 bg-slate-50 shadow-xl mt-6 top-12 font-semibold p-1 '>
-              <li className=' flex justify-center items-center gap-x-3 text-sm p-2 px-2 transition-all rounded ease-in-out duration-600 hover:bg-slate-200 cursor-pointer hover:rounded   hover:border-gray-400 ' onClick={googleAuth } > <TbLogin/>Login <span 
+        className='transition-all flex flex-col justify-center w-screen h-screen ease-in-out duration-300 border border-slate-500 rounded absolute top-0  right-0  bg-slate-50 shadow-xl  font-semibold p-1 '>
+              <li className=' flex justify-center items-center gap-x-3 text-sm p-8 px-2 transition-all rounded ease-in-out duration-600 hover:bg-slate-200 cursor-pointer hover:rounded   hover:border-gray-400 ' onClick={googleAuth } > <TbLogin/>Login <span 
               ></span> </li>
               <hr />
 
               <Link to="/">
             <li 
-               className=' flex justify-center items-center gap-x-4  text-sm p-2 px-2 transition-all rounded ease-in-out duration-600 hover:bg-slate-200 cursor-pointer   hover:border-gray-400 '
+               className=' flex justify-center items-center gap-x-4  text-sm p-8 px-2 transition-all rounded ease-in-out duration-600 hover:bg-slate-200 cursor-pointer   hover:border-gray-400 '
             ><FaHome />  Home </li>
          </Link> 
          <hr />
          <Link to="/menu">
             <li
-            className=' flex justify-center items-center  gap-x-4 text-sm p-2 px-2 transition-all rounded ease-in-out duration-600 hover:bg-slate-200 cursor-pointer   hover:border-gray-400 '
+            className=' flex justify-center items-center  gap-x-4 text-sm p-8 px-2 transition-all rounded ease-in-out duration-600 hover:bg-slate-200 cursor-pointer   hover:border-gray-400 '
             >< MdRestaurantMenu />  Menu  </li>
          </Link>
          <hr />
          <Link to="/aboutus">
            <li
-           className=' flex justify-center items-center gap-x-2 text-sm p-2 px-3 transition-all rounded ease-in-out duration-600 hover:bg-slate-200 cursor-pointer   hover:border-gray-400 '
+           className=' flex justify-center items-center gap-x-2 text-sm p-8 px-3 transition-all rounded ease-in-out duration-600 hover:bg-slate-200 cursor-pointer   hover:border-gray-400 '
            > <SiInformatica /> About Us</li>
          </Link>
+
+          {/* //Remove menu items from screen */}
+         <div onClick={Remove} className='absolute cursor-pointer top-5 left-6 text-4xl rotate-45 font-light border-2 rounded-full w-10 h-10 flex justify-center items-center border-slate-400 hover:border-red-300 hover:text-red-300 bg-slate-100'>+</div>
 
         </motion.ul>}
           {/* When User is Authenticated*/}
