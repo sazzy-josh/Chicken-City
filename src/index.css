@@ -18,6 +18,11 @@
     height: auto;
     
 }
+body{
+    width: 100vw;
+    height: auto;
+    overflow-x: hidden;
+}
 
 .move{
     top: 90%;

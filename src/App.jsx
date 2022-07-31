@@ -16,7 +16,7 @@ function App() {
     <AuthContextProvider>
        <AnimatePresence>
       <Router>
-      <div className="flex flex-col w-screen h-auto relative">
+      <div className="flex flex-col w-screen relative">
          <Header />
          <Routes>
             <Route path='/' element={ <Home /> } />
