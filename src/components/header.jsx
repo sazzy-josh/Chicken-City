@@ -202,7 +202,7 @@ const Header = () => {
         initial={{  x:100  }}
         animate={{  x: 0 }}
         transition={{ ease: "easeInOut", duration:0.009 }}
-        className='transition-all flex flex-col justify-center w-2/3 h-screen  absolute top-0  right-0 left-0 bottom-0 bg-slate-50 shadow-xl  font-semibold p-1 '>
+        className='transition-all flex flex-col justify-center w-3/4 h-screen  absolute top-0  left-0 bottom-0 bg-slate-50 shadow-xl  font-semibold p-1 '>
               <li className=' flex justify-center items-center gap-x-3 text-sm p-8 px-2 transition-all rounded ease-in-out duration-600 hover:bg-slate-200 cursor-pointer hover:rounded   hover:border-gray-400 ' onClick={googleAuth } > <TbLogin/>Login <span 
               ></span> </li>
               <hr />
