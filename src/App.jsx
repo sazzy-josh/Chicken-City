@@ -10,7 +10,8 @@ import {AnimatePresence } from 'framer-motion'
 import AuthContextProvider from './context/authContext'
 import AboutUs from './pages/aboutUs'
 import Food from './pages/foods'
-// import RemoveMenu from './components/RemoveMenu'
+import Helmet from './components/Helmet'
+
 
 
 function App() {
@@ -21,7 +22,11 @@ function App() {
       <div className="flex flex-col w-screen relative">
          <Header />
          <Routes>
-            <Route path='/' element={ <Home /> } />
+            <Route path='/' element={
+              <Helmet title="Home">
+                 <Home /> 
+              </Helmet>
+            } />
             <Route path='/login' element={ <Login /> } />
             <Route path='/foods' element={ <Food /> } />
             <Route path='/Sign-up' element={ <SignUp />} />

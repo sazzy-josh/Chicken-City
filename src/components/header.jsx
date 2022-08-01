@@ -41,10 +41,6 @@ const Header = () => {
   };
  }, []);
 
-//  const Remove = () => {
-//   setOpenMenu(prev => !prev)
-//  }
-
  const googleAuth = async(e) => {
      e.preventDefault()
      RemoveNav()
@@ -239,13 +235,15 @@ const Header = () => {
         className='transition-all font-semibold bg-slate-100 top-0 bottom-0 right-0 left-0 absolute text-sm flex flex-col ease-in-out duration-300  border-slate-400 rounded justify-center  w-2/3 h-screen' >
           
           {User && User.email === "idahosajoshua61@gmail.com" && <li
-           onClick={RemoveNav} className='flex m-1 justify-center p-8 rounded items-center cursor-pointer hover:bg-slate-300' >New Item <span className='mx-1'><IoIosAdd/></span> </li> }
+           onClick={RemoveNav} className='flex m-1 justify-center p-8 rounded items-center cursor-pointer hover:bg-slate-300' >New Item 
+            <span className='mx-1'><IoIosAdd/></span> </li> }
          <hr />
          <Link to="/">
             <li 
                onClick={RemoveNav}
                className=' flex justify-center m-1 items-center gap-x-4  text-sm p-8 px-2 transition-all rounded ease-in-out duration-600 hover:bg-slate-300 cursor-pointer   hover:border-gray-400 '
-            ><FaHome />  Home </li>
+            ><FaHome /> Home 
+            </li>
          </Link> 
          <hr />
          <Link to="/foods">
