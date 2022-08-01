@@ -108,8 +108,12 @@ const Header = () => {
       <div className='flex  transition-all ease-in-out duration-1000'>
        
         <div className='flex justify-center items-center box-border gap-3 min-w-[88px]'>
-        <div className='text-xl  relative flex justify-center cursor-pointer -left-2 items-center'><GiShoppingCart /> <span className='text-slate-100  absolute -top-2 -right-2 text-xs p-1  bg-red-500 rounded-full w-4 h-4 flex font-semibold items-center justify-center'>2</span>
-        </div>
+        <motion.div
+          whileTap={{
+            scale: 1.1,
+          }}
+        className='text-xl  relative flex justify-center cursor-pointer -left-2 items-center'><GiShoppingCart /> <span className='text-slate-100  absolute -top-2 -right-2 text-xs p-1  bg-red-500 rounded-full w-4 h-4 flex font-semibold items-center justify-center'>2</span>
+        </motion.div>
 
         {/* <---- This section handles Authentication for medium and large screens ------>  */}
 
@@ -161,13 +165,19 @@ const Header = () => {
     
 
     {/*Nav Section for Mobile and Small Screens */}
+
+
     <div className="sm:hidden flex justify-between w-screen p-3 py- relative bg-slate-50">
       
 
       {/* Cart section for mobile screens  */}
 
-      <div className='text-2xl relative text-slate-600 font-bold flex justify-center cursor-pointer  items-center'><GiShoppingCart /> <span className='text-slate-100 absolute top-0.5 -right-2 text-xs p-1  bg-red-600 rounded-full w-4 h-4 flex font-semibold items-center justify-center'>2</span>
-        </div>
+      <motion.div
+        whileTap={{
+          scale: 1.1,
+        }}
+      className='text-2xl relative text-slate-600 font-bold flex justify-center cursor-pointer  items-center'><GiShoppingCart /> <span className='text-slate-100 absolute top-0.5 -right-2 text-xs p-1  bg-red-600 rounded-full w-4 h-4 flex font-semibold items-center justify-center'>2</span>
+        </motion.div>
 
 
         {/* Logo Section for mobile screen */}
