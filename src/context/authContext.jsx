@@ -1,4 +1,4 @@
-import { createContext } from "react";
+import { createContext , useState } from "react";
 import React from 'react'
 import { useReducer } from "react";
 import { initialState } from "./reducer"; 
@@ -9,8 +9,12 @@ export const AuthContext = createContext()
 
 const AuthContextProvider = ({ children }) => {
  const [state, dispatch] = useReducer(AuthReducer , initialState)
+ const [openMenu, setOpenMenu] = useState(true);
 
 
+ function RemoveNav(){
+  setOpenMenu(prev => !prev)
+ }
  
  function loginUser(user){
   dispatch(
@@ -30,7 +34,7 @@ const AuthContextProvider = ({ children }) => {
  }
 
   return (
-    <AuthContext.Provider value = {{User: state.user , loginUser ,logoutUser }}  >
+    <AuthContext.Provider value = {{User: state.user , RemoveNav , loginUser ,logoutUser , openMenu }}  >
       {children}
     </AuthContext.Provider>
   )

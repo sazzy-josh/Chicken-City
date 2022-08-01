@@ -18,7 +18,7 @@ import { useContext } from 'react'
 import { AuthContext } from '../context/authContext'
 import { auth  } from '../firebase.config'
 import { onAuthStateChanged } from 'firebase/auth'
-const nav = document.getElementById('navbar')
+
 
 
 const Header = () => {
@@ -28,14 +28,8 @@ const Header = () => {
     //   email: "",
     //   confirmPassword : ""
     // });
-    const [openMenu, setOpenMenu] = useState(true);
-     const { loginUser ,logoutUser, User} = useContext(AuthContext)
- 
-    
-// const addNav = () => {
-//   User && User.email !== "idahosajoshua61@gmail.com" ? nav.classList.add("navbar") : nav.classList.remove("navbar")
-// }
-
+  // const [openMenu, setOpenMenu] = useState(true);
+  const { loginUser , logoutUser, User , RemoveNav , openMenu } = useContext(AuthContext) 
 
  useEffect(() => {
     const unsuscribe = onAuthStateChanged(auth ,(currentUser) => {
@@ -47,23 +41,22 @@ const Header = () => {
   };
  }, []);
 
- const Remove = () => {
-  setOpenMenu(prev => !prev)
- }
+//  const Remove = () => {
+//   setOpenMenu(prev => !prev)
+//  }
 
  const googleAuth = async(e) => {
      e.preventDefault()
-     setOpenMenu(prev => !prev)
+     RemoveNav()
      const provider = new GoogleAuthProvider();
      const { user } = await signInWithPopup(auth, provider)
      loginUser(user)
-     console.log(user)
  }
 
 
  const LogOut = async (e) => {
   e.preventDefault()
-  setOpenMenu(prev => !prev)
+  RemoveNav()
   await signOut(auth)
   logoutUser()
  }
@@ -99,7 +92,7 @@ const Header = () => {
           scale: 1.05,
           transition: { duration: 0.5 },
           }}
-           className='hover:text-green-800 hover:shadow-lg  flex items-center gap-x-2  hover:font-semi-bold' >Menu < MdRestaurantMenu /> </motion.li>
+           className='hover:text-green-800 hover:shadow-lg  flex items-center gap-x-2  hover:font-semi-bold' >Food < MdRestaurantMenu /> </motion.li>
          </Link>
          <Link to="/aboutus">
            <motion.li whileHover={{
@@ -125,7 +118,7 @@ const Header = () => {
         {/* <---- This section handles Authentication for medium and large screens ------>  */}
 
         {/* When there is no authenticated User*/}
-        {!User && <div className='flex justify-center cursor-pointer items-center' onClick={() => setOpenMenu(prev => !prev) }>
+        {!User && <div className='flex justify-center cursor-pointer items-center' onClick={RemoveNav}>
             <motion.img src={Avatar} whileTap={{scale:0.8}} className="w-9 h-9 cursor-pointer hover:border-2 rounded-full hover:shadow-lg  border-cyan-600 " alt="Avatar"  />
            {openMenu ? <BiChevronDown  className='min-w-[12px]'/> : <BiChevronUp  className='min-w-[12px]' /> }
         </div>}
@@ -141,7 +134,7 @@ const Header = () => {
         </motion.div>}
           {/* When User is Authenticated*/}
         </div>
-        {User && <div className='flex justify-center items-center  cursor-pointer' onClick={() => setOpenMenu(prev => !prev) }>
+        {User && <div className='flex justify-center items-center  cursor-pointer' onClick={RemoveNav}>
             <motion.img src={User.providerData[0].photoURL} whileTap={{scale:0.7}} className="w-8 h-8 cursor-pointer hover:border-2 rounded-full hover:shadow-lg  border-cyan-600 " alt="" />
             {openMenu ? <BiChevronDown  className='min-w-[12px]' /> : <BiChevronUp  className='min-w-[12px]'/> }
         </div>}
@@ -171,7 +164,7 @@ const Header = () => {
     </div>
     
 
-    {/* Mobile and Small Screens */}
+    {/*Nav Section for Mobile and Small Screens */}
     <div className="sm:hidden flex justify-between w-screen p-3 py- relative bg-slate-50">
       
 
@@ -191,7 +184,7 @@ const Header = () => {
         {/*Authentication section goes here for  small and mobile screens*/}
 
         <div className='flex'>
-        {!User && <div className='flex justify-center relative cursor-pointer items-center z-1' onClick={() => setOpenMenu(prev => !prev) }>
+        {!User && <div className='flex justify-center relative cursor-pointer items-center z-1' onClick={RemoveNav }>
             <motion.img src={Avatar} whileTap={{scale:0.8}} className="w-9 h-9 cursor-pointer hover:border-2 rounded-full hover:shadow-lg  border-cyan-600 z-10" alt="Avatar"  />
            {openMenu ? <BiChevronDown  className='min-w-[12px] z-99'/> : <BiChevronUp className='z-10' /> }
         </div>}
@@ -202,36 +195,39 @@ const Header = () => {
         initial={{  x:100  }}
         animate={{  x: 0 }}
         transition={{ ease: "easeInOut", duration:0.009 }}
-        className='transition-all flex flex-col justify-center w-screen h-screen  absolute top-0  right-0 left-0 bottom-0 bg-slate-50 shadow-xl  font-semibold p-1 '>
+        className='transition-all flex flex-col justify-center w-2/3 h-screen  absolute top-0  right-0 left-0 bottom-0 bg-slate-50 shadow-xl  font-semibold p-1 '>
               <li className=' flex justify-center items-center gap-x-3 text-sm p-8 px-2 transition-all rounded ease-in-out duration-600 hover:bg-slate-200 cursor-pointer hover:rounded   hover:border-gray-400 ' onClick={googleAuth } > <TbLogin/>Login <span 
               ></span> </li>
               <hr />
 
               <Link to="/">
             <li 
+            onClick={RemoveNav}
                className=' flex justify-center items-center gap-x-4  text-sm p-8 px-2 transition-all rounded ease-in-out duration-600 hover:bg-slate-200 cursor-pointer   hover:border-gray-400 '
             ><FaHome />  Home </li>
          </Link> 
          <hr />
          <Link to="/menu">
             <li
+             onClick={RemoveNav}
             className=' flex justify-center items-center  gap-x-4 text-sm p-8 px-2 transition-all rounded ease-in-out duration-600 hover:bg-slate-200 cursor-pointer   hover:border-gray-400 '
-            >< MdRestaurantMenu />  Menu  </li>
+            >< MdRestaurantMenu />  Food  </li>
          </Link>
          <hr />
          <Link to="/aboutus">
            <li
+           onClick={RemoveNav}
            className=' flex justify-center items-center gap-x-2 text-sm p-8 px-3 transition-all rounded ease-in-out duration-600 hover:bg-slate-200 cursor-pointer   hover:border-gray-400 '
            > <SiInformatica /> About Us</li>
          </Link>
 
           {/* //Remove menu items from screen */}
-         <div onClick={Remove} className='absolute cursor-pointer top-5 left-6 text-4xl rotate-45 font-light border-2 rounded-full w-10 h-10 flex justify-center items-center border-slate-400 hover:border-slate-700 hover:text-slate-300 bg-slate-400'>+</div>
+         <div onClick={RemoveNav} className='absolute cursor-pointer top-5 left-6 text-4xl rotate-45 font-light border-2 rounded-full w-10 h-10 flex justify-center items-center border-slate-400 hover:border-slate-700 hover:text-slate-300 bg-slate-400'>+</div>
 
         </motion.ul>}
           {/* When User is Authenticated*/}
         </div>
-        {User && <div className='flex justify-center items-center cursor-pointer z-10'  onClick={() => setOpenMenu(prev => !prev) }>
+        {User && <div className='flex justify-center items-center cursor-pointer z-10'  onClick={RemoveNav}>
             <motion.img src={User.providerData[0].photoURL} whileTap={{scale:0.7}} className="w-8 h-8 cursor-pointer hover:border-2 rounded-full hover:shadow-lg  border-cyan-600 " alt="Avatar" />
             {openMenu ? <BiChevronDown /> : <BiChevronUp /> }
         </div>}
@@ -240,24 +236,28 @@ const Header = () => {
          initial={{ opacity: 0.9, x:20  }}
          animate={{ opacity: 1 , x: 0 }}
          transition={{ ease: "easeInOut", duration: 0.0009 }}
-        className='transition-all font-semibold bg-slate-100 top-0 bottom-0 right-0 left-0 absolute text-sm flex flex-col ease-in-out duration-300 border-2 border-slate-400 rounded justify-center  w-screen h-screen' >
+        className='transition-all font-semibold bg-slate-100 top-0 bottom-0 right-0 left-0 absolute text-sm flex flex-col ease-in-out duration-300  border-slate-400 rounded justify-center  w-2/3 h-screen' >
           
-          {User && User.email === "idahosajoshua61@gmail.com" && <li className='flex m-1 justify-center p-8 rounded items-center cursor-pointer hover:bg-slate-300' >New Item <span className='mx-1'><IoIosAdd/></span> </li> }
+          {User && User.email === "idahosajoshua61@gmail.com" && <li
+           onClick={RemoveNav} className='flex m-1 justify-center p-8 rounded items-center cursor-pointer hover:bg-slate-300' >New Item <span className='mx-1'><IoIosAdd/></span> </li> }
          <hr />
          <Link to="/">
             <li 
+               onClick={RemoveNav}
                className=' flex justify-center m-1 items-center gap-x-4  text-sm p-8 px-2 transition-all rounded ease-in-out duration-600 hover:bg-slate-300 cursor-pointer   hover:border-gray-400 '
             ><FaHome />  Home </li>
          </Link> 
          <hr />
-         <Link to="/menu">
+         <Link to="/foods">
             <li
+             onClick={RemoveNav}
             className=' flex justify-center items-center m-1 gap-x-4 text-sm p-8 px-2 transition-all rounded ease-in-out duration-600 hover:bg-slate-300 cursor-pointer   hover:border-gray-400 '
-            >< MdRestaurantMenu />  Menu  </li>
+            >< MdRestaurantMenu />  Food  </li>
          </Link>
          <hr />
          <Link to="/aboutus">
            <li
+            onClick={RemoveNav}
            className=' flex justify-center m-1 items-center gap-x-2 text-sm p-8 px-3 transition-all rounded ease-in-out duration-600 hover:bg-slate-300 cursor-pointer   hover:border-gray-400 '
            > <SiInformatica /> About Us</li>
          </Link>
@@ -266,7 +266,7 @@ const Header = () => {
          <li className='flex m-1 items-center justify-center p-8 gap-x-3 rounded cursor-pointer hover:bg-slate-300'  onClick={LogOut} > <span ><MdOutlineLogout/></span>Logout  </li>
           
            {/* //Remove menu items from screen */}
-         <div onClick={Remove} className='absolute cursor-pointer top-5 left-6 text-4xl rotate-45 font-light border-2 rounded-full w-10 h-10 flex justify-center items-center border-slate-400 hover:border-slate-700 hover:text-slate-300 bg-slate-400'>+</div>
+         <div onClick={RemoveNav} className='absolute cursor-pointer top-5 left-6 text-4xl rotate-45 font-light border-2 rounded-full w-10 h-10 flex justify-center items-center border-slate-400 hover:border-slate-700 hover:text-slate-300 bg-slate-400'>+</div>
              
         </motion.ul>}
         
