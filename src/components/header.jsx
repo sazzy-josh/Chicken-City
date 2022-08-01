@@ -237,7 +237,7 @@ const Header = () => {
         </div>}
         <div>
         {!openMenu && User && <motion.ul
-         initial={{ opacity: 0.9, x:100  }}
+         initial={{ opacity: 0.9, x:20  }}
          animate={{ opacity: 1 , x: 0 }}
          transition={{ ease: "easeInOut", duration: 0.0009 }}
         className='transition-all font-semibold bg-slate-100 top-0 bottom-0 right-0 left-0 absolute text-sm flex flex-col ease-in-out duration-300 border-2 border-slate-400 rounded justify-center  w-screen h-screen' >
