@@ -226,7 +226,7 @@ const Header = () => {
          </Link>
 
           {/* //Remove menu items from screen */}
-         <div onClick={Remove} className='absolute cursor-pointer top-5 left-6 text-4xl rotate-45 font-light border-2 rounded-full w-10 h-10 flex justify-center items-center border-slate-400 hover:border-red-300 hover:text-red-300 bg-slate-100'>+</div>
+         <div onClick={Remove} className='absolute cursor-pointer top-5 left-6 text-4xl rotate-45 font-light border-2 rounded-full w-10 h-10 flex justify-center items-center border-slate-400 hover:border-slate-700 hover:text-slate-300 bg-slate-400'>+</div>
 
         </motion.ul>}
           {/* When User is Authenticated*/}
@@ -266,7 +266,7 @@ const Header = () => {
          <li className='flex m-1 items-center justify-center p-8 gap-x-3 rounded cursor-pointer hover:bg-slate-300'  onClick={LogOut} > <span ><MdOutlineLogout/></span>Logout  </li>
           
            {/* //Remove menu items from screen */}
-         <div onClick={Remove} className='absolute cursor-pointer top-5 left-6 text-4xl rotate-45 font-light border-2 rounded-full w-10 h-10 flex justify-center items-center border-slate-400 hover:border-red-300 hover:text-red-300 bg-slate-100'>+</div>
+         <div onClick={Remove} className='absolute cursor-pointer top-5 left-6 text-4xl rotate-45 font-light border-2 rounded-full w-10 h-10 flex justify-center items-center border-slate-400 hover:border-slate-700 hover:text-slate-300 bg-slate-400'>+</div>
              
         </motion.ul>}
         
