@@ -2,7 +2,7 @@ import React from 'react'
 import { useState , useEffect } from 'react'
 import logo from './img/logo.png' 
 import Avatar from './img/avatar.png'
-import { Link } from 'react-router-dom '
+import { Link ,NavLink } from 'react-router-dom '
 import { BiChevronDown } from 'react-icons/bi'
 import { BiChevronUp } from 'react-icons/bi'
 import { GiShoppingCart } from 'react-icons/gi'
@@ -75,28 +75,29 @@ const Header = () => {
          initial={{ opacity: 0.5 }}
         animate={{ x: 20 ,opacity: 2 }}
         transition={{ ease: "easeInOut", duration: 0.5 }}
-      className='flex justify-center items-center gap-6 mr-5 sm:text-sm sm:-ml-40 sm:mr-6 sm:w-[400px] md:mr-6 md:text- font-bold'>
-         <Link to="/">
-            <motion.li  whileHover={{
-          scale: 1.05,
+      className='flex justify-center items-center gap-6 mr-5 sm:text-sm sm:-ml-40 sm:mr-6 sm:w-[400px] md:mr-6 md:text- font-bold
+      '>
+         <NavLink to="/">
+            <motion.li  whileTap={{
+          scale: 0.8,
           transition: { duration: 0.5 },
           }}
-          className='hover:text-green-800 hover:shadow-lg hover:font-semi-bold flex items-center gap-x-2 ' >Home <FaHome /></motion.li>
-         </Link> 
-         <Link to="/menu">
-            <motion.li whileHover={{
-          scale: 1.05,
+          className={`relative flex items-center gap-x-2 (navData) => (navData.isActive ? 'active' : '')`} >Home <FaHome /></motion.li>
+         </NavLink> 
+         <NavLink to="/menu">
+            <motion.li whileTap={{
+          scale: 0.8,
           transition: { duration: 0.5 },
           }}
-           className='hover:text-green-800 hover:shadow-lg  flex items-center gap-x-2  hover:font-semi-bold' >Food < MdRestaurantMenu /> </motion.li>
-         </Link>
-         <Link to="/aboutus">
-           <motion.li whileHover={{
-          scale: 1.05,
+           className={`relative  flex items-center gap-x-2  (navData) => (navData.isActive ? 'active' : '')`} >Food < MdRestaurantMenu /> </motion.li>
+         </NavLink>
+         <NavLink to="/aboutus">
+           <motion.li whileTap={{
+          scale: 0.8,
           transition: { duration: 0.5 },
           }}
-           className='hover:text-green-800 hover:shadow-lg  flex items-center gap-x-2  hover:font-semi-bold min-w-[]' >About Us <SiInformatica /> </motion.li>
-         </Link>
+           className={`relative  flex items-center gap-x-2  (navData) => (navData.isActive ? 'active' : '')`} >About Us <SiInformatica /> </motion.li>
+         </NavLink>
           {!User && <Link to="sign-up">
             <li className='hover:bg-slate-600 hover:font-semi-bold transition-all duration-300 ease-in-out hover:text-slate-100 border hover:shadow-lg  bg-slate-500 text-slate-200 rounded-lg px-2 p-1 min-w-[74px]' >Sign Up</li>
           </Link>}
@@ -206,26 +207,26 @@ const Header = () => {
               ></span> </li>
               <hr />
 
-              <Link to="/">
+          <NavLink to="/">
             <li 
             onClick={RemoveNav}
-               className=' flex justify-center items-center gap-x-4  text-sm p-8 px-2 transition-all rounded ease-in-out duration-600 hover:bg-slate-200 cursor-pointer   hover:border-gray-400 '
+               className='relative flex justify-center items-center gap-x-4  text-sm p-8 px-2 transition-all rounded ease-in-out duration-600 hover:bg-slate-200 cursor-pointer   hover:border-gray-400 '
             ><FaHome />  Home </li>
-         </Link> 
+         </NavLink> 
          <hr />
-         <Link to="/menu">
+         <NavLink to="/menu">
             <li
              onClick={RemoveNav}
-            className=' flex justify-center items-center  gap-x-4 text-sm p-8 px-2 transition-all rounded ease-in-out duration-600 hover:bg-slate-200 cursor-pointer   hover:border-gray-400 '
+            className='relative flex justify-center items-center  gap-x-4 text-sm p-8 px-2 transition-all rounded ease-in-out duration-600 hover:bg-slate-200 cursor-pointer   hover:border-gray-400 '
             >< MdRestaurantMenu />  Food  </li>
-         </Link>
+         </NavLink>
          <hr />
-         <Link to="/aboutus">
+         <NavLink to="/aboutus">
            <li
            onClick={RemoveNav}
-           className=' flex justify-center items-center gap-x-2 text-sm p-8 px-3 transition-all rounded ease-in-out duration-600 hover:bg-slate-200 cursor-pointer   hover:border-gray-400 '
+           className='relative flex justify-center items-center gap-x-2 text-sm p-8 px-3 transition-all rounded ease-in-out duration-600 hover:bg-slate-200 cursor-pointer   hover:border-gray-400 '
            > <SiInformatica /> About Us</li>
-         </Link>
+         </NavLink>
 
           {/* //Remove menu items from screen */}
          <div onClick={RemoveNav} className='absolute cursor-pointer top-5 left-6 text-4xl rotate-45 font-light border-2 rounded-full w-10 h-10 flex justify-center items-center border-slate-400 hover:border-slate-700 hover:text-slate-300 bg-slate-400'>+</div>
@@ -248,27 +249,31 @@ const Header = () => {
            onClick={RemoveNav} className='flex m-1 justify-center p-8 rounded items-center cursor-pointer hover:bg-slate-300' >New Item 
             <span className='mx-1'><IoIosAdd/></span> </li> }
          <hr />
-         <Link to="/">
+         <NavLink to="/">
             <li 
                onClick={RemoveNav}
-               className=' flex justify-center m-1 items-center gap-x-4  text-sm p-8 px-2 transition-all rounded ease-in-out duration-600 hover:bg-slate-300 cursor-pointer   hover:border-gray-400 '
+               className={
+                `relative flex justify-center m-1 items-center gap-x-4  text-sm p-8 px-2 transition-all rounded ease-in-out duration-600 hover:bg-slate-300 cursor-pointer   hover:border-gray-400 (nav) => (nav.isActive ? 'activeLink' : '')`
+               }
             ><FaHome /> Home 
             </li>
-         </Link> 
+         </NavLink> 
          <hr />
-         <Link to="/foods">
+         <NavLink to="/foods">
             <li
              onClick={RemoveNav}
-            className=' flex justify-center items-center m-1 gap-x-4 text-sm p-8 px-2 transition-all rounded ease-in-out duration-600 hover:bg-slate-300 cursor-pointer   hover:border-gray-400 '
+            className={`
+            relative flex justify-center items-center m-1 gap-x-4 text-sm p-8 px-2 transition-all rounded ease-in-out duration-600 hover:bg-slate-300 cursor-pointer hover:border-gray-400  
+            (nav) => (nav.isActive ? 'activeLink' : '')`}
             >< MdRestaurantMenu />  Food  </li>
-         </Link>
+         </NavLink>
          <hr />
-         <Link to="/aboutus">
+         <NavLink to="/aboutus">
            <li
             onClick={RemoveNav}
-           className=' flex justify-center m-1 items-center gap-x-2 text-sm p-8 px-3 transition-all rounded ease-in-out duration-600 hover:bg-slate-300 cursor-pointer   hover:border-gray-400 '
+           className={`relative flex justify-center m-1 items-center gap-x-2 text-sm p-8 px-3 transition-all rounded ease-in-out duration-600 hover:bg-slate-300 cursor-pointer hover:border-gray-400   (nav) => (nav.isActive ? 'activeLink' : '')`}
            > <SiInformatica /> About Us</li>
-         </Link>
+         </NavLink>
          <hr />
 
          <li className='flex m-1 items-center justify-center p-8 gap-x-3 rounded cursor-pointer hover:bg-slate-300'  onClick={LogOut} > <span ><MdOutlineLogout/></span>Logout  </li>

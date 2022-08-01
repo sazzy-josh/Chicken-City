@@ -28,7 +28,26 @@ body{
     top: 90%;
     margin-top: 10px;
 }
-.mov2{
-   
+.active{
+   color: rgb(185 28 28 );
+   opacity: 1;
 }
+
+.active::before{
+    content: "";
+    width: 50px;
+    height: 2px;
+    background-color: brown;
+    position: absolute;
+    bottom: 0;
+    border-top-left-radius: 0%;
+    border-top-right-radius: 0%;
+    
+
+}
+
+.activeLink{
+    color: rgb(59, 209, 29);
+    opacity: 1;
+ }
     
