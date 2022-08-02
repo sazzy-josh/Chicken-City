@@ -46,5 +46,24 @@ body{
 
 }
 
-
+@media (max-width: 640px){
+    .active{
+        color: rgb(28, 96, 185);
+        opacity: 1;
+     }
+     
+     .active::before{
+         content: "";
+         width: 50px;
+         height: 2px;
+         left:0;
+         top: 0;
+         background-color: rgb(106, 42, 165);
+         position: absolute;
+         border-top-left-radius: 0%;
+         border-top-right-radius: 0%;
+         
+     
+     } 
+}
     
