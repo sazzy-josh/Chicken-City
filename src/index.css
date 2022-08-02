@@ -28,23 +28,30 @@ body{
     top: 90%;
     margin-top: 10px;
 }
-.active{
-   color: rgb(185 28 28 );
-   opacity: 1;
-}
 
-.active::before{
-    content: "";
-    width: 50px;
-    height: 2px;
-    background-color: brown;
-    position: absolute;
-    bottom: 0;
-    border-top-left-radius: 0%;
-    border-top-right-radius: 0%;
+@media (min-width: 641px){
+
+    .active{
+        color: rgb(185 28 28 );
+        
+        opacity: 1;
+     }
+
+     .active::before{
+        content: "";
+        width: 50px;
+        height: 2px;
+        background-color: brown;
+        position: absolute;
+        bottom: 0;
+        border-top-left-radius: 0%;
+        border-top-right-radius: 0%;
+        
     
-
+    }
 }
+
+
 
 @media (max-width: 640px){
     .active{
@@ -52,18 +59,44 @@ body{
         opacity: 1;
      }
      
-     .active::before{
-         content: "";
-         width: 50px;
-         height: 2px;
-         right: 0;
-         top:0;
-         display: block;
-         background-color: rgb(106, 42, 165);
-         position: absolute;
-         
-         
+     .active::after{
+      
+        
+            content: "";
+            margin-top: -44px;
+            width: 30%;
+            height: 1px;
+            background-color: rgb(28, 96, 185);
+            position: absolute;
+            left: 0;
+           
+            border-top-left-radius: 0%;
+            border-top-right-radius: 0%;
+            
+        
+        
+        
+    
+    } 
+    .active::before{
+      
+        
+        content: "";
+        width: 30%;
+        height: 1px;
+        background-color: rgb(28, 96, 185);
+        position: absolute;
+        right: 0;
+        margin-top: 44px;
      
-     } 
+       
+        border-top-left-radius: 0%;
+        border-top-right-radius: 0%;
+        
+    
+    
+    
+
+} 
 }
     

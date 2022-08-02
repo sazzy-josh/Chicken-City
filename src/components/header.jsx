@@ -214,7 +214,7 @@ const Header = () => {
             ><FaHome />  Home </li>
          </NavLink> 
          <hr />
-         <NavLink to="/menu">
+         <NavLink to="/foods">
             <li
              onClick={RemoveNav}
             className='relative flex justify-center items-center  gap-x-4 text-sm p-8 px-2 transition-all rounded ease-in-out duration-600 hover:bg-slate-200 cursor-pointer hover:border-gray-400 '
@@ -253,7 +253,7 @@ const Header = () => {
             <li 
                onClick={RemoveNav}
                className={
-                `relative flex justify-center m-1 items-center gap-x-4  text-sm p-8 px-2 transition-all rounded ease-in-out duration-600 hover:bg-slate-300 cursor-pointer   hover:border-gray-400 (nav) => (nav.isActive ? 'activeLink' : '')`
+                `relative flex justify-center m-1 items-center gap-x-4  text-sm p-8 px-2 transition-all rounded ease-in-out duration-600 hover:bg-slate-300 cursor-pointer hover:border-gray-400 (nav) => (nav.isActive ? 'activeLink' : '')`
                }
             ><FaHome /> Home 
             </li>
