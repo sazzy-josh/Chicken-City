@@ -56,12 +56,12 @@ body{
          content: "";
          width: 50px;
          height: 2px;
-         left:0;
-         top: 0;
+         right: 0;
+         top:0;
+         display: block;
          background-color: rgb(106, 42, 165);
          position: absolute;
-         border-top-left-radius: 0%;
-         border-top-right-radius: 0%;
+         
          
      
      } 
