@@ -32,7 +32,7 @@ body{
 @media (min-width: 641px){
 
     .active{
-        color:  rgb(28, 96, 185);
+        color:  rgb(249 115 22 );
         
         opacity: 1;
      }
@@ -41,7 +41,7 @@ body{
         content: "";
         width: 50px;
         height: 2px;
-        background-color: rgb(28, 96, 185);
+        background-color:rgb(249 115 22 );
         position: absolute;
         bottom: 0;
         border-top-left-radius: 0%;
@@ -55,7 +55,7 @@ body{
 /* bgPrimary - f5f3f3 */
 @media (max-width: 640px){
     .active{
-        color: rgb(28, 96, 185);
+        color: rgb(249 115 22);
         opacity: 1;
      }
      
@@ -66,7 +66,7 @@ body{
             margin-top: -46px;
             width: 30%;
             height: 1px;
-            background-color: rgb(28, 96, 185);
+            background-color: rgb(249 115 22);
             position: absolute;
             left: 0;
            
@@ -84,7 +84,7 @@ body{
         content: "";
         width: 30%;
         height: 1px;
-        background-color: rgb(28, 96, 185);
+        background-color: rgb(248 115 22);
         position: absolute;
         right: 0;
         margin-top: 44px;
