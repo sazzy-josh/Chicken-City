@@ -32,7 +32,7 @@ body{
 @media (min-width: 641px){
 
     .active{
-        color: rgb(185 28 28 );
+        color:  rgb(28, 96, 185);
         
         opacity: 1;
      }
@@ -41,7 +41,7 @@ body{
         content: "";
         width: 50px;
         height: 2px;
-        background-color: brown;
+        background-color: rgb(28, 96, 185);
         position: absolute;
         bottom: 0;
         border-top-left-radius: 0%;
@@ -52,7 +52,7 @@ body{
 }
 
 
-
+/* bgPrimary - f5f3f3 */
 @media (max-width: 640px){
     .active{
         color: rgb(28, 96, 185);

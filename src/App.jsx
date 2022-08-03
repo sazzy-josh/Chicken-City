@@ -27,10 +27,18 @@ function App() {
                  <Home /> 
               </Helmet>
             } />
-            <Route path='/login' element={ <Login /> } />
-            <Route path='/foods' element={ <Food /> } />
-            <Route path='/Sign-up' element={ <SignUp />} />
-            <Route path='/aboutus' element={ <AboutUs />} />
+            <Route path='/login' element={ <Helmet title="Login">
+                 <Login /> 
+              </Helmet> } />
+            <Route path='/foods' element={ <Helmet title="foods">
+                 <Food /> 
+              </Helmet> } />
+            <Route path='/Sign-up' element={<Helmet title="Sign-up">
+                 <SignUp /> 
+              </Helmet>} />
+            <Route path='/aboutus' element={<Helmet title="About-us">
+                 <AboutUs /> 
+              </Helmet>} />
 
           </Routes>
          <Footer />

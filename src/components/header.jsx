@@ -58,7 +58,7 @@ const Header = () => {
  }
 
   return (
-    <header className='h-auto w-screen bg-slate-50 flex flex-col justify-center  mb-3 sticky top-0 '>
+    <header className='h-auto w-screen bg-[#f5f3f3] flex flex-col justify-center  mb-3 sticky top-0 '>
     {/* Desktop && Tablet View  */}
     <div className="hidden sm:flex lg:ml-6 pl-5 px-5 p-3 justify-between">
       <div className='w-3/5'>
@@ -168,7 +168,7 @@ const Header = () => {
     {/*Nav Section for Mobile and Small Screens */}
 
 
-    <div className="sm:hidden flex justify-between w-screen p-3 py- relative bg-slate-50">
+    <div className="sm:hidden flex justify-between w-screen p-3 py- relative">
       
 
       {/* Cart section for mobile screens  */}
