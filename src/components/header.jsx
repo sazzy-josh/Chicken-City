@@ -58,7 +58,7 @@ const Header = () => {
  }
 
   return (
-    <header className='h-auto w-screen bg-[#fffdfd] flex flex-col justify-center  mb-3 sticky top-0 '>
+    <header className='h-auto w-screen bg-[#fffdfd] flex flex-col justify-center z-10  mb-3 sticky top-0 '>
     {/* Desktop && Tablet View  */}
     <div className="hidden sm:flex lg:ml-6 pl-5 px-5 p-3 justify-between">
       <div className='w-3/5'>

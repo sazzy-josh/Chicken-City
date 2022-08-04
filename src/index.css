@@ -23,10 +23,16 @@ body{
     height: auto;
     overflow-x: hidden;
     scroll-behavior: smooth;
+    box-sizing: border-box;
+}
+
+.overlay{
+ background-color: rgba(256 ,256, 256 ,0.6);
+ 
 }
 
 .screen{
- height: calc(100vh - 73px);
+ height: calc(100vh - 83px);
 }
 
 .move{
