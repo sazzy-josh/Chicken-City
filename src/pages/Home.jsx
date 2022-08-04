@@ -20,11 +20,11 @@ const categories = [
 const Home = () => {
   return (
     <section className='relative'>
-      <main className='grid sm:grid-cols-2 p-3 sm:p-10 gap-10 screen'>
+      <main className='grid sm:grid-cols-2 p-3 sm:p-12 gap-10 '>
       {/* Column 1 for medium and  large screens */}
-     <div className=''>
+     <div className='h-screen'>
     {/* Food delivery logo section */}
-       <div className='flex items-center rounded-full text-xs p-1 px-2  justify-center text-orange-400 font-semibold bg-orange-200 max-w-[130px]'>
+       <div className='flex  items-center rounded-full text-xs p-1 px-2  justify-center text-orange-400 font-semibold bg-orange-200 max-w-[130px]'>
         <p>Bike Delivery</p>
         <div className='bg-white w-5 h-5 rounded-full flex justify-center items-center'>
         <img src={Bike} alt="Bike Delivery" className='w-6 h-6' />
@@ -41,7 +41,7 @@ const Home = () => {
        className='py-4 text-5xl font-bold sm:tracking-wider leading-[1.3] sm:leading-[1.8]'><span className='text-orange-400'> We </span>  offer  <br /> the <span className='text-orange-400'>Fastest </span>
         Delivery within <span className='text-orange-400'>Every City.</span></motion.p>
 
-        <p className='tracking-wider  leading-[1.4] sm:leading-[1.9]'>
+        <p className='tracking-wider  leading-[2.5] sm:leading-[1.9]'>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates quod ullam doloribus possimus maxime eius et hic eligendi animi, mollitia ad neque iusto quis earum labore illum deserunt, aut blanditiis suscipit reiciendis cupiditate? Aperiam, doloremque exercitationem! 
         </p>
 
@@ -49,12 +49,12 @@ const Home = () => {
          initial={{opacity:0.3 }}
          animate={{opacity:1 }}
          transition={{ ease: "easeInOut", duration: 2 }}
-        className='text-orange-500 text-bold p-2  rounded bg-orange-300 sm:max-w-[150px] mt-3  sm:mt-8 font-bold flex justify-center items-center gap-2'>Order Now <BsArrowRight className='font-bold' /></motion.p>
+        className='text-orange-500 text-bold p-3  rounded bg-orange-300 sm:max-w-[150px] mt-3  sm:mt-8 font-bold flex justify-center items-center gap-2'>Order Now <BsArrowRight className='font-bold' /></motion.p>
      </div>
     
      {/* Column 2 for medium and  large screens */}
-     <div className='flex p-3 sm:p-5 gap-3 relative '>
-        <img src={HeroBg} alt="Hero-bg" className='ml-auto md:w-[450px] -z-2' />
+     <div className='flex p-3 sm:p-5 gap-3 relative sm:screen'>
+        <img src={HeroBg} alt="Hero-bg" className='ml-auto md:w-[450px] -z-2 sm:h-[500px]' />
 
         <div className='rounded h-full w-full absolute top-0 left-0 flex flex-wrap justify-center items-center gap-6 sm:gap-12 sm:px-32 '>
           

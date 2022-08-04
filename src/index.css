@@ -32,7 +32,7 @@ body{
 }
 
 .screen{
- height: calc(100vh - 83px);
+ height: calc(100vh-103px);
 }
 
 .move{
