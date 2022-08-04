@@ -1,10 +1,12 @@
 import React from 'react'
 import Bike from '../components/assets/img/delivery.png'
 import { BsArrowRight } from 'react-icons/bs'
+import HeroBg from '../components/assets/img/heroBg.png'
+
 
 const Home = () => {
   return (
-    <main className='grid sm:grid-cols-2 p-3 sm:p-10 gap-3'>
+    <main className='grid sm:grid-cols-2 p-3 sm:p-10 gap-3 screen'>
       {/* Column 1 for medium and  large screens */}
      <div className=''>
     {/* Food delivery logo section */}
@@ -17,18 +19,18 @@ const Home = () => {
 
        {/* Text Content for Header*/}
        <p className='py-4 text-5xl font-bold sm:tracking-wider leading-[1.3] sm:leading-normal'><span className='text-orange-400'> We </span>  offer  <br /> the <span className='text-orange-400'>Fastest </span>
-        Delivery in <span className='text-orange-400'>Your City</span></p>
+        Delivery in <span className='text-orange-400'>Your City.</span></p>
 
-        <p className='sm:tracking-wider leading-[1.3] sm:leading-normal'>
+        <p className='tracking-wider leading-[1.4] leading-[1.3] sm:leading-normal'>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates quod ullam doloribus possimus maxime eius et hic eligendi animi, mollitia ad neque iusto quis earum labore illum deserunt, aut blanditiis suscipit reiciendis cupiditate? Aperiam, doloremque exercitationem! 
         </p>
 
-        <p className='text-orange-500 text-bold p-2 rounded bg-orange-300 max-w-[150px] mt-3 font-bold flex justify-center items-center gap-2'>Order Now <BsArrowRight className='font-bold' /></p>
+        <p className='text-orange-500 text-bold p-2  rounded bg-orange-300 sm:max-w-[150px] mt-3  sm:mt-8 font-bold flex justify-center items-center gap-2'>Order Now <BsArrowRight className='font-bold' /></p>
      </div>
     
      {/* Column 2 for medium and  large screens */}
-     <div>
-        column 2
+     <div className='flex'>
+        <img src={HeroBg} alt="Hero-bg" className='ml-auto'/>
     </div>      
     </main>
   )

@@ -22,6 +22,11 @@ body{
     width: 100vw;
     height: auto;
     overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+.screen{
+ height: calc(100vh - 73px);
 }
 
 .move{
@@ -39,7 +44,7 @@ body{
 
      .active::before{
         content: "";
-        width: 50px;
+        width: 30px;
         height: 2px;
         background-color:rgb(249 115 22 );
         position: absolute;
@@ -92,7 +97,9 @@ body{
        
         border-top-left-radius: 0%;
         border-top-right-radius: 0%;
+       
         
+    
     
     
     

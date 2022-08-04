@@ -65,7 +65,7 @@ const Header = () => {
 
         {/* Logo goes here */}
       <Link to="/">
-      <div className='flex justify-start items-center font-semibold'><img src={logo} alt="Logo"  className='w-12 h-12'/> <span className='text-2xl tracking-wide text-slate-700'><span className='text-orange-500 font-serif'>C</span><span className='text-red-700 font-serif'>i</span ><span className='text-red-700 font-serif'>t</span><span className='text-orange-500 font-serif'>y</span></span></div>
+      <div className='flex justify-start items-center font-semibold'><img src={logo} alt="Logo"  className='w-12 h-12'/> <span className='text-2xl tracking-wide text-slate-700'><span className='text-orange-400 font-serif'>C</span><span className='text-red-700 font-serif'>i</span ><span className='text-red-700 font-serif'>t</span><span className='text-orange-400 font-serif'>y</span></span></div>
       </Link>
       </div>
 
@@ -99,7 +99,7 @@ const Header = () => {
            className={`relative  flex items-center gap-x-2  (navData) => (navData.isActive ? 'active' : '')`} >About Us <SiInformatica /> </motion.li>
          </NavLink>
           {!User && <Link to="sign-up">
-            <li className='hover:bg-slate-600 hover:font-semi-bold transition-all duration-300 ease-in-out hover:text-slate-100 border hover:shadow-lg  bg-slate-500 text-slate-200 rounded-lg px-2 p-1 min-w-[74px]' >Sign Up</li>
+            <li className='hover:bg-slate-600 hover:font-semi-bold transition-all duration-300 ease-in-out hover:border-red-500 hover:text-slate-100 border hover:shadow-lg  bg-red-500 text-slate-50 border-red-500 rounded-lg px-2 p-1 min-w-[74px]' >Sign Up</li>
           </Link>}
          
 
