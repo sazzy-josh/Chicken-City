@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState , useEffect } from 'react'
-import logo from './img/logo.png' 
-import Avatar from './img/avatar.png'
+import logo from './assets/img/logo.png' 
+import Avatar from './assets/img/avatar.png'
 import { Link ,NavLink } from 'react-router-dom '
 import { BiChevronDown } from 'react-icons/bi'
 import { BiChevronUp } from 'react-icons/bi'
@@ -58,7 +58,7 @@ const Header = () => {
  }
 
   return (
-    <header className='h-auto w-screen bg-[#f5f3f3] flex flex-col justify-center  mb-3 sticky top-0 '>
+    <header className='h-auto w-screen bg-[#fffdfd] flex flex-col justify-center  mb-3 sticky top-0 '>
     {/* Desktop && Tablet View  */}
     <div className="hidden sm:flex lg:ml-6 pl-5 px-5 p-3 justify-between">
       <div className='w-3/5'>
