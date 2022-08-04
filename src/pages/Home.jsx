@@ -21,7 +21,7 @@ const Home = () => {
        <p className='py-4 text-5xl font-bold sm:tracking-wider leading-[1.3] sm:leading-normal'><span className='text-orange-400'> We </span>  offer  <br /> the <span className='text-orange-400'>Fastest </span>
         Delivery in <span className='text-orange-400'>Your City.</span></p>
 
-        <p className='tracking-wider leading-[1.4] leading-[1.3] sm:leading-normal'>
+        <p className='tracking-wider sm:leading-[1.4] leading-[1.3] sm:leading-normal'>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates quod ullam doloribus possimus maxime eius et hic eligendi animi, mollitia ad neque iusto quis earum labore illum deserunt, aut blanditiis suscipit reiciendis cupiditate? Aperiam, doloremque exercitationem! 
         </p>
 
