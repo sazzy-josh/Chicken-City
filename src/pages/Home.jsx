@@ -23,9 +23,12 @@ const categories = [
 const Home = () => {
   return (
     <section className='relative'>
+
+      {/* Start of Main Page section */}
+
       <main className='grid sm:grid-cols-2 p-3 sm:p-12 gap-10 h-auto screen'>
       {/* Column 1 for medium and  large screens */}
-     <div className='sm:h-screen screen relative'>
+     <div className='sm:h-full relative'>
     {/* Food delivery logo section */}
        <div className='flex  items-center rounded-full text-xs p-1 px-2  justify-center text-orange-400 font-semibold bg-orange-200 max-w-[130px]'>
         <p>Bike Delivery</p>
@@ -49,28 +52,35 @@ const Home = () => {
         </p>
 
         <motion.p
+         whileHover={{scale:0.9 }}
          initial={{opacity:0.3 }}
          animate={{opacity:1 }}
-         transition={{ ease: "easeInOut", duration: 2 }}
-        className='text-orange-500 text-bold p-3  rounded bg-orange-300 sm:max-w-[150px] mt-3  sm:mt-8 font-bold flex justify-center items-center gap-2'>Order Now <BsArrowRight className='font-bold' /></motion.p>
+         transition={{ ease: "easeInOut", duration: 0.4 }}
+        className='text-orange-500 text-bold p-3 cursor-pointer rounded-lg bg-orange-300 sm:max-w-[150px] mt-3  sm:mt-8 font-bold flex justify-center items-center gap-2'>Order Now <BsArrowRight className='font-bold' /></motion.p>
             
           <div className='flex  py-12 gap-12 items-center sm:justify-start justify-center text-sm  '>
           
-              <div className='bg-slate-700 flex items-center gap-1 justify-center rounded-lg h-[60px] p-2 text-white w-[144px]'>
+              <motion.div 
+              whileHover={{scale:0.9}}
+              transition={{duration:0.3}}
+              className='bg-slate-700 cursor-pointer flex items-center gap-1 justify-center rounded-lg h-[60px] p-2 text-white w-[144px]'>
                 <div ><img src={apple} alt="apple" /></div>
                 <div className='p-0'>
                   <p className='text-[10px]'> Download on the</p>
                   <p className=''>App Store</p>
                 </div>
-              </div>
+              </motion.div>
 
-              <div className='bg-slate-700 flex items-center h-[60px] gap-1 rounded-lg p-2 text-white w-[144px]'>
+              <motion.div 
+              whileHover={{scale:0.9}}
+              transition={{duration:0.3}}
+              className='bg-slate-700 cursor-pointer flex items-center h-[60px] gap-1 rounded-lg p-2 text-white w-[144px]'>
                 <div><img src={google} alt="android" className='w-6 h-6' /></div>
                 <div >
                   <p className='text-[10px]'>Get it on</p>
                   <p className=''>Play Store</p>
                 </div>
-              </div>
+              </motion.div>
           </div>
      </div>
     
@@ -78,12 +88,12 @@ const Home = () => {
      <div className='flex p-3 sm:p-5 gap-3 relative '>
         <img src={HeroBg} alt="Hero-bg" className='ml-auto md:w-[450px] -z-2 sm:h-[500px]' />
 
-        <div className='rounded screen w-full absolute top-0 left-0 flex flex-wrap justify-center items-center gap-6 sm:gap-16 sm:px-32 '>
+        <div className='rounded screen w-full absolute  top-0 left-0 flex flex-wrap justify-center items-center gap-6 sm:gap-16 sm:px-32 '>
           
         {categories.map(({image, id , type , extra , price}) => {
           return (
-         <div className='overlay p-3 w-120  text-sm text-center text-slate-700 rounded-xl bg-red-300 mt-12'>
-            <img src={image} alt={id} className='w-40 h-40 object-contain -mt-20 text-center '/>
+         <div className='overlay p-3 sm:w-120 w-40 flex flex-col items-center text-sm max-h-[200px] text-center text-slate-700 rounded-xl bg-red-300 mt-12'>
+            <img src={image} alt={id} className='smd:w-50 sm:h-50 w-24 h-24 object-contain sm:-mt-10 -mt-8 text-center '/>
             <p className='font-bold p-2 w-38'>{type}</p>
             <p className='font-semibold p-2 text-[12px] w-full'>{extra}</p>
             <p className='font-bold text-center'><span className='text-pink-800'>${price}</span></p>
@@ -91,16 +101,12 @@ const Home = () => {
           </div>
           )
         })}
-
-
-          
-
-          
-
-
+ 
         </div>
     </div>      
     </main>
+
+    
     </section>
   )
 }
