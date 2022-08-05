@@ -19,10 +19,10 @@ const categories = [
 
 const Home = () => {
   return (
-    <section className='relative'>
-      <main className='grid sm:grid-cols-2 p-3 sm:p-12 gap-10 '>
+    <section className='relative box-border'>
+      <main className='grid sm:grid-cols-2 p-3 sm:p-12 gap-10 h-auto'>
       {/* Column 1 for medium and  large screens */}
-     <div className='h-screen'>
+     <div className='sm:h-screen screen '>
     {/* Food delivery logo section */}
        <div className='flex  items-center rounded-full text-xs p-1 px-2  justify-center text-orange-400 font-semibold bg-orange-200 max-w-[130px]'>
         <p>Bike Delivery</p>
@@ -38,7 +38,7 @@ const Home = () => {
        transition={{ ease: "easeInOut", duration: 0.7 ,
        }}
        
-       className='py-4 text-5xl font-bold sm:tracking-wider leading-[1.3] sm:leading-[1.8]'><span className='text-orange-400'> We </span>  offer  <br /> the <span className='text-orange-400'>Fastest </span>
+       className='py-4 text-5xl font-bold sm:tracking-wider leading-[1.2] sm:leading-[1.8]'><span className='text-orange-400'> We </span>  offer  <br /> the <span className='text-orange-400'>Fastest </span>
         Delivery within <span className='text-orange-400'>Every City.</span></motion.p>
 
         <p className='tracking-wider  leading-[2.5] sm:leading-[1.9]'>
@@ -53,14 +53,14 @@ const Home = () => {
      </div>
     
      {/* Column 2 for medium and  large screens */}
-     <div className='flex p-3 sm:p-5 gap-3 relative sm:screen'>
+     <div className='flex p-3 sm:p-5 gap-3 relative '>
         <img src={HeroBg} alt="Hero-bg" className='ml-auto md:w-[450px] -z-2 sm:h-[500px]' />
 
-        <div className='rounded h-full w-full absolute top-0 left-0 flex flex-wrap justify-center items-center gap-6 sm:gap-12 sm:px-32 '>
+        <div className='rounded screen w-full absolute top-0 left-0 flex flex-wrap justify-center items-center gap-6 sm:gap-16 sm:px-32 '>
           
         {categories.map(({image, id , type , extra , price}) => {
           return (
-         <div className='overlay p-3 w-120  text-sm text-center text-slate-700 rounded-xl bg-red-300 '>
+         <div className='overlay p-3 w-120  text-sm text-center text-slate-700 rounded-xl bg-red-300 mt-12'>
             <img src={image} alt={id} className='w-40 h-40 object-contain -mt-20 text-center '/>
             <p className='font-bold p-2 w-38'>{type}</p>
             <p className='font-semibold p-2 text-[12px] w-full'>{extra}</p>
