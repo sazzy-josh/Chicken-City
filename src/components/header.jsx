@@ -75,7 +75,7 @@ const Header = () => {
          initial={{ opacity: 0.5 }}
         animate={{ x: 20 ,opacity: 2 }}
         transition={{ ease: "easeInOut", duration: 0.5 }}
-      className='flex justify-center items-center gap-6 mr-5 sm:text-sm sm:-ml-40 sm:mr-6 sm:w-[400px] md:mr-6 md:text- font-bold
+      className='flex justify-center items-center gap-6 mr-5 sm:text-sm sm:-ml-40 sm:mr-6 sm:w-[400px] md:mr-6 md:text- font-[500]
       '>
          <NavLink to="/">
             <motion.li  whileTap={{
@@ -99,7 +99,7 @@ const Header = () => {
            className={`relative  flex items-center gap-x-2  (navData) => (navData.isActive ? 'active' : '')`} >About Us <SiInformatica /> </motion.li>
          </NavLink>
           {!User && <Link to="sign-up">
-            <li className='hover:bg-slate-600 hover:font-semi-bold transition-all duration-300 ease-in-out hover:border-red-500 hover:text-slate-100 border hover:shadow-lg  bg-red-500 text-slate-50 border-red-500 rounded-lg px-2 p-1 min-w-[74px]' >Sign Up</li>
+            <li className='hover:bg-slate-600 hover:font-semi-bold transition-all duration-300 ease-in-out hover:text-slate-100 border bg-slate-500 hover:shadow-lg   text-slate-50 rounded-lg px-2 p-1 min-w-[74px]' >Sign Up</li>
           </Link>}
          
 

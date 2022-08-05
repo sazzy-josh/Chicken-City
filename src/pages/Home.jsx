@@ -9,9 +9,12 @@ import p4 from '../components/assets/img/r1.png'
 import p5 from '../components/assets/img/i1.png'
 import p6 from '../components/assets/img/fi3.png'
 import p7 from '../components/assets/images/product_01.3.png'
+import apple from '../components/assets/img/apple.png'
+import google from '../components/assets/img/google.png'
+
 
 const categories = [
-  {id:1 , type:"Chicken" , price : 20 , extra: "Mixed Kebab plates" , image:p1},
+  {id:1 , type:"Chicken" , price : 20 , extra: "Mixed Kebab plates" , image:p2},
   {id:2 , type:"Icecream" , price : 9 , extra: "Chocolate & Vanila" , image :p5 },
   {id:3 , type:"Fish" , price : 19.6 , extra: "Mixed Fish Kebab" , image : p6 },
   {id:4 , type:"Hamburger" , price : 11 , extra: "Mixed Chicken Hamburger" , image : p7}
@@ -19,10 +22,10 @@ const categories = [
 
 const Home = () => {
   return (
-    <section className='relative box-border'>
-      <main className='grid sm:grid-cols-2 p-3 sm:p-12 gap-10 h-auto'>
+    <section className='relative'>
+      <main className='grid sm:grid-cols-2 p-3 sm:p-12 gap-10 h-auto screen'>
       {/* Column 1 for medium and  large screens */}
-     <div className='sm:h-screen screen '>
+     <div className='sm:h-screen screen relative'>
     {/* Food delivery logo section */}
        <div className='flex  items-center rounded-full text-xs p-1 px-2  justify-center text-orange-400 font-semibold bg-orange-200 max-w-[130px]'>
         <p>Bike Delivery</p>
@@ -38,11 +41,11 @@ const Home = () => {
        transition={{ ease: "easeInOut", duration: 0.7 ,
        }}
        
-       className='py-4 text-5xl font-bold sm:tracking-wider leading-normal sm:leading-[1.8]'><span className='text-orange-400'> We </span>  offer  <br /> the <span className='text-orange-400'>Fastest </span>
+       className='py-4 text-4xl sm:text-5xl font-bold sm:tracking-wider leading-[1.3] sm:leading-[1.8]'><span className='text-orange-400'> We </span>  offer  <br /> the <span className='text-orange-400'>Fastest </span>
         Delivery within <span className='text-orange-400'>Every City.</span></motion.p>
 
-        <p className='tracking-wider  leading-[2.0] sm:leading-[1.9]'>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates quod ullam doloribus possimus maxime eius et hic eligendi animi, mollitia ad neque iusto quis earum labore illum deserunt, aut blanditiis suscipit reiciendis cupiditate? Aperiam, doloremque exercitationem! 
+        <p className='tracking-wider  leading-[2.0] sm:leading-[1.9] font-[500]'>
+        Restaurant style Yogurt Mint Sauce is delicious dip which is quick and easy to .. This is a standard Indian mint chutney served with poppadums along with mint and lemon.
         </p>
 
         <motion.p
@@ -50,6 +53,36 @@ const Home = () => {
          animate={{opacity:1 }}
          transition={{ ease: "easeInOut", duration: 2 }}
         className='text-orange-500 text-bold p-3  rounded bg-orange-300 sm:max-w-[150px] mt-3  sm:mt-8 font-bold flex justify-center items-center gap-2'>Order Now <BsArrowRight className='font-bold' /></motion.p>
+            
+          <div className='flex  py-12 gap-12 items-center sm:justify-start justify-center text-sm  '>
+          {/* <p className='flex'> Place your orders between</p>
+              <div>
+              <p className='font-[600]'>Lunch</p>
+              <p>12.00 - 2PM</p>
+              </div>
+
+              <div>
+              <p className='font-[600]'>Dinner</p>
+              <p>6.00 - 8PM</p>
+              </div> */}
+
+
+              <div className='bg-slate-700 flex items-center rounded-lg p-2 text-white w-[144px]'>
+                <div ><img src={apple} alt="apple" /></div>
+                <div >
+                  <p className='text-xs'> Download on the</p>
+                  <p className=''>App Store</p>
+                </div>
+              </div>
+
+              <div className='bg-slate-700 flex items-center rounded-lg p-2 text-white w-[144px]'>
+                <div><img src={google} alt="android" className='w-6 h-6' /></div>
+                <div >
+                  <p className='text-xs'>Get it on</p>
+                  <p className=''>Play Store</p>
+                </div>
+              </div>
+          </div>
      </div>
     
      {/* Column 2 for medium and  large screens */}
@@ -64,7 +97,7 @@ const Home = () => {
             <img src={image} alt={id} className='w-40 h-40 object-contain -mt-20 text-center '/>
             <p className='font-bold p-2 w-38'>{type}</p>
             <p className='font-semibold p-2 text-[12px] w-full'>{extra}</p>
-            <p className='font-bold text-center'><span className='text-pink-800'>$</span> {price}</p>
+            <p className='font-bold text-center'><span className='text-pink-800'>${price}</span></p>
             
           </div>
           )
