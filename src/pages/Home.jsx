@@ -41,7 +41,7 @@ const Home = () => {
        transition={{ ease: "easeInOut", duration: 0.7 ,
        }}
        
-       className='py-4 text-4xl sm:text-5xl font-bold sm:tracking-wider leading-[1.3] sm:leading-[1.8]'><span className='text-orange-400'> We </span>  offer  <br /> the <span className='text-orange-400'>Fastest </span>
+       className='py-4 text-4xl sm:text-5xl font-bold sm:tracking-wider leading-[1.5] sm:leading-[1.8]'><span className='text-orange-400'> We </span>  offer  <br /> the <span className='text-orange-400'>Fastest </span>
         Delivery within <span className='text-orange-400'>Every City.</span></motion.p>
 
         <p className='tracking-wider  leading-[2.0] sm:leading-[1.9] font-[500]'>
@@ -55,30 +55,19 @@ const Home = () => {
         className='text-orange-500 text-bold p-3  rounded bg-orange-300 sm:max-w-[150px] mt-3  sm:mt-8 font-bold flex justify-center items-center gap-2'>Order Now <BsArrowRight className='font-bold' /></motion.p>
             
           <div className='flex  py-12 gap-12 items-center sm:justify-start justify-center text-sm  '>
-          {/* <p className='flex'> Place your orders between</p>
-              <div>
-              <p className='font-[600]'>Lunch</p>
-              <p>12.00 - 2PM</p>
-              </div>
-
-              <div>
-              <p className='font-[600]'>Dinner</p>
-              <p>6.00 - 8PM</p>
-              </div> */}
-
-
-              <div className='bg-slate-700 flex items-center rounded-lg p-2 text-white w-[144px]'>
+          
+              <div className='bg-slate-700 flex items-center gap-1 justify-center rounded-lg h-[60px] p-2 text-white w-[144px]'>
                 <div ><img src={apple} alt="apple" /></div>
-                <div >
-                  <p className='text-xs'> Download on the</p>
+                <div className='p-0'>
+                  <p className='text-[10px]'> Download on the</p>
                   <p className=''>App Store</p>
                 </div>
               </div>
 
-              <div className='bg-slate-700 flex items-center rounded-lg p-2 text-white w-[144px]'>
+              <div className='bg-slate-700 flex items-center h-[60px] gap-1 rounded-lg p-2 text-white w-[144px]'>
                 <div><img src={google} alt="android" className='w-6 h-6' /></div>
                 <div >
-                  <p className='text-xs'>Get it on</p>
+                  <p className='text-[10px]'>Get it on</p>
                   <p className=''>Play Store</p>
                 </div>
               </div>
