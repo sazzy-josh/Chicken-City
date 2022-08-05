@@ -113,7 +113,7 @@ const Header = () => {
           whileTap={{
             scale: 1.1,
           }}
-        className='text-xl  relative flex justify-center cursor-pointer -left-2 items-center'><GiShoppingCart /> <span className='text-slate-100  absolute -top-2 -right-2 text-xs p-1  bg-red-500 rounded-full w-4 h-4 flex font-semibold items-center justify-center'>2</span>
+        className='text-xl  relative flex justify-center cursor-pointer -left-2 items-center'><GiShoppingCart /> <span className='text-slate-100  absolute -top-2 -right-2 text-xs p-1  bg-red-500 rounded-full w-4 h-4 flex font-semibold items-center justify-center'>0</span>
         </motion.div>
 
         {/* <---- This section handles Authentication for medium and large screens ------>  */}
@@ -177,7 +177,7 @@ const Header = () => {
         whileTap={{
           scale: 1.1,
         }}
-      className='text-2xl relative text-slate-600 font-bold flex justify-center cursor-pointer  items-center'><GiShoppingCart /> <span className='text-slate-100 absolute top-0.5 -right-2 text-xs p-1  bg-red-600 rounded-full w-4 h-4 flex font-semibold items-center justify-center'>2</span>
+      className='text-2xl relative text-slate-600 font-bold flex justify-center cursor-pointer  items-center'><GiShoppingCart /> <span className='text-slate-100 absolute top-0.5 -right-2 text-xs p-1  bg-red-600 rounded-full w-4 h-4 flex font-semibold items-center justify-center'>0</span>
         </motion.div>
 
 
