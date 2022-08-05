@@ -47,8 +47,8 @@ const Home = () => {
        className='py-4 text-4xl sm:text-5xl font-bold sm:tracking-wider leading-[1.5] sm:leading-[1.8]'><span className='text-orange-400'> We </span>  offer  <br /> the <span className='text-orange-400'>Fastest </span>
         Delivery within <span className='text-orange-400'>Every City.</span></motion.p>
 
-        <p className='tracking-wider text-sm leading-[2.0] sm:leading-[1.9] font-[500]'>
-        Restaurant style Yogurt Mint Sauce is delicious dip which is quick and easy to .. This is a standard Indian mint chutney served with poppadums along with mint and lemon.
+        <p className='tracking-wider text-sm py-4 box-border leading-[2.0] sm:leading-[1.9] font-[500]'>
+        Restaurant style Yogurt Mint Sauce is delicious dip which is quick and easy to .. This is a standard Indian mint chutney served with poppadums along with mint and lemon.We provide pleasure to your tastebuds 😉
         </p>
 
         <motion.p
@@ -58,7 +58,7 @@ const Home = () => {
          transition={{ ease: "easeInOut", duration: 0.4 }}
         className='text-orange-500 text-bold p-3 cursor-pointer rounded-lg bg-orange-300 sm:max-w-[150px] mt-3  sm:mt-8 font-bold flex justify-center items-center gap-2'>Order Now <BsArrowRight className='font-bold' /></motion.p>
             
-          <div className='flex  py-12 gap-12 items-center sm:justify-start justify-center text-sm  '>
+          <div className='flex  py-4 md:gap-8 items-center sm:justify-start justify-center text-sm  '>
           
               <motion.div 
               whileHover={{scale:0.9}}
