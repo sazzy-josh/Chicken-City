@@ -15,7 +15,7 @@ import google from '../components/assets/img/google.png'
 import verified from './assets/images/kindpng_524994.png'
 
 const categories = [
-  {id:1 , type:"Chicken" , price : 20 , extra: "Mixed Kebab plates" , image:p2},
+  {id:1 , type:"Chicken" , price : 20 , extra: "Chicken & Chips" , image:p2},
   {id:2 , type:"Icecream" , price : 9.2 , extra: "Chocolate & Vanila" , image :p5 },
   {id:3 , type:"Fish" , price : 19.6 , extra: "Mixed Fish Kebab" , image : p6 },
   {id:4 , type:"Hamburger" , price : 11.3 , extra: "Mixed Chicken Hamburger" , image : p7}
