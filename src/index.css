@@ -32,11 +32,11 @@ body{
 }
 
 .screen{
- max-height: calc(100vh-68px);
+ max-height: calc(100vh-72px);
 }
 
 .small{
-    height: ;
+    
 }
 
 .move{
