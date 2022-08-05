@@ -38,10 +38,10 @@ const Home = () => {
        transition={{ ease: "easeInOut", duration: 0.7 ,
        }}
        
-       className='py-4 text-5xl font-bold sm:tracking-wider leading-[1.2] sm:leading-[1.8]'><span className='text-orange-400'> We </span>  offer  <br /> the <span className='text-orange-400'>Fastest </span>
+       className='py-4 text-5xl font-bold sm:tracking-wider leading-normal sm:leading-[1.8]'><span className='text-orange-400'> We </span>  offer  <br /> the <span className='text-orange-400'>Fastest </span>
         Delivery within <span className='text-orange-400'>Every City.</span></motion.p>
 
-        <p className='tracking-wider  leading-[2.5] sm:leading-[1.9]'>
+        <p className='tracking-wider  leading-[2.0] sm:leading-[1.9]'>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates quod ullam doloribus possimus maxime eius et hic eligendi animi, mollitia ad neque iusto quis earum labore illum deserunt, aut blanditiis suscipit reiciendis cupiditate? Aperiam, doloremque exercitationem! 
         </p>
 
