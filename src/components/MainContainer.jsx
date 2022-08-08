@@ -46,10 +46,10 @@ const MainContainer = () => {
        transition={{ ease: "easeInOut", duration: 0.7 ,
        }}
        
-       className='py-4 text-4xl sm:text-5xl font-bold sm:tracking-wider leading-[1.5] sm:leading-[1.8]'><span className='text-orange-400'> We </span>  offer  <br /> the <span className='text-orange-400'>Fastest </span>
-        Delivery within <span className='text-orange-400'>Every City.</span></motion.p>
+       className='py-4 text-4xl sm:text-5xl font-bold sm:tracking-[normal] leading-[1.5] sm:leading-[1.4]'> We offer the <span className='text-orange-400'>Fastest Delivery </span>
+        within Every City.</motion.p>
 
-        <p className='tracking-wider text-sm py-4 box-border leading-[2.0] sm:leading-[1.9] font-[500]'>
+        <p className='tracking-wider text-sm py-4 box-border sm:leading-[1.9] font-[500]'>
         Restaurant style Yogurt Mint Sauce is delicious dip which is quick and easy to .. This is a standard Indian mint chutney served with poppadums along with mint and lemon.
         We provide pleasure to your tastebuds 😉..
         </p>
@@ -63,19 +63,20 @@ const MainContainer = () => {
         className='text-orange-500 text-bold p-3 cursor-pointer rounded-lg bg-orange-300 w-[150px]  sm:max-w-[140px] max-h-[80px]  font-bold flex justify-center items-center '>Order Now  <BsArrowRight className='font-bold' /></motion.p>
 
         <div className='flex justify-center text-xs items-center  p-1 font-bold text-red-700'>
-        <img src={verified} alt="verified" className='w-[190px]  sm:max-h-[190px] h-[30px] object-contain' />
+        {/* <img src={verified} alt="verified" className='w-[190px]  sm:max-h-[190px] h-[30px] object-contain' /> */}
         {/* Verified Stripe checkout < MdVerified/> */}
         </div>
             
-        </div>
 
+            
+        </div>
 
           <div className='flex  sm:py-4 py-14 gap-8 items-center sm:justify-start justify-center text-sm  '>
           
               <motion.div 
               whileHover={{scale:0.9}}
               transition={{duration:0.3}}
-              className='bg-slate-700 cursor-pointer flex items-center gap-1 justify-center rounded-lg h-[60px] p-2 text-white w-[144px]'>
+              className='bg-black cursor-pointer flex items-center gap-1 justify-center rounded-lg h-[60px] p-2 text-white w-[144px]'>
                 <div ><img src={apple} alt="apple" /></div>
                 <div className='p-0'>
                   <p className='text-[10px]'> Download on the</p>
@@ -86,7 +87,7 @@ const MainContainer = () => {
               <motion.div 
               whileHover={{scale:0.9}}
               transition={{duration:0.3}}
-              className='bg-slate-700 cursor-pointer flex items-center h-[60px] gap-1 rounded-lg p-2 text-white w-[144px]'>
+              className='bg-black cursor-pointer flex items-center h-[60px] gap-1 rounded-lg p-2 text-white w-[144px]'>
                 <div><img src={google} alt="android" className='w-6 h-6' /></div>
                 <div >
                   <p className='text-[10px]'>Get it on</p>
