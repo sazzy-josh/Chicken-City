@@ -69,11 +69,11 @@ body{
 /* bgPrimary - f5f3f3 */
 @media (max-width: 640px){
     .active{
-        color: rgb(249 115 22);
+        color: rgb(239 68 68);
         opacity: 1;
      }
      
-     .active::after{
+     /* .active::after{
       
         
             content: "";
@@ -106,7 +106,7 @@ body{
        
         border-top-left-radius: 0%;
         border-top-right-radius: 0%;   
-   } 
+   }  */
   
 
 }

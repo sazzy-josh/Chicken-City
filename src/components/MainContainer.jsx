@@ -54,14 +54,15 @@ const MainContainer = () => {
         We provide pleasure to your tastebuds 😉..
         </p>
 
-        <div className='grid grid-cols-2 gap-2 justify-center items-center'> 
+        <div className='flex  gap-4 items-center'> 
         <motion.p
          whileHover={{scale:0.9 }}
          initial={{opacity:0.3 }}
          animate={{opacity:1 }}
          transition={{ ease: "easeInOut", duration: 0.4 }}
-        className='text-slate-50 text-bold p-3 my-4 cursor-pointer rounded-full bg-red-500 w-[150px]  sm:max-w-[140px] max-h-[80px]  font-bold flex justify-center items-center '>Order Now  <BsArrowRight className='font-bold' /></motion.p>
-
+        className='text-slate-50 text-bold p-3 my-4 cursor-pointer rounded-full bg-red-500 w-[150px] shadow-lg sm:max-w-[140px] max-h-[80px]  font-bold flex justify-center items-center '>Order Now  <BsArrowRight className='font-bold' /></motion.p>
+        
+        <motion.p className='text-slate-50 text-bold p-3 my-4 cursor-pointer rounded-full bg-red-500 w-[150px] shadow-lg sm:max-w-[140px] max-h-[80px]  font-bold flex justify-center items-center '>Book a Table  <BsArrowRight className='font-bold' /></motion.p>
         <div className='flex justify-center text-xs items-center  p-1 font-bold text-red-700'>
         {/* <img src={verified} alt="verified" className='w-[190px]  sm:max-h-[190px] h-[30px] object-contain' /> */}
         {/* Verified Stripe checkout < MdVerified/> */}
@@ -99,7 +100,7 @@ const MainContainer = () => {
     
      {/* Column 2 for medium and  large screens */}
      <div className='flex p-3 sm:p-5 gap-3 relative '>
-        <img src={HeroBg} alt="Hero-bg" className='ml-auto md:w-[550px] -z-2 sm:h-[500px]' />
+        <img src={HeroBg} alt="Hero-bg" className='ml-auto w-full lg:w-[550px] -z-2 h-screen sm:h-[500px]' />
 
         <div className='rounded screen w-full absolute  top-0 left-0 flex flex-wrap justify-center items-center gap-6 sm:gap-16 sm:px-32 '>
           
