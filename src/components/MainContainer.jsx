@@ -49,7 +49,7 @@ const MainContainer = () => {
        className='py-4 text-4xl sm:text-5xl font-bold sm:tracking-[normal] leading-[1.5] sm:leading-[1.4]'> We offer the <span className='text-red-500'>Fastest Delivery </span>
         within Every City.</motion.p>
 
-        <p className='tracking-wider text-sm py-4 box-border  sm:leading-[1.9] font-[500] max-w-[500px]'>
+        <p className='tracking-wider text-sm py-4 box-border leading-normal  sm:leading-[1.9] font-[500] max-w-[500px]'>
         Restaurant style Yogurt Mint Sauce is delicious dip which is quick and easy to .. This is a standard Indian mint chutney served with poppadums along with mint and lemon.
         We provide pleasure to your tastebuds 😉..
         </p>
