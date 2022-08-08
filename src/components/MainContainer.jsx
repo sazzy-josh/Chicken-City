@@ -28,11 +28,11 @@ const MainContainer = () => {
     <div>
         {/* Start of Main Page section */}
 
-      <main className='grid sm:grid-cols-2 p-3 sm:p-12 gap-10 h-auto screen'>
+      <main className='grid sm:grid-cols-2 p-3 sm:p-12 md:px-32 gap-10 h-auto screen'>
       {/* Column 1 for medium and  large screens */}
      <div className='sm:h-full relative'>
     {/* Food delivery logo section */}
-       <div className='flex  items-center rounded-full text-xs p-1 px-2  justify-center text-orange-400 font-semibold bg-orange-200 max-w-[130px]'>
+       <div className='flex  items-center rounded-full text-xs p-1 px-2  justify-center text-red-500 font-semibold bg-red-200 max-w-[130px]'>
         <p>Bike Delivery</p>
         <div className='bg-white w-5 h-5 rounded-full flex justify-center items-center'>
         <img src={Bike} alt="Bike Delivery" className='w-6 h-6' />
@@ -46,10 +46,10 @@ const MainContainer = () => {
        transition={{ ease: "easeInOut", duration: 0.7 ,
        }}
        
-       className='py-4 text-4xl sm:text-5xl font-bold sm:tracking-[normal] leading-[1.5] sm:leading-[1.4]'> We offer the <span className='text-orange-400'>Fastest Delivery </span>
+       className='py-4 text-4xl sm:text-5xl font-bold sm:tracking-[normal] leading-[1.5] sm:leading-[1.4]'> We offer the <span className='text-red-500'>Fastest Delivery </span>
         within Every City.</motion.p>
 
-        <p className='tracking-wider text-sm py-4 box-border sm:leading-[1.9] font-[500]'>
+        <p className='tracking-wider text-sm py-4 box-border  sm:leading-[1.9] font-[500] max-w-[500px]'>
         Restaurant style Yogurt Mint Sauce is delicious dip which is quick and easy to .. This is a standard Indian mint chutney served with poppadums along with mint and lemon.
         We provide pleasure to your tastebuds 😉..
         </p>
@@ -60,7 +60,7 @@ const MainContainer = () => {
          initial={{opacity:0.3 }}
          animate={{opacity:1 }}
          transition={{ ease: "easeInOut", duration: 0.4 }}
-        className='text-orange-500 text-bold p-3 cursor-pointer rounded-lg bg-orange-300 w-[150px]  sm:max-w-[140px] max-h-[80px]  font-bold flex justify-center items-center '>Order Now  <BsArrowRight className='font-bold' /></motion.p>
+        className='text-slate-50 text-bold p-3 my-4 cursor-pointer rounded-full bg-red-500 w-[150px]  sm:max-w-[140px] max-h-[80px]  font-bold flex justify-center items-center '>Order Now  <BsArrowRight className='font-bold' /></motion.p>
 
         <div className='flex justify-center text-xs items-center  p-1 font-bold text-red-700'>
         {/* <img src={verified} alt="verified" className='w-[190px]  sm:max-h-[190px] h-[30px] object-contain' /> */}
@@ -71,7 +71,7 @@ const MainContainer = () => {
             
         </div>
 
-          <div className='flex  sm:py-4 py-14 gap-8 items-center sm:justify-start justify-center text-sm  '>
+          {/* <div className='flex  sm:py-4 py-14 gap-8 items-center sm:justify-start justify-center text-sm  '>
           
               <motion.div 
               whileHover={{scale:0.9}}
@@ -94,12 +94,12 @@ const MainContainer = () => {
                   <p className=''>Play Store</p>
                 </div>
               </motion.div>
-          </div>
+          </div> */}
      </div>
     
      {/* Column 2 for medium and  large screens */}
      <div className='flex p-3 sm:p-5 gap-3 relative '>
-        <img src={HeroBg} alt="Hero-bg" className='ml-auto md:w-[450px] -z-2 sm:h-[500px]' />
+        <img src={HeroBg} alt="Hero-bg" className='ml-auto md:w-[550px] -z-2 sm:h-[500px]' />
 
         <div className='rounded screen w-full absolute  top-0 left-0 flex flex-wrap justify-center items-center gap-6 sm:gap-16 sm:px-32 '>
           
