@@ -65,7 +65,7 @@ const Header = () => {
 
         {/* Logo goes here */}
       <Link to="/">
-      <div className='flex justify-start items-center font-semibold'><img src={logo} alt="Logo"  className='w-12 h-12'/> <span className='text-2xl tracking-wide text-slate-700'><span className='text-orange-400 font-serif'>C</span><span className='text-red-500 font-serif'>i</span ><span className='text-red-500 font-serif'>t</span><span className='text-orange-400 font-serif'>y</span></span></div>
+      <div className='flex justify-start items-center font-semibold'><img src={logo} alt="Logo"  className='w-12 h-12'/> <span className='text-2xl tracking-wide text-slate-700'><span className=' font-serif'>C</span><span className='text-black font-serif'>i</span ><span className='text-black font-serif'>t</span><span className=' font-serif'>y</span></span></div>
       </Link>
       </div>
 
