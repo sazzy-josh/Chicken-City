@@ -72,7 +72,7 @@ const MainContainer = () => {
      {/* Column 2 for medium and  large screens */}
      <div className=' relative flex items-center justify-center '>
       
-       <img src={HeroBg} alt="Hero-bg" className=' w-full lg:object-cover sm:object-contain'  />
+       <img src={HeroBg} alt="Hero-bg" className=' w-full object-cover'  />
 
 
     </div>      
