@@ -28,7 +28,7 @@ const MainContainer = () => {
     <div>
         {/* Start of Main Page section */}
 
-      <main className='grid sm:grid-cols-2 p-3 sm:p-12 md:px-32 gap-10 h-auto screen'>
+      <main className='grid sm:grid-cols-2 p-3 sm:p-10 lg:px-32 gap-10 h-auto screen'>
       {/* Column 1 for medium and  large screens */}
      <div className='sm:h-full relative'>
     {/* Food delivery logo section */}
@@ -100,7 +100,7 @@ const MainContainer = () => {
     
      {/* Column 2 for medium and  large screens */}
      <div className='flex p-3 sm:p-5 gap-3 relative '>
-        <img src={HeroBg} alt="Hero-bg" className='ml-auto w-full lg:w-[550px] -z-2 h-screen sm:h-[500px]' />
+        <img src={HeroBg} alt="Hero-bg" className='ml-auto w-full lg:w-[550px] -z-2 md:h-screen ' />
 
         <div className='rounded screen w-full absolute  top-0 left-0 flex flex-wrap justify-center items-center gap-6 sm:gap-16 sm:px-32 '>
           

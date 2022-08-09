@@ -58,7 +58,7 @@ const Header = () => {
  }
 
   return (
-    <header className='h-auto w-screen bg-[#fffdfd] flex  md:px-28 flex-col justify-center z-10  mb-3 sticky top-0 '>
+    <header className='h-auto w-screen bg-[#fffdfd] flex lg:px-28 flex-col justify-center z-10  mb-3 sticky top-0 '>
     {/* Desktop && Tablet View  */}
     <div className="hidden sm:flex lg:ml-6 pl-5 px-10 p-3 justify-between">
       <div className='w-3/5'>
@@ -70,10 +70,10 @@ const Header = () => {
       </div>
 
        {/* Nav Menu items goes here  */}
-      <div className='flex justify-center items-center '>
+      <div className='flex justify-center items-center'>
       <motion.ul 
          initial={{ opacity: 0.5 }}
-        animate={{ x: 20 ,opacity: 2 }}
+        animate={{ x: 20 ,opacity: 2 }}   
         transition={{ ease: "easeInOut", duration: 0.5 }}
       className='flex justify-center items-center gap-6 mr-5 sm:text-sm sm:-ml-40 sm:mr-6 sm:w-[400px] md:mr-6 md:text- font-[500]
       '>
