@@ -47,7 +47,7 @@ const MainContainer = () => {
        className='py-4 text-4xl lg:text-5xl font-bold md:tracking-[normal] leading-[1.5] '> We offer the <span className='text-red-500'>Fastest Delivery </span>
         within Every City.</motion.p>
 
-        <p className='tracking-wider text-sm py-4 box-border leading-normal  md:leading-[1.9] font-[500] max-w-[500px]'>
+        <p className='tracking-wider text-sm box-border leading-normal  md:leading-[1.9] font-[500] max-w-[500px]'>
         Restaurant style Yogurt Mint Sauce is delicious dip which is quick and easy to .. This is a standard Indian mint chutney served with poppadums along with mint and lemon.
         We provide pleasure to your tastebuds 😉..
         </p>
@@ -60,7 +60,7 @@ const MainContainer = () => {
          transition={{ ease: "easeInOut", duration: 0.4 }}
         className='text-slate-50 text-bold gap-2 p-3 my-4 cursor-pointer rounded-full bg-red-500 w-[150px] shadow-lg sm:max-w-[140px] max-h-[80px]  font-bold flex justify-center items-center '>Order Now  <BsArrowRight className='font-bold' /></motion.p>
         
-        <motion.p className='text-slate-50 text-bold gap-2 p-3 my-4 cursor-pointer rounded-full bg-red-500 w-[150px] shadow-lg sm:max-w-[140px] max-h-[80px]  font-bold flex justify-center items-center '>Book a Table  <BsArrowRight className='font-bold' /></motion.p>
+        <motion.p className='text-slate-50 text-bold gap-1 p-3 my-4 cursor-pointer rounded-full bg-red-500 w-[150px] shadow-lg sm:max-w-[160px] max-h-[80px]  font-bold flex justify-center items-center '>Book a Table  <BsArrowRight className='font-bold' /></motion.p>
         <div className='flex justify-center text-xs items-center  p-1 font-bold text-red-700'>
         {/* <img src={verified} alt="verified" className='w-[190px]  sm:max-h-[190px] h-[30px] object-contain' /> */}
         {/* Verified Stripe checkout < MdVerified/> */}
@@ -76,7 +76,7 @@ const MainContainer = () => {
      {/* Column 2 for medium and  large screens */}
      <div className=' relative '>
       
-       <img src={HeroBg} alt="Hero-bg" className='ml-auto w-full object-cover'  />
+       <img src={HeroBg} alt="Hero-bg" className=' w-full object-cover'  />
 
 
     </div>      
