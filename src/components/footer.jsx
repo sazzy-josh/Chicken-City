@@ -15,7 +15,7 @@ const Footer = () => {
   return (
 
     <div className='w-full bg-slate-500 flex justify-center'>
-      <div className='grid h-auto lg:w-3/4 text-[12px] gap-y-8 sm:grid-cols-2 md:grid-cols-4 text-white p-8'>
+      <div className='grid h-auto w-full lg:w-3/4 text-[12px] gap-y-8 sm:grid-cols-2 md:grid-cols-4 text-white p-4 md:p-8'>
             {/* logo and contact goes here */}
       <div className='flex flex-col gap-y-4 md:items-center'>
         <div className='flex justify-start items-center'>
