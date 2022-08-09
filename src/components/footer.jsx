@@ -37,19 +37,19 @@ const Footer = () => {
         Contact
        </h4>
      
-      <div className='flex gap-x-2'>
+      <div className='flex items-center gap-x-2'>
       <VscLocation />
       <p> F1-320 Jeff Heights, Woodstock ,New Brunswick,Canada</p>
 
       </div>
 
-      <div className='flex gap-x-2'>
+      <div className='flex items-center gap-x-2'>
 
       <BiPhone />
       <p> +1-234-906-5051</p>
       </div>
 
-      <div className='flex gap-x-2'>
+      <div className='flex items-center gap-x-2'>
 
       <MdOutlineEmail />
       <p>support@chickencity.com</p>
