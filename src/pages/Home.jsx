@@ -8,9 +8,6 @@ const Home = () => {
   return (
     <section className='relative'>
     <MainContainer />
-    <Footer />
-      
-
     
     </section>
   )
