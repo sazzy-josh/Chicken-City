@@ -168,7 +168,7 @@ const Header = () => {
     {/*Nav Section for Mobile and Small Screens */}
 
 
-    <div className="sm:hidden flex justify-between w-screen p-3 py- relative">
+    <div className="sm:hidden flex justify-between w-screen p-5 py- relative">
       
 
       {/* Cart section for mobile screens  */}
@@ -284,7 +284,7 @@ const Header = () => {
         </motion.ul>}
         
         </div>
-        <div className='text-[10px] overflow-hidden max-w-[134px] max-h-[20px] flex justify-center  absolute top-12 p-1 font-semibold right-3 '>
+        <div className='text-[10px] overflow-hidden max-w-[134px] max-h-[20px] flex justify-center  absolute top-14 p-1 font-semibold right-6 '>
           Hi, {User? User.displayName.slice(0,9) + "." : "Guest"}!
         </div>
         </div>

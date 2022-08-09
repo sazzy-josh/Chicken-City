@@ -23,7 +23,7 @@ const MainContainer = () => {
     <div>
         {/* Start of Main Page section */}
 
-      <main className='grid md:grid-cols-2 p-3 sm:p-10 lg:px-32 gap-10 h-auto screen box-border'>
+      <main className='grid md:grid-cols-2 p-5 sm:p-10 lg:px-32 gap-10 h-auto screen box-border'>
       {/* Column 1 for medium and  large screens */}
      <div className='sm:h-full relative  flex justify-center flex-col pt-4 '>
     {/* Food delivery logo section */}
