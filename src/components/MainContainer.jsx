@@ -2,7 +2,7 @@ import React from 'react'
 import Bike from '../components/assets/img/delivery.png'
 import { BsArrowRight } from 'react-icons/bs'
 import { MdVerified } from 'react-icons/md'
-import HeroBg from '../components/assets/img/heroBg.png'
+import HeroBg from '../components/assets/images/heroo.png'
 import { motion } from 'framer-motion'
 import p1 from '../components/assets/img/c1.png'
 import p2 from '../components/assets/img/c7.png'
@@ -10,9 +10,7 @@ import p4 from '../components/assets/img/r1.png'
 import p5 from '../components/assets/img/i1.png'
 import p6 from '../components/assets/img/fi3.png'
 import p7 from '../components/assets/images/product_01.3.png'
-import apple from '../components/assets/img/apple.png'
-import google from '../components/assets/img/google.png'
-import verified from './assets/images/kindpng_524994.png'
+
 
 const categories = [
   {id:1 , type:"Chicken" , price : 20 , extra: "Chicken & Chips" , image:p2},
@@ -49,7 +47,7 @@ const MainContainer = () => {
        className='py-4 text-4xl sm:text-5xl font-bold sm:tracking-[normal] leading-[1.5] sm:leading-[1.4]'> We offer the <span className='text-red-500'>Fastest Delivery </span>
         within Every City.</motion.p>
 
-        <p className='tracking-wider text-sm py-4 box-border leading-normal  sm:leading-[1.9] font-[500] max-w-[500px]'>
+        <p className='tracking-wider text-sm py-4 box-border leading-normal  md:leading-[1.9] font-[500] max-w-[500px]'>
         Restaurant style Yogurt Mint Sauce is delicious dip which is quick and easy to .. This is a standard Indian mint chutney served with poppadums along with mint and lemon.
         We provide pleasure to your tastebuds 😉..
         </p>
@@ -99,25 +97,11 @@ const MainContainer = () => {
      </div>
     
      {/* Column 2 for medium and  large screens */}
-     <div className='flex p-3 sm:p-5 gap-3 relative '>
-        <img src={HeroBg} alt="Hero-bg" className='ml-auto w-full lg:w-[550px] -z-2' id='img'/>
+     <div className=' relative '>
+      
+       <img src={HeroBg} alt="Hero-bg" className='ml-auto w-full object-contain'  />
 
-        <div className='rounded screen w-full absolute  top-0 left-0 flex flex-wrap justify-center items-center gap-6 2xl:gap-16 2xl:px-32 '>
-          
-        {categories.map(({image, id , type , extra , price}) => {
-          return (
-         <div className='overlay p-3 sm:w-50 h-50 lg:w-120 w-40 flex flex-col items-center text-sm max-h-[200px] text-center text-slate-700 rounded-xl bg-red-300 mt-12'>
-            <img src={image} alt={id} className=' 2xl:w-50 2xl:h-50 md:w-30 md:h-30  w-24 h-24 object-contain sm:-mt-10 -mt-12 text-center '/>
-            <p className='font-bold p-2 w-38'>{type}</p>
-            <p className='font-semibold p-2 text-[12px] w-full'>{extra}</p>
-            <p className='font-bold text-center'><span className='text-pink-800'>${price}</span></p>
-             
-            
-          </div>
-          )
-        })}
- 
-        </div>
+
     </div>      
     </main>
     </div>
