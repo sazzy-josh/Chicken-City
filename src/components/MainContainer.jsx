@@ -28,7 +28,7 @@ const MainContainer = () => {
     <div>
         {/* Start of Main Page section */}
 
-      <main className='grid sm:grid-cols-2 p-3 sm:p-10 lg:px-32 gap-10 h-auto screen'>
+      <main className='grid md:grid-cols-2 p-3 sm:p-10 lg:px-32 gap-10 h-auto screen box-border'>
       {/* Column 1 for medium and  large screens */}
      <div className='sm:h-full relative'>
     {/* Food delivery logo section */}
@@ -100,17 +100,18 @@ const MainContainer = () => {
     
      {/* Column 2 for medium and  large screens */}
      <div className='flex p-3 sm:p-5 gap-3 relative '>
-        <img src={HeroBg} alt="Hero-bg" className='ml-auto w-full lg:w-[550px] -z-2 md:h-screen ' />
+        <img src={HeroBg} alt="Hero-bg" className='ml-auto w-full lg:w-[550px] -z-2' id='img'/>
 
-        <div className='rounded screen w-full absolute  top-0 left-0 flex flex-wrap justify-center items-center gap-6 sm:gap-16 sm:px-32 '>
+        <div className='rounded screen w-full absolute  top-0 left-0 flex flex-wrap justify-center items-center gap-6 2xl:gap-16 2xl:px-32 '>
           
         {categories.map(({image, id , type , extra , price}) => {
           return (
-         <div className='overlay p-3 sm:w-120 w-40 flex flex-col items-center text-sm max-h-[200px] text-center text-slate-700 rounded-xl bg-red-300 mt-12'>
-            <img src={image} alt={id} className='smd:w-50 sm:h-50 w-24 h-24 object-contain sm:-mt-10 -mt-12 text-center '/>
+         <div className='overlay p-3 sm:w-50 h-50 lg:w-120 w-40 flex flex-col items-center text-sm max-h-[200px] text-center text-slate-700 rounded-xl bg-red-300 mt-12'>
+            <img src={image} alt={id} className=' 2xl:w-50 2xl:h-50 md:w-30 md:h-30  w-24 h-24 object-contain sm:-mt-10 -mt-12 text-center '/>
             <p className='font-bold p-2 w-38'>{type}</p>
             <p className='font-semibold p-2 text-[12px] w-full'>{extra}</p>
             <p className='font-bold text-center'><span className='text-pink-800'>${price}</span></p>
+             
             
           </div>
           )

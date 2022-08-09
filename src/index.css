@@ -38,6 +38,12 @@ body{
     
 }
 
+
+#img{
+height: 74%;
+}
+
+
 .move{
     top: 90%;
     margin-top: 10px;
