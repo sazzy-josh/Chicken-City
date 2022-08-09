@@ -28,7 +28,7 @@ const MainContainer = () => {
 
       <main className='grid md:grid-cols-2 p-3 sm:p-10 lg:px-32 gap-10 h-auto screen box-border'>
       {/* Column 1 for medium and  large screens */}
-     <div className='sm:h-full relative'>
+     <div className='sm:h-full relative lg:mt-12'>
     {/* Food delivery logo section */}
        <div className='flex  items-center rounded-full text-xs p-1 px-2  justify-center text-red-500 font-semibold bg-red-200 max-w-[130px]'>
         <p>Bike Delivery</p>
@@ -44,7 +44,7 @@ const MainContainer = () => {
        transition={{ ease: "easeInOut", duration: 0.7 ,
        }}
        
-       className='py-4 text-4xl sm:text-5xl font-bold sm:tracking-[normal] leading-[1.5] sm:leading-[1.4]'> We offer the <span className='text-red-500'>Fastest Delivery </span>
+       className='py-4 text-4xl lg:text-5xl font-bold md:tracking-[normal] leading-[1.5] '> We offer the <span className='text-red-500'>Fastest Delivery </span>
         within Every City.</motion.p>
 
         <p className='tracking-wider text-sm py-4 box-border leading-normal  md:leading-[1.9] font-[500] max-w-[500px]'>
@@ -58,9 +58,9 @@ const MainContainer = () => {
          initial={{opacity:0.3 }}
          animate={{opacity:1 }}
          transition={{ ease: "easeInOut", duration: 0.4 }}
-        className='text-slate-50 text-bold p-3 my-4 cursor-pointer rounded-full bg-red-500 w-[150px] shadow-lg sm:max-w-[140px] max-h-[80px]  font-bold flex justify-center items-center '>Order Now  <BsArrowRight className='font-bold' /></motion.p>
+        className='text-slate-50 text-bold gap-2 p-3 my-4 cursor-pointer rounded-full bg-red-500 w-[150px] shadow-lg sm:max-w-[140px] max-h-[80px]  font-bold flex justify-center items-center '>Order Now  <BsArrowRight className='font-bold' /></motion.p>
         
-        <motion.p className='text-slate-50 text-bold p-3 my-4 cursor-pointer rounded-full bg-red-500 w-[150px] shadow-lg sm:max-w-[140px] max-h-[80px]  font-bold flex justify-center items-center '>Book a Table  <BsArrowRight className='font-bold' /></motion.p>
+        <motion.p className='text-slate-50 text-bold gap-2 p-3 my-4 cursor-pointer rounded-full bg-red-500 w-[150px] shadow-lg sm:max-w-[140px] max-h-[80px]  font-bold flex justify-center items-center '>Book a Table  <BsArrowRight className='font-bold' /></motion.p>
         <div className='flex justify-center text-xs items-center  p-1 font-bold text-red-700'>
         {/* <img src={verified} alt="verified" className='w-[190px]  sm:max-h-[190px] h-[30px] object-contain' /> */}
         {/* Verified Stripe checkout < MdVerified/> */}
@@ -70,36 +70,13 @@ const MainContainer = () => {
             
         </div>
 
-          {/* <div className='flex  sm:py-4 py-14 gap-8 items-center sm:justify-start justify-center text-sm  '>
           
-              <motion.div 
-              whileHover={{scale:0.9}}
-              transition={{duration:0.3}}
-              className='bg-black cursor-pointer flex items-center gap-1 justify-center rounded-lg h-[60px] p-2 text-white w-[144px]'>
-                <div ><img src={apple} alt="apple" /></div>
-                <div className='p-0'>
-                  <p className='text-[10px]'> Download on the</p>
-                  <p className=''>App Store</p>
-                </div>
-              </motion.div>
-
-              <motion.div 
-              whileHover={{scale:0.9}}
-              transition={{duration:0.3}}
-              className='bg-black cursor-pointer flex items-center h-[60px] gap-1 rounded-lg p-2 text-white w-[144px]'>
-                <div><img src={google} alt="android" className='w-6 h-6' /></div>
-                <div >
-                  <p className='text-[10px]'>Get it on</p>
-                  <p className=''>Play Store</p>
-                </div>
-              </motion.div>
-          </div> */}
      </div>
     
      {/* Column 2 for medium and  large screens */}
      <div className=' relative '>
       
-       <img src={HeroBg} alt="Hero-bg" className='ml-auto w-full object-contain'  />
+       <img src={HeroBg} alt="Hero-bg" className='ml-auto w-full object-cover'  />
 
 
     </div>      
