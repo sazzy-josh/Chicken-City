@@ -55,9 +55,9 @@ const MainContainer = () => {
          initial={{opacity:0.3 }}
          animate={{opacity:1 }}
          transition={{ ease: "easeInOut", duration: 0.4 }}
-        className='text-slate-50 text-bold gap-2 p-3 my-4 text-xs cursor-pointer rounded-full bg-red-500 w-[120px] shadow-xl md:max-w-[140px] max-h-[80px]  font-bold flex justify-center items-center '>Order Now  <BsArrowRight className='font-bold' /></motion.p>
+        className='text-slate-50 text-bold gap-2 p-3 my-8 text-xs cursor-pointer rounded-full bg-red-500 w-[120px] shadow-xl md:max-w-[140px] max-h-[80px]  font-bold flex justify-center items-center '>Order Now  <BsArrowRight className='font-bold' /></motion.p>
         
-        <motion.p className='text-slate-50 text-bold gap-1 text-xs p-3 my-4 cursor-pointer rounded-full bg-black w-[120px] shadow-xl sm:max-w-[160px] max-h-[80px]  font-bold flex justify-center items-center '>Book a Table  <BsArrowRight className='font-bold' /></motion.p>
+        <motion.p className='text-slate-50 text-bold gap-1 text-xs p-3 my-8 cursor-pointer rounded-full bg-black w-[120px] shadow-xl sm:max-w-[160px] max-h-[80px]  font-bold flex justify-center items-center '>Book a Table  <BsArrowRight className='font-bold' /></motion.p>
         <div className='flex justify-center text-xs items-center  p-1 font-bold text-red-700'>
         
         </div>
