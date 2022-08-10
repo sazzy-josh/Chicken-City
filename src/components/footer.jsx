@@ -14,8 +14,8 @@ import { MdOutlineEmail } from 'react-icons/md'
 const Footer = () => {
   return (
 
-    <div className='w-full bg-slate-500 flex justify-center' >
-      <div className='grid h-auto w-full lg:w-3/4 text-[12px] gap-y-8 sm:grid-cols-2 md:grid-cols-4 text-white p-4 md:p-8'>
+    <div className='w-full bg-slate-500 flex flex-col items-center text-sm' >
+      <div className='grid h-auto w-full lg:w-3/4 sm:w-full  gap-y-8 lg:gap-x-16 sm:grid-cols-2 md:grid-cols-4 text-white p-4 md:p-8'>
             {/* logo and contact goes here */}
       <div className='flex flex-col gap-y-4 md:items-center'>
         <div className='flex justify-start items-center'>
@@ -33,61 +33,66 @@ const Footer = () => {
 
    {/* CONTACT LOCATION SECTION */}
       <div className='flex flex-col'>
-       <h4 className='font-bold text-xl py-2'>
+       <h5 className='font-bold text-lg py-2'>
         Contact
-       </h4>
-     
-      <div className='flex items-start gap-x-2'>
-      <VscLocation />
-      <p> F1-320 Jeff Heights, Woodstock ,New Brunswick,Canada</p>
+       </h5>
+       <div className='flex flex-col gap-y-3'>
+          <div className='flex items-start gap-x-2'>
+          <VscLocation />
+          <p> F1-320 Jeff Heights, Woodstock ,New Brunswick,Canada</p>
 
-      </div>
+          </div>
 
-      <div className='flex items-center gap-x-2'>
+          <div className='flex items-center gap-x-2'>
 
-      <BiPhone />
-      <p> +1-234-906-5051</p>
-      </div>
+          <BiPhone />
+          <p> +1-234-906-5051</p>
+          </div>
 
-      <div className='flex items-center gap-x-2'>
+          <div className='flex items-center gap-x-2'>
 
-      <MdOutlineEmail />
-      <p>support@chickencity.com</p>
-      </div>
-
+          <MdOutlineEmail />
+          <p>support@chickencity.com</p>
+          </div>
+          </div>  
       </div>
 
       <div>
        
-      <h4 className='font-bold text-xl py-2'>
+      <h5 className='font-bold text-lg py-2'>
         Support
-       </h4>
+       </h5>
+        <div className='flex flex-col gap-y-3'>
+          <p>FAQ</p>
+          <p>Shippings and Returns</p>
+          <p>Contact us</p>
+          <p>Our Partners</p>
+
+        </div>
         
-        <p>FAQ</p>
-        <p>Shippings and Returns</p>
-        <p>Contact us</p>
-        <p>Our Partners</p>
 
 
       </div>
      {/* info section */}
       <div>
         
-      <h4 className='font-bold text-xl py-2'>
+      <h5 className='font-bold text-lg py-2'>
         Info
-       </h4>
-
-        <p>Dates</p>
-        <p>Parties</p>
-        <p>Birthdays</p>
-        <p>Menu</p>
-
+       </h5>
+       <div className='flex flex-col gap-y-3'>
+          <p>Dates</p>
+          <p>Parties</p>
+          <p>Birthdays</p>
+          <p>Menu</p>
+        </div>
       </div>
 
     
 
 
       </div>
+
+      <span className='text-white text-sm flex justify-center py-2 '> &copy;2022  All right Reserved </span>
 
     </div>
     

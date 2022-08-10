@@ -18,7 +18,7 @@ import { useContext } from 'react'
 import { AuthContext } from '../context/authContext'
 import { auth  } from '../firebase.config'
 import { onAuthStateChanged } from 'firebase/auth'
-
+import { AnimatePresence } from 'framer-motion'
 
 
 const Header = () => {
@@ -58,12 +58,15 @@ const Header = () => {
  }
 
   return (
+    <AnimatePresence>
+
+  
     <header className='h-auto w-screen bg-[#fffdfd] flex lg:px-28 flex-col justify-center z-10  mb-3 sticky top-0 '>
     {/* Desktop && Tablet View  */}
     <motion.div 
       initial={{ y:'-50vw', opacity: 0.5 }}
       animate={{ y: 0  ,opacity: 1 }}   
-      transition={{ type:'spring', duration: 0.2 , stiffness:150 }}
+      transition={{ type:'spring', duration: 0.1 , stiffness:150 }}
     className="hidden sm:flex lg:ml-6 pl-5 px-10 p-3 justify-between">
       <div className='w-3/5'>
 
@@ -203,12 +206,13 @@ const Header = () => {
         </div>}
         <div>
 
-          {/* User not yet Authenticated  */}
-        {!openMenu && !User &&  <motion.ul 
+        {/* User not yet Authenticated */}
+        <AnimatePresence>
+        {!openMenu && !User &&  (<motion.ul 
         initial={{opacity:0 ,x:350}}
         animate={{opacity:1 , x: -10}}
-        exit={{x:-240}}
-        transition={{type:'spring' , stiffness:240 ,duration:0.5  }}
+        exit={{x:1000  }}
+        transition={{type:'spring' , stiffness:280  ,ease:'easeOut' }}
         className='flex flex-col justify-center w-3/4 h-screen  absolute top-0  left-0 bottom-0 bg-slate-50 shadow-xl  font-semibold p-1 '>
               <li className=' flex justify-center items-center gap-x-3 text-sm p-8 px-2 transition-all rounded ease-in-out duration-600 hover:bg-slate-200 cursor-pointer hover:rounded   hover:border-gray-400 ' onClick={googleAuth } > <TbLogin/>Login <span 
               ></span> </li>
@@ -238,20 +242,31 @@ const Header = () => {
           {/* //Remove menu items from screen */}
          <div onClick={RemoveNav} className='absolute cursor-pointer top-5 left-6 text-4xl rotate-45 font-light border-2 rounded-full w-10 h-10 flex justify-center items-center border-slate-400 hover:border-slate-700 hover:text-slate-300 bg-slate-400'>+</div>
 
-        </motion.ul>}
-          {/* When User is Authenticated*/}
+        </motion.ul>)
+        }
+        </AnimatePresence>
         </div>
-        {User && <div className='flex justify-center items-center cursor-pointer z-10'  onClick={RemoveNav}>
+
+         {/* When User is Authenticated*/}
+        
+        {User && 
+        <motion.div
+        className='flex justify-center items-center cursor-pointer z-10'  onClick={RemoveNav}>
             <motion.img src={User.providerData[0].photoURL} whileTap={{scale:0.7}} className="w-8 h-8 cursor-pointer hover:border-2 rounded-full hover:shadow-lg  border-cyan-600 " alt="Avatar" />
             {openMenu ? <BiChevronDown /> : <BiChevronUp /> }
-        </div>}
+        </motion.div>}
+       
         <div>
-        {!openMenu && User && <motion.ul
-         initial={{  x:100  }}
-         animate={{  x: 0 }}
-         transition={{ ease: "easeInOut", duration: 0.09 }}
-        className=' font-semibold  bg-slate-100 top-0 bottom-0 right-0 left-0 absolute text-sm flex flex-col  border-slate-400 rounded justify-center  w-3/4 h-screen' >
-          
+        <AnimatePresence>
+        {!openMenu && User && 
+      
+        <motion.ul
+        initial={{opacity:0 ,x:350}}
+        animate={{opacity:1 , x: -10}}
+        exit={{x:1050 ,  }}
+        transition={{type:'spring' , stiffness:240 , ease:'easeOut' }}
+        className=' font-semibold  bg-slate-100 top-0 bottom-0 right-0 left-0 absolute text-sm flex flex-col  border-slate-400 rounded justify-center  w-3/4 h-screen'>
+        
           {User && User.email === "idahosajoshua61@gmail.com" && <li
            onClick={RemoveNav} className='flex m-1 justify-center p-8 rounded items-center cursor-pointer hover:bg-slate-300' >New Item 
             <span className='mx-1'><IoIosAdd/></span> </li> }
@@ -289,7 +304,7 @@ const Header = () => {
          <div onClick={RemoveNav} className='absolute cursor-pointer top-5 left-6 text-4xl rotate-45 font-light border-2 rounded-full w-10 h-10 flex justify-center items-center border-slate-400 hover:border-slate-700 hover:text-slate-300 bg-slate-400'>+</div>
              
         </motion.ul>}
-        
+        </AnimatePresence>
         </div>
         <div className='text-[10px] overflow-hidden max-w-[134px] max-h-[20px] flex justify-center  absolute top-14 p-1 font-semibold right-6 '>
           Hi, {User? User.displayName.slice(0,9) + "." : "Guest"}!
@@ -303,6 +318,7 @@ const Header = () => {
      
     </header>
     
+    </AnimatePresence>
   )
 }
 
