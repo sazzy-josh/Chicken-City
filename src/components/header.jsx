@@ -185,7 +185,11 @@ const Header = () => {
 
         {/* Logo Section for mobile screen */}
     <Link to="/">
-      <div className='flex justify-start items-center font-semibold'><img src={logo} alt="Logo"  className='w-11 h-11'/> <span className='text-2xl tracking-wide '><span className=' font-serif'>C</span><span className='font-serif'>i</span ><span className=' font-serif'>t</span><span className= 'font-serif'>y</span></span></div>
+      <motion.div
+      initial={{ y:'-50vw', opacity: 0.5 }}
+      animate={{ y: 0  ,opacity: 1 }}   
+      transition={{ type:'spring', duration: 0.2 , stiffness:150 }}
+       className='flex justify-start items-center font-semibold'><img src={logo} alt="Logo"  className='w-11 h-11'/> <span className='text-2xl tracking-wide '><span className=' font-serif'>C</span><span className='font-serif'>i</span ><span className=' font-serif'>t</span><span className= 'font-serif'>y</span></span></motion.div>
       </Link>
 
 
