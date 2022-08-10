@@ -60,22 +60,24 @@ const Header = () => {
   return (
     <header className='h-auto w-screen bg-[#fffdfd] flex lg:px-28 flex-col justify-center z-10  mb-3 sticky top-0 '>
     {/* Desktop && Tablet View  */}
-    <div className="hidden sm:flex lg:ml-6 pl-5 px-10 p-3 justify-between">
+    <motion.div 
+      initial={{ y:'-50vw', opacity: 0.5 }}
+      animate={{ y: 0  ,opacity: 1 }}   
+      transition={{ type:'spring', duration: 0.2 , stiffness:150 }}
+    className="hidden sm:flex lg:ml-6 pl-5 px-10 p-3 justify-between">
       <div className='w-3/5'>
 
         {/* Logo goes here */}
       <Link to="/">
-      <div className='flex justify-start items-center font-semibold'><img src={logo} alt="Logo"  className='w-12 h-12'/> <span className='text-2xl tracking-wide text-slate-700'><span className=' font-serif'>C</span><span className='text-black font-serif'>i</span ><span className='text-black font-serif'>t</span><span className=' font-serif'>y</span></span></div>
+      <motion.div
+      className='flex justify-start items-center font-semibold'><img src={logo} alt="Logo"  className='w-12 h-12'/> <span className='text-2xl tracking-wide text-slate-700'><span className=' font-serif'>C</span><span className='text-black font-serif'>i</span ><span className='text-black font-serif'>t</span><span className=' font-serif'>y</span></span></motion.div>
       </Link>
       </div>
 
        {/* Nav Menu items goes here  */}
       <div className='flex justify-center items-center'>
       <motion.ul 
-         initial={{ opacity: 0.5 }}
-        animate={{ x: 20 ,opacity: 2 }}   
-        transition={{ ease: "easeInOut", duration: 0.5 }}
-      className='flex justify-center items-center gap-6 mr-5 sm:text-sm sm:-ml-40 sm:mr-6 sm:w-[400px] md:mr-6 md:text- font-[500]
+      className='flex justify-center items-center gap-6 mr-5 sm:text-sm sm:-ml-40 sm:mr-6 sm:w-[400px] md:mr-6 font-[500]
       '>
          <NavLink to="/">
             <motion.li  whileTap={{
@@ -84,7 +86,7 @@ const Header = () => {
           }}
           className={`relative flex items-center gap-x-2 (navData) => (navData.isActive ? 'active' : '')`} >Home <FaHome /></motion.li>
          </NavLink> 
-         <NavLink to="/menu">
+         <NavLink to="/foods">
             <motion.li whileTap={{
           scale: 0.8,
           transition: { duration: 0.5 },
@@ -162,7 +164,7 @@ const Header = () => {
         </div>
       </div>
       
-    </div>
+    </motion.div>
     
 
     {/*Nav Section for Mobile and Small Screens */}
@@ -199,9 +201,10 @@ const Header = () => {
 
           {/* User not yet Authenticated  */}
         {!openMenu && !User &&  <motion.ul 
-        initial={{  x:90  }}
-        animate={{  x: 0 }}
-        transition={{ ease: "easeInOut", duration: 0.09 }}
+        initial={{opacity:0 ,x:350}}
+        animate={{opacity:1 , x: -10}}
+        exit={{x:-240}}
+        transition={{type:'spring' , stiffness:240 ,duration:0.5  }}
         className='flex flex-col justify-center w-3/4 h-screen  absolute top-0  left-0 bottom-0 bg-slate-50 shadow-xl  font-semibold p-1 '>
               <li className=' flex justify-center items-center gap-x-3 text-sm p-8 px-2 transition-all rounded ease-in-out duration-600 hover:bg-slate-200 cursor-pointer hover:rounded   hover:border-gray-400 ' onClick={googleAuth } > <TbLogin/>Login <span 
               ></span> </li>

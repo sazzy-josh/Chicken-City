@@ -23,7 +23,11 @@ const MainContainer = () => {
     <div>
         {/* Start of Main Page section */}
 
-      <main className='grid md:grid-cols-2 p-5 sm:p-10 lg:px-32 gap-10 h-auto screen box-border'>
+      <motion.main
+       initial={{opacity:0 ,x:-450}}
+       animate={{opacity:1 , x: -10}}
+       transition={{type:'spring' , stiffness:400 , delay: 0.5  }}
+      className='grid md:grid-cols-2 p-5 sm:p-10 lg:px-32 gap-10 h-auto screen box-border'>
       {/* Column 1 for medium and  large screens */}
      <div className='sm:h-full relative  flex justify-center flex-col pt-4 '>
     {/* Food delivery logo section */}
@@ -35,16 +39,11 @@ const MainContainer = () => {
        </div>
 
        {/* Text Content for Header*/}
-       <motion.p 
-       initial={{opacity:0.4 ,x:-100}}
-       animate={{opacity:1 , x: 0}}
-       transition={{ ease: "easeInOut", duration: 0.7 ,
-       }}
-       
+       <motion.p  
        className='py-5 text-4xl lg:text-5xl font-bold md:tracking-[normal] md:py-8 lg:max-w-[500px] '> We offer the <span className='text-red-500'>Fastest Delivery </span>
         within Every City.</motion.p>
 
-        <p className='tracking-wider text-sm box-border leading-normal  lg:leading-[1.9] font-[500] max-w-[500px]'>
+        <p className='tracking-wider text-sm box-border leading-normal lg:leading-[1.9] font-[700] max-w-[500px]'>
         Restaurant style Yogurt Mint Sauce is delicious dip which is quick and easy to .. This is a standard Indian mint chutney served with poppadums along with mint and lemon.
         We provide pleasure to your tastebuds 😉..
         </p>
@@ -76,7 +75,7 @@ const MainContainer = () => {
 
 
     </div>      
-    </main>
+    </motion.main>
     </div>
   )
 }

@@ -14,7 +14,7 @@ import { MdOutlineEmail } from 'react-icons/md'
 const Footer = () => {
   return (
 
-    <div className='w-full bg-slate-500 flex justify-center'>
+    <div className='w-full bg-slate-500 flex justify-center' >
       <div className='grid h-auto w-full lg:w-3/4 text-[12px] gap-y-8 sm:grid-cols-2 md:grid-cols-4 text-white p-4 md:p-8'>
             {/* logo and contact goes here */}
       <div className='flex flex-col gap-y-4 md:items-center'>
@@ -37,7 +37,7 @@ const Footer = () => {
         Contact
        </h4>
      
-      <div className='flex items-center gap-x-2'>
+      <div className='flex items-start gap-x-2'>
       <VscLocation />
       <p> F1-320 Jeff Heights, Woodstock ,New Brunswick,Canada</p>
 
