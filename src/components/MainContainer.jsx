@@ -3,18 +3,18 @@ import Bike from '../components/assets/img/delivery.png'
 import { BsArrowRight } from 'react-icons/bs'
 import HeroBg from '../components/assets/images/heroo.png'
 import { motion } from 'framer-motion'
-import p2 from '../components/assets/img/c7.png'
-import p5 from '../components/assets/img/i1.png'
-import p6 from '../components/assets/img/fi3.png'
-import p7 from '../components/assets/images/product_01.3.png'
+// import p2 from '../components/assets/img/c7.png'
+// import p5 from '../components/assets/img/i1.png'
+// import p6 from '../components/assets/img/fi3.png'
+// import p7 from '../components/assets/images/product_01.3.png'
 
 
-const categories = [
-  {id:1 , type:"Chicken" , price : 20 , extra: "Chicken & Chips" , image:p2},
-  {id:2 , type:"Icecream" , price : 9.2 , extra: "Chocolate & Vanila" , image :p5 },
-  {id:3 , type:"Fish" , price : 19.6 , extra: "Mixed Fish Kebab" , image : p6 },
-  {id:4 , type:"Hamburger" , price : 11.3 , extra: "Mixed Chicken Hamburger" , image : p7}
-]
+// const categories = [
+//   {id:1 , type:"Chicken" , price : 20 , extra: "Chicken & Chips" , image:p2},
+//   {id:2 , type:"Icecream" , price : 9.2 , extra: "Chocolate & Vanila" , image :p5 },
+//   {id:3 , type:"Fish" , price : 19.6 , extra: "Mixed Fish Kebab" , image : p6 },
+//   {id:4 , type:"Hamburger" , price : 11.3 , extra: "Mixed Chicken Hamburger" , image : p7}
+// ]
 
 
 
