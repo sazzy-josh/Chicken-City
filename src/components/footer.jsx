@@ -37,8 +37,8 @@ const Footer = () => {
         Contact
        </h5>
        <div className='flex flex-col gap-y-3'>
-          <div className='flex items-start gap-x-2'>
-          <VscLocation />
+          <div className='flex gap-x-2 items-start'>
+          <VscLocation  className='mt-1'/>
           <p> F1-320 Jeff Heights, Woodstock ,New Brunswick,Canada</p>
 
           </div>
@@ -92,7 +92,7 @@ const Footer = () => {
 
       </div>
 
-      <span className='text-white text-sm flex justify-center py-2 '> &copy;2022  All right Reserved </span>
+      <span className='text-white text-[12px] flex justify-center py-2 text-center'> &copy;2022-website made by Idahosa Joshua. All right Reserved </span>
 
     </div>
     

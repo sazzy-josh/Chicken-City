@@ -1,6 +1,6 @@
-import { useState } from 'react'
+import { useState  } from 'react'
 import './index.css'
-import { BrowserRouter as Router ,Routes , Route } from 'react-router-dom'
+import { BrowserRouter as Router ,Routes , Route , useLocation } from 'react-router-dom'
 import Header from './components/header'
 import Footer from './components/footer'
 import Home from './pages/Home'
@@ -15,10 +15,11 @@ import Helmet from './components/Helmet'
 
 
 function App() {
+ 
   return (
     <AuthContextProvider>
        <AnimatePresence>
-      <Router>
+      <Router location={location} key={location.key}>
       <div className="flex flex-col w-screen relative">
          <Header />
          <Routes>
