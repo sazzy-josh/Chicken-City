@@ -21,6 +21,7 @@ const Footer = () => {
         <div className='flex justify-start items-center'>
          <img src={Logo} alt="logo" className='w-12 h-12' />
          <span className='text-xl font-semibold text-white tracking-wider '><span className=' font-serif'>C</span><span className='font-serif'>i</span ><span className=' font-serif'>t</span><span className= 'font-serif'>y</span></span>
+        
         </div>
        <div className='flex text-white gap-x-2'>
          <FaFacebook/>
