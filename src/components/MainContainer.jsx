@@ -103,7 +103,12 @@ const MainContainer = () => {
          transition={{ ease: "easeInOut", duration: 0.4 }}
         className='text-slate-50 text-bold gap-2 p-3 my-8 text-xs cursor-pointer rounded-full bg-red-500 w-[120px] shadow-xl md:max-w-[140px] max-h-[80px]  font-bold flex justify-center items-center '>Order Now  <BsArrowRight className='font-bold' /></motion.p>
         
-        <motion.p className='text-slate-50 text-bold gap-1 text-xs p-3 my-8 cursor-pointer rounded-full bg-black w-[120px] shadow-xl sm:max-w-[160px] max-h-[80px]  font-bold flex justify-center items-center '>Book a Table  <BsArrowRight className='font-bold' /></motion.p>
+        <motion.p 
+         whileHover={{scale:0.9 ,  y:-10 }}
+         initial={{opacity:0.3  }}
+         animate={{opacity:1  }}
+         transition={{ duration: 0.4 ,type:"spring" , stiffness:200 }}
+        className='text-slate-50 text-bold gap-1 text-xs p-3 my-8 cursor-pointer rounded-full bg-black w-[120px] shadow-xl sm:max-w-[160px] max-h-[80px]  font-bold flex justify-center items-center '>All Foods <BsArrowRight className='font-bold' /></motion.p>
         <div className='flex justify-center text-xs items-center  p-1 font-bold text-red-700'>
         
         </div>
@@ -145,9 +150,9 @@ const MainContainer = () => {
             key={id} >
  
           <div className='w-[120px] shadow-lg h-[140px] lg:w-[160px] lg:h-[210px] rounded-xl flex-col gap-y-2 flex items-center justify-center bg-gradient-to-r from-slate-200
-           to-red-300 cursor-pointer hover:border border-red-300 border-2 drop-shadow hover:bg-gradient-to-r hover:to-pink-200 hover:from-slate-50'>
+           to-red-200 cursor-pointer hover:border border-red-300 border-2 drop-shadow hover:bg-gradient-to-r hover:to-pink-200 hover:from-slate-50'>
            <div className='lg:w-[80px] lg:h-[80px] w-65 h-65 flex justify-center items-center rounded-full bg-white '>
-           <img src={image} alt={type} className='md:w-12 md:h-12 h-10 w-10 object-contain '  /> 
+           <img src={image} alt={type.toLocaleUpperCase} className='md:w-12 md:h-12 h-10 w-10 object-contain '  /> 
            </div>
            <p className='font-bold text-sm text-center'>{type}</p>
           </div>
