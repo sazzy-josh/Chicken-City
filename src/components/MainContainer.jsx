@@ -54,7 +54,8 @@ const MainContainer = () => {
           slidesToShow: 2,
           slidesToScroll: 2,
           initialSlide: 2,
-          dots: false
+          dots: false,
+          speed: 1000,
         }
       },
       {
@@ -62,7 +63,9 @@ const MainContainer = () => {
         settings: {
           slidesToShow: 2,
           slidesToScroll: 2,
-          dots: false
+          dots: false,
+          speed: 1000,
+          autoplaySpeed: 2500
         }
       }
     ]
