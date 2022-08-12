@@ -147,6 +147,7 @@ const MainContainer = () => {
         return (
           <div className='slider'>
            <motion.div
+           className='overflow-hidden'
             initial={{opacity:0}}
             animate={{opacity:1}}
             transition={{type:"spring" , duration:1 , stiffness:400}}
