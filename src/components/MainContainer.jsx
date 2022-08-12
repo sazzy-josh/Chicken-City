@@ -154,6 +154,7 @@ const MainContainer = () => {
             whileHover={{y:-10 }}
             whileTap={{y:-10 }}
             key={id} >
+            
  
           <div className='w-[120px] shadow-lg h-[140px] lg:w-[160px] lg:h-[210px] rounded-xl flex-col gap-y-2 flex items-center justify-center bg-gradient-to-r from-slate-200
            to-red-200 cursor-pointer hover:border border-red-300 border-2 drop-shadow hover:bg-gradient-to-r hover:to-pink-200 hover:from-slate-50'>
