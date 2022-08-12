@@ -156,7 +156,7 @@ const MainContainer = () => {
            <div className='lg:w-[80px] lg:h-[80px] w-65 h-65 flex justify-center items-center rounded-full bg-white '>
            <img src={image} alt={ type} className='md:w-12 md:h-12 h-10 w-10 object-contain '  /> 
            </div>
-           <p className='font-bold text-sm text-center'>{type.toUpperCase()}</p>
+           <p className='font-bold md:text-sm text-[12px] text-center'>{type.toUpperCase()}</p>
           </div>
          
         </motion.div>
