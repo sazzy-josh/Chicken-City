@@ -124,7 +124,7 @@ const MainContainer = () => {
      {/* Column 2 for medium and  large screens */}
      <div className=' relative flex items-center justify-center '>
       
-       <img src={HeroBg} alt="Hero-bg" className='w-3/4 object-contain'  />
+       <img src={HeroBg} alt="Hero-bg" className='lg:w-full w-3/4  object-cover'  />
 
 
     </div>      
@@ -148,6 +148,7 @@ const MainContainer = () => {
             animate={{opacity:1}}
             transition={{type:"spring" , duration:1 , stiffness:400}}
             whileHover={{y:-10 }}
+            whileTap={{y:-10 }}
             key={id} >
  
           <div className='w-[120px] shadow-lg h-[140px] lg:w-[160px] lg:h-[210px] rounded-xl flex-col gap-y-2 flex items-center justify-center bg-gradient-to-r from-slate-200
