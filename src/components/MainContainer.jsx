@@ -141,7 +141,7 @@ const MainContainer = () => {
 
 
        
-       <div className='w-full '>
+       <div className='w-full overflow-hidden'>
        <Slider {...settings}>
        {categories && categories.map(({id , type , image}) => {
         return (
@@ -156,7 +156,7 @@ const MainContainer = () => {
           <div className='w-[120px] shadow-lg h-[140px] lg:w-[160px] lg:h-[210px] rounded-xl flex-col gap-y-2 flex items-center justify-center bg-gradient-to-r from-slate-200
            to-red-200 cursor-pointer hover:border border-red-300 border-2 drop-shadow hover:bg-gradient-to-r hover:to-pink-200 hover:from-slate-50'>
            <div className='lg:w-[80px] lg:h-[80px] w-65 h-65 flex justify-center items-center rounded-full bg-white '>
-           <img src={image} alt={ type} className='md:w-12 md:h-12 h-10 w-10 object-contain '  /> 
+           <img src={image} alt={type} className='md:w-12 md:h-12 h-10 w-10 object-contain '  /> 
            </div>
            <p className='font-bold md:text-sm text-[12px] text-center'>{type.toUpperCase()}</p>
           </div>
