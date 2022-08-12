@@ -1,24 +1,70 @@
 import React from 'react'
+import Slider from "react-slick";
 import Bike from '../components/assets/img/delivery.png'
 import { BsArrowRight } from 'react-icons/bs'
 import HeroBg from '../components/assets/images/heroo.png'
 import { motion } from 'framer-motion'
-// import p2 from '../components/assets/img/c7.png'
-// import p5 from '../components/assets/img/i1.png'
-// import p6 from '../components/assets/img/fi3.png'
-// import p7 from '../components/assets/images/product_01.3.png'
+import products from './assets/fake-data/products'
+import C1 from "./assets/images/chicken_1.2.png"
+import C2 from "./assets/images/burger_1.1.png"
+import C3 from "./assets/images/fish_2.1.png"
+import C4 from "./assets/images/product_2.1.png"
+import C5 from "./assets/images/sandwhich_1.png"
+import C6 from "./assets/images/bread_1.1.png"
+import C7 from './assets/images/product_09_image_01.png'
+import C8 from './assets/images/chicken_2.2.png'
 
 
-// const categories = [
-//   {id:1 , type:"Chicken" , price : 20 , extra: "Chicken & Chips" , image:p2},
-//   {id:2 , type:"Icecream" , price : 9.2 , extra: "Chocolate & Vanila" , image :p5 },
-//   {id:3 , type:"Fish" , price : 19.6 , extra: "Mixed Fish Kebab" , image : p6 },
-//   {id:4 , type:"Hamburger" , price : 11.3 , extra: "Mixed Chicken Hamburger" , image : p7}
-// ]
+const categories = [
+  {id:1 , type:"Chicken"  , image:C1},
+  {id:2 , type:"Hamburger" , image :C2 },
+  {id:3 , type:"Fish" ,  image : C3 },
+  {id:4 , type:"Pizza" ,  image : C4},
+  {id:5 , type:"Sandwich" ,  image : C5},
+  {id:6 , type:"Bread" ,  image : C6},
+  {id:7 , type:"Sauced Rice" ,  image : C7},
+  {id:8 , type:"Chips" ,  image : C8}
+
+]
 
 
 
 const MainContainer = () => {
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 800,
+    slidesToShow: 4,
+    slidesToScroll: 3,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    responsive: [
+      {
+        breakpoint: 1000,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 2,
+          infinite: true,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1
+        }
+      }
+    ]
+  };
   return (
     <div>
         {/* Start of Main Page section */}
@@ -76,6 +122,49 @@ const MainContainer = () => {
 
     </div>      
     </motion.main>
+
+    {/* Section  2 Page of Home Page */}
+        
+      <div className='p-5 sm:p-10 lg:px-28 flex flex-col items-center'>
+        <h3 className='md:text-[32px] text-[28px] font-bold text-center'> More than 2,000 dishes To Order! </h3>
+        <p className='lg:text-sm text-xs text-center'>Welcome to the Biggest Network of Food Ordering and Delivery</p>
+
+
+       
+       <div className='w-full '>
+       <Slider {...settings}>
+       {categories && categories.map(({id , type , image}) => {
+        return (
+          <div className='slider'>
+           <motion.div
+            initial={{opacity:0}}
+            animate={{opacity:1}}
+            transition={{type:"spring" , duration:1 , stiffness:400}}
+            whileHover={{y:-10 }}
+            key={id} >
+ 
+          <div className='w-[120px] shadow-lg h-[140px] lg:w-[160px] lg:h-[210px] rounded-xl flex-col gap-y-2 flex items-center justify-center bg-gradient-to-r from-slate-200
+           to-red-300 cursor-pointer hover:border border-red-300 border-2 drop-shadow hover:bg-gradient-to-r hover:to-pink-200 hover:from-slate-50'>
+           <div className='lg:w-[80px] lg:h-[80px] w-65 h-65 flex justify-center items-center rounded-full bg-white '>
+           <img src={image} alt={type} className='md:w-12 md:h-12 h-10 w-10 object-contain '  /> 
+           </div>
+           <p className='font-bold text-sm text-center'>{type}</p>
+          </div>
+         
+        </motion.div>
+          </div>
+           
+          )
+        })}
+         </Slider>
+        
+       </div>
+      
+
+      </div>
+      
+
+
     </div>
   )
 }

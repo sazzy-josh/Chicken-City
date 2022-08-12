@@ -1,5 +1,7 @@
 import { useState  } from 'react'
 import './index.css'
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
 import { BrowserRouter as Router ,Routes , Route , useLocation } from 'react-router-dom'
 import Header from './components/header'
 import Footer from './components/footer'
