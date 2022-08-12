@@ -78,7 +78,7 @@ const MainContainer = () => {
        initial={{opacity:0 ,x:-450}}
        animate={{opacity:1 , x: 0}}
        transition={{type:'spring' , stiffness:300 , delay: 0.7 , duration: 0.8  }}
-      className='grid md:grid-cols-2 p-5 sm:p-10 lg:px-32 gap-10  screen'>
+      className='grid md:grid-cols-2 p-5 sm:p-10 lg:px-32 gap-10 h-auto overflow-hidden screen'>
       {/* Column 1 for medium and  large screens */}
      <div className='sm:h-full relative  flex justify-center flex-col pt-4 '>
     {/* Food delivery logo section */}
