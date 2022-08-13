@@ -199,23 +199,41 @@ const MainContainer = () => {
                <p className='font-bold'>Search For Meal</p>
            </div>
             
-           <div className='flex flex-col gap-y-2 justify-center items-center'>
+           <motion.div 
+            initial={{ opacity:0 }}
+            whileInView={{ opacity: 1  }}
+            viewport={{ once: true }}
+            transition={{duration:2 ,delay:1}}
+            exit={{opacity:0}}
+           className='flex flex-col gap-y-2 justify-center items-center'>
                <img src={cart} alt="search" className='w-[100px] h-[100px] object-contain' />
                <span className='p-2 border-dotted border-2 rounded-full border-red-300 w-12 h-12 text-center font-bold'>02</span>
                <p className='font-bold'>Add to Cart</p>
-           </div>
+           </motion.div>
 
-           <div className='flex flex-col gap-y-2 justify-center items-center'>
+           <motion.div
+            initial={{ opacity:0 }}
+            whileInView={{ opacity: 1  }}
+            viewport={{ once: true }}
+            transition={{duration:2 ,delay:2}}
+            exit={{opacity:0}}
+            className='flex flex-col gap-y-2 justify-center items-center'>
                <img src={checkout} alt="search" className='w-[100px] h-[100px] object-contain' />
                <span className='p-2 border-dotted border-2 rounded-full border-red-300 w-12 h-12 text-center font-bold'>03</span>
                <p className='font-bold'>Proceed to Checkout</p>
-           </div>
+           </motion.div>
 
-           <div className='flex flex-col gap-y-2 justify-center items-center'>
+           <motion.div
+           initial={{ opacity:0 }}
+           whileInView={{ opacity: 1  }}
+           viewport={{ once: true }}
+           transition={{duration:2 ,delay:3}}
+           exit={{opacity:0}}
+           className='flex flex-col gap-y-2 justify-center items-center'>
                <img src={payment} alt="search" className='w-[100px] h-[100px] object-contain' />
                <span className='p-2 border-dotted border-2 rounded-full border-red-300 w-12 h-12 text-center font-bold'>01</span>
                <p className='font-bold'>Make Payment</p>
-           </div>
+           </motion.div>
 
 
 
