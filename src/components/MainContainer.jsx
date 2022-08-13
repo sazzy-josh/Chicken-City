@@ -36,7 +36,7 @@ const MainContainer = () => {
     speed: 800,
     swipeToSlide: true,
     slidesToShow: 4,
-    slidesToScroll: 3,
+    slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 2000,
     responsive: [
@@ -44,7 +44,6 @@ const MainContainer = () => {
         breakpoint: 1000,
         settings: {
           slidesToShow: 3,
-          slidesToScroll: 2,
           infinite: true,
           dots: true
         }
@@ -53,7 +52,7 @@ const MainContainer = () => {
         breakpoint: 600,
         settings: {
           slidesToShow: 2,
-          slidesToScroll: 2,
+         
           initialSlide: 2,
           dots: false,
           speed: 1000,
@@ -63,7 +62,6 @@ const MainContainer = () => {
         breakpoint: 480,
         settings: {
           slidesToShow: 2,
-          slidesToScroll: 2,
           dots: false,
           speed: 1000,
           autoplaySpeed: 2500
