@@ -32,8 +32,9 @@ const categories = [
 const MainContainer = () => {
   const settings = {
     dots: true,
-    infinite: true,
+    infinite: false,
     speed: 800,
+    swipeToSlide: true,
     slidesToShow: 4,
     slidesToScroll: 3,
     autoplay: true,
