@@ -13,7 +13,10 @@ import C5 from "./assets/images/sandwhich_1.png"
 import C6 from "./assets/images/bread_1.1.png"
 import C7 from './assets/images/product_09_image_01.png'
 import C8 from './assets/images/chicken_2.2.png'
-
+import search from "./assets/svg/search.svg"
+import cart from "./assets/svg/cart.svg"
+import checkout from "./assets/svg/checkout.svg"
+import payment from "./assets/svg/order.svg"
 
 const categories = [
   {id:1 , type:"Chicken"  , image:C1},
@@ -77,7 +80,7 @@ const MainContainer = () => {
       <motion.main
        initial={{opacity:0 ,x:"-100vw"}}
        animate={{opacity:1 , x: 0}}
-       transition={{type:'spring' , stiffness:220 , delay: 0.7 , duration: 0.7  }}
+       transition={{type:'spring' , stiffness:220 , delay: 0.3 , duration: 0.5  }}
       className='grid md:grid-cols-2 p-5 sm:p-10 lg:px-32 gap-10 h-auto overflow-hidden screen'>
       {/* Column 1 for medium and  large screens */}
      <div className='sm:h-full relative  flex justify-center flex-col pt-4 '>
@@ -133,11 +136,11 @@ const MainContainer = () => {
     </div>      
     </motion.main>
 
-    {/* Section  2 Page of Home Page */}
+    {/*Categories Section Page of Home Page */}
         
-      <div className='p-5 sm:p-10 lg:px-28 flex flex-col items-center'>
-        <h3 className='md:text-[32px] text-[28px] font-bold text-center'> More than 2,000 dishes To Order! </h3>
-        <p className='lg:text-sm text-xs text-center'>Welcome to the Biggest Network of Food Ordering and Delivery</p>
+      <div className='p-5 sm:p-10 lg:px-28 flex flex-col items-center my-2'>
+        <h3 className='md:text-[32px] text-[28px] font-bold text-center'> More than 2,000 Dishes To Order! </h3>
+        <p className='lg:text-sm text-xs text-center font-semibold'>Welcome to the Biggest Network of Food Ordering and Delivery</p>
 
 
        
@@ -147,14 +150,15 @@ const MainContainer = () => {
         return (
           <div className='slider'>
            <motion.div
-            initial={{opacity:0}}
-            animate={{opacity:1}}
+            initial={{opacity:0  }}
             transition={{type:"spring" , duration:1 , stiffness:400}}
             whileHover={{y:-10 }}
+            whileInView={{ opacity: 1  }}
+            viewport={{ once: true }}
             whileTap={{y:10 }}
             key={id} >
       
-          <div className='w-[120px] shadow-lg h-[140px] lg:w-[160px] lg:h-[210px] rounded-xl flex-col gap-y-2 flex items-center justify-center bg-gradient-to-r from-slate-200
+          <div className='w-[120px] shadow-lg h-[140px] lg:w-[160px] lg:h-[210px] rounded-xl flex-col gap-y-2 flex items-center justify-center bg-gradient-to-r from-slate-200 my-8
            to-red-200 cursor-pointer hover:border border-red-300 border-2 drop-shadow hover:bg-gradient-to-r hover:to-pink-200 hover:from-slate-50'>
            <div className='lg:w-[80px] lg:h-[80px] w-65 h-65 flex justify-center items-center rounded-full bg-white '>
            <img src={image} alt={type} className='md:w-12 md:h-12 h-10 w-10 object-contain '  /> 
@@ -173,7 +177,55 @@ const MainContainer = () => {
       
 
       </div>
-      
+
+      {/* How to Order Section  */}
+
+      <div className='p-5 sm:p-10 lg:px-28'>
+         <h3 className='md:text-[32px] text-[28px] font-bold text-center'>How To Order?</h3>
+          <p className='lg:text-sm text-xs text-center py-2 font-bold'>
+            Follow the steps
+          </p>
+
+         <motion.div
+         initial={{ opacity:0 }}
+         whileInView={{ opacity: 1  }}
+         viewport={{ once: true }}
+         transition={{duration:2}}
+         exit={{opacity:0}}
+         className='grid grid-col sm:grid-cols-2 lg:grid-cols-4 my-4'>
+           <div className='flex flex-col gap-y-2 justify-center items-center'>
+               <img src={search} alt="search" className='w-[100px] h-[100px] object-contain' />
+               <span className='p-2 border-dotted border-2 rounded-full border-red-300 w-12 h-12 text-center font-bold'>01</span>
+               <p className='font-bold'>Search For Meal</p>
+           </div>
+            
+           <div className='flex flex-col gap-y-2 justify-center items-center'>
+               <img src={cart} alt="search" className='w-[100px] h-[100px] object-contain' />
+               <span className='p-2 border-dotted border-2 rounded-full border-red-300 w-12 h-12 text-center font-bold'>02</span>
+               <p className='font-bold'>Add to Cart</p>
+           </div>
+
+           <div className='flex flex-col gap-y-2 justify-center items-center'>
+               <img src={checkout} alt="search" className='w-[100px] h-[100px] object-contain' />
+               <span className='p-2 border-dotted border-2 rounded-full border-red-300 w-12 h-12 text-center font-bold'>03</span>
+               <p className='font-bold'>Proceed to Checkout</p>
+           </div>
+
+           <div className='flex flex-col gap-y-2 justify-center items-center'>
+               <img src={payment} alt="search" className='w-[100px] h-[100px] object-contain' />
+               <span className='p-2 border-dotted border-2 rounded-full border-red-300 w-12 h-12 text-center font-bold'>01</span>
+               <p className='font-bold'>Make Payment</p>
+           </div>
+
+
+
+
+
+         </motion.div>
+
+         
+        
+      </div>
 
 
     </div>

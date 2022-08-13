@@ -1,0 +1,3 @@
+padding:  p-5 sm:p-10 lg:px-28
+
+font-size   md:text-[32px] text-[28px] font-bold text-center 
