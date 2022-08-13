@@ -66,7 +66,7 @@ const Popular = () => {
           {allFoods.map(({ id, price ,image01 , title }) => {
              return (
                 <div className='flex items-center justify-center'>
-                  <div key={id} className="rounded-lg flex border border-red-200 flex-col w-[180px] h-[250px]  justify-around items-center bg-gradient-to-r from-slate-100 to-red-200 shadow-lg hover:border-red-400">
+                  <div key={id} className="rounded-lg flex border border-red-200 flex-col w-[180px] h-[250px]  justify-around items-center bg-gradient-to-r from-slate-100 to-red-200 shadow-lg hover:border-red-400 cursor-pointer">
                 
                      <motion.img 
                      whileHover={{scale:1.2}}
