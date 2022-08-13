@@ -117,6 +117,17 @@ const products = [
 
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ad et est, fugiat repudiandae neque illo delectus commodi magnam explicabo autem voluptates eaque velit vero facere mollitia. Placeat rem, molestiae error obcaecati enim doloribus impedit aliquam, maiores qui minus neque.",
   },
+  {
+    id: "19",
+    title: "Leaf Toast Bread ",
+    price: 33.0,
+    image01: product_08_image_01,
+    image02: product_08_image_02,
+    image03: product_06_image_03,
+    category: "Bread",
+
+    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ad et est, fugiat repudiandae neque illo delectus commodi magnam explicabo autem voluptates eaque velit vero facere mollitia. Placeat rem, molestiae error obcaecati enim doloribus impedit aliquam, maiores qui minus neque.",
+  },
 
   {
     id: "04",
@@ -141,7 +152,18 @@ const products = [
 
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ad et est, fugiat repudiandae neque illo delectus commodi magnam explicabo autem voluptates eaque velit vero facere mollitia. Placeat rem, molestiae error obcaecati enim doloribus impedit aliquam, maiores qui minus neque.",
   },
+  {
+    id: "30",
+    title: "Sandwich",
+    price: 17.0,
+    image01: product_14_image_03,
+    image02: product_14_image_01,
+    image03: product_14_image_02,
+    category: "Sandwich",
 
+    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ad et est, fugiat repudiandae neque illo delectus commodi magnam explicabo autem voluptates eaque velit vero facere mollitia. Placeat rem, molestiae error obcaecati enim doloribus impedit aliquam, maiores qui minus neque.",
+  } ,
+ 
   {
     id: "123",
     title: "Hamburger Cheeseburger ",
@@ -175,6 +197,17 @@ const products = [
 
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ad et est, fugiat repudiandae neque illo delectus commodi magnam explicabo autem voluptates eaque velit vero facere mollitia. Placeat rem, molestiae error obcaecati enim doloribus impedit aliquam, maiores qui minus neque.",
   },
+  {
+    id: "50",
+    title: "Crunchy Tasty chicken",
+    price: 28.50,
+    image01: product_12_image_03,
+    image02: product_12_image_02,
+    image03: product_09_image_02,
+    category: "Chicken",
+
+    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ad et est, fugiat repudiandae neque illo delectus commodi magnam explicabo autem voluptates eaque velit vero facere mollitia. Placeat rem, molestiae error obcaecati enim doloribus impedit aliquam, maiores qui minus neque.",
+  } ,
   {
     id: "06",
     title: "Royal Cheese Burger",
@@ -328,18 +361,6 @@ const products = [
   },
 
   {
-    id: "19",
-    title: "Leaf Toast Bread ",
-    price: 33.0,
-    image01: product_08_image_01,
-    image02: product_08_image_02,
-    image03: product_06_image_03,
-    category: "Bread",
-
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ad et est, fugiat repudiandae neque illo delectus commodi magnam explicabo autem voluptates eaque velit vero facere mollitia. Placeat rem, molestiae error obcaecati enim doloribus impedit aliquam, maiores qui minus neque.",
-  },
-
-  {
     id: "20",
     title: "Pumpkin sliced Bread ",
     price: 22.0,
@@ -384,20 +405,10 @@ const products = [
 
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ad et est, fugiat repudiandae neque illo delectus commodi magnam explicabo autem voluptates eaque velit vero facere mollitia. Placeat rem, molestiae error obcaecati enim doloribus impedit aliquam, maiores qui minus neque.",
   } ,
-  {
-    id: "50",
-    title: "Tasty Chinese chicken",
-    price: 28.50,
-    image01: product_12_image_03,
-    image02: product_12_image_02,
-    image03: product_09_image_02,
-    category: "Chicken",
-
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ad et est, fugiat repudiandae neque illo delectus commodi magnam explicabo autem voluptates eaque velit vero facere mollitia. Placeat rem, molestiae error obcaecati enim doloribus impedit aliquam, maiores qui minus neque.",
-  } ,
+  
   {
     id: "56",
-    title: "Tasty Chinese chicken",
+    title: "Tasty Crunchy Chicken",
     price: 38.99,
     image01: product_12_image_02,
     image02: product_12_image_01,
@@ -531,17 +542,7 @@ const products = [
 
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ad et est, fugiat repudiandae neque illo delectus commodi magnam explicabo autem voluptates eaque velit vero facere mollitia. Placeat rem, molestiae error obcaecati enim doloribus impedit aliquam, maiores qui minus neque.",
   } ,
-  {
-    id: "32",
-    title: "Toppings Doughnut",
-    price: 16.0,
-    image01: product_14_image_01,
-    image02: product_14_image_03,
-    image03: product_14_image_02,
-    category: "Sandwich",
-
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ad et est, fugiat repudiandae neque illo delectus commodi magnam explicabo autem voluptates eaque velit vero facere mollitia. Placeat rem, molestiae error obcaecati enim doloribus impedit aliquam, maiores qui minus neque.",
-  } ,
+  
 
 
 

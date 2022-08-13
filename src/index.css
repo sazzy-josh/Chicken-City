@@ -19,7 +19,12 @@
     
 }
 
-
+.cards{
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap:  10px;
+    
+}
 
 body{
     width: 100vw;
@@ -65,15 +70,23 @@ height: 90%;
     top: 90%;
     margin-top: 10px;
 }
+@media (max-width: 1024px){
+    .cards{
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap:  10px;
+        
+    }
+}
 
-@media (min-width: 641px){
+@media (max-width: 764px){
 
     .active{
         color:  rgb(239 68 68  );
         
         opacity: 1;
      }
-
+   
      .active::before{
         content: "";
         width: 30px;
@@ -86,6 +99,12 @@ height: 90%;
         
     
     }
+    .cards{
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap:  10px;
+        
+    }
 }
 
 
@@ -95,42 +114,19 @@ height: 90%;
         color: rgb(239 68 68);
         opacity: 1;
      }
-     
-     /* .active::after{
-      
+     .cards{
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap:  10px;
         
-            content: "";
-            margin-top: -46px;
-            width: 30%;
-            height: 1px;
-            background-color: rgb(249 115 22);
-            position: absolute;
-            left: 0;
-           
-            border-top-left-radius: 0%;
-            border-top-right-radius: 0%;
-            
+    }
+     
+   
         
         
         
     
-    } 
-    .active::before{
-      
-        
-        content: "";
-        width: 30%;
-        height: 1px;
-        background-color: rgb(248 115 22);
-        position: absolute;
-        right: 0;
-        margin-top: 44px;
-     
-       
-        border-top-left-radius: 0%;
-        border-top-right-radius: 0%;   
-   }  */
-  
+
 
 }
     
