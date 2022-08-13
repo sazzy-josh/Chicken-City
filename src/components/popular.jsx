@@ -21,30 +21,30 @@ const Popular = () => {
              </span>
          
            
-             <span  className='flex items-center justify-center p-2'>
+             <span  className='flex items-center justify-center p-2 gap-x-1'>
                 
                 <img src={pizzaClip} alt="pizza" className='w-3 h-3' />
                 Pizza
              </span>
            
            
-             <span  className='flex items-center justify-center p-2'>
+             <span  className='flex items-center justify-center p-2 gap-x-1'>
                
-                <img src={breadClip} alt="pizza"  className='w-3 h-3'/>
+                <img src={breadClip} alt="bread"  className='w-3 h-3'/>
                 Bread  
              </span>
           
            
              <span  className='flex items-center justify-center p-2 gap-x-1'>
                 
-                <img src={Hamburger} alt="pizza"  className='w-3 h-3' />
+                <img src={Hamburger} alt="burger"  className='w-3 h-3' />
                 Burger
              </span>
          
          
              <span className='flex items-center justify-center p-2 gap-x-1'>
                
-                <img src={chickenClip} alt="pizza"  className='w-3 h-3'/>
+                <img src={chickenClip} alt="chicken"  className='w-3 h-3'/>
                 Chicken
              </span>
          
