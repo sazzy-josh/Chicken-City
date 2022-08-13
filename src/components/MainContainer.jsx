@@ -17,6 +17,8 @@ import search from "./assets/svg/search.svg"
 import cart from "./assets/svg/cart.svg"
 import checkout from "./assets/svg/checkout.svg"
 import payment from "./assets/svg/order.svg"
+import C9 from './assets/images/drinks.png'
+
 
 const categories = [
   {id:1 , type:"Chicken"  , image:C1},
@@ -26,7 +28,8 @@ const categories = [
   {id:5 , type:"Sandwich" ,  image : C5},
   {id:6 , type:"Bread" ,  image : C6},
   {id:7 , type:"Sauced Rice" ,  image : C7},
-  {id:8 , type:"Chips" ,  image : C8}
+  {id:8 , type:"Chips" ,  image : C8},
+  {id:9 ,type:"Drinks" , image:C9}
 
 ]
 
@@ -115,7 +118,7 @@ const MainContainer = () => {
          initial={{opacity:0.3  }}
          animate={{opacity:1  }}
          transition={{ duration: 0.4 ,type:"spring" , stiffness:200 }}
-        className='text-slate-50 text-bold gap-1 text-xs p-3 my-8 cursor-pointer rounded-full bg-black w-[120px] shadow-xl sm:max-w-[160px] max-h-[80px]  font-bold flex justify-center items-center '>All Foods <BsArrowRight className='font-bold' /></motion.p>
+        className='border border-red-400 text-bold gap-1 text-xs p-3 my-8 cursor-pointer rounded-full  text-red-500 w-[120px] shadow-xl sm:max-w-[160px] max-h-[80px]  font-bold flex justify-center items-center '>All Foods <BsArrowRight className='font-bold' /></motion.p>
         <div className='flex justify-center text-xs items-center  p-1 font-bold text-red-700'>
         
         </div>
@@ -225,19 +228,15 @@ const MainContainer = () => {
 
            <motion.div
            initial={{ opacity:0 }}
-           whileInView={{ opacity: 1  }}
+           whileInView={{ opacity: 1 }}
            viewport={{ once: true }}
            transition={{duration:2 ,delay:3}}
            exit={{opacity:0}}
            className='flex flex-col gap-y-2 justify-center items-center'>
                <img src={payment} alt="search" className='w-[100px] h-[100px] object-contain' />
-               <span className='p-2 border-dotted border-2 rounded-full border-red-300 w-12 h-12 text-center font-bold'>01</span>
+               <span className='p-2 border-dotted border-2 rounded-full border-red-300 w-12 h-12 flex justify-center  items-center font-bold'>04</span>
                <p className='font-bold'>Make Payment</p>
            </motion.div>
-
-
-
-
 
          </motion.div>
 
