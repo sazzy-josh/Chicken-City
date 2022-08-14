@@ -7,6 +7,8 @@ import pizzaClip from './assets/images/pizza.png'
 import Hamburger from './assets/images/hamburger.png'
 import { motion } from 'framer-motion'
 import { AnimatePresence } from 'framer-motion'
+import { MdKeyboardArrowRight } from "react-icons/md"
+
 
 const Popular = () => {
 
@@ -115,14 +117,22 @@ const Popular = () => {
                      whileHover={{scale:1.2}}
                      src={image01} alt={title} className="sm:w-[90px] sm:h-[90px] w-[80px] h-[80px] object-contain py-1 "/>
                      <span className='lg:text-sm text-xs text-center py-2 font-bold'>{title}</span>
-                     <div className='flex text-sm text-center py-2 font-bold justify-between items-center w-full p-2'><p>${price}</p> <span className='text-lg px-2 rounded text-white bg-red-300'>+</span> </div>
+                     <div className='flex text-sm text-center py-2 font-bold justify-between items-center w-full p-2 '><p>${price}</p> <span className='text-lg px-2 rounded text-white bg-red-300  hover:bg-white hover:text-red-400'>+</span> </div>
              
                  </motion.div>
                 </div>
              )
-          }).slice(0,12)}
+          }).slice(0,6)}
 
          </div>
+
+          <div className='flex justify-center'>
+          <span className='border-2 border-red-400 shadow-xl rounded-full p-2 gap-x-2 bg-red-400 text-sm text-white flex justify-center items-center font-semibold '>See all foods 
+           <div className="bg-white text-red-400 font-bold rounded-full p-1 text-lg ">
+             <MdKeyboardArrowRight/>
+           </div> 
+         </span>
+          </div>
     </div>
   )
 }

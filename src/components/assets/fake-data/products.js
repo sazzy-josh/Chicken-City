@@ -270,7 +270,7 @@ const products = [
 
   {
     id: "11",
-    title: "Crunchy Bread ",
+    title: "Chocolate Bread ",
     price: 28.0,
     image01: product_15_image_02,
     image02: product_15_image_01,
