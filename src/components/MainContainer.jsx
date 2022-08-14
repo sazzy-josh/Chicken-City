@@ -143,7 +143,7 @@ const MainContainer = () => {
         
       <div className='p-5 sm:p-10 lg:px-28 flex flex-col items-center my-2'>
         <h3 className='md:text-[32px] text-[28px] font-bold text-center'> More than 2,000 Dishes To Order! </h3>
-        <p className='lg:text-sm text-xs text-center font-semibold'>Welcome to the Biggest Network of Food Ordering and Delivery</p>
+        <p className='lg:text-sm text-xs text-center font-bold'>Welcome to the Biggest Network of Food Ordering and Delivery</p>
 
 
        
@@ -162,7 +162,7 @@ const MainContainer = () => {
             key={id} >
       
           <div className='w-[120px] shadow-lg h-[140px] lg:w-[160px] lg:h-[210px] rounded-xl flex-col gap-y-2 flex items-center justify-center bg-gradient-to-r from-slate-200 my-8
-           to-red-200 cursor-pointer hover:border border-red-300 border-2 drop-shadow hover:bg-gradient-to-r hover:to-pink-200 hover:from-slate-50'>
+           to-red-200 cursor-pointer hover:border border-red-300 border drop-shadow hover:bg-gradient-to-r hover:to-pink-200 hover:from-slate-50'>
            <div className='lg:w-[80px] lg:h-[80px] w-65 h-65 flex justify-center items-center rounded-full bg-white '>
            <img src={image} alt={type} className='md:w-12 md:h-12 h-10 w-10 object-contain '  /> 
            </div>

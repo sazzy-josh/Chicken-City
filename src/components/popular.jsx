@@ -59,7 +59,7 @@ const Popular = () => {
 
   return (
     <div className=' p-5 sm:p-10 lg:px-28'>
-        <p className='md:text-[32px] text-[28px] font-bold text-center'>Popular Dishes with delivery</p>
+        <p className='md:text-[32px] text-[28px] font-bold text-center'>Popular Dishes with Discount</p>
          <p className='lg:text-sm text-xs text-center py-2 font-bold'> The most delicious and healthy dishes from our chef.You can order this meal seperately or as part of a meal plan</p>
 
          <div className=' bg-red-400 rounded-lg py-3 flex justify-center items-center text-xs md:text-sm font-semibold md:gap-x-3'>
@@ -111,14 +111,14 @@ const Popular = () => {
                    animate={{opacity:1}}
                    exit={{opacity:1}}
                    transition={{duration:0.5  }}
-                  key={id} className="rounded-lg flex border border-red-200 flex-col w-[180px] h-[250px]  justify-around items-center hover:bg-gradient-to-r  hover:from-slate-50 hover:to-red-200 hover:border-red-400 hover:border-dotted shadow-xl cursor-pointer">
-                
+                  key={id} className="rounded-lg flex border border-red-200 flex-col w-[180px] h-[250px]  justify-around items-center relative hover:bg-gradient-to-r  hover:from-slate-50 hover:to-red-200 hover:border-red-400 hover:border-dotted shadow-xl cursor-pointer">
+                <span class="animate-ping absolute  h-4 w-4 top-0 right-0  z-10 rounded-full bg-red-400 opacity-75"></span>
                      <motion.img 
                      whileHover={{scale:1.2}}
                      src={image01} alt={title} className="sm:w-[90px] sm:h-[90px] w-[80px] h-[80px] object-contain py-1 "/>
                      <span className='lg:text-sm text-xs text-center py-2 font-bold'>{title}</span>
-                     <div className='flex text-sm text-center py-2 font-bold justify-between items-center w-full p-2 '><p>${price}</p> <span className='text-lg px-2 rounded text-white bg-red-300  hover:bg-white hover:text-red-400'>+</span> </div>
-             
+                     <div className='flex text-sm text-center py-2 font-bold justify-between items-center w-full p-2 '><p className=' p-1 rounded-lg text-slate-800'>${price}</p> <span className='text-lg px-2 rounded text-white bg-red-300  hover:bg-white hover:text-red-400'>+</span> </div>
+                  <div className='absolute top-0 right-0  bg-gradient-to-br from-slate-50 to-red-300 font-semibold rounded-tr-lg rounded-bl-lg text-xs  overflow-hidden p-1'>10% OFF</div>
                  </motion.div>
                 </div>
              )
@@ -127,7 +127,7 @@ const Popular = () => {
          </div>
 
           <div className='flex justify-center'>
-          <span className='border-2 border-red-400 shadow-xl rounded-full p-2 gap-x-2 bg-red-400 text-sm text-white flex justify-center items-center font-semibold '>See all foods 
+          <span className=' cursor-pointer border-2 border-red-400 shadow-xl rounded-full p-2 gap-x-2 bg-red-400 text-sm text-white flex justify-center items-center font-semibold '>See all foods 
            <div className="bg-white text-red-400 font-bold rounded-full p-1 text-lg ">
              <MdKeyboardArrowRight/>
            </div> 
