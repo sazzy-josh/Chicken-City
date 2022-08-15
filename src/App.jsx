@@ -13,43 +13,45 @@ import AuthContextProvider from './context/authContext'
 import AboutUs from './pages/aboutUs'
 import Food from './pages/foods'
 import Helmet from './components/Helmet'
-
+import CartContextProvider from './context/CartContext';
 
 
 function App() {
  
   return (
-    <AuthContextProvider>
-       <AnimatePresence>
-      <Router location={location} key={location.key}>
-      <div className="flex flex-col w-screen relative">
-         <Header />
-         <Routes>
-            <Route path='/' element={
-              <Helmet title="Home">
-                 <Home /> 
-              </Helmet>
-            } />
-            <Route path='/login' element={ <Helmet title="Login">
-                 <Login /> 
-              </Helmet> } />
-            <Route path='/foods' element={ <Helmet title="foods">
-                 <Food /> 
-              </Helmet> } />
-            <Route path='/Sign-up' element={<Helmet title="Sign-up">
-                 <SignUp /> 
-              </Helmet>} />
-            <Route path='/aboutus' element={<Helmet title="About-us">
-                 <AboutUs /> 
-              </Helmet>} />
+    <CartContextProvider>
+     <AuthContextProvider>
+          <AnimatePresence>
+        <Router location={location} key={location.key}>
+        <div className="flex flex-col w-screen relative">
+            <Header />
+            <Routes>
+              <Route path='/' element={
+                <Helmet title="Home">
+                    <Home /> 
+                </Helmet>
+              } />
+              <Route path='/login' element={ <Helmet title="Login">
+                    <Login /> 
+                </Helmet> } />
+              <Route path='/foods' element={ <Helmet title="foods">
+                    <Food /> 
+                </Helmet> } />
+              <Route path='/Sign-up' element={<Helmet title="Sign-up">
+                    <SignUp /> 
+                </Helmet>} />
+              <Route path='/aboutus' element={<Helmet title="About-us">
+                    <AboutUs /> 
+                </Helmet>} />
 
-          </Routes>
-         <Footer />
-      </div>
-    </Router>
-    </AnimatePresence>
+            </Routes>
+            <Footer />
+        </div>
+      </Router>
+      </AnimatePresence>
 
-    </AuthContextProvider>
+     </AuthContextProvider>
+    </CartContextProvider>
     
     
     

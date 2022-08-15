@@ -8,13 +8,15 @@ import Hamburger from './assets/images/hamburger.png'
 import { motion } from 'framer-motion'
 import { AnimatePresence } from 'framer-motion'
 import { MdKeyboardArrowRight } from "react-icons/md"
-
+import { cartsContext } from '../context/CartContext'
 
 const Popular = () => {
-
+   const { addToCart } = cartsContext()
+   
+  
     const [category, setcategory] = useState('ALL');
     const [allFoods, setallFoods] = useState(products);
-
+    
     useEffect(() => {
        
       if(category === 'ALL'){
@@ -102,7 +104,12 @@ const Popular = () => {
          </div>
 
          <div className='cards py-4 '>
-          {allFoods.map(({ id, price ,image01 , title }) => {
+          {allFoods.map(({ id, price ,image01 , title , quantity}) => {
+
+         const addItem = () => {
+            addToCart({ id , price , title ,image01 , quantity })
+         }
+
              return (
                 <div className='flex items-center justify-center'>
                   
@@ -110,15 +117,17 @@ const Popular = () => {
                    initial={{opacity:0}}
                    animate={{opacity:1}}
                    exit={{opacity:1}}
-                   transition={{duration:0.5  }}
-                  key={id} className="rounded-lg flex border border-red-200 flex-col w-[180px] h-[250px]  justify-around items-center relative hover:bg-gradient-to-r  hover:from-slate-50 hover:to-red-200 hover:border-red-400 hover:border-dotted shadow-xl cursor-pointer">
+                   transition={{duration:0.5 }}
+                   key={id}
+                   className="rounded-lg flex border border-red-200 flex-col w-[180px] h-[250px]  justify-around items-center relative hover:bg-gradient-to-r  hover:from-slate-50 hover:to-red-200 hover:border-red-400 hover:border-dotted shadow-xl cursor-pointer">
                 <span class="animate-ping absolute  h-4 w-4 top-0 right-0  z-10 rounded-full bg-red-400 opacity-75"></span>
                      <motion.img 
                      whileHover={{scale:1.2}}
                      src={image01} alt={title} className="sm:w-[90px] sm:h-[90px] w-[80px] h-[80px] object-contain py-1 "/>
                      <span className='lg:text-sm text-xs text-center py-2 font-bold'>{title}</span>
-                     <div className='flex text-sm text-center py-2 font-bold justify-between items-center w-full p-2 '><p className=' p-1 rounded-lg text-slate-800'>${price}</p> <span className='text-lg px-2 rounded text-white bg-red-300  hover:bg-white hover:text-red-400'>+</span> </div>
-                  <div className='absolute top-0 right-0  bg-gradient-to-br from-slate-50 to-red-300 font-semibold rounded-tr-lg rounded-bl-lg text-xs  overflow-hidden p-1'>10% OFF</div>
+                     <div className='flex text-sm text-center py-2 font-bold justify-between items-center w-full p-2 '><p className=' p-1 rounded-lg text-slate-800'>${price}</p> <span onClick={addItem} className='text-lg px-2 rounded text-white bg-red-300  hover:bg-white hover:text-red-400' 
+                     >+</span> </div>
+                  <div className='absolute top-0 text-slate-900 right-0 bg-gradient-to-br from-slate-50 to-red-300 font-semibold rounded-tr-lg rounded-bl-lg text-xs  overflow-hidden p-1'>10% OFF</div>
                  </motion.div>
                 </div>
              )
@@ -127,8 +136,8 @@ const Popular = () => {
          </div>
 
           <div className='flex justify-center'>
-          <span className=' cursor-pointer border-2 border-red-400 shadow-xl rounded-full p-2 gap-x-2 bg-red-400 text-sm text-white flex justify-center items-center font-semibold '>See all foods 
-           <div className="bg-white text-red-400 font-bold rounded-full p-1 text-lg ">
+          <span className=' cursor-pointer border-2 border-red-400 shadow-xl rounded-full p-1 gap-x-2 bg-red-400 text-xs px-2 text-white flex justify-center items-center font-semibold '>See all foods 
+           <div className="bg-white text-red-400 font-bold rounded-full p-[2px] text-lg ">
              <MdKeyboardArrowRight/>
            </div> 
          </span>

@@ -84,6 +84,7 @@ import product_18_image_03 from "../images/fish_2.3.png";
 const products = [
   {
     id: "01",
+    quantity : 1,
     title: "Chicken Burger",
     price: 24.99,
     image01: product_01_image_01,
@@ -93,11 +94,24 @@ const products = [
 
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ad et est, fugiat repudiandae neque illo delectus commodi magnam explicabo autem voluptates eaque velit vero facere mollitia. Placeat rem, molestiae error obcaecati enim doloribus impedit aliquam, maiores qui minus neque. ",
   },
+  {
+    id: "23",
+    quantity : 1,
+    title: "Fried Crunchy chicken",
+    price: 34.99,
+    image01: product_12_image_01,
+    image02: product_09_image_01,
+    image03: product_09_image_02,
+    category: "Chicken",
+
+    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ad et est, fugiat repudiandae neque illo delectus commodi magnam explicabo autem voluptates eaque velit vero facere mollitia. Placeat rem, molestiae error obcaecati enim doloribus impedit aliquam, maiores qui minus neque.",
+  } ,
 
   {
     id: "02",
+    quantity : 1,
     title: "Vegetarian Pizza",
-    price: 115.99,
+    price: 15.99,
     image01: product_02_image_01,
     image02: product_02_image_02,
     image03: product_02_image_03,
@@ -105,11 +119,24 @@ const products = [
 
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ad et est, fugiat repudiandae neque illo delectus commodi magnam explicabo autem voluptates eaque velit vero facere mollitia. Placeat rem, molestiae error obcaecati enim doloribus impedit aliquam, maiores qui minus neque.",
   },
+  {
+    id: "26",
+    quantity : 1,
+    title: "Grilled Oil Fish",
+    price: 34.99,
+    image01: product_11_image_01,
+    image02: product_11_image_02,
+    image03: product_11_image_03,
+    category: "Fish",
+
+    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ad et est, fugiat repudiandae neque illo delectus commodi magnam explicabo autem voluptates eaque velit vero facere mollitia. Placeat rem, molestiae error obcaecati enim doloribus impedit aliquam, maiores qui minus neque.",
+  } ,
 
   {
     id: "03",
+    quantity : 1,
     title: "Double Cheese Margherita",
-    price: 110.99,
+    price: 11.99,
     image01: product_03_image_01,
     image02: product_03_image_02,
     image03: product_03_image_03,
@@ -119,6 +146,7 @@ const products = [
   },
   {
     id: "19",
+    quantity : 1,
     title: "Leaf Toast Bread ",
     price: 33.99,
     image01: product_08_image_01,
@@ -129,20 +157,11 @@ const products = [
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ad et est, fugiat repudiandae neque illo delectus commodi magnam explicabo autem voluptates eaque velit vero facere mollitia. Placeat rem, molestiae error obcaecati enim doloribus impedit aliquam, maiores qui minus neque.",
   },
 
-  {
-    id: "04",
-    title: "Maxican Green Wave",
-    price: 110.99,
-    image01: product_04_image_01,
-    image02: product_04_image_02,
-    image03: product_04_image_03,
-    category: "Pizza",
-
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ad et est, fugiat repudiandae neque illo delectus commodi magnam explicabo autem voluptates eaque velit vero facere mollitia. Placeat rem, molestiae error obcaecati enim doloribus impedit aliquam, maiores qui minus neque.",
-  },
+  
 
   {
     id: "05",
+    quantity : 1,
     title: "Cheese Burger",
     price: 24.99,
     image01: product_05_image_01,
@@ -154,6 +173,7 @@ const products = [
   },
   {
     id: "30",
+    quantity : 1,
     title: "Sandwich",
     price: 17.59,
     image01: product_14_image_03,
@@ -166,6 +186,7 @@ const products = [
  
   {
     id: "123",
+    quantity : 1,
     title: "Hamburger Cheeseburger ",
     price: 29.99,
     image01: product_17_image_01,
@@ -177,8 +198,9 @@ const products = [
   },
   {
     id: "30.99",
+    quantity : 1,
     title: "Slider Cheeseburger",
-    price: 39.0,
+    price: 26.99,
     image01: product_17_image_03,
     image02: product_17_image_04,
     image03: product_17_image_02,
@@ -188,6 +210,7 @@ const products = [
   },
   {
     id: "134",
+    quantity : 1,
     title: " Veggie burger",
     price: 19.99,
     image01: product_17_image_04,
@@ -199,6 +222,7 @@ const products = [
   },
   {
     id: "50",
+    quantity : 1,
     title: "Crunchy Tasty chicken",
     price: 28.99,
     image01: product_12_image_03,
@@ -210,6 +234,7 @@ const products = [
   } ,
   {
     id: "06",
+    quantity : 1,
     title: "Royal Cheese Burger",
     price: 24.99,
     image01: product_01_image_01,
@@ -222,6 +247,7 @@ const products = [
 
   {
     id: "07",
+    quantity : 1,
     title: "Seafood Pizza",
     price: 15.99,
     image01: product_02_image_02,
@@ -234,6 +260,7 @@ const products = [
 
   {
     id: "08",
+    quantity : 1,
     title: "Thin Cheese Pizza",
     price: 11.99,
     image01: product_03_image_02,
@@ -246,6 +273,7 @@ const products = [
 
   {
     id: "09",
+    quantity : 1,
     title: "Pizza With Mushroom",
     price: 12.99,
     image01: product_04_image_02,
@@ -258,6 +286,7 @@ const products = [
 
   {
     id: "10",
+    quantity : 1,
     title: "Classic Hamburger",
     price: 24.99,
     image01: product_05_image_02,
@@ -270,6 +299,7 @@ const products = [
 
   {
     id: "11",
+    quantity : 1,
     title: "Chocolate Bread ",
     price: 28.99,
     image01: product_15_image_02,
@@ -282,8 +312,9 @@ const products = [
 
   {
     id: "12",
+    quantity : 1,
     title: "Delicious Bread ",
-    price: 26.2,
+    price: 26.29,
     image01: product_06_image_02,
     image02: product_06_image_01,
     image03: product_06_image_03,
@@ -294,8 +325,9 @@ const products = [
 
   {
     id: "13",
+    quantity : 1,
     title: "Loaf Bread ",
-    price: 25.9,
+    price: 25.29,
     image01: product_15_image_03,
     image02: product_15_image_02,
     image03: product_06_image_03,
@@ -304,9 +336,22 @@ const products = [
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ad et est, fugiat repudiandae neque illo delectus commodi magnam explicabo autem voluptates eaque velit vero facere mollitia. Placeat rem, molestiae error obcaecati enim doloribus impedit aliquam, maiores qui minus neque.",
   },
   {
+    id: "04",
+    quantity : 1,
+    title: "Maxican Green Wave",
+    price: 19.99,
+    image01: product_04_image_01,
+    image02: product_04_image_02,
+    image03: product_04_image_03,
+    category: "Pizza",
+
+    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ad et est, fugiat repudiandae neque illo delectus commodi magnam explicabo autem voluptates eaque velit vero facere mollitia. Placeat rem, molestiae error obcaecati enim doloribus impedit aliquam, maiores qui minus neque.",
+  },
+  {
     id: "14",
+    quantity : 1,
     title: "Fried chicken",
-    price: 43.0,
+    price: 43.59,
     image01: product_09_image_01,
     image02: product_09_image_02,
     image03: product_09_image_03,
@@ -316,8 +361,9 @@ const products = [
   },
   {
     id: "15",
+    quantity : 1,
     title: "Grilled chicken and Chips",
-    price: 49.0,
+    price: 49.99,
     image01: product_09_image_03,
     image02: product_12_image_02,
     image03: product_10_image_03,
@@ -327,8 +373,9 @@ const products = [
   },
   {
     id: "16",
+    quantity : 1,
     title: "Banana Bread ",
-    price: 35.0,
+    price: 35.99,
     image01: product_07_image_03,
     image02: product_07_image_02,
     image03: product_07_image_01,
@@ -338,8 +385,9 @@ const products = [
   },
   {
     id: "17",
+    quantity : 1,
     title: "Butter Bread ",
-    price: 17.0,
+    price: 17.99,
     image01: product_06_image_02,
     image02: product_06_image_01,
     image03: product_06_image_03,
@@ -350,8 +398,9 @@ const products = [
 
   {
     id: "18",
+    quantity : 1,
     title: "Wheat Sliced Bread ",
-    price: 15.0,
+    price: 15.99,
     image01: product_06_image_01,
     image02: product_06_image_01,
     image03: product_06_image_03,
@@ -362,8 +411,9 @@ const products = [
 
   {
     id: "20",
+    quantity : 1,
     title: "Pumpkin sliced Bread ",
-    price: 22.0,
+    price: 22.99,
     image01: product_08_image_02,
     image02: product_08_image_01,
     image03: product_06_image_03,
@@ -374,6 +424,7 @@ const products = [
 
   {
     id: "21",
+    quantity : 1,
     title: "Chinese Coconut Bread ",
     price: 23.99,
     image01: product_16_image_01,
@@ -385,8 +436,9 @@ const products = [
   },
   {
     id: "22",
+    quantity : 1,
     title: "Mixed chicken Kebabs",
-    price: 52.0,
+    price: 52.99,
     image01: product_09_image_02,
     image02: product_10_image_03,
     image03: product_10_image_01,
@@ -394,20 +446,11 @@ const products = [
 
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ad et est, fugiat repudiandae neque illo delectus commodi magnam explicabo autem voluptates eaque velit vero facere mollitia. Placeat rem, molestiae error obcaecati enim doloribus impedit aliquam, maiores qui minus neque.",
   },
-  {
-    id: "23",
-    title: "Fried Crunchy chicken",
-    price: 34.0,
-    image01: product_12_image_01,
-    image02: product_09_image_01,
-    image03: product_09_image_02,
-    category: "Chicken",
-
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ad et est, fugiat repudiandae neque illo delectus commodi magnam explicabo autem voluptates eaque velit vero facere mollitia. Placeat rem, molestiae error obcaecati enim doloribus impedit aliquam, maiores qui minus neque.",
-  } ,
+  
   
   {
     id: "56",
+    quantity : 1,
     title: "Tasty Crunchy Chicken",
     price: 38.99,
     image01: product_12_image_02,
@@ -421,8 +464,9 @@ const products = [
 
   {
     id: "24",
+    quantity : 1,
     title: "Mixed Fish Kebab",
-    price: 34.0,
+    price: 34.99,
     image01: product_11_image_01,
     image02: product_11_image_02,
     image03: product_11_image_03,
@@ -433,8 +477,9 @@ const products = [
 
   {
     id: "105",
+    quantity : 1,
     title: "Kipper Fried fish ",
-    price: 24.0,
+    price: 24.99,
     image01: product_18_image_01,
     image02: product_18_image_02,
     image03: product_18_image_03,
@@ -445,8 +490,9 @@ const products = [
 
   {
     id: "159",
+    quantity : 1,
     title: "grilled fish with tomatoes ",
-    price: 28.0,
+    price: 28.99,
     image01: product_18_image_02,
     image02: product_18_image_01,
     image03: product_18_image_03,
@@ -456,8 +502,9 @@ const products = [
   } ,
   {
     id: "199",
+    quantity : 1,
     title: "Steamed fish ",
-    price: 18.0,
+    price: 18.99,
     image01: product_18_image_03,
     image02: product_18_image_01,
     image03: product_18_image_02,
@@ -467,8 +514,9 @@ const products = [
   } ,
   {
     id: "25",
+    quantity : 1,
     title: "Jamaican Fried fish",
-    price: 29.0,
+    price: 29.99,
     image01: product_11_image_02,
     image02: product_11_image_01,
     image03: product_11_image_03,
@@ -476,21 +524,12 @@ const products = [
 
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ad et est, fugiat repudiandae neque illo delectus commodi magnam explicabo autem voluptates eaque velit vero facere mollitia. Placeat rem, molestiae error obcaecati enim doloribus impedit aliquam, maiores qui minus neque.",
   } ,
-  {
-    id: "26",
-    title: "Grilled Oil Fish",
-    price: 34.0,
-    image01: product_11_image_01,
-    image02: product_11_image_02,
-    image03: product_11_image_03,
-    category: "Fish",
-
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ad et est, fugiat repudiandae neque illo delectus commodi magnam explicabo autem voluptates eaque velit vero facere mollitia. Placeat rem, molestiae error obcaecati enim doloribus impedit aliquam, maiores qui minus neque.",
-  } ,
+  
   {
     id: "27",
+    quantity : 1,
     title: "Rice and Chicken Stew",
-    price: 37.0,
+    price: 37.99,
     image01: product_13_image_01,
     image02: product_13_image_02,
     image03: product_13_image_03,
@@ -500,8 +539,9 @@ const products = [
   } ,
   {
     id: "28",
+    quantity : 1,
     title: "Fried Rice and Chicken",
-    price: 27.0,
+    price: 27.99,
     image01: product_13_image_02,
     image02: product_13_image_01,
     image03: product_13_image_03,
@@ -511,8 +551,9 @@ const products = [
   } ,
   {
     id: "29",
+    quantity : 1,
     title: "Sauced Rice and Chicken",
-    price: 27.0,
+    price: 27.99,
     image01: product_13_image_03,
     image02: product_13_image_01,
     image03: product_13_image_02,
@@ -522,8 +563,9 @@ const products = [
   } ,
   {
     id: "30",
+    quantity : 1,
     title: "Sandwich",
-    price: 17.0,
+    price: 17.99,
     image01: product_14_image_03,
     image02: product_14_image_01,
     image03: product_14_image_02,
@@ -533,8 +575,9 @@ const products = [
   } ,
   {
     id: "31",
+    quantity : 1,
     title: "Sandwich with Toppings",
-    price: 18.0,
+    price: 18.99,
     image01: product_14_image_02,
     image02: product_14_image_01,
     image03: product_14_image_03,

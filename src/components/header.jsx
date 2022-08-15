@@ -19,17 +19,16 @@ import { AuthContext } from '../context/authContext'
 import { auth  } from '../firebase.config'
 import { onAuthStateChanged } from 'firebase/auth'
 import { AnimatePresence } from 'framer-motion'
-
+import { cartsContext } from '../context/CartContext'
 
 const Header = () => {
-    // const [values, setValues] = useState({
-    //   FirstName: "",
-    //   LastName: "",
-    //   email: "",
-    //   confirmPassword : ""
-    // });
-  // const [openMenu, setOpenMenu] = useState(true);
+  const {state : {cartItems} , addToCart ,state} = cartsContext()
+
   const { loginUser , logoutUser, User , RemoveNav , openMenu } = useContext(AuthContext) 
+
+//  useEffect(() => {
+      
+//  }, [cartItems]);
 
  useEffect(() => {
     const unsuscribe = onAuthStateChanged(auth ,(currentUser) => {
@@ -118,7 +117,7 @@ const Header = () => {
           whileTap={{
             scale: 1.1,
           }}
-        className='text-xl  relative flex justify-center cursor-pointer -left-2 items-center'><GiShoppingCart /> <span className='text-slate-100  absolute -top-2 -right-2 text-xs p-1  bg-red-500 rounded-full w-4 h-4 flex font-semibold items-center justify-center'>0</span>
+        className='text-xl  relative flex justify-center cursor-pointer -left-2 items-center'><GiShoppingCart /> <span className='text-slate-100  absolute -top-2 -right-2 text-xs p-1  bg-red-500 rounded-full w-4 h-4 flex font-semibold items-center justify-center'>{cartItems.length}</span>
         </motion.div>
 
         {/* <---- This section handles Authentication for medium and large screens ------>  */}
@@ -182,7 +181,7 @@ const Header = () => {
         whileTap={{
           scale: 1.1,
         }}
-      className='text-2xl relative text-slate-600 font-bold flex justify-center cursor-pointer  items-center'><GiShoppingCart /> <span className='text-slate-100 absolute top-0.5 -right-2 text-xs p-1  bg-red-600 rounded-full w-4 h-4 flex font-semibold items-center justify-center'>0</span>
+      className='text-2xl relative text-slate-600 font-bold flex justify-center cursor-pointer  items-center'><GiShoppingCart /> <span className='text-white absolute top-0.5 -right-2 text-[10px] p-1  bg-red-500 shadow-lg rounded-full w-4 h-4 flex font-semibold items-center justify-center'>{cartItems.length}</span>
         </motion.div>
 
 

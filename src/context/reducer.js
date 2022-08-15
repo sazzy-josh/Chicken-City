@@ -2,11 +2,18 @@ export const initialState = {
     user : null
 }
 
-export function AuthReducer (state = initialState, action) {
-  switch (action.type) {
+export const cartState = {
+  cartItems : [],
+  totalQuantity : 0 ,
+  totalAmount : 0 ,
+  showCart : false ,
+}
+
+export function AuthReducer (state = initialState, {payload , type }) {
+  switch (type) {
   case "SET_USER":
     return { ...state, 
-       user : action.payload
+       user : payload
     } ;
     case "LOGOUT_USER":
     return { ...state, 
@@ -16,3 +23,19 @@ export function AuthReducer (state = initialState, action) {
     return state
   }
 }
+
+export function CartReducer (state = cartState , {payload , type}){
+  switch (type) {
+    case "ADD_TO_CART":
+       return {...state ,cartItems: [...state.cartItems , {id:payload.id , price:payload.price , image: payload.image01 , quantity : payload.quantity }]}
+   
+      case "REMOVE_ITEM":
+        return {...state , cartItems: [state.cartItems.map((item) => item.id !== payload.id )]} ;
+
+
+  
+    default:
+      return state;
+  }
+}
+
