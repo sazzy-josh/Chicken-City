@@ -11,7 +11,7 @@ import { MdKeyboardArrowRight } from "react-icons/md"
 import { cartsContext } from '../context/CartContext'
 
 const Popular = () => {
-   const { addToCart } = cartsContext()
+   const { addToCart  } = cartsContext()
    
   
     const [category, setcategory] = useState('ALL');

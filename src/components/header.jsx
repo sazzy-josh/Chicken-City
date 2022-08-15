@@ -181,7 +181,7 @@ const Header = () => {
         whileTap={{
           scale: 1.1,
         }}
-      className='text-2xl relative text-slate-600 font-bold flex justify-center cursor-pointer  items-center'><GiShoppingCart /> <span className='text-white absolute top-0.5 -right-2 text-[10px] p-1  bg-red-500 shadow-lg rounded-full w-4 h-4 flex font-semibold items-center justify-center'>{cartItems.length}</span>
+      className='text-2xl relative text-slate-600 font-bold flex justify-center cursor-pointer  items-center'><GiShoppingCart /> <span className='text-white absolute top-0.5 -right-2 text-[10px] p-1  bg-red-500 shadow-lg rounded-full w-4 h-4 flex font-bold items-center justify-center'>{cartItems.length}</span>
         </motion.div>
 
 
