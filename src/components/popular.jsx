@@ -137,7 +137,7 @@ const Popular = () => {
                         addItem({ id , price , title ,image01 , quantity })
                      }} className='text-lg px-2 rounded text-white bg-red-300  hover:bg-white hover:text-red-400' 
                      >+</span>)  :(<span disabled onClick={() => {
-                        toast.warn("Item Already exist in cart!")
+                        toast.warn("Item Already exist in cart!" , { position: toast.POSITION.TOP_LEFT })
                      }} className='cursor-not-allowed text-lg px-2 rounded  text-white bg-red-300  hover:bg-white hover:text-red-400' 
                      >+</span>)  } 
                      </div>

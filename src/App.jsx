@@ -27,7 +27,7 @@ function App() {
           <AnimatePresence>
         <Router location={location} key={location.key}>
         <div className="flex flex-col w-screen relative">
-        <ToastContainer  />
+        <ToastContainer limit={5} />
             <Header />
             <Routes>
            
