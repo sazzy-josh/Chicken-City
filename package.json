@@ -15,6 +15,7 @@
     "react-icons": "^4.4.0",
     "react-router-dom": "^6.3.0",
     "react-slick": "^0.29.0",
+    "react-toastify": "^9.0.8",
     "slick-carousel": "^1.8.1"
   },
   "devDependencies": {

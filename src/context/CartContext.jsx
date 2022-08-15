@@ -43,7 +43,7 @@ const CartContextProvider = ({ children }) => {
   )
 }
 
- export const cartsContext = () => {
+ export const useCartsContext = () => {
     return useContext(CartContext)
 } 
 

@@ -8,10 +8,17 @@ import Hamburger from './assets/images/hamburger.png'
 import { motion } from 'framer-motion'
 import { AnimatePresence } from 'framer-motion'
 import { MdKeyboardArrowRight } from "react-icons/md"
-import { cartsContext } from '../context/CartContext'
+import { useCartsContext } from '../context/CartContext'
+import { toast } from 'react-toastify';
+
+
 
 const Popular = () => {
-   const { addToCart  } = cartsContext()
+
+   const notify = () => {
+     
+   }
+   const {removeFromCart, addToCart , state:{ cartItems }  } = useCartsContext()
    
   
     const [category, setcategory] = useState('ALL');
@@ -108,6 +115,7 @@ const Popular = () => {
 
          const addItem = () => {
             addToCart({ id , price , title ,image01 , quantity })
+            toast.success("Item Added to Cart!")
          }
 
              return (
@@ -125,9 +133,15 @@ const Popular = () => {
                      whileHover={{scale:1.2}}
                      src={image01} alt={title} className="sm:w-[90px] sm:h-[90px] w-[80px] h-[80px] object-contain py-1 "/>
                      <span className='lg:text-sm text-xs text-center py-2 font-bold'>{title}</span>
-                     <div className='flex text-sm text-center py-2 font-bold justify-between items-center w-full p-2 '><p className=' p-1 rounded-lg text-slate-800'>${price}</p> <span onClick={addItem} className='text-lg px-2 rounded text-white bg-red-300  hover:bg-white hover:text-red-400' 
-                     >+</span> </div>
-                  <div className='absolute top-0 text-slate-900 right-0 bg-gradient-to-br from-slate-50 to-red-300 font-semibold rounded-tr-lg rounded-bl-lg text-xs  overflow-hidden p-1'>10% OFF</div>
+                     <div className='flex text-sm text-center py-2 font-bold justify-between items-center w-full p-2 '><p className=' p-1 rounded-lg text-slate-800'>${price}</p> {cartItems && !cartItems.some((item) => item.id === id ) ? (<span onClick={() => {
+                        addItem({ id , price , title ,image01 , quantity })
+                     }} className='text-lg px-2 rounded text-white bg-red-300  hover:bg-white hover:text-red-400' 
+                     >+</span>)  :(<span disabled onClick={() => {
+                        toast.warn("Item Already exist in cart!")
+                     }} className='cursor-not-allowed text-lg px-2 rounded  text-white bg-red-300  hover:bg-white hover:text-red-400' 
+                     >+</span>)  } 
+                     </div>
+                  <div className='absolute top-0 text-slate-900 right-0 bg-gradient-to-br from-slate-50 to-red-300 font-semibold rounded-tr-lg rounded-bl-lg text-xs overflow-hidden p-1'>10% OFF</div>
                  </motion.div>
                 </div>
              )

@@ -14,21 +14,27 @@ import AboutUs from './pages/aboutUs'
 import Food from './pages/foods'
 import Helmet from './components/Helmet'
 import CartContextProvider from './context/CartContext';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 function App() {
  
   return (
+    
     <CartContextProvider>
      <AuthContextProvider>
           <AnimatePresence>
         <Router location={location} key={location.key}>
         <div className="flex flex-col w-screen relative">
+        <ToastContainer  />
             <Header />
             <Routes>
+           
               <Route path='/' element={
                 <Helmet title="Home">
                     <Home /> 
+                   
                 </Helmet>
               } />
               <Route path='/login' element={ <Helmet title="Login">

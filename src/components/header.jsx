@@ -19,10 +19,10 @@ import { AuthContext } from '../context/authContext'
 import { auth  } from '../firebase.config'
 import { onAuthStateChanged } from 'firebase/auth'
 import { AnimatePresence } from 'framer-motion'
-import { cartsContext } from '../context/CartContext'
+import { useCartsContext } from '../context/CartContext'
 
 const Header = () => {
-  const {state : {cartItems} , addToCart ,state} = cartsContext()
+  const {state : {cartItems} , addToCart } = useCartsContext()
 
   const { loginUser , logoutUser, User , RemoveNav , openMenu } = useContext(AuthContext) 
 
@@ -117,7 +117,7 @@ const Header = () => {
           whileTap={{
             scale: 1.1,
           }}
-        className='text-xl  relative flex justify-center cursor-pointer -left-2 items-center'><GiShoppingCart /> <span className='text-slate-100  absolute -top-2 -right-2 text-xs p-1  bg-red-500 rounded-full w-4 h-4 flex font-semibold items-center justify-center'>{cartItems.length}</span>
+        className='text-xl  relative flex justify-center cursor-pointer -left-2 items-center'><GiShoppingCart /> <span className='text-slate-100  absolute -top-2 -right-2 text-[10px] p-1  bg-red-500 rounded-full w-4 h-4 flex font-bold items-center justify-center'>{cartItems.length}</span>
         </motion.div>
 
         {/* <---- This section handles Authentication for medium and large screens ------>  */}
@@ -172,7 +172,7 @@ const Header = () => {
     {/*Nav Section for Mobile and Small Screens */}
 
 
-    <div className="sm:hidden flex justify-between w-screen p-5 py- relative">
+    <div className="sm:hidden flex justify-between w-screen p-5 py- relative z-20">
       
 
       {/* Cart section for mobile screens  */}
@@ -199,7 +199,7 @@ const Header = () => {
         {/*Authentication section goes here for  small and mobile screens*/}
 
         <div className='flex'>
-        {!User && <div className='flex justify-center relative cursor-pointer items-center z-1' onClick={RemoveNav }>
+        {!User && <div className='flex justify-center relative cursor-pointer items-center' onClick={RemoveNav }>
             <motion.img src={Avatar} whileTap={{scale:0.8}} className="w-9 h-9 cursor-pointer hover:border-2 rounded-full hover:shadow-lg  border-cyan-600 z-10" alt="Avatar"  />
            {openMenu ? <BiChevronDown  className='min-w-[12px] z-99'/> : <BiChevronUp className='z-10' /> }
         </div>}
@@ -212,7 +212,7 @@ const Header = () => {
         animate={{opacity:1 , x: -10}}
         exit={{x:1000  }}
         transition={{type:'spring' , stiffness:280  ,ease:'easeOut' }}
-        className='flex flex-col justify-center w-3/4 h-screen  absolute top-0  left-0 bottom-0 bg-slate-50 shadow-xl  font-semibold p-1 '>
+        className='flex flex-col justify-center w-3/4 h-screen  absolute top-0  z-30 left-0 bottom-0 bg-slate-50 shadow-xl  font-semibold p-1 '>
               <li className=' flex justify-center items-center gap-x-3 text-sm p-8 px-2 transition-all rounded ease-in-out duration-600 hover:bg-slate-200 cursor-pointer hover:rounded   hover:border-gray-400 ' onClick={googleAuth } > <TbLogin/>Login <span 
               ></span> </li>
               <hr />
