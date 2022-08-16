@@ -13,28 +13,29 @@ import AuthContextProvider from './context/authContext'
 import AboutUs from './pages/aboutUs'
 import Food from './pages/foods'
 import Helmet from './components/Helmet'
-import CartContextProvider from './context/CartContext';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import CartContainer from './components/cart';
+import  { useCartsContext } from './context/CartContext';
+
 
 
 function App() {
- 
+   const { state: {showCart}} = useCartsContext() 
+
   return (
-    
-    <CartContextProvider>
+     
      <AuthContextProvider>
           <AnimatePresence>
         <Router location={location} key={location.key}>
         <div className="flex flex-col w-screen relative">
+        {showCart && <CartContainer />}
         <ToastContainer limit={5} />
             <Header />
-            <Routes>
-           
+            <Routes>      
               <Route path='/' element={
                 <Helmet title="Home">
-                    <Home /> 
-                   
+                    <Home />    
                 </Helmet>
               } />
               <Route path='/login' element={ <Helmet title="Login">
@@ -55,9 +56,8 @@ function App() {
         </div>
       </Router>
       </AnimatePresence>
-
      </AuthContextProvider>
-    </CartContextProvider>
+  
     
     
     

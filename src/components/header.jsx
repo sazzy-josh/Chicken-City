@@ -22,7 +22,7 @@ import { AnimatePresence } from 'framer-motion'
 import { useCartsContext } from '../context/CartContext'
 
 const Header = () => {
-  const {state : {cartItems} , addToCart } = useCartsContext()
+  const {state : {cartItems} , addToCart ,  openCart } = useCartsContext()
 
   const { loginUser , logoutUser, User , RemoveNav , openMenu } = useContext(AuthContext) 
 
@@ -114,10 +114,11 @@ const Header = () => {
        
         <div className='flex justify-center items-center box-border gap-3 min-w-[88px]'>
         <motion.div
+        onClick={openCart}
           whileTap={{
             scale: 1.1,
           }}
-        className='text-xl  relative flex justify-center cursor-pointer -left-2 items-center'><GiShoppingCart /> <span className='text-slate-100  absolute -top-2 -right-2 text-[10px] p-1  bg-red-500 rounded-full w-4 h-4 flex font-bold items-center justify-center'>{cartItems.length}</span>
+        className='text-xl  relative flex justify-center cursor-pointer -left-2 items-center'><GiShoppingCart  /> <span className='text-slate-100  absolute -top-2 -right-2 text-[10px] p-1  bg-red-500 rounded-full w-4 h-4 flex font-bold items-center justify-center'>{cartItems.length}</span>
         </motion.div>
 
         {/* <---- This section handles Authentication for medium and large screens ------>  */}

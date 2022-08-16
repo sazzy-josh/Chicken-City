@@ -20,6 +20,14 @@
     
 }
 
+.black{
+    background-color: black;
+    opacity: 25%;
+}
+
+.cart{
+   z-index: 100;
+}
 
 .index{
     z-index: 100;
@@ -37,6 +45,18 @@ body{
     overflow-x: hidden;
     scroll-behavior: smooth;
     box-sizing: border-box;
+}
+
+.subtotal{
+    display: flex;
+    justify-content:space-around;
+    position: absolute;
+    bottom: 0;
+    
+}
+
+.cartheight{
+    height: calc(100vh - 133px);
 }
 
 .overlay{

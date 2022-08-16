@@ -236,6 +236,7 @@ const MainContainer = () => {
                <img src={payment} alt="search" className='w-[100px] h-[100px] object-contain' />
                <span className='p-2 border-dotted border-2 rounded-full border-red-300 w-12 h-12 flex justify-center  items-center font-bold'>04</span>
                <p className='font-bold'>Make Payment</p>
+               
            </motion.div>
 
          </motion.div>
@@ -244,7 +245,7 @@ const MainContainer = () => {
         
       </div>
 
-
+      
     </div>
   )
 }

@@ -29,13 +29,13 @@ export function AuthReducer (state = initialState, {payload , type }) {
 export function CartReducer (state = cartState , {payload , type}){
   switch (type) {
     case "ADD_TO_CART":
-      return {...state , cartItems : [ ...state.cartItems ,   {id:payload.id , price:payload.price , image: payload.image01 , quantity : payload.quantity }] } ;
+      return {...state , cartItems : [ ...state.cartItems ,   {id:payload.id , price:payload.price , image: payload.image01 , quantity : payload.quantity , title: payload.title }] } ;
    
       case "REMOVE_ITEM":
         return {...state , cartItems: state.cartItems.filter((item) => item.id !== payload.id )} ;
 
-      case "SHOW_CART" :
-        return {...state , showCart : !showCart  }
+      case "SHOW_CART":
+        return {...state , showCart : !state.showCart} ;
   
     default:
       return state;

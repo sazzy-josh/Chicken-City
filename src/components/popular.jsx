@@ -13,6 +13,8 @@ import { toast } from 'react-toastify';
 import { TiDelete} from 'react-icons/ti'
 
 
+
+
 const Popular = () => {
 
    const {removeFromCart, addToCart , state:{ cartItems }   } = useCartsContext()
@@ -149,7 +151,7 @@ const Popular = () => {
                         addItem({ id , price , title ,image01 , quantity })
                      }} className='text-lg px-2 rounded text-white bg-red-300  hover:bg-white hover:text-red-400' 
                      >+</span>)  :(<span disabled onClick={remove} className='text-lg px-2 rounded  text-white bg-red-300  hover:bg-white hover:text-red-400' 
-                     ><TiDelete className='w-6 h-6' /></span>)  } 
+                     ><TiDelete className='w-6 h-6' /></span>)} 
                      </div>
                   <div className='absolute top-0 text-slate-900 right-0 bg-gradient-to-br from-slate-50 to-red-300 font-semibold rounded-tr-lg rounded-bl-lg text-xs overflow-hidden p-1'>10% OFF</div>
                  </motion.div>
