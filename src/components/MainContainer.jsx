@@ -106,12 +106,12 @@ const MainContainer = () => {
         </p>
 
         <div className='flex  gap-4 items-center'> 
-        <motion.p
+        <motion.a
          whileHover={{scale:0.9 }}
          initial={{opacity:0.3 }}
          animate={{opacity:1 }}
          transition={{ ease: "easeInOut", duration: 0.4 }}
-        className='text-white  text-bold gap-2 p-3 my-8 text-xs cursor-pointer rounded-full bg-red-500 w-[120px] shadow-lg md:max-w-[140px] max-h-[80px] border-2 border-red-200 font-bold flex justify-center items-center '>Order Now </motion.p>
+        className='text-white  text-bold gap-2 p-3 my-8 text-xs cursor-pointer rounded-full bg-red-500 w-[120px] shadow-lg md:max-w-[140px] max-h-[80px] border-2 border-red-200 font-bold flex justify-center items-center ' href='#popular'>Order Now </motion.a>
         
         <motion.p 
          whileHover={{scale:0.9 ,  y:-10 }}

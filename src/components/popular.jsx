@@ -15,9 +15,6 @@ import { TiDelete} from 'react-icons/ti'
 
 const Popular = () => {
 
-   const notify = () => {
-     
-   }
    const {removeFromCart, addToCart , state:{ cartItems }   } = useCartsContext()
    
   
@@ -78,7 +75,7 @@ const Popular = () => {
     }, [category]);
 
   return (
-    <div className=' p-5 sm:p-10 lg:px-28'>
+    <div className=' p-5 sm:p-10 lg:px-28' id='popular'>
         <p className='md:text-[32px] text-[28px] font-bold text-center'>Popular Dishes with Discount</p>
          <p className='lg:text-sm text-xs text-center py-2 font-bold'> The most delicious and healthy dishes from our chef.You can order this meal seperately or as part of a meal plan</p>
 
@@ -129,6 +126,10 @@ const Popular = () => {
             toast.success("Item Added to Cart!")
          }
 
+         const remove = () => {
+            toast.info("Item Removed from cart!" , { position: toast.POSITION.TOP_LEFT }) , removeFromCart({id})
+         }
+
              return (
                 <div className='flex items-center justify-center'>
                   
@@ -147,9 +148,7 @@ const Popular = () => {
                      <div className='flex text-sm text-center py-2 font-bold justify-between items-center w-full p-2 '><p className=' p-1 rounded-lg text-slate-800'>${price}</p> {cartItems && !cartItems.some((item) => item.id === id ) ? (<span onClick={() => {
                         addItem({ id , price , title ,image01 , quantity })
                      }} className='text-lg px-2 rounded text-white bg-red-300  hover:bg-white hover:text-red-400' 
-                     >+</span>)  :(<span disabled onClick={() => {
-                        toast.info("Item Removed from cart!" , { position: toast.POSITION.TOP_LEFT }) , removeFromCart({id})
-                     }} className='text-lg px-2 rounded  text-white bg-red-300  hover:bg-white hover:text-red-400' 
+                     >+</span>)  :(<span disabled onClick={remove} className='text-lg px-2 rounded  text-white bg-red-300  hover:bg-white hover:text-red-400' 
                      ><TiDelete className='w-6 h-6' /></span>)  } 
                      </div>
                   <div className='absolute top-0 text-slate-900 right-0 bg-gradient-to-br from-slate-50 to-red-300 font-semibold rounded-tr-lg rounded-bl-lg text-xs overflow-hidden p-1'>10% OFF</div>
