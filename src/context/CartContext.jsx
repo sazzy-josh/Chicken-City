@@ -1,4 +1,4 @@
-import { createContext , useContext  , useReducer} from "react";
+import { createContext , useContext  , useReducer , useEffect } from "react";
 import { CartReducer, cartState } from "./reducer";
 
 
@@ -23,6 +23,10 @@ const CartContextProvider = ({ children }) => {
     dispatch({ type: "DECREASE", payload });
   };
 
+  const showCart = () => {
+    dispatch({ type : "SHOW_CART"})
+  }
+
   //Function to remove an item from the cart
   const removeFromCart = (payload) => {
     dispatch({ type: "REMOVE_ITEM", payload });
@@ -36,8 +40,9 @@ const CartContextProvider = ({ children }) => {
 
 
 
+
   return (
-   <CartContext.Provider value={{state , addToCart  , removeFromCart }}>
+   <CartContext.Provider value={{state , addToCart  , removeFromCart , showCart }}>
     {children}
    </CartContext.Provider>
   )
