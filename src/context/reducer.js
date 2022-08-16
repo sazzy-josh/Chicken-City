@@ -32,7 +32,7 @@ export function CartReducer (state = cartState , {payload , type}){
       return {...state , cartItems : [ ...state.cartItems ,   {id:payload.id , price:payload.price , image: payload.image01 , quantity : payload.quantity }] } ;
    
       case "REMOVE_ITEM":
-        return {...state , cartItems: [state.cartItems.map((item) => item.id !== payload.id )]} ;
+        return {...state , cartItems: state.cartItems.filter((item) => item.id !== payload.id )} ;
 
       case "SHOW_CART" :
         return {...state , showCart : !showCart  }
