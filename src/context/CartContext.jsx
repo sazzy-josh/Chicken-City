@@ -1,4 +1,4 @@
-import { createContext , useContext  , useReducer , useEffect } from "react";
+import { createContext , useContext  , useReducer , useEffect ,useState } from "react";
 import { CartReducer, cartState } from "./reducer";
 
 export const CartContext = createContext()
@@ -8,16 +8,20 @@ export const CartContext = createContext()
 const CartContextProvider = ({ children }) => {
   
  const [state, dispatch] = useReducer(CartReducer, cartState)
+ const [total , setTotal] = useState(0)
 
  useEffect(() => {
   localStorage.setItem('cartItems' , JSON.stringify(state.cartItems))
 }, [state]);
 
- //Function to handle when an item is added from the store into the Cart
- const addToCart = (prod) => {
-  //localstorage
-    
+useEffect(() => {
+  setTotal(state.cartItems.reduce((acc , item) => {
+    return acc += Number(item.quantity) * Number(item.price) 
+  },0))
+}, [state.cartItems]);
 
+ //Function to handle when an item is added from the store into the Cart
+  const addToCart = (prod) => {
     dispatch({ type: "ADD_TO_CART", payload : prod });
   };
 
@@ -44,13 +48,14 @@ const CartContextProvider = ({ children }) => {
   const clearCart = () => {
     dispatch({ type: "CLEAR" });
   };
+    
+  
 
 
-
-
+ 
 
   return (
-   <CartContext.Provider value={{state , addToCart  , removeFromCart , openCart   }}>
+   <CartContext.Provider value={{state , addToCart  , removeFromCart , openCart , total }}>
     {children}
    </CartContext.Provider>
   )

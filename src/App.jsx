@@ -24,6 +24,7 @@ function App() {
    const { state: {showCart}} = useCartsContext() 
 
   return (
+    
      
      <AuthContextProvider>
           <AnimatePresence>

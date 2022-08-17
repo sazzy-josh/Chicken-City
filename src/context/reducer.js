@@ -9,8 +9,6 @@ export const initialState = {
 
 export const cartState = {
   cartItems : storage,
-  totalQuantity : 0 ,
-  totalAmount : 0 ,
   showCart : false ,
 }
 
@@ -42,6 +40,12 @@ export function CartReducer (state = cartState , {payload , type}){
 
       case "SHOW_CART":
         return {...state , showCart : !state.showCart} ;
+
+      // case "TOTAL_AMOUNT" :
+      //     return {...state ,totalAmount : state.cartItems.map(item => {
+      //        item.price * item.quantity}).reduce((acc,item) => {
+      //        acc + item
+      //     },0) }
   
     default:
       return state;

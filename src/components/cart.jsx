@@ -1,12 +1,20 @@
-import React from 'react'
+import React ,{ useEffect , useState } from "react"
 import { motion , AnimatePresence } from 'framer-motion'
-import img from "./assets/images/bread_1.2.png"
 import { useCartsContext } from '../context/CartContext'
 import empty from "./assets/svg/empty.svg"
 
 
 const CartContainer = () => {
-    const { removeFromCart , openCart , state: {cartItems} } = useCartsContext()
+    const {total, removeFromCart , openCart , state: {cartItems}} = useCartsContext()
+  
+
+  //   useEffect(() => {
+  //     setTotal(cartItems.reduce((acc , item) => {
+  //       return acc += Number(item.quantity) * Number(item.price) 
+  //     },total))
+  // }, []);
+ 
+    console.log(total)
 
   return (
     // Cart Section for Desktop and Large screens
@@ -54,7 +62,7 @@ const CartContainer = () => {
          
         {!cartItems.length < 1 &&  <div className='flex flex-col bg-red-400 h-[100px] p-2 px-4 w-full fixed bottom-0 overflow-x-hidden'>
          <div className='w-2/3 text-lg text-slate-800 font-bold'>
-          Subtotal : <span>$200.89</span>
+          Subtotal : <span>${total.toFixed(2)}</span>
          </div>
 
          <div className='my-4 font-semibold text-slate-800'> <span className='bg-white p-2 rounded-md mr-4'>Checkout</span> <span className='rounded-md bg-slate-500 p-2'>Continue Shopping</span> </div>
