@@ -32,7 +32,7 @@ useEffect(() => {
 
   //Function to handle when an item is removed from the cart
   const decrease = (payload) => {
-    dispatch({ type: "DECREASE", payload });
+    dispatch({ type: "DECREASE", payload  });
   };
 
   const openCart = () => {
@@ -55,7 +55,7 @@ useEffect(() => {
  
 
   return (
-   <CartContext.Provider value={{state , addToCart  , removeFromCart , openCart , total }}>
+   <CartContext.Provider value={{state , addToCart  , removeFromCart , openCart , increase , decrease ,total }}>
     {children}
    </CartContext.Provider>
   )

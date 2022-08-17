@@ -23,6 +23,7 @@ export function AuthReducer (state = initialState, {payload , type }) {
     return { ...state, 
        user : null
     } ;
+
   default:
     return state
   }
@@ -41,12 +42,17 @@ export function CartReducer (state = cartState , {payload , type}){
       case "SHOW_CART":
         return {...state , showCart : !state.showCart} ;
 
-      // case "TOTAL_AMOUNT" :
-      //     return {...state ,totalAmount : state.cartItems.map(item => {
-      //        item.price * item.quantity}).reduce((acc,item) => {
-      //        acc + item
-      //     },0) }
-  
+
+      case "INCREASE" :
+        return {...state , cartItems : state.cartItems.map( i => i.id === payload.id 
+          ? ({...i, quantity: i.quantity + 1 })
+          : i )} ;
+
+      case "DECREASE" :
+    return {...state , cartItems : state.cartItems.map( i => i.id === payload.id 
+      ? ({...i, quantity: i.quantity - 1 })
+      : i )} ;
+    
     default:
       return state;
   }

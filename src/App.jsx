@@ -31,7 +31,7 @@ function App() {
         <Router location={location} key={location.key}>
         <div className="flex flex-col w-screen relative">
         {showCart && <CartContainer />}
-        <ToastContainer limit={5} />
+        <ToastContainer limit={5} autoClose={500}/>
             <Header />
             <Routes>      
               <Route path='/' element={
