@@ -1,13 +1,19 @@
+const storage = localStorage.getItem("cartItems")
+  ? JSON.parse(localStorage.getItem("cartItems"))
+  : [];
+
+
 export const initialState = {
     user : null
 }
 
 export const cartState = {
-  cartItems : [],
+  cartItems : storage,
   totalQuantity : 0 ,
   totalAmount : 0 ,
   showCart : false ,
 }
+
 
 export function AuthReducer (state = initialState, {payload , type }) {
   switch (type) {

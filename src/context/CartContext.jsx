@@ -3,12 +3,21 @@ import { CartReducer, cartState } from "./reducer";
 
 export const CartContext = createContext()
 
+
+
 const CartContextProvider = ({ children }) => {
   
  const [state, dispatch] = useReducer(CartReducer, cartState)
 
+ useEffect(() => {
+  localStorage.setItem('cartItems' , JSON.stringify(state.cartItems))
+}, [state]);
+
  //Function to handle when an item is added from the store into the Cart
  const addToCart = (prod) => {
+  //localstorage
+    
+
     dispatch({ type: "ADD_TO_CART", payload : prod });
   };
 
@@ -41,7 +50,7 @@ const CartContextProvider = ({ children }) => {
 
 
   return (
-   <CartContext.Provider value={{state , addToCart  , removeFromCart , openCart  }}>
+   <CartContext.Provider value={{state , addToCart  , removeFromCart , openCart   }}>
     {children}
    </CartContext.Provider>
   )

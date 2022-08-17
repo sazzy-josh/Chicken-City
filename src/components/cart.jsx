@@ -1,5 +1,5 @@
 import React from 'react'
-import { motion } from 'framer-motion'
+import { motion , AnimatePresence } from 'framer-motion'
 import img from "./assets/images/bread_1.2.png"
 import { useCartsContext } from '../context/CartContext'
 import empty from "./assets/svg/empty.svg"
@@ -10,7 +10,13 @@ const CartContainer = () => {
 
   return (
     // Cart Section for Desktop and Large screens
-    <div className='hidden sm:flex fixed top-0 left-0  w-full h-screen cart'>
+    <AnimatePresence exitBeforeEnter>
+    <motion.div 
+    initial={{x:"100vw"}}
+    animate={{x:0}}
+    exit={{x:"-100vw"}}
+    transition={{duration:1 , ease:'easeOut'}}
+    className='hidden sm:flex fixed top-0 left-0  w-full h-screen cart '>
       <div className='w-4/6 black'></div>
       
       <div className=' sm:w-4/6 lg:w-2/6 bg-white flex flex-col box-border'>
@@ -57,7 +63,8 @@ const CartContainer = () => {
        
 
       </div>
-    </div>
+    </motion.div>
+    </AnimatePresence>
   )
 }
 
