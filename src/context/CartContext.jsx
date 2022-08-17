@@ -46,7 +46,7 @@ useEffect(() => {
 
   //Function to clear the cart
   const clearCart = () => {
-    dispatch({ type: "CLEAR" });
+    dispatch({ type: "CLEAR_CART" });
   };
     
   
@@ -55,7 +55,7 @@ useEffect(() => {
  
 
   return (
-   <CartContext.Provider value={{state , addToCart  , removeFromCart , openCart , increase , decrease ,total }}>
+   <CartContext.Provider value={{ state , clearCart, addToCart  , removeFromCart , openCart , increase , decrease ,total }}>
     {children}
    </CartContext.Provider>
   )

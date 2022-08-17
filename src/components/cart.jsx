@@ -5,7 +5,7 @@ import empty from "./assets/svg/empty.svg"
 
 
 const CartContainer = () => {
-    const {total ,increase, decrease , removeFromCart , openCart , state: {cartItems}} = useCartsContext()
+    const {clearCart , total ,increase, decrease , removeFromCart , openCart , state: {cartItems}} = useCartsContext()
     // const [qty , setQty] = useState(cartItems.qty)
 
  
@@ -28,7 +28,10 @@ const CartContainer = () => {
           <span className='rotate-45 text-xl text-white'>+</span>
          
         </div>
-        <span className="border rounded-full gap-x-1 m-2 flex justify-between p-1 font-bold hover:text-red-500 hover:font-extrabold hover:border-red-600 border-slate-700 cursor-pointer text-xs items-center px-2"><p className="rounded-full p-2 border text-[9px] w-5 h-5 flex justify-center items-center border-slate-800  hover:border-red-600 "><span>X</span></p>clear cart</span></div>
+        <span
+        onClick={clearCart}  
+        className="border rounded-full gap-x-1 m-2 flex justify-between p-1 font-bold hover:text-red-500 hover:font-extrabold hover:border-red-600 border-slate-700 cursor-pointer text-xs items-center px-2"><p className="rounded-full p-2 border text-[9px] w-5 h-5 flex justify-center items-center border-slate-800  hover:border-red-600 "><span>X</span></p>clear cart</span>
+        </div>
         {/* CART ITEMS SECTION */}
 
         {cartItems.length < 1 ? <div className='flex flex-col gap-y-4 h-screen justify-center items-center'><img src={empty} alt="empty cart" className='w-[150px] h-[150px] object-contain' /> <p>No item in cart</p> </div> :<div className='flex flex-col w-full p-4  overflow-y-scroll cartheight'>

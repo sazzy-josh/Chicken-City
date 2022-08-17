@@ -52,6 +52,9 @@ export function CartReducer (state = cartState , {payload , type}){
     return {...state , cartItems : state.cartItems.map( i => i.id === payload.id 
       ? ({...i, quantity: i.quantity - 1 })
       : i )} ;
+
+      case "CLEAR_CART": 
+      return {...state , cartItems: []}
     
     default:
       return state;
