@@ -19,9 +19,9 @@ import CartContainer from './components/cart';
 import  { useCartsContext } from './context/CartContext';
 
 const contextClass = {
-  success: "bg-green-400",
+  success: "bg-green-700",
   error: "bg-red-600",
-  info: "bg-gray-600",
+  info: "bg-gray-800",
   warning: "bg-orange-400",
   default: "bg-indigo-600",
   dark: "bg-white-600 font-gray-300",
