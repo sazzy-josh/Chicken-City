@@ -41,7 +41,7 @@ function App() {
         <ToastContainer limit={5}toastClassName={({ type }) => contextClass[type || "default"] + 
         " relative flex p-2 min-h-10 w-3/4 sm:w-auto rounded-xl sm:rounded-xl justify-around overflow-hidden cursor-pointer"
       }
-      bodyClassName={() => "text-[14px]  font-slate-50 flex items-center p-1"}
+      bodyClassName={() => "text-[14px]  font-slate-50 flex items-center overflow-hidden p-1"}
       autoClose={500} />
             <Header />
             <Routes>      
