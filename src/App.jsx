@@ -38,7 +38,7 @@ function App() {
         <Router location={location} key={location.key}>
         <div className="flex flex-col w-screen relative">
         {showCart && <CartContainer />}
-        <ToastContainer limit={5}toastClassName={({ type }) => contextClass[type || "default"] + 
+        <ToastContainer limit={5} toastClassName={({ type }) => contextClass[type || "default"] + 
         " relative flex p-2 min-h-10 w-3/4 sm:w-auto rounded-xl sm:rounded-xl justify-around overflow-hidden cursor-pointer"
       }
       bodyClassName={() => "text-[14px]  font-slate-50 flex items-center overflow-hidden p-1"}
