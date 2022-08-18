@@ -47,6 +47,7 @@ body{
     box-sizing: border-box;
 }
 
+
 .subtotal{
     display: flex;
     justify-content:space-around;

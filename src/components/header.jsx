@@ -130,9 +130,9 @@ const Header = () => {
         </div>}
         <div>
         {!openMenu && !User &&  <motion.div 
-      initial={{ opacity: 0.9, x:100  }}
-         animate={{ opacity: 1 , x: 0 }}
-         transition={{ ease: "easeInOut", duration: 0.0009 }}
+      initial={{ opacity: 0   }}
+      animate={{ opacity: 1  }}
+      transition={{  duration: 0.5 ,type:'spring' }}
         className='transition-all ease-in-out duration-300'>
               <p className='border bg-slate-100 rounded flex justify-center items-center  text-sm p-1 px-1 absolute right-5  w-1/6 transition-all ease-in-out duration-600 font-semibold m-2  mt-8' onClick={googleAuth }>
                 <p className=' flex justify-center rounded hover:bg-slate-300 cursor-pointer p-1 items-center w-full'>Login <span className='px-1'><TbLogin/></span> </p>

@@ -18,7 +18,14 @@ import 'react-toastify/dist/ReactToastify.css';
 import CartContainer from './components/cart';
 import  { useCartsContext } from './context/CartContext';
 
-
+const contextClass = {
+  success: "bg-green-400",
+  error: "bg-red-600",
+  info: "bg-gray-600",
+  warning: "bg-orange-400",
+  default: "bg-indigo-600",
+  dark: "bg-white-600 font-gray-300",
+};
 
 function App() {
    const { state: {showCart}} = useCartsContext() 
@@ -31,7 +38,11 @@ function App() {
         <Router location={location} key={location.key}>
         <div className="flex flex-col w-screen relative">
         {showCart && <CartContainer />}
-        <ToastContainer limit={5} autoClose={500}/>
+        <ToastContainer limit={5}toastClassName={({ type }) => contextClass[type || "default"] + 
+        " relative flex p-2 min-h-10 w-3/4 sm:w-auto rounded-full justify-around overflow-hidden cursor-pointer"
+      }
+      bodyClassName={() => "text-[14px]  font-slate-50 flex items-center p-1"}
+      autoClose={500} />
             <Header />
             <Routes>      
               <Route path='/' element={

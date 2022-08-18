@@ -60,12 +60,12 @@ const CartContainer = () => {
 
         {/* CHECKOUT AND SUBTOTAL SECTION */}
          
-        {!cartItems.length < 1 &&  <div className='flex flex-col bg-red-400 h-[100px] p-2 px-4 w-full fixed bottom-0 overflow-x-hidden'>
+        {!cartItems.length < 1 &&  <div className='flex flex-col bg-gradient-to-tl from-slate-100 to-red-500 h-[100px] p-2 px-4 w-full fixed bottom-0 overflow-x-hidden'>
          <div className='w-2/3 text-lg text-slate-800 font-bold'>
           Subtotal : <span>${total.toFixed(2)}</span>
          </div>
 
-         <div className='my-4 font-semibold text-slate-800'> <span className='bg-white p-2 rounded-md mr-4 text-sm'>Checkout</span> <span className='rounded-md bg-slate-500 p-2 text-sm'>Continue Shopping</span> </div>
+         <div className='my-4 font-semibold text-slate-800'> <span className='bg-white p-2 rounded-md mr-4 text-sm shadow-lg cursor-pointer'>Checkout</span> <span className='rounded-md bg-slate-500 p-2 text-sm shadow-lg cursor-pointer'>Continue Shopping</span> </div>
 
         </div>}
        
