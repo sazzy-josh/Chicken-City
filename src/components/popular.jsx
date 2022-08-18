@@ -126,7 +126,7 @@ const Popular = () => {
          const addItem = () => {
             addToCart({ id , price , title ,image01 , quantity })
             // toast.success("Item Added to Cart!")
-            toast.success(`${title} Added to Cart`, {
+            toast.success(`${title} added to cart!`, {
                position: toast.POSITION.TOP_RIGHT, 
           });
          }
