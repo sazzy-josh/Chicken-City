@@ -6,13 +6,8 @@ import { HiPlus , HiMinus} from 'react-icons/hi'
 import {MdDeleteForever} from 'react-icons/md' 
 import { GiShoppingCart } from 'react-icons/gi'
 import  { VscQuestion } from 'react-icons/vsc'
-// import FlutterBtn from "./flutter/flutterBtn"
+import FlutterBtn from "./flutter/flutterBtn"
 
-// migrated to yarn
-
-
-
-// const stripeApiKey = "pk_test_51LYV4vFHeXM96Uirwtuq028r3g2yklZxAyVGiyFx0wu8ejulhCSEu23LgjtVXJnL1JpbbQnTYderO5rIighXoErU0033erGCbv";
 
 const CartContainer = () => {
     const {clearCart , total ,increase, decrease , removeFromCart , openCart , state: {cartItems}} = useCartsContext()
@@ -88,7 +83,7 @@ const CartContainer = () => {
        
        
       
-         {/* <FlutterBtn total={total} /> */}
+         <FlutterBtn  />
         
           
           </div> 

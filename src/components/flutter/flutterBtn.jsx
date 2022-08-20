@@ -1,13 +1,16 @@
 import React from 'react'
 import { FlutterWaveButton, closePaymentModal } from 'flutterwave-react-v3';
-import log from "../assets/img/logo.png"
+import { useCartsContext } from '../../context/CartContext';
 
-const FlutterBtn = ({total}) => {
-  
+
+const FlutterBtn = () => {
+   
+   const {clearCart , total , openCart } = useCartsContext()
+
     const config = {
         public_key: 'FLWPUBK_TEST-fcd450bbe39e4078a50213a06e5fb0a6-X',
         tx_ref: Date.now(),
-        amount: total*610,
+        amount: total * 610,
         currency: 'NGN',
         payment_options:'card,mobilemoney,ussd',
         customer: {
@@ -18,7 +21,7 @@ const FlutterBtn = ({total}) => {
         customizations: {
           title: 'Foodcity',
           description: 'Payment for items in cart',
-          logo:log,
+          logo:'',
         },
       };
     
@@ -27,8 +30,10 @@ const FlutterBtn = ({total}) => {
         text: 'Pay with Flutterwave!',
         callback: (response) => {
            console.log(response);
-           console.log("Paid")
-          closePaymentModal() // this will close the modal programmatically
+           clearCart()
+           openCart()
+          closePaymentModal()
+         // this will close the modal programmatically
         },
         onClose: () => {},
       };

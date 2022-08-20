@@ -55,7 +55,7 @@ useEffect(() => {
  
 
   return (
-   <CartContext.Provider value={{ state , clearCart, addToCart  , removeFromCart , openCart , increase , decrease ,total }}>
+   <CartContext.Provider value={{ state , clearCart, addToCart  , removeFromCart , openCart , increase , decrease , total }}>
     {children}
    </CartContext.Provider>
   )
