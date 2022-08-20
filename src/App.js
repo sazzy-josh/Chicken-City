@@ -1,8 +1,7 @@
-import { useState  } from 'react'
 import './index.css'
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
-import { BrowserRouter as Router ,Routes , Route , useLocation } from 'react-router-dom'
+import { BrowserRouter as Router ,Routes , Route } from 'react-router-dom'
 import Header from './components/header'
 import Footer from './components/footer'
 import Home from './pages/Home'
@@ -35,7 +34,7 @@ function App() {
      
      <AuthContextProvider>
           <AnimatePresence>
-        <Router location={location} key={location.key}>
+        <Router>
         <div className="flex flex-col w-screen relative">
         {showCart && <CartContainer />}
         <ToastContainer limit={5} toastClassName={({ type }) => contextClass[type || "default"] + 

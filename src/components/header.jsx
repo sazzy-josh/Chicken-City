@@ -1,8 +1,8 @@
 import React from 'react'
-import { useState , useEffect } from 'react'
+import { useEffect } from 'react'
 import logo from './assets/img/logo.png' 
 import Avatar from './assets/img/avatar.png'
-import { Link ,NavLink } from 'react-router-dom '
+import { Link ,NavLink } from 'react-router-dom'
 import { BiChevronDown } from 'react-icons/bi'
 import { BiChevronUp } from 'react-icons/bi'
 import { GiShoppingCart } from 'react-icons/gi'
@@ -22,7 +22,7 @@ import { AnimatePresence } from 'framer-motion'
 import { useCartsContext } from '../context/CartContext'
 
 const Header = () => {
-  const {state : {cartItems} , addToCart ,  openCart } = useCartsContext()
+  const {state : {cartItems} ,  openCart } = useCartsContext()
 
   const { loginUser , logoutUser, User , RemoveNav , openMenu } = useContext(AuthContext) 
 
@@ -36,9 +36,9 @@ const Header = () => {
     
    } )
   return () => {
-    unsuscribe
+    unsuscribe()
   };
- }, []);
+ },[]);
 
  const googleAuth = async(e) => {
      e.preventDefault()

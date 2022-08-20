@@ -6,7 +6,6 @@ import chickenClip from './assets/images/chicken_CLIPART.png'
 import pizzaClip from './assets/images/pizza.png'
 import Hamburger from './assets/images/hamburger.png'
 import { motion } from 'framer-motion'
-import { AnimatePresence } from 'framer-motion'
 import { MdKeyboardArrowRight } from "react-icons/md"
 import { useCartsContext } from '../context/CartContext'
 import { toast } from 'react-toastify';
@@ -132,7 +131,7 @@ const Popular = () => {
          }
 
          const remove = () => {
-            toast.info("Item Removed from cart!" , { position: toast.POSITION.TOP_LEFT }) , removeFromCart({id})
+           return  toast.info("Item Removed from cart!" , { position: toast.POSITION.TOP_LEFT }) , removeFromCart({id})
          }
 
              return (
