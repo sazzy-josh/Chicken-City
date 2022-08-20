@@ -6,9 +6,9 @@ import { HiPlus , HiMinus} from 'react-icons/hi'
 import {MdDeleteForever} from 'react-icons/md' 
 import { GiShoppingCart } from 'react-icons/gi'
 import  { VscQuestion } from 'react-icons/vsc'
-import FlutterBtn from "./flutter/flutterBtn"
+// import FlutterBtn from "./flutter/flutterBtn"
 
-
+// migrated to yarn
 
 
 
