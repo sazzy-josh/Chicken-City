@@ -6,11 +6,11 @@ import { HiPlus , HiMinus} from 'react-icons/hi'
 import {MdDeleteForever} from 'react-icons/md' 
 import { GiShoppingCart } from 'react-icons/gi'
 import  { VscQuestion } from 'react-icons/vsc'
-import FlutterBtn from "./flutter/flutterBtn"
+// import FlutterBtn from "./flutter/flutterBtn"
 
 
 const CartContainer = () => {
-    const {clearCart , total ,increase, decrease , removeFromCart , openCart , state: {cartItems}} = useCartsContext()
+    const {clearCart , total ,increase, decrease , removeFromCart , openCart , state: {cartItems} ,flutterModal} = useCartsContext()
    
 
  
@@ -81,9 +81,9 @@ const CartContainer = () => {
 
          <div className='my-[2px] text-slate-800 flex  items-center gap-x-2'> <span className='bg-black p-2 rounded-lg text-white flex w-[120px] justify-center items-center text-[14px] shadow-lg cursor-pointer'>View Bag({cartItems.map(item => item.quantity).reduce((total,i) => total += i)})  <GiShoppingCart className='w-4 h-4'/></span>
        
-       
+          <div className="rounded-lg p-2 bg-blue-400 text-white shadow-lg border-slate-800 cursor-pointer" onClick={flutterModal}> Checkout 💳</div>
       
-         <FlutterBtn  />
+         {/* <FlutterBtn  /> */}
         
           
           </div> 

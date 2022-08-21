@@ -87,6 +87,27 @@ body{
     
 }
 
+.modal{
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    height: 100vh;
+    width: 100vw;
+    z-index: 200;
+   background-color: rgba(36, 36, 34, 0.3); ;
+}
+
+
+.inner_Flutter_Modal{
+  z-index: 200;
+}
+
+
 #img{
 height: 90%;
 }

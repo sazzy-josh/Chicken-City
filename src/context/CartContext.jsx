@@ -48,6 +48,11 @@ useEffect(() => {
   const clearCart = () => {
     dispatch({ type: "CLEAR_CART" });
   };
+
+  //Function to show Flutter Modal
+  const flutterModal = () => {
+    dispatch({type: "SHOW_MODAL"})
+  }
     
   
 
@@ -55,7 +60,7 @@ useEffect(() => {
  
 
   return (
-   <CartContext.Provider value={{ state , clearCart, addToCart  , removeFromCart , openCart , increase , decrease , total }}>
+   <CartContext.Provider value={{ state , clearCart, addToCart  , removeFromCart , openCart , increase , decrease , total , flutterModal }}>
     {children}
    </CartContext.Provider>
   )

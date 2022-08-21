@@ -16,6 +16,7 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import CartContainer from './components/cart';
 import  { useCartsContext } from './context/CartContext';
+import FlutterModal from './components/flutter/flutterModal';
 
 
 const contextClass = {
@@ -28,16 +29,17 @@ const contextClass = {
 };
 
 function App() {
-   const { state: {showCart}} = useCartsContext() 
+   const { state: {showCart} , state : {showModal} } = useCartsContext() 
 
   return (
     
      
-     <AuthContextProvider>
-          <AnimatePresence>
+     <AuthContextProvider >
+          <AnimatePresence exitBeforeEnter>
         <Router>
         <div className="flex flex-col w-screen relative">
         {showCart && <CartContainer />}
+        {showModal && <FlutterModal /> }
         <ToastContainer l
         imit={5} toastClassName={({ type }) => contextClass[type || "default"] + 
         " relative flex p-2 min-h-10 w-3/4 sm:w-auto rounded-xl sm:rounded-xl justify-around overflow-hidden cursor-pointer my-2"

@@ -3,7 +3,7 @@ import { FlutterWaveButton, closePaymentModal } from 'flutterwave-react-v3';
 import { useCartsContext } from '../../context/CartContext';
 
 
-const FlutterBtn = () => {
+const FlutterBtn = (props) => {
    
    const {clearCart , total , openCart } = useCartsContext()
 
@@ -14,9 +14,9 @@ const FlutterBtn = () => {
         currency: 'NGN',
         payment_options:'card,mobilemoney,ussd',
         customer: {
-          email: 'idahosajoshua61@gmail.com',
-          phonenumber: '07064586146',
-          name: 'idahosa Joshua',
+          email: props.fmail,
+          phonenumber: props.tel,
+          name: props.fname,
         },
         customizations: {
           title: 'Foodcity',
@@ -39,8 +39,8 @@ const FlutterBtn = () => {
       };
     
       return (
-         <div className='bg-yellow-300 p-2 rounded-lg'>
-           <FlutterWaveButton {...fwConfig} />
+         <div className='bg-yellow-400 p-2 rounded-lg text-center my-2'>
+           <FlutterWaveButton {...fwConfig} /> 
          </div>
         
       );
