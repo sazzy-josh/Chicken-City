@@ -40,14 +40,14 @@ const Footer = () => {
        <div className='flex flex-col gap-y-3'>
           <div className='flex gap-x-2 items-start'>
           <VscLocation  className='mt-1'/>
-          <p> F1-320 Jeff Heights, Woodstock ,New Brunswick,Canada</p>
+          <p> F1-320 Ipaja,Garden City Road,Lagos,Nigeria</p>
 
           </div>
 
           <div className='flex items-center gap-x-2'>
 
           <BiPhone />
-          <p> +1-234-906-5051</p>
+          <p> +234-7000-0000</p>
           </div>
 
           <div className='flex items-center gap-x-2'>

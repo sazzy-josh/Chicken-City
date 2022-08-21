@@ -26,13 +26,13 @@ const CartContainer = () => {
     transition={{duration:1 ,stiffness:120 , type:'spring' }}
     className='hidden md:flex fixed top-0 left-0  w-full h-screen cart'>
       {/* CART ITEMS SECTION */}
-      <div className='w-4/6 bg-white '>
+      <div className='w-4/6 bg-white  relative'>
           
           <div className="h-[90px] w-full flex p-8 justify-between items-start">
 
             <p className="text-[30px] font-bold ">Shopping Cart</p>
              <p className="text-md font-semibold mt-4">{cartItems.map((item) =>item.quantity).reduce((acc,i)=>{
-              return acc += i})} items</p>
+              return acc += i},0)} items</p>
           </div>
 
         {/* ITEMS SECTION  */}
@@ -47,7 +47,7 @@ const CartContainer = () => {
                     <div key={id}>
                       <hr />
                         <div className=" flex gap-x-[8px] w-full content py-4 items-center justify-center h-[150px] ">
-                <div className="w-1/6 bg-slate-200 shadow-xs rounded-xl flex justify-center items-center h-[125px]">
+                <div className="w-1/6 bg-slate-100 shadow-xs rounded-xl flex justify-center items-center h-[125px]">
                   <img src={image} alt={image} className="w-[110px] h-[110px]  object-contain "/>
                 </div>
                 <div className="w-2/6 flex flex-col">
@@ -67,7 +67,7 @@ const CartContainer = () => {
                 </div>
                 <div className="w-1/6 flex justify-between items-center">
                   <span className="font-semibold">{quantity} x ${price}</span>
-                  <span className="font-bold text-2xl rotate-45 cursor-pointer" onClick={() =>removeFromCart({id}) }> + </span>
+                  <span className="font-bold text-2xl rotate-45 cursor-pointer hover:text-red-500" onClick={() =>removeFromCart({id}) }> + </span>
                 </div>
                 
               </div>
@@ -79,7 +79,12 @@ const CartContainer = () => {
 
 
             
-              <div className="flex gap-x-1  absolute bottom-6 items-center cursor-pointer" onClick={ openCart }><HiOutlineArrowNarrowLeft className="w-8 h-8" /> Back to Shop</div> 
+            <div className="absolute bottom-6 flex w-full justify-between items-center ">
+              <div className="flex gap-x-1   items-center cursor-pointer" onClick={ openCart }><HiOutlineArrowNarrowLeft className="w-8 h-8" /> Back to Shop</div> 
+              <span
+              onClick={clearCart}  
+              className="border rounded-full gap-x-1  flex justify-around mr-12 p-1 font-bold hover:text-red-500 hover:font-extrabold hover:border-red-600 border-slate-700 cursor-pointer text-xs items-center px-2"><p className="rounded-full p-2 border text-[9px] w-5 h-5 flex justify-center items-center border-slate-800  hover:border-red-600 "><span>X</span></p>clear cart</span>
+            </div>
           </div>
           {/* END OF ITEMS SECTION */}
 
