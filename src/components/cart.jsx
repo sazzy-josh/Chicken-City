@@ -1,9 +1,8 @@
 import React  from "react"
 import { motion , AnimatePresence } from 'framer-motion'
 import { useCartsContext } from '../context/CartContext'
-import pics from './assets/images/bread_1.2.png'
 import empty from "./assets/svg/empty.svg"
-import { HiPlus , HiMinus} from 'react-icons/hi'
+import { HiPlus , HiMinus , HiOutlineArrowNarrowLeft } from 'react-icons/hi'
 import { MdCancel } from 'react-icons/md'
 import { GiShoppingCart } from 'react-icons/gi'
 import  { VscQuestion } from 'react-icons/vsc'
@@ -24,47 +23,51 @@ const CartContainer = () => {
     initial={{x:"100vw"}}
     animate={{x:0}}
     exit={{x:"-100vw"}}
-    transition={{duration:1 , ease:'easeOut'}}
-    className='hidden sm:flex fixed top-0 left-0  w-full h-screen cart'>
+    transition={{duration:1 ,stiffness:120 , type:'spring' }}
+    className='hidden md:flex fixed top-0 left-0  w-full h-screen cart'>
       {/* CART ITEMS SECTION */}
-      <div className='w-4/6 bg-white overflow-y-scroll'>
+      <div className='w-4/6 bg-white '>
           
-          <div className="h-1/6 w-full flex p-8 justify-between items-start">
+          <div className="h-[90px] w-full flex p-8 justify-between items-start">
 
-            <p className="text-[30px] font-bold">Shopping Cart</p>
-             <p className="text-sm font-semibold mt-4">3 items</p>
+            <p className="text-[30px] font-bold ">Shopping Cart</p>
+             <p className="text-md font-semibold mt-4">{cartItems.map((item) =>item.quantity).reduce((acc,i)=>{
+              return acc += i})} items</p>
           </div>
 
         {/* ITEMS SECTION  */}
-          <div className="p-8 flex flex-col w-full">
-          <hr />
+          <div className="p-8 flex flex-col w-full items-section">
+          
              {/* LOOP THROUGH CART ITEMS */}  
                 {cartItems.length < 1 ? (
-                  <div> <img src={empty} alt="no-item" className="w-[250px] h-[250px]"/></div>
+                  <div className="flex flex-col items-center justify-center"> <img src={empty} alt="no-item" className="w-[250px] h-[250px]"/> <p className="text-center">No item in cart</p></div>
                 ) : (
-                 cartItems.map(({id, quantity , price , image , title }) => {
+                 cartItems.map(({id, quantity , price , image , title ,category }) => {
                   return (
-                    <div>
+                    <div key={id}>
+                      <hr />
                         <div className=" flex gap-x-[8px] w-full content py-4 items-center justify-center h-[150px] ">
                 <div className="w-1/6 bg-slate-200 shadow-xs rounded-xl flex justify-center items-center h-[125px]">
-                  <img src={pics} alt="i" className="w-[110px] h-[110px]  object-contain "/>
+                  <img src={image} alt={image} className="w-[110px] h-[110px]  object-contain "/>
                 </div>
                 <div className="w-2/6 flex flex-col">
-                <span className="text-sm">Bread</span>
-                <span className="font-semibold text-sm">Wheat Slice Bread Margherata</span>
+                <span className="text-md">{category}</span>
+                <span className="font-semibold text-sm">{title}</span>
                 </div>
                 <div className="w-2/6 flex gap-x-4 items-center">
-                  <motion.span
+                  {quantity > 1 ? (<motion.span
                   whileTap={{scale:1.4}}
-                  className="cursor-pointer"><HiMinus /></motion.span>
-                  <span className="border rounded-lg p-2 px-4 font-bold">1</span>
+                  className="cursor-pointer" onClick={()=> {decrease({id})}}><HiMinus /></motion.span>) : (<motion.span
+                    whileTap={{scale:1.4}}
+                    className="cursor-not-allowed"><HiMinus /></motion.span>)}
+                  <span className="border rounded-lg p-2 px-4 font-bold">{quantity}</span>
                   <motion.span
                     whileTap={{scale:1.4}}
-                  className="cursor-pointer"><HiPlus /></motion.span>
+                  className="cursor-pointer" onClick={()=> {increase({id})}}><HiPlus /></motion.span>
                 </div>
                 <div className="w-1/6 flex justify-between items-center">
-                  <span className="font-semibold">2 x $26.3</span>
-                  <span className="font-bold text-2xl rotate-45 cursor-pointer"> + </span>
+                  <span className="font-semibold">{quantity} x ${price}</span>
+                  <span className="font-bold text-2xl rotate-45 cursor-pointer" onClick={() =>removeFromCart({id}) }> + </span>
                 </div>
                 
               </div>
@@ -76,7 +79,7 @@ const CartContainer = () => {
 
 
             
-               
+              <div className="flex gap-x-1  absolute bottom-6 items-center cursor-pointer" onClick={ openCart }><HiOutlineArrowNarrowLeft className="w-8 h-8" /> Back to Shop</div> 
           </div>
           {/* END OF ITEMS SECTION */}
 

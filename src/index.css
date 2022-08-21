@@ -23,9 +23,13 @@
 
 .content{
   display: flex;
-  
+
 }
 
+.items-section{
+    height: calc(100vh - 150px);
+    overflow-y: scroll;
+}
 
 .cart{
    z-index: 100;
