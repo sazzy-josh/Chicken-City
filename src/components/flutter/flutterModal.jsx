@@ -4,6 +4,7 @@ import { useState } from 'react'
 import { FlutterWaveButton, closePaymentModal } from 'flutterwave-react-v3';
 import { useCartsContext } from '../../context/CartContext';
 import { motion  , AnimatePresence} from 'framer-motion'
+import { MdCancel } from 'react-icons/md'
 
 const FlutterModal = () => {
 
@@ -47,13 +48,13 @@ const FlutterModal = () => {
 
           const fwConfig = {
             ...config,
-            text: 'Pay with Flutterwave!',
+            text: 'PAY  NOW!',
             callback: (response) => {
                console.log(response);
                clearCart()
                openCart()
                flutterModal()
-              closePaymentModal()
+               closePaymentModal()
              // this will close the modal programmatically
             },
             onClose: () => {},
@@ -69,18 +70,18 @@ const FlutterModal = () => {
         animate={{y:0}}
         transition={{duration:1 , type:"spring" ,stiffness:200 }}
         exit={{y:"-100vw"}}
-        className='inner_Flutter_Modal w-[30vw] h-[50vh] bg-slate-300 rounded-xl shadow-xl text-white p-4 flex flex-col'>
-         <div className='flex justify-between h-1/4'><div className='rounded-full w-12 h-12 p-1 bg-slate-800 flex items-center justify-center'><img src={logo} alt="flutter" className='w-8 h-8'/></div> <span  className='bg-red-600 font-bold rotate-45 rounded-full text-[26px] w-8 h-8 mt-2 cursor-pointer flex justify-center items-center' onClick={flutterModal}>+</span> </div>
+        className='inner_Flutter_Modal h-[40vh] w-[85vw]  sm:w-[45vw] sm:h-[50vh] lg:w-[30vw] lg:h-[50vh]  bg-slate-300 rounded-xl shadow-xl text-white p-4 flex flex-col'>
+         <div className='flex justify-between h-1/4'> <div className='flex'><div className='rounded-full w-12 h-12 p-1 bg-slate-800 flex items-center justify-center'><img src={logo} alt="flutter" className='sm:w-8 sm:h-8'/></div> </div> <span  className='w-12 p-1 h-12 cursor-pointer flex justify-center items-center' onClick={flutterModal}><MdCancel className="w-8 h-8 text-red-500" /> </span> </div>
            
            <div className='flex flex-col h-3/4 '>
            <form className='flex flex-col  text-black gap-y-2'> 
-            <input type="text" name="fullName" placeholder='Idahosa Osaze' className='p-2 rounded-md' required onChange={(e)=> {setName(e.target.value)}} value={name} />
-            <input type="email" name="email" placeholder='idahosajoshua61@gmail.com' className='p-2 rounded-md' required onChange={(e)=> {setEmail(e.target.value)}} value={email}/>
-            <input type="tel" name="phone" placeholder="+234-700-000-0000" className='p-2 rounded-md' required onChange={(e)=> {setPhone(e.target.value)}} value={phone} />
+            <input type="text" name="fullName" placeholder='Idahosa Osaze' className='p-2 rounded-md outline-none' required onChange={(e)=> {setName(e.target.value)}} value={name} />
+            <input type="email" name="email" placeholder='idahosajoshua61@gmail.com' className='p-2 rounded-md  outline-none' required onChange={(e)=> {setEmail(e.target.value)}} value={email}/>
+            <input type="tel" name="phone" placeholder="+234-700-000-0000" className='p-2 rounded-md  outline-none' required onChange={(e)=> {setPhone(e.target.value)}} value={phone} />
             
            </form>
             
-           <button className='bg-yellow-400 p-2 rounded-lg text-center my-4 '>
+           <button className='bg-yellow-400 p-2 rounded-lg text-center my-4 font-bold'>
                <FlutterWaveButton {...fwConfig} />
            </button>
 
