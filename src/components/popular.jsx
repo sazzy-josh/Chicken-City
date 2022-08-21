@@ -120,10 +120,10 @@ const Popular = () => {
          </div>
 
          <div className='cards py-4 '>
-          {allFoods.map(({ id, price ,image01 , title , quantity}) => {
+          {allFoods.map(({ id, price ,image01 , title , quantity , category}) => {
 
          const addItem = () => {
-            addToCart({ id , price , title ,image01 , quantity })
+            addToCart({ id , price , title ,image01 , quantity , category})
             // toast.success("Item Added to Cart!")
             toast.success(`${title} added to cart!`, {
                position: toast.POSITION.TOP_RIGHT, 
@@ -150,7 +150,7 @@ const Popular = () => {
                      src={image01} alt={title} className="sm:w-[90px] sm:h-[90px] w-[80px] h-[80px] object-contain py-1 "/>
                      <span className='lg:text-sm text-xs text-center py-2 font-bold'>{title}</span>
                      <div className='flex text-sm text-center py-2 font-bold justify-between items-center w-full p-2 '><p className=' p-1 rounded-lg text-slate-800'>${price}</p> {cartItems && !cartItems.some((item) => item.id === id ) ? (<span onClick={() => {
-                        addItem({ id , price , title ,image01 , quantity })
+                        addItem({ id , price , title ,image01 , quantity ,category})
                      }} className='text-lg px-2 rounded text-white bg-red-300  hover:bg-white hover:text-red-400' 
                      >+</span>)  :(<span disabled onClick={remove} className='text-lg px-2 rounded  text-white bg-red-300  hover:bg-white hover:text-red-400' 
                      ><TiDelete className='w-6 h-6' /></span>)} 

@@ -20,10 +20,12 @@
     
 }
 
-.black{
-    background-color: black;
-    opacity: 35%;
+
+.content{
+  display: flex;
+  
 }
+
 
 .cart{
    z-index: 100;
