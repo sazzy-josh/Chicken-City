@@ -41,7 +41,7 @@ const Footer = () => {
           <div className='flex gap-x-2 items-start'>
           <VscLocation  className='mt-1'/>
           <p> F1-320 Ipaja,Garden City Road,Lagos,Nigeria</p>
-
+          {/* //location */}
           </div>
 
           <div className='flex items-center gap-x-2'>
