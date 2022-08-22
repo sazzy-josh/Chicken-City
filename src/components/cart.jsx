@@ -3,6 +3,7 @@ import { motion , AnimatePresence } from 'framer-motion'
 import { useCartsContext } from '../context/CartContext'
 import empty from "./assets/svg/empty.svg"
 import { HiPlus , HiMinus , HiOutlineArrowNarrowLeft ,HiOutlineArrowNarrowRight } from 'react-icons/hi'
+import { MdOutlinePayment } from 'react-icons/md'
 
 // import FlutterBtn from "./flutter/flutterBtn"
 
@@ -133,10 +134,13 @@ const CartContainer = () => {
 
        <div className="flex justify-between py-4 font-semibold">
          <p className="font-bold">TOTAL PRICE</p>
-         <p>₦{subTotal().toFixed(2)}</p>
+         <p>{ total === 0 ? (<p>₦0.000</p>) : (<p>₦{subTotal().toFixed(2)}</p>)  }</p>
        </div>
 
-       <div className="w-full bg-black text-white my-2 text-center p-2 font-semibold cursor-pointer rounded-sm" onClick={flutterModal}>CHECKOUT</div>
+       <div className="w-full bg-black flex items-center justify-center gap-x-1 text-white my-2 text-center p-2 font-semibold cursor-pointer rounded-sm" onClick={flutterModal}>CHECKOUT <MdOutlinePayment className='w-4 h-4'/> </div>
+
+       <p className="text-red-600 py-2 text-lg text-center"> *WARNING:DO NOT MAKE PAYMENTS WITH YOUR REAL CARD 💳* </p>
+       
 
       </div>
     </motion.div>

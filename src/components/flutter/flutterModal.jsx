@@ -8,7 +8,7 @@ import { MdCancel } from 'react-icons/md'
 
 const FlutterModal = () => {
 
-    const {clearCart  , openCart ,flutterModal ,subTotal ,setFee } = useCartsContext()
+    const {clearCart,openCart,flutterModal, subTotal,setFee} = useCartsContext()
 
        let totalValue = subTotal()
      
@@ -37,7 +37,7 @@ const FlutterModal = () => {
 
           const fwConfig = {
             ...config,
-            text: 'PAY  NOW!',
+            text: `PAY ₦${totalValue} NOW!`,
             callback: (response) => {
                console.log(response);
                clearCart()
@@ -71,9 +71,16 @@ const FlutterModal = () => {
             
            </form>
             
-           <button className='bg-yellow-400 p-2 rounded-lg text-center my-4 font-bold'>
+           <button className='bg-yellow-400 p-2 rounded-lg text-center my-4 font-bold tracking-wider font-type'>
                <FlutterWaveButton {...fwConfig} />
            </button>
+
+           {/* <div className='flex flex-col text-red-400 tracking-wider text-sm text-center font-semibold mb-2'>
+            <p>*4242424242424242*</p>
+            <p>*01/31*</p>
+            <p>*812*</p>
+            
+           </div> */}
 
            </div>
   
