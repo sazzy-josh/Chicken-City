@@ -8,21 +8,10 @@ import { MdCancel } from 'react-icons/md'
 
 const FlutterModal = () => {
 
-    const {clearCart , total , openCart ,flutterModal } = useCartsContext()
+    const {clearCart  , openCart ,flutterModal ,subTotal ,setFee } = useCartsContext()
 
-
-    // const [values, setValues] = useState({
-    //     fullName: "",
-    //     email: "",
-    //     phone : ""
-    //     });
-
-        // const handleInput = (e) => {
-        //     const { name , value} = e.target
-        //     setValues({...values , [name]: value })
-            
-        //  }
-
+       let totalValue = subTotal()
+     
 
         const [name, setName] = useState("");
         const [phone, setPhone] = useState("");
@@ -31,7 +20,7 @@ const FlutterModal = () => {
         const config = {
             public_key: 'FLWPUBK_TEST-fcd450bbe39e4078a50213a06e5fb0a6-X',
             tx_ref: Date.now(),
-            amount: total * 610,
+            amount: totalValue,
             currency: 'NGN',
             payment_options:'card,mobilemoney,ussd',
             customer: {
@@ -53,6 +42,7 @@ const FlutterModal = () => {
                console.log(response);
                clearCart()
                openCart()
+               setFee(0.00)
                flutterModal()
                closePaymentModal()
              // this will close the modal programmatically

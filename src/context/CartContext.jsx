@@ -6,8 +6,9 @@ export const CartContext = createContext()
 
 
 const CartContextProvider = ({ children }) => {
-  
+
  const [state, dispatch] = useReducer(CartReducer, cartState)
+ const [ fee ,setFee ] = useState(0.00)
  const [total , setTotal] = useState(0)
 
  useEffect(() => {
@@ -19,6 +20,15 @@ useEffect(() => {
     return acc += Number(item.quantity) * Number(item.price) 
   },0))
 }, [state.cartItems]);
+
+  const subTotal = () => {
+    let totalAmount = total + Number(fee)
+    return totalAmount
+ }
+  
+useEffect(() => {
+  subTotal()
+}, []);
 
  //Function to handle when an item is added from the store into the Cart
   const addToCart = (prod) => {
@@ -39,6 +49,8 @@ useEffect(() => {
     dispatch({ type : "SHOW_CART" })
   }
 
+
+
   //Function to remove an item from the cart
   const removeFromCart = (payload) => {
     dispatch({ type: "REMOVE_ITEM", payload });
@@ -53,6 +65,12 @@ useEffect(() => {
   const flutterModal = () => {
     dispatch({type: "SHOW_MODAL"})
   }
+
+  const handleFee = (e) => {
+    setFee(e.target.value)
+  }
+  
+  console.log(subTotal())
     
   
 
@@ -60,7 +78,7 @@ useEffect(() => {
  
 
   return (
-   <CartContext.Provider value={{ state , clearCart, addToCart  , removeFromCart , openCart , increase , decrease , total , flutterModal }}>
+   <CartContext.Provider value={{ state , total , fee , clearCart, addToCart  , removeFromCart , openCart , increase , decrease , flutterModal ,handleFee , subTotal, setFee }}>
     {children}
    </CartContext.Provider>
   )

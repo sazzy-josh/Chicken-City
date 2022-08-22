@@ -8,7 +8,7 @@ import { HiPlus , HiMinus , HiOutlineArrowNarrowLeft ,HiOutlineArrowNarrowRight 
 
 
 const CartContainer = () => {
-    const { clearCart , total ,increase, decrease , removeFromCart , openCart , state: {cartItems} , flutterModal } = useCartsContext()
+    const { clearCart , total ,increase, decrease , removeFromCart , openCart , state: {cartItems} , flutterModal ,handleFee , fee ,subTotal } = useCartsContext()
    
 
  
@@ -109,11 +109,11 @@ const CartContainer = () => {
        <span className="font-semibold  flex justify-between">
         <p className="font-bold">SHIPPING</p>
 
-        <p>₦1500</p>
+        <p>₦{fee}</p>
        </span>
 
        <div className="w-full py-2">
-       <select name="delivery" className="w-full p-2 outline-none font-semibold">
+       <select name="delivery" className="w-full p-2 outline-none font-semibold" onChange={ handleFee } value={ fee }>
         <option className='p-2' value="800">STANDARD DELIVERY  ₦800</option>
         <option className='p-2' value="1500">EXPRESS DELIVERY  ₦1500</option>
         <option className='p-2' value="2500">⚡SWIFT-HIGH PRIORITY  ₦2500</option>
@@ -133,10 +133,10 @@ const CartContainer = () => {
 
        <div className="flex justify-between py-4 font-semibold">
          <p className="font-bold">TOTAL PRICE</p>
-         <p>₦1800.99</p>
+         <p>₦{subTotal().toFixed(2)}</p>
        </div>
 
-       <div className="w-full bg-black text-white my-2 text-center p-2 font-semibold cursor-pointer rounded-sm" onClick={flutterModal }>CHECKOUT</div>
+       <div className="w-full bg-black text-white my-2 text-center p-2 font-semibold cursor-pointer rounded-sm" onClick={flutterModal}>CHECKOUT</div>
 
       </div>
     </motion.div>

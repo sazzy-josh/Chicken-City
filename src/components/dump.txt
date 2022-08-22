@@ -58,3 +58,17 @@
           </div> 
 
         </div>}
+
+
+
+         // const [values, setValues] = useState({
+    //     fullName: "",
+    //     email: "",
+    //     phone : ""
+    //     });
+
+        // const handleInput = (e) => {
+        //     const { name , value} = e.target
+        //     setValues({...values , [name]: value })
+            
+        //  }

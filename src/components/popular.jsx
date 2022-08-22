@@ -80,7 +80,7 @@ const Popular = () => {
         <p className='md:text-[32px] text-[28px] font-bold text-center'>Popular Dishes with Discount</p>
          <p className='lg:text-sm text-xs text-center py-2 font-bold'> The most delicious and healthy dishes from our chef.You can order this meal seperately or as part of a meal plan</p>
 
-         <div className=' bg-red-400 rounded-lg py-3 flex justify-center items-center text-xs md:text-sm font-semibold md:gap-x-3'>
+         <div className=' bg-red-400 rounded-lg py-3 flex justify-center text-slate-900 items-center text-xs md:text-sm font-semibold md:gap-x-3'>
            
              <span className={`flex items-center justify-center p-2 cursor-pointer ${category === "ALL" ? "bg-white rounded-lg" : ""}`}  onClick={() => setcategory("ALL")}>
                 All
@@ -131,7 +131,8 @@ const Popular = () => {
          }
 
          const remove = () => {
-           return  toast.info("Item Removed from cart!" , { position: toast.POSITION.TOP_LEFT }) , removeFromCart({id})
+            toast.info("Item Removed from cart!" , { position: toast.POSITION.TOP_LEFT }) 
+             return   removeFromCart({id})
          }
 
              return (

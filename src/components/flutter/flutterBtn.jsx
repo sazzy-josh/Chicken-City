@@ -10,7 +10,7 @@ const FlutterBtn = (props) => {
     const config = {
         public_key: 'FLWPUBK_TEST-fcd450bbe39e4078a50213a06e5fb0a6-X',
         tx_ref: Date.now(),
-        amount: total ,
+        amount: total,
         currency: 'NGN',
         payment_options:'card,mobilemoney,ussd',
         customer: {
