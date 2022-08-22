@@ -2,7 +2,7 @@ import React from 'react'
 import { FlutterWaveButton, closePaymentModal } from 'flutterwave-react-v3';
 import { useCartsContext } from '../../context/CartContext';
 
-
+// This code is presently not in use..Button failed to recieve props 
 const FlutterBtn = (props) => {
    
    const {clearCart , total , openCart } = useCartsContext()
@@ -10,7 +10,7 @@ const FlutterBtn = (props) => {
     const config = {
         public_key: 'FLWPUBK_TEST-fcd450bbe39e4078a50213a06e5fb0a6-X',
         tx_ref: Date.now(),
-        amount: total * 610,
+        amount: total ,
         currency: 'NGN',
         payment_options:'card,mobilemoney,ussd',
         customer: {

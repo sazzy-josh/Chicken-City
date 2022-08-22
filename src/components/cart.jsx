@@ -2,15 +2,13 @@ import React  from "react"
 import { motion , AnimatePresence } from 'framer-motion'
 import { useCartsContext } from '../context/CartContext'
 import empty from "./assets/svg/empty.svg"
-import { HiPlus , HiMinus , HiOutlineArrowNarrowLeft } from 'react-icons/hi'
-import { MdCancel } from 'react-icons/md'
-import { GiShoppingCart } from 'react-icons/gi'
-import  { VscQuestion } from 'react-icons/vsc'
+import { HiPlus , HiMinus , HiOutlineArrowNarrowLeft ,HiOutlineArrowNarrowRight } from 'react-icons/hi'
+
 // import FlutterBtn from "./flutter/flutterBtn"
 
 
 const CartContainer = () => {
-    const {clearCart , total ,increase, decrease , removeFromCart , openCart , state: {cartItems} ,flutterModal} = useCartsContext()
+    const { clearCart , total ,increase, decrease , removeFromCart , openCart , state: {cartItems} , flutterModal } = useCartsContext()
    
 
  
@@ -66,7 +64,7 @@ const CartContainer = () => {
                   className="cursor-pointer" onClick={()=> {increase({id})}}><HiPlus /></motion.span>
                 </div>
                 <div className="w-1/6 flex justify-between items-center">
-                  <span className="font-semibold">{quantity} x ${price}</span>
+                  <span className="font-semibold">{quantity} x ₦{price}</span>
                   <span className="font-bold text-2xl rotate-45 cursor-pointer hover:text-red-500" onClick={() =>removeFromCart({id}) }> + </span>
                 </div>
                 
@@ -93,10 +91,52 @@ const CartContainer = () => {
 
       {/* CART SUMMARY AND CHECKOUT SECTION */}
       
-      <div className='w-2/6 bg-slate-300 flex flex-col box-border'>
+      <div className='w-2/6 bg-slate-300 flex flex-col box-border p-8'>
         
+       <div className="h-[90px] items-center py-4">
+       <p className="text-[30px] font-bold"> Summary </p>
        
-       
+       </div>
+       <hr />
+
+       <div className="flex flex-col gap-y-4">
+       <div className="flex items-center justify-between font-semibold  ">
+        <p className="pt-8 font-bold">ITEMS {cartItems.map((item) =>item.quantity).reduce((acc,i)=>{
+              return acc += i},0)}</p>
+        <p> ₦{total.toFixed(2)}</p>
+       </div>
+
+       <span className="font-semibold  flex justify-between">
+        <p className="font-bold">SHIPPING</p>
+
+        <p>₦1500</p>
+       </span>
+
+       <div className="w-full py-2">
+       <select name="delivery" className="w-full p-2 outline-none font-semibold">
+        <option className='p-2' value="800">STANDARD DELIVERY  ₦800</option>
+        <option className='p-2' value="1500">EXPRESS DELIVERY  ₦1500</option>
+        <option className='p-2' value="2500">⚡SWIFT-HIGH PRIORITY  ₦2500</option>
+      </select>
+       </div>
+
+       <span className="font-bold py-1">PROMO CODE</span>
+
+       <div className="relative mb-[26px]">
+       <input type="text" placeholder="Enter your Code" className='w-full p-2 font-bold outline-none' />
+       <HiOutlineArrowNarrowRight className="absolute right-2 top-2 w-6 h-6 " />
+       </div>
+ 
+       </div>
+
+       <hr />
+
+       <div className="flex justify-between py-4 font-semibold">
+         <p className="font-bold">TOTAL PRICE</p>
+         <p>₦1800.99</p>
+       </div>
+
+       <div className="w-full bg-black text-white my-2 text-center p-2 font-semibold cursor-pointer rounded-sm" onClick={flutterModal }>CHECKOUT</div>
 
       </div>
     </motion.div>
