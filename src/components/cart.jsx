@@ -4,8 +4,9 @@ import { useCartsContext } from '../context/CartContext'
 import empty from "./assets/svg/empty.svg"
 import { HiPlus , HiMinus , HiOutlineArrowNarrowLeft ,HiOutlineArrowNarrowRight } from 'react-icons/hi'
 import { MdOutlinePayment } from 'react-icons/md'
+import img from './assets/images/chicken_1.2.png'
 
-// import FlutterBtn from "./flutter/flutterBtn"
+
 
 
 const CartContainer = () => {
@@ -41,7 +42,7 @@ const CartContainer = () => {
                 {cartItems.length < 1 ? (
                   <div className="flex flex-col items-center justify-center sansPro"> <img src={empty} alt="no-item" className="w-[250px] h-[250px]"/> <p className="text-center sansPro">No item in cart</p></div>
                 ) : (
-                 cartItems.map(({id, quantity , price , image , title ,category }) => {
+                 cartItems.map(({ id, quantity , price , image , title ,category }) => {
                   return (
                     <div key={id}>
                       <hr />
@@ -79,7 +80,7 @@ const CartContainer = () => {
 
             
             <div className="absolute bottom-6 flex w-full justify-between items-center ">
-              <div className="flex gap-x-1   items-center cursor-pointer" onClick={ openCart }><HiOutlineArrowNarrowLeft className="w-8 h-8" /> Back to Shop</div> 
+              <div className="flex gap-x-1   items-center cursor-pointer sansPro hover:font-semibold" onClick={ openCart }><HiOutlineArrowNarrowLeft className="w-6 h-6 sansPro hover:text-slate-700 hover:scale-125 " /> Back to Shop</div> 
               <span
               onClick={clearCart}  
               className="border rounded-full gap-x-1  flex justify-around mr-12 p-1 font-bold hover:text-red-500 hover:font-extrabold hover:border-red-600 border-slate-700 cursor-pointer text-xs items-center px-2"><p className="rounded-full p-2 border text-[9px] w-5 h-5 flex justify-center items-center border-slate-800  hover:border-red-600 "><span>X</span></p>clear cart</span>
@@ -116,8 +117,8 @@ const CartContainer = () => {
        <div className="w-full py-2">
        <select name="delivery" className="w-full p-2 outline-none font-semibold rounded-sm sansPro" onChange={ handleFee } value={ fee }>
         <option className='p-2 sansPro' value="800">STANDARD DELIVERY  ₦800</option>
-        <option className='p-2 sansPro' value="1500">EXPRESS DELIVERY  ₦1500</option>
-        <option className='p-2 sansPro' value="2500">⚡SWIFT-HIGH PRIORITY  ₦2500</option>
+        <option className='p-2 sansPro' value="1500">EXPRESS DELIVERY  ₦1,500</option>
+        <option className='p-2 sansPro' value="2500">⚡SWIFT-HIGH PRIORITY  ₦2,500</option>
       </select>
        </div>
 
@@ -144,6 +145,57 @@ const CartContainer = () => {
 
       </div>
     </motion.div>
+
+      {/*Cart's Mobile and small Screens*/}
+     <motion.div 
+       className="w-full md:hidden bg-white p-3 mobile-cart flex flex-col sansPro my-2 mb-4">
+        <div className="flex justify-between items-center">
+          <HiOutlineArrowNarrowLeft onClick={openCart} className="w-6 h-6"/><span
+              onClick={clearCart}  
+              className="border rounded-full gap-x-1  flex justify-around p-1 font-bold hover:text-red-500 hover:font-extrabold hover:border-red-600 border-slate-700 cursor-pointer text-xs items-center px-1"><p className="rounded-full p-2 border text-[9px] w-4 h-4 flex justify-center items-center border-slate-800  hover:border-red-600 "><span>X</span></p>clear cart</span>
+        </div>
+
+       <p className="sansPro font-semibold py-4">Cart({cartItems.map((item) =>item.quantity).reduce((acc,i)=>{
+              return acc += i},0)})</p>
+        
+        <div className="flex flex-col">
+          {cartItems.length < 1 ? (
+            <div className="flex flex-col justify-center items-center ">
+              <img src={empty} alt={empty} className='w-[150px] h-[150px]' />
+              <p>No Items In Cart</p></div>
+          ) : ( 
+            <div>{cartItems.map(({id, quantity , price , image , title ,category}) => {
+              return (
+                <>
+                <div className="flex w-full mb-2 my-4 " key={id}>
+                <div className="w-2/6 flex justify-center items-center h-[80px]">
+                  <div className="w-110px h-150px bg-slate-200 rounded-md -ml-4 flex justify-center items-center"><img src={image} alt={image} className="w-[85px] h-[85px] object-contain" /></div>
+                </div>
+                <div className="w-4/6 sansPro flex flex-col text-sm">
+                  <p className="sansPro leading-none font-semibold tracking-normal text-slate-700"> {title}</p>
+                  <p className="sansPro text-slate-500 py-1 font-semibold">{category}</p>
+                  <div className="sansPro flex items-center">Quantity: <span className="flex items-center mx-2 gap-x-1"> <motion.span
+                  whileTap={{scale:1.2}}
+                  className="rounded-full p-2 border-slate-300 border-2 w-8 h-8 flex items-center justify-center text-xs">< HiMinus /></motion.span> <span flex items-center justify-center text-sm>{quantity}</span> <motion.span
+                  whileTap={{scale:1.2}}
+                  className="rounded-full p-2 w-8 h-8 justify-center items-center border-slate-300 border-2 text-xs">< HiPlus/></motion.span></span></div>
+                </div>
+                <div className="w-2/6 sansPro flex flex-col justify-between "><p className="sansPro">{quantity} x ₦{price.toLocaleString()}</p> <p className="underline underline-offset-2 sansPro py-2" onClick={() => { removeFromCart({id})} }>
+                Remove
+               </p></div>
+            
+               </div>
+              
+               <hr />
+                </>
+              )
+            }) }</div>
+          )}
+          
+        </div>
+        
+        
+     </motion.div>
 
     
 

@@ -40,6 +40,7 @@ function App() {
           <AnimatePresence exitBeforeEnter>
        
         <div className="flex flex-col w-screen relative">
+        {/* <CartContainer /> */}
         {showCart && <CartContainer />}
         {showModal && <FlutterModal /> } 
         <ToastContainer limit={5} toastClassName={({ type }) => contextClass[type || "default"] + 

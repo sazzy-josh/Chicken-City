@@ -76,6 +76,19 @@ body{
     height: calc(100vh - 133px);
 }
 
+.mobile-cart{
+ background: rgb(255, 255, 255);
+ z-index: 150;
+ height: 100vh;
+ position: fixed;
+ width: 100vw;
+ top: 0;
+ right: 0;
+ bottom:0;
+ font-family: 'Source Sans Pro', sans-serif;
+ 
+}
+
 .overlay{
  background-color: rgba(256 ,256, 256 ,0.6);
  
