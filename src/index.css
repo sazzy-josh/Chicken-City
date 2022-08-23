@@ -79,7 +79,8 @@ body{
 .mobile-cart{
  background: rgb(255, 255, 255);
  z-index: 150;
- height: 100vh;
+ height: 100%;
+ overflow-y: scroll;
  position: fixed;
  width: 100vw;
  top: 0;
