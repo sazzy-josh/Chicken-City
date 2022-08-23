@@ -40,7 +40,7 @@ const FlutterModal = () => {
 
           const fwConfig = {
             ...config,
-            text: `PAY ₦${totalValue} NOW!`,
+            text: `PAY ₦${totalValue.toLocaleString()} NOW!`,
             callback: (response) => {
                console.log(response);
                navigate(`/payment-successful/${name}`)
@@ -77,7 +77,7 @@ const FlutterModal = () => {
             
            </form>
             
-           <button className='bg-yellow-400 p-2 rounded-lg text-center my-4 font-bold tracking-wider font-type'>
+           <button className='bg-yellow-400 p-2 rounded-lg text-center my-4 font-bold tracking-wider sansPro'>
                <FlutterWaveButton {...fwConfig} />
            </button>
 
