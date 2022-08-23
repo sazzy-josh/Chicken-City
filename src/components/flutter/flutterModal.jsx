@@ -81,12 +81,7 @@ const FlutterModal = () => {
                <FlutterWaveButton {...fwConfig} />
            </button>
 
-           {/* <div className='flex flex-col text-red-400 tracking-wider text-sm text-center font-semibold mb-2'>
-            <p>*4242424242424242*</p>
-            <p>*01/31*</p>
-            <p>*812*</p>
-            
-           </div> */}
+        
 
            </div>
   
