@@ -46,25 +46,25 @@ const CartContainer = () => {
                     <div key={id}>
                       <hr />
                         <div className=" flex gap-x-[8px] w-full content py-4 items-center justify-center h-[150px] ">
-                <div className="w-1/6 bg-slate-100 shadow-xs rounded-xl flex justify-center items-center h-[125px]">
+                <div className="sm:w-1/6 bg-slate-100 shadow-xs rounded-xl flex justify-center items-center h-[125px]">
                   <img src={image} alt={image} className="w-[110px] h-[110px]  object-contain "/>
                 </div>
-                <div className="w-2/6 flex flex-col">
+                <div className="sm:w-2/6 flex flex-col">
                 <span className="text-md sansPro text-slate-500">{category}</span>
                 <span className="font-semibold text-sm sansPro">{title}</span>
                 </div>
-                <div className="w-2/6 flex gap-x-4 items-center">
+                <div className="sm:w-1/6 lg:w-2/6 flex sm:gap-x-1 lg:gap-x-4 items-center text-sm">
                   {quantity > 1 ? (<motion.span
                   whileTap={{scale:1.4}}
                   className="cursor-pointer border rounded-full p-2" onClick={()=> {decrease({id})}}><HiMinus /></motion.span>) : (<motion.span
                     whileTap={{scale:1.4}}
                     className="cursor-not-allowed  border rounded-full p-2"><HiMinus /></motion.span>)}
-                  <span className="p-2 px-4 font-semibold sansPro">{quantity}</span>
+                  <span className="p-2 sm:px-2 lg:px-4 font-semibold sansPro">{quantity}</span>
                   <motion.span
                     whileTap={{scale:1.4}}
                   className="cursor-pointer border rounded-full p-2" onClick={()=> {increase({id})}}><HiPlus /></motion.span>
                 </div>
-                <div className="w-1/6 flex justify-between items-center">
+                <div className="sm:w-2/6 lg:w-1/6 flex sm:justify-around lg:justify-between items-center">
                   <span className="font-semibold  sansPro">{quantity} x ₦{price.toLocaleString()}</span>
                   <span className="font-bold text-2xl rotate-45 cursor-pointer hover:text-red-500 " onClick={() =>removeFromCart({id}) }> + </span>
                 </div>
