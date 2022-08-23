@@ -17,7 +17,7 @@ const CartContainer = () => {
 
   return (
     // Cart Section for Desktop and Large screens
-    <AnimatePresence exitBeforeEnter>
+    <AnimatePresence >
     <motion.div 
     initial={{x:"100vw"}}
     animate={{x:0}}

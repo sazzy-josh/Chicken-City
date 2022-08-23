@@ -1,7 +1,7 @@
 import './index.css'
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
-import { BrowserRouter as Router ,Routes , Route } from 'react-router-dom'
+import {Routes , Route ,useLocation  } from 'react-router-dom'
 import Header from './components/header'
 import Footer from './components/footer'
 import Home from './pages/Home'
@@ -30,26 +30,25 @@ const contextClass = {
 };
 
 function App() {
-   const { state: {showCart} , state : {showModal} , state : { showCheckout } } = useCartsContext() 
+   const { state: {showCart} , state : {showModal}  } = useCartsContext() 
+   const location = useLocation()
 
   return (
     
      
      <AuthContextProvider >
           <AnimatePresence exitBeforeEnter>
-        <Router>
+       
         <div className="flex flex-col w-screen relative">
         {showCart && <CartContainer />}
-        {showModal && <FlutterModal /> }
-        {/* {showCheckout && <CheckoutSuccessful />} */}
-        
+        {showModal && <FlutterModal /> } 
         <ToastContainer limit={5} toastClassName={({ type }) => contextClass[type || "default"] + 
         " relative flex p-2 min-h-10 w-3/4 sm:w-auto rounded-xl sm:rounded-xl justify-around overflow-hidden cursor-pointer my-2"
       }
       bodyClassName={() => "text-[14px]  font-slate-50 flex items-center overflow-hidden p-1"}
       autoClose={500} />
             <Header />
-            <Routes>      
+            <Routes location={location} key={location.key}>      
               <Route path='/' element={
                 <Helmet title="Home">
                     <Home />    
@@ -73,7 +72,7 @@ function App() {
             </Routes>
             <Footer />
         </div>
-      </Router>
+      
       </AnimatePresence>
      </AuthContextProvider>
   

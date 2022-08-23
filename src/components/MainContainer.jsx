@@ -4,7 +4,6 @@ import Bike from '../components/assets/img/delivery.png'
 import { BsArrowRight } from 'react-icons/bs'
 import HeroBg from '../components/assets/images/heroo.png'
 import { motion } from 'framer-motion'
-import products from './assets/fake-data/products'
 import C1 from "./assets/images/chicken_1.2.png"
 import C2 from "./assets/images/burger_1.1.png"
 import C3 from "./assets/images/fish_2.1.png"
@@ -81,9 +80,10 @@ const MainContainer = () => {
         {/* Start of Main Page section */}
 
       <motion.main
-       initial={{opacity:0 ,x:"-100vw"}}
+       initial={{opacity:0 ,x:"100vw"}}
        animate={{opacity:1 , x: 0}}
-       transition={{type:'spring' , stiffness:220 , delay: 0.3 , duration: 0.5  }}
+       exit={{x:"-100vw"}}
+       transition={{type:'spring' , stiffness:220 , duration: 0.5  }}
       className='grid md:grid-cols-2 p-5 sm:p-10 lg:px-32 gap-10 h-auto overflow-hidden screen'>
       {/* Column 1 for medium and  large screens */}
      <div className='sm:h-full relative  flex justify-center flex-col pt-4 '>
