@@ -119,6 +119,15 @@ body{
    background-color: rgba(36, 36, 34, 0.3); ;
 }
 
+.home{
+    border: 1px solid black;
+    border-radius: 30px;
+    display: flex;
+    padding: 8px;
+    margin: 10px  0;
+    width: 200px;
+}
+
 
 .inner_Flutter_Modal{
   z-index: 200;
