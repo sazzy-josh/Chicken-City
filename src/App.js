@@ -17,6 +17,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import CartContainer from './components/cart';
 import  { useCartsContext } from './context/CartContext';
 import FlutterModal from './components/flutter/flutterModal';
+import CheckoutSuccessful from './components/checkoutSuccessful';
 
 
 const contextClass = {
@@ -29,7 +30,7 @@ const contextClass = {
 };
 
 function App() {
-   const { state: {showCart} , state : {showModal} } = useCartsContext() 
+   const { state: {showCart} , state : {showModal} , state : { showCheckout } } = useCartsContext() 
 
   return (
     
@@ -40,8 +41,9 @@ function App() {
         <div className="flex flex-col w-screen relative">
         {showCart && <CartContainer />}
         {showModal && <FlutterModal /> }
-        <ToastContainer l
-        imit={5} toastClassName={({ type }) => contextClass[type || "default"] + 
+        {/* {showCheckout && <CheckoutSuccessful />} */}
+        
+        <ToastContainer limit={5} toastClassName={({ type }) => contextClass[type || "default"] + 
         " relative flex p-2 min-h-10 w-3/4 sm:w-auto rounded-xl sm:rounded-xl justify-around overflow-hidden cursor-pointer my-2"
       }
       bodyClassName={() => "text-[14px]  font-slate-50 flex items-center overflow-hidden p-1"}
@@ -65,6 +67,9 @@ function App() {
               <Route path='/aboutus' element={<Helmet title="About-us">
                     <AboutUs /> 
                 </Helmet>} />
+
+              <Route path='/payment-successful/:tx' element={<CheckoutSuccessful />} />
+               
             </Routes>
             <Footer />
         </div>

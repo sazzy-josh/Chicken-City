@@ -11,6 +11,7 @@ export const cartState = {
   cartItems : storage,
   showCart : false ,
   showModal : false,
+  showCheckout: false,
 }
 
 
@@ -45,6 +46,9 @@ export function CartReducer (state = cartState , {payload , type}){
 
         case "SHOW_MODAL":
         return {...state , showModal : !state.showModal} ;
+
+        case "SHOW_CHECKOUT":
+          return {...state , showCheckout : !state.showCheckout} ;
 
 
       case "INCREASE" :

@@ -5,15 +5,18 @@ import { FlutterWaveButton, closePaymentModal } from 'flutterwave-react-v3';
 import { useCartsContext } from '../../context/CartContext';
 import { motion  , AnimatePresence} from 'framer-motion'
 import { MdCancel } from 'react-icons/md'
+import { useNavigate } from 'react-router-dom'
 
 const FlutterModal = () => {
 
-    const {clearCart,openCart,flutterModal, subTotal,setFee} = useCartsContext()
+      const navigate = useNavigate()
+    
+    const {clearCart,openCart,flutterModal, subTotal,setFee , name ,handleName  } = useCartsContext()
 
        let totalValue = subTotal()
      
 
-        const [name, setName] = useState("");
+        // const [name, setName] = useState("");
         const [phone, setPhone] = useState("");
         const [email, setEmail] = useState("");
 
@@ -40,11 +43,14 @@ const FlutterModal = () => {
             text: `PAY ₦${totalValue} NOW!`,
             callback: (response) => {
                console.log(response);
+               navigate(`/payment-successful/${name}`)
                clearCart()
                openCart()
                setFee(0.00)
                flutterModal()
                closePaymentModal()
+              
+             
              // this will close the modal programmatically
             },
             onClose: () => {},
@@ -65,7 +71,7 @@ const FlutterModal = () => {
            
            <div className='flex flex-col h-3/4 '>
            <form className='flex flex-col  text-black gap-y-2'> 
-            <input type="text" name="fullName" placeholder='Idahosa Osaze' className='p-2 rounded-md outline-none' required onChange={(e)=> {setName(e.target.value)}} value={name} />
+            <input type="text" name="fullName" placeholder='Idahosa Osaze' className='p-2 rounded-md outline-none' required onChange={handleName} value={name} />
             <input type="email" name="email" placeholder='idahosajoshua61@gmail.com' className='p-2 rounded-md  outline-none' required onChange={(e)=> {setEmail(e.target.value)}} value={email}/>
             <input type="tel" name="phone" placeholder="+234-700-000-0000" className='p-2 rounded-md  outline-none' required onChange={(e)=> {setPhone(e.target.value)}} value={phone} />
             

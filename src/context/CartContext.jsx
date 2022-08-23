@@ -9,6 +9,7 @@ const CartContextProvider = ({ children }) => {
 
  const [state, dispatch] = useReducer(CartReducer, cartState)
  const [ fee ,setFee ] = useState(0.00)
+ const [ name ,setName ] = useState('')
  const [total , setTotal] = useState(0)
 
  useEffect(() => {
@@ -61,16 +62,25 @@ useEffect(() => {
     dispatch({ type: "CLEAR_CART" });
   };
 
+  //Function to show Checkout after successfull payment
+  const checkout = () => {
+    dispatch({ type:"SHOW_CHECKOUT" });
+  };
+
   //Function to show Flutter Modal
   const flutterModal = () => {
     dispatch({type: "SHOW_MODAL"})
   }
 
+  //handle onchange event of delivery options
   const handleFee = (e) => {
     setFee(e.target.value)
   }
   
-  console.log(subTotal())
+  //handles onchange event on flutter modals name input
+const handleName = (e) => {
+   setName(e.target.value)
+}
     
   
 
@@ -78,7 +88,7 @@ useEffect(() => {
  
 
   return (
-   <CartContext.Provider value={{ state , total , fee , clearCart, addToCart  , removeFromCart , openCart , increase , decrease , flutterModal ,handleFee , subTotal, setFee }}>
+   <CartContext.Provider value={{ state , total , fee , name ,clearCart, addToCart  , removeFromCart , openCart , increase , decrease , flutterModal ,handleFee , subTotal, setFee , handleName ,checkout  }}>
     {children}
    </CartContext.Provider>
   )
