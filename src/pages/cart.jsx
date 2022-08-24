@@ -29,7 +29,7 @@ const Cart = () => {
         <div className="flex flex-col">
           {cartItems.length < 1 ? (
             <div className="flex flex-col justify-center items-center ">
-              <img src={empty} alt={empty} className='w-[150px] h-[150px]' />
+              <img src={empty} alt='no-item' className='w-[150px] h-[150px]' />
               <p>No Items In Cart</p></div>
           ) : ( 
             <div>{cartItems.map(({id, quantity , price , image , title ,category}) => {
