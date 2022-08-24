@@ -26,9 +26,6 @@ const Header = () => {
 
   const { loginUser , logoutUser, User , RemoveNav , openMenu } = useContext(AuthContext) 
 
-//  useEffect(() => {
-      
-//  }, [cartItems]);
 
  useEffect(() => {
     const unsuscribe = onAuthStateChanged(auth ,(currentUser) => {
