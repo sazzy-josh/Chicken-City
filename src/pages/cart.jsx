@@ -2,18 +2,23 @@ import React  from "react"
 import { motion , AnimatePresence } from 'framer-motion'
 import { useCartsContext } from '../context/CartContext'
 import empty from "./../components/assets/svg/empty.svg"
-import { HiPlus , HiMinus , HiOutlineArrowNarrowLeft ,HiOutlineArrowNarrowRight } from 'react-icons/hi'
+import { HiPlus , HiMinus , HiOutlineArrowNarrowLeft } from 'react-icons/hi'
 import { MdOutlinePayment } from 'react-icons/md'
+import { Link } from 'react-router-dom'
 
 const Cart = () => {
 
-    const { clearCart , total ,increase, decrease , removeFromCart , openCart , state: {cartItems} , flutterModal ,handleFee , fee ,subTotal } = useCartsContext()
+    const { clearCart , total ,increase, decrease , removeFromCart  , state: {cartItems} , flutterModal ,handleFee , fee ,subTotal } = useCartsContext()
   return (
     <AnimatePresence>
       <motion.div 
+      initial={{x:"-100vw"}}
+      animate={{x:0}}
+      exit={{x:"-100vw"}}
+      transition={{duration:1 , type:"spring" , stiffness:120 }}
        className="w-full md:hidden bg-white p-3 mobile-cart flex flex-col sansPro my-2 mb-4">
         <div className="flex justify-between items-center">
-          <HiOutlineArrowNarrowLeft onClick={openCart} className="w-6 h-6"/><span
+         <Link to='/'><HiOutlineArrowNarrowLeft className="w-6 h-6"/> </Link> <span
               onClick={clearCart}  
               className="border rounded-full gap-x-1  flex justify-around p-1 font-bold hover:text-red-500 hover:font-extrabold hover:border-red-600 border-slate-700 cursor-pointer text-xs items-center px-1"><p className="rounded-full p-2 border text-[9px] w-4 h-4 flex justify-center items-center border-slate-800  hover:border-red-600 "><span>X</span></p>clear cart</span>
         </div>

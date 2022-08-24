@@ -178,7 +178,7 @@ const Header = () => {
 
       {/* Cart section for mobile screens  */}
 
-      <Link to='/cart%items%list'>
+      <Link to='/cart-items?list?items'>
       <motion.div
         whileTap={{
           scale: 1.1,
