@@ -22,16 +22,6 @@ const Popular = () => {
     const [category, setcategory] = useState('ALL');
     const [allFoods, setallFoods] = useState(products);
   
- 
-
-   //  useEffect(() => {
-   //      setTotal(cartItems.reduce((acc , item) => {
-   //        return acc += Number(item.quantity) * Number(item.price) 
-   //      },0))
-   //  }, [cartItems]);
-    
-   //  console.log(total.toFixed(2))
-
     
     useEffect(() => {
        
