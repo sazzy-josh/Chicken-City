@@ -18,6 +18,7 @@ import CartContainer from './components/cart';
 import  { useCartsContext } from './context/CartContext';
 import FlutterModal from './components/flutter/flutterModal';
 import CheckoutSuccessful from './components/checkoutSuccessful';
+import Cart from './pages/cart';
 
 
 const contextClass = {
@@ -69,6 +70,7 @@ function App() {
                 </Helmet>} />
 
               <Route path='/payment-successful/:tx' element={<CheckoutSuccessful />} />
+              <Route path='/cart%items%list' element={ <Cart /> } />
                
             </Routes>
             <Footer />

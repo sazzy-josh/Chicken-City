@@ -4,7 +4,7 @@ import { useCartsContext } from '../context/CartContext'
 import empty from "./assets/svg/empty.svg"
 import { HiPlus , HiMinus , HiOutlineArrowNarrowLeft ,HiOutlineArrowNarrowRight } from 'react-icons/hi'
 import { MdOutlinePayment } from 'react-icons/md'
-import img from './assets/images/chicken_1.2.png'
+
 
 
 
@@ -147,7 +147,7 @@ const CartContainer = () => {
     </motion.div>
 
       {/*Cart's Mobile and small Screens*/}
-     <motion.div 
+     {/* <motion.div 
        className="w-full md:hidden bg-white p-3 mobile-cart flex flex-col sansPro my-2 mb-4">
         <div className="flex justify-between items-center">
           <HiOutlineArrowNarrowLeft onClick={openCart} className="w-6 h-6"/><span
@@ -195,7 +195,7 @@ const CartContainer = () => {
         </div>
         
         
-     </motion.div>
+     </motion.div> */}
 
     
 

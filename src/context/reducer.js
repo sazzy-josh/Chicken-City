@@ -9,7 +9,7 @@ export const initialState = {
 
 export const cartState = {
   cartItems : storage,
-  showCart : true,
+  showCart : false,
   showModal : false,
   showCheckout: false,
 }
