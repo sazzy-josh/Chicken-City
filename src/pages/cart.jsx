@@ -10,12 +10,12 @@ const Cart = () => {
 
     const { clearCart , total ,increase, decrease , removeFromCart  , state: {cartItems} , flutterModal ,handleFee , fee ,subTotal } = useCartsContext()
   return (
-    <AnimatePresence>
+    <AnimatePresence exitBeforeEnter>
       <motion.div 
       initial={{x:"-100vw"}}
       animate={{x:0}}
-      exit={{x:"-100vw"}}
-      transition={{duration:1 , type:"spring" , stiffness:120 }}
+      exit={{x:"100vw"}}
+      transition={{duration:0.5 , type:"easeInout" , stiffness:120 }}
        className="w-full md:hidden bg-white p-3 mobile-cart flex flex-col sansPro my-2 mb-4">
         <div className="flex justify-between items-center">
          <Link to='/'><HiOutlineArrowNarrowLeft className="w-6 h-6"/> </Link> <span
