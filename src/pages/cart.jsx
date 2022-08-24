@@ -26,7 +26,7 @@ const Cart = () => {
        <p className="sansPro font-semibold py-4">Cart({cartItems.map((item) =>item.quantity).reduce((acc,i)=>{
               return acc += i},0)})</p>
         
-        <div className="flex flex-col">
+        <div className="flex flex-col min-h-[40vh]">
           {cartItems.length < 1 ? (
             <div className="flex flex-col justify-center items-center ">
               <img src={empty} alt={empty} className='w-[150px] h-[150px]' />
