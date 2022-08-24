@@ -28,7 +28,7 @@ const Cart = () => {
         
         <div className="flex flex-col">
           {cartItems.length < 1 ? (
-            <div className="flex flex-col justify-center items-center  h-screen">
+            <div className="flex flex-col justify-center items-center my-16">
               <img src={empty} alt={empty} className='w-[200px] h-[200px]' />
               <p>No Items In Cart</p></div>
           ) : ( 
