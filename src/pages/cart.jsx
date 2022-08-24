@@ -44,9 +44,9 @@ const Cart = () => {
                   <p className="sansPro text-slate-500 py-1 font-semibold">{category}</p>
                   <div className="sansPro flex items-center">Quantity: <span className="flex items-center mx-2 gap-x-1"> <motion.span
                   whileTap={{scale:1.2}}
-                  className="rounded-full p-2 border-slate-300 border-2 w-8 h-8 flex items-center justify-center text-xs">< HiMinus /></motion.span> <span flex items-center justify-center text-sm>{quantity}</span> <motion.span
+                  className="rounded-full p-2 border-slate-300 border-2 w-8 h-8 flex items-center justify-center text-xs" onClick={()=> {decrease({id})}}>< HiMinus /></motion.span> <span flex items-center justify-center text-sm>{quantity}</span> <motion.span
                   whileTap={{scale:1.2}}
-                  className="rounded-full p-2 w-8 h-8 justify-center items-center border-slate-300 border-2 text-xs">< HiPlus/></motion.span></span></div>
+                  className="rounded-full p-2 w-8 h-8 justify-center items-center border-slate-300 border-2 text-xs" onClick={()=> {increase({id})}}>< HiPlus/></motion.span></span></div>
                 </div>
                 <div className="w-2/6 sansPro flex flex-col justify-between "><p className="sansPro">{quantity} x ₦{price.toLocaleString()}</p> <p className="underline underline-offset-2 sansPro py-2" onClick={() => { removeFromCart({id})} }>
                 Remove

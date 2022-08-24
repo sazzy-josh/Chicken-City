@@ -70,7 +70,7 @@ function App() {
                 </Helmet>} />
 
               <Route path='/payment-successful/:tx' element={<CheckoutSuccessful />} />
-              <Route path='/cart!items%list' element={<Cart /> } />
+              <Route path='/cartItems3qPzZ26PeuhwEyCdgWWBXK2vGNF7' element={<Cart /> } />
                
             </Routes>
             <Footer />
