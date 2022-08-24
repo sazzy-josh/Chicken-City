@@ -50,9 +50,9 @@ const CheckoutSuccessful = () => {
                 />
            </div>
            </div>
-           <p className='font-semibold py-1 text-center'>Thank you {tx}!Your Payment has been recieved and your order would be delivered Shortly.</p>
-           <p className='font-semibold text-center'>Transaction reference: #{Date.now()+654098765} </p>
-           <Link to='/'><div className='flex my-4 gap-x-1 border-rounded justify-center border-slate-200 items-center text-black  border-2 font-semibold hover:bg-slate-700 hover:text-white rounded-full p-2'> <p> Back to home</p> <HiOutlineArrowNarrowLeft /> </div></Link>
+           <p className='font-semibold py-1 text-center text-xs md:text-sm'>Thank you {tx}!Your Payment has been recieved and your order would be delivered Shortly.</p>
+           <p className='font-semibold text-center text-xs md:text-sm'>Transaction reference: #{Date.now()+654098765} </p>
+           <Link to='/'><div className='flex my-4 gap-x-1 border-rounded justify-center border-slate-200 items-center text-black  border-2 font-semibold hover:bg-slate-700 hover:text-white rounded-full p-2  text-xs md:text-sm'> <p> Back to home</p> <HiOutlineArrowNarrowLeft /> </div></Link>
        </div>
        
     </div> 
