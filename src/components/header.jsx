@@ -5,7 +5,7 @@ import Avatar from './assets/img/avatar.png'
 import { Link ,NavLink } from 'react-router-dom'
 import { BiChevronDown } from 'react-icons/bi'
 import { BiChevronUp } from 'react-icons/bi'
-import { GiShoppingCart } from 'react-icons/gi'
+import { IoMdCart } from 'react-icons/io'
 import { TbLogin } from 'react-icons/tb'
 import { MdOutlineLogout } from 'react-icons/md'
 import { MdRestaurantMenu } from 'react-icons/md'
@@ -118,7 +118,7 @@ const Header = () => {
           whileTap={{
             scale: 1.1,
           }}
-        className='text-xl  relative flex justify-center cursor-pointer -left-2 items-center'><GiShoppingCart  /> <span className='text-slate-100  absolute -top-2 -right-2 text-[10px] p-1  bg-red-500 rounded-full w-4 h-4 flex font-bold items-center justify-center'>{cartItems.length}</span>
+        className='text-xl  relative flex justify-center cursor-pointer -left-2 items-center'><IoMdCart/> <span className='text-slate-100  absolute -top-2 -right-2 text-[10px] p-1  bg-red-500 rounded-full w-4 h-4 flex font-bold items-center justify-center'>{cartItems.length}</span>
         </motion.div>
 
         {/* <---- This section handles Authentication for medium and large screens ------>  */}
@@ -178,14 +178,17 @@ const Header = () => {
 
       {/* Cart section for mobile screens  */}
 
-      <Link to='/cartItems3qPzZ26PeuhwEyCdgWWBXK2vGNF7'>
+     
       <motion.div
         whileTap={{
           scale: 1.1,
         }}
-      className='text-2xl relative text-slate-600 font-bold flex justify-center cursor-pointer  items-center'><GiShoppingCart /> <span className='text-white absolute top-0.5 -right-2 text-[10px] p-1  bg-red-500 shadow-lg rounded-full w-4 h-4 flex font-bold items-center justify-center'>{cartItems.length}</span>
+      className='text-2xl relative text-slate-600 font-bold flex justify-center cursor-pointer  items-center'>
+         <Link to='/cartItems3qPzZ26PeuhwEyCdgWWBXK2vGNF7'>
+        <IoMdCart/> <span className='text-white absolute top-0.5 -right-2 text-[10px] p-1  bg-red-500 shadow-lg rounded-full w-4 h-4 flex font-bold items-center justify-center'>{cartItems.length}</span>
+      </Link>
         </motion.div>
-        </Link>
+        
 
         {/* Logo Section for mobile screen */}
     <Link to="/">

@@ -2,7 +2,7 @@ import React  from "react"
 import { motion , AnimatePresence } from 'framer-motion'
 import { useCartsContext } from '../context/CartContext'
 import empty from "./../components/assets/svg/empty.svg"
-import { HiPlus , HiMinus , HiOutlineArrowNarrowLeft } from 'react-icons/hi'
+import { HiPlus , HiMinus , HiOutlineArrowNarrowLeft, HiOutlineArrowNarrowRight } from 'react-icons/hi'
 import { MdOutlinePayment } from 'react-icons/md'
 import { Link } from 'react-router-dom'
 
@@ -29,26 +29,28 @@ const Cart = () => {
         <div className="flex flex-col">
           {cartItems.length < 1 ? (
             <div className="flex flex-col justify-center items-center ">
-              <img src={empty} alt='no-item' className='w-[150px] h-[150px]' />
+              <img src={empty} alt={empty} className='w-[150px] h-[150px]' />
               <p>No Items In Cart</p></div>
           ) : ( 
             <div>{cartItems.map(({id, quantity , price , image , title ,category}) => {
               return (
                 <>
                 <div className="flex w-full mb-2 my-4 " key={id}>
-                <div className="w-2/6 flex justify-center items-center h-[80px]">
+                <div className="w-2/6 flex justify-center items-center h-[90px]">
                   <div className="w-110px h-150px bg-slate-200 rounded-md -ml-4 flex justify-center items-center"><img src={image} alt={image} className="w-[85px] h-[85px] object-contain" /></div>
                 </div>
                 <div className="w-4/6 sansPro flex flex-col text-sm">
                   <p className="sansPro leading-none font-semibold tracking-normal text-slate-700"> {title}</p>
                   <p className="sansPro text-slate-500 py-1 font-semibold">{category}</p>
-                  <div className="sansPro flex items-center">Quantity: <span className="flex items-center mx-2 gap-x-1"> <motion.span
+                  <div className="sansPro flex items-center">Quantity: <span className="flex items-center mx-2 gap-x-1"> {quantity > 1 ? (<motion.span
                   whileTap={{scale:1.2}}
-                  className="rounded-full p-2 border-slate-300 border-2 w-8 h-8 flex items-center justify-center text-xs" onClick={()=> {decrease({id})}}>< HiMinus /></motion.span> <span flex items-center justify-center text-sm>{quantity}</span> <motion.span
+                  className="rounded-full p-2 border-slate-300 border-2 w-8 h-8 flex items-center justify-center text-xs" onClick={()=> {decrease({id})}}>< HiMinus /></motion.span>) : (<motion.span
+                    whileTap={{scale:1.2}}
+                    className="rounded-full p-2 border-slate-300 border-2 w-8 h-8 flex items-center justify-center text-xs cursor-not-allowed" disabled>< HiMinus /></motion.span> )} <span flex items-center justify-center text-sm>{quantity}</span> <motion.span
                   whileTap={{scale:1.2}}
                   className="rounded-full p-2 w-8 h-8 justify-center items-center border-slate-300 border-2 text-xs" onClick={()=> {increase({id})}}>< HiPlus/></motion.span></span></div>
                 </div>
-                <div className="w-2/6 sansPro flex flex-col justify-between "><p className="sansPro">{quantity} x ₦{price.toLocaleString()}</p> <p className="underline underline-offset-2 sansPro py-2" onClick={() => { removeFromCart({id})} }>
+                <div className="w-2/6 sansPro flex flex-col justify-between "><p className="sansPro">{quantity} x ₦{price.toLocaleString()}</p> <p className="underline underline-offset-2 sansPro py-2 text-slate-600" onClick={() => { removeFromCart({id})} }>
                 Remove
                </p></div>
             
@@ -62,7 +64,55 @@ const Cart = () => {
           
         </div>
         
-        
+        <p className="font-bold sansPro mt-6 mb-2 text-[20px]">
+            Summary
+        </p>
+        <hr />
+        <div className="flex justify-between sansPro  my-2">
+            <p className="sansPro font-bold">Subtotal</p>
+            <p className="sansPro font-semibold">₦{total.toLocaleString()}</p>
+        </div>
+        <div className="flex justify-between sansPro semibold ">
+            <p className="sansPro font-bold">Shipping</p>
+            <p className="sansPro font-semibold">₦{fee}</p>
+        </div>
+
+        <div className="flex justify-between sansPro semibold ">
+            <p className="sansPro font-bold">Discount</p>
+            <p className="sansPro font-semibold">₦0</p>
+        </div>
+        <div className="w-full py-2 mb-2">
+       <select name="delivery" className="w-full py-2 px-1 bg-gray-200 outline-slate-300 font-semibold rounded-sm sansPro" onChange={ handleFee } value={ fee }>
+        <option className='sansPro  w-full' value="800">STANDARD DELIVERY  ₦800</option>
+        <option className='sansPro w-full' value="1500">EXPRESS DELIVERY  ₦1,500</option>
+        <option className='sansPro w-full' value="2500">⚡SWIFT-HIGH PRIORITY  ₦2,500</option>
+      </select>
+       </div>
+
+       <hr />
+       <div className="flex justify-between sansPro semibold my-3">
+            <p className="sansPro font-bold">Total</p>
+            <p className="sansPro font-semibold">{ total === 0 ? (<p  className="sansPro">₦0.000</p>) : (<p  className="sansPro">₦{subTotal().toLocaleString()}</p>)  }</p>
+        </div>
+
+      <hr />
+
+      
+
+       <div className="flex flex-col gap-y-2">
+         
+         <div className="sansPro relative">
+         <input type="text" name="Promocode"  placeholder="Enter your code" className="sansPro border-slate-200 border-2 rounded-md p-2 w-full outline-none" />
+         <HiOutlineArrowNarrowRight  className="absolute right-3 top-4" onClick={()=> {alert("Ooops!!Invalid promo code")}}/>
+         </div>
+       
+
+       </div>
+
+       <span className="w-full rounded-full my-2 p-2 flex justify-center items-center sansPro bg-slate-800 text-white gap-x-1" onClick={flutterModal}>
+        <p className="sansPro ">Checkout </p>< MdOutlinePayment className="mt-1" />
+       </span>
+
      </motion.div>
 
 

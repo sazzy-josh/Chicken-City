@@ -80,7 +80,7 @@ const CartContainer = () => {
 
             
             <div className="absolute bottom-6 flex w-full justify-between items-center ">
-              <div className="flex gap-x-1   items-center cursor-pointer sansPro hover:font-semibold" onClick={ openCart }><HiOutlineArrowNarrowLeft className="w-6 h-6 sansPro hover:text-slate-700 hover:scale-125 " /> Back to Shop</div> 
+              <div className="flex gap-x-1   items-center cursor-pointer sansPro hover:font-semibold" onClick={ openCart }> <HiOutlineArrowNarrowLeft  className="w-6 h-6 sansPro hover:text-slate-700 hover:scale-125 " /> Back to Shop</div> 
               <span
               onClick={clearCart}  
               className="border rounded-full gap-x-1  flex justify-around mr-12 p-1 font-bold hover:text-red-500 hover:font-extrabold hover:border-red-600 border-slate-700 cursor-pointer text-xs items-center px-2"><p className="rounded-full p-2 border text-[9px] w-5 h-5 flex justify-center items-center border-slate-800  hover:border-red-600 "><span>X</span></p>clear cart</span>
@@ -114,6 +114,12 @@ const CartContainer = () => {
         <p className="sansPro">₦{fee}</p>
        </span>
 
+       <span className="font-semibold  flex justify-between sansPro">
+        <p className="font-semibold sansPro">DISCOUNT</p>
+
+        <p className="sansPro">₦0</p>
+       </span>
+
        <div className="w-full py-2">
        <select name="delivery" className="w-full p-2 outline-none font-semibold rounded-sm sansPro" onChange={ handleFee } value={ fee }>
         <option className='p-2 sansPro' value="800">STANDARD DELIVERY  ₦800</option>
@@ -128,6 +134,7 @@ const CartContainer = () => {
        <input type="text" placeholder="Enter your Code" className='w-full p-2 font-semibold rounded-sm outline-none' />
        <HiOutlineArrowNarrowRight className="absolute right-2 top-2 w-6 h-6 " />
        </div>
+
  
        </div>
 
