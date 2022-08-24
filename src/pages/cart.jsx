@@ -64,7 +64,7 @@ const Cart = () => {
           
         </div>
         
-   {  cartItems.length > 1 && 
+   {  cartItems.length > 0 && 
    <>
    <p className="font-bold sansPro mt-6 mb-2 text-[20px]">
             Summary

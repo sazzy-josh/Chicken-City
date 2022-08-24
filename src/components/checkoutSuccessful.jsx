@@ -32,7 +32,7 @@ const CheckoutSuccessful = () => {
 
 
   return (
-    <div className='flex flex-col'>
+    <div className='flex flex-col overflow-x-hidden'>
     
 
         <div className='success flex justify-center items-center flex-col'>
