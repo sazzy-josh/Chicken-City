@@ -26,10 +26,10 @@ const Cart = () => {
        <p className="sansPro font-semibold py-4">Cart({cartItems.map((item) =>item.quantity).reduce((acc,i)=>{
               return acc += i},0)})</p>
         
-        <div className="flex flex-col min-h-[40vh]">
+        <div className="flex flex-col">
           {cartItems.length < 1 ? (
-            <div className="flex flex-col justify-center items-center ">
-              <img src={empty} alt={empty} className='w-[150px] h-[150px]' />
+            <div className="flex flex-col justify-center items-center  h-screen">
+              <img src={empty} alt={empty} className='w-[200px] h-[200px]' />
               <p>No Items In Cart</p></div>
           ) : ( 
             <div>{cartItems.map(({id, quantity , price , image , title ,category}) => {
@@ -64,7 +64,9 @@ const Cart = () => {
           
         </div>
         
-        <p className="font-bold sansPro mt-6 mb-2 text-[20px]">
+   {  cartItems.length > 1 && 
+   <>
+   <p className="font-bold sansPro mt-6 mb-2 text-[20px]">
             Summary
         </p>
         <hr />
@@ -112,6 +114,7 @@ const Cart = () => {
        <span className="w-full rounded-full my-2 p-2 flex justify-center items-center sansPro bg-slate-800 text-white gap-x-1" onClick={flutterModal}>
         <p className="sansPro ">Checkout </p>< MdOutlinePayment className="mt-1" />
        </span>
+       </>}
 
      </motion.div>
 
