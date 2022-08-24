@@ -72,16 +72,16 @@ const Cart = () => {
         <hr />
         <div className="flex justify-between sansPro  my-2">
             <p className="sansPro font-bold">Subtotal</p>
-            <p className="sansPro font-semibold">₦{total.toLocaleString()}</p>
+            <p className="sansPro ">₦{total.toLocaleString()}</p>
         </div>
         <div className="flex justify-between sansPro semibold ">
             <p className="sansPro font-bold">Shipping</p>
-            <p className="sansPro font-semibold">₦{fee}</p>
+            <p className="sansPro ">₦{fee}</p>
         </div>
 
         <div className="flex justify-between sansPro semibold ">
             <p className="sansPro font-bold">Discount</p>
-            <p className="sansPro font-semibold">₦0</p>
+            <p className="sansPro ">₦0</p>
         </div>
         <div className="w-full py-2 mb-2">
        <select name="delivery" className="w-full py-2 px-1 bg-gray-200 outline-slate-300 font-semibold rounded-sm sansPro" onChange={ handleFee } value={ fee }>
@@ -94,14 +94,14 @@ const Cart = () => {
        <hr />
        <div className="flex justify-between sansPro semibold my-3">
             <p className="sansPro font-bold">Total</p>
-            <p className="sansPro font-semibold">{ total === 0 ? (<p  className="sansPro">₦0.000</p>) : (<p  className="sansPro">₦{subTotal().toLocaleString()}</p>)  }</p>
+            <p className="sansPro ">{ total === 0 ? (<p  className="sansPro">₦0.000</p>) : (<p  className="sansPro">₦{subTotal().toLocaleString()}</p>)  }</p>
         </div>
 
       <hr />
 
       
 
-       <div className="flex flex-col gap-y-2">
+       <div className="flex flex-col gap-y-2 my-4">
          
          <div className="sansPro relative">
          <input type="text" name="Promocode"  placeholder="Enter your code" className="sansPro border-slate-200 border-2 rounded-md p-2 w-full outline-none" />
@@ -111,7 +111,7 @@ const Cart = () => {
 
        </div>
 
-       <span className="w-full rounded-full my-2 p-2 flex justify-center items-center sansPro bg-slate-800 text-white gap-x-1" onClick={flutterModal}>
+       <span className="w-full rounded-full my-2 p-3 flex justify-center items-center sansPro bg-slate-800 text-white gap-x-1" onClick={flutterModal}>
         <p className="sansPro ">Checkout </p>< MdOutlinePayment className="mt-1" />
        </span>
        </>}
