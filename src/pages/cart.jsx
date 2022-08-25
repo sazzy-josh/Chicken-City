@@ -40,7 +40,7 @@ const Cart = () => {
                   <div className="w-110px h-150px bg-slate-200 rounded-md -ml-4 flex justify-center items-center"><img src={image} alt={image} className="w-[85px] h-[85px] object-contain" /></div>
                 </div>
                 <div className="w-4/6 sansPro flex flex-col text-sm">
-                  <p className="sansPro leading-none font-semibold tracking-normal text-slate-700"> {title}</p>
+                  <p className="sansPro leading-none font-[500px] tracking-normal text-slate-700"> {title}</p>
                   <p className="sansPro text-slate-500 py-1 font-semibold">{category}</p>
                   <div className="sansPro flex items-center">Quantity: <span className="flex items-center mx-2 gap-x-1"> {quantity > 1 ? (<motion.span
                   whileTap={{scale:1.2}}

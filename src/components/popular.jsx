@@ -68,7 +68,7 @@ const Popular = () => {
   return (
     <div className=' p-5 sm:p-10 lg:px-28' id='popular'>
         <p className='md:text-[32px] text-[28px] font-bold text-center'>Popular Dishes with Discount</p>
-         <p className='lg:text-sm text-xs text-center py-2 font-bold'> The most delicious and healthy dishes from our chef.You can order this meal seperately or as part of a meal plan</p>
+         <p className='lg:text-sm text-xs text-center py-2 font-bold text-slate-700'> The most delicious and healthy dishes from our chef.You can order this meal seperately or as part of a meal plan</p>
 
          <div className=' bg-red-400 rounded-lg py-3 flex justify-center text-slate-900 items-center text-xs md:text-sm font-semibold md:gap-x-3'>
            

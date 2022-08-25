@@ -100,7 +100,7 @@ const MainContainer = () => {
        className='py-5 text-4xl lg:text-5xl font-bold md:tracking-[normal] md:py-8 lg:max-w-[500px] '> We offer the <span className='text-red-500'>Fastest Delivery </span>
         within Every City.</motion.p>
 
-        <p className='tracking-wider text-sm box-border leading-normal lg:leading-[1.9] font-[700] max-w-[500px]'>
+        <p className='tracking-wider text-sm box-border leading-normal lg:leading-[1.9] font-[500] max-w-[500px] text-slate-700'>
         Restaurant style Yogurt Mint Sauce is delicious dip which is quick and easy to .. This is a standard Indian mint chutney served with poppadums along with mint and lemon.
         We provide pleasure to your tastebuds 😉..
         </p>
@@ -111,7 +111,7 @@ const MainContainer = () => {
          initial={{opacity:0.3 }}
          animate={{opacity:1 }}
          transition={{ ease: "easeInOut", duration: 0.4 }}
-        className='text-white  text-bold gap-2 p-3 my-8 text-xs cursor-pointer rounded-full bg-red-500 w-[120px] shadow-lg md:max-w-[140px] max-h-[80px] border-2 border-red-200 font-bold flex justify-center items-center ' href='#popular'>Order Now </motion.a>
+        className='text-white  text-bold gap-2 p-3 my-8 text-xs cursor-pointer rounded-full bg-red-500 w-[120px] shadow-lg md:max-w-[140px] max-h-[80px] border-2 border-red-200 font-bold flex justify-center items-center' href='#popular' >Order Now </motion.a>
         
         <motion.p 
          whileHover={{scale:0.9 ,  y:-10 }}
@@ -143,7 +143,7 @@ const MainContainer = () => {
         
       <div className='p-5 sm:p-10 lg:px-28 flex flex-col items-center my-2'>
         <h3 className='md:text-[32px] text-[28px] font-bold text-center'> More than 2,000 Dishes To Order! </h3>
-        <p className='lg:text-sm text-xs text-center font-bold'>Welcome to the Biggest Network of Food Ordering and Delivery</p>
+        <p className='lg:text-sm text-xs text-center text-slate-700 font-bold'>Welcome to the Biggest Network of Food Ordering and Delivery</p>
 
 
        
@@ -185,7 +185,7 @@ const MainContainer = () => {
 
       <div className='p-5 sm:p-10 lg:px-28'>
          <h3 className='md:text-[32px] text-[28px] font-bold text-center'>How To Order?</h3>
-          <p className='lg:text-sm text-xs text-center py-2 font-bold'>
+          <p className='lg:text-sm text-xs text-center py-2 font-bold text-slate-700'>
             Follow the steps
           </p>
 
@@ -199,7 +199,7 @@ const MainContainer = () => {
            <div className='flex flex-col gap-y-2 justify-center items-center'>
                <img src={search} alt="search" className='w-[100px] h-[100px] object-contain' />
                <span className='p-2 border-dotted border-2 rounded-full border-red-300 w-12 h-12 text-center font-bold'>01</span>
-               <p className='font-bold'>Search For Meal</p>
+               <p className='font-bold text-slate-700'>Search For Meal</p>
            </div>
             
            <motion.div 
@@ -211,7 +211,7 @@ const MainContainer = () => {
            className='flex flex-col gap-y-2 justify-center items-center'>
                <img src={cart} alt="search" className='w-[100px] h-[100px] object-contain' />
                <span className='p-2 border-dotted border-2 rounded-full border-red-300 w-12 h-12 text-center font-bold'>02</span>
-               <p className='font-bold'>Add to Cart</p>
+               <p className='font-bold text-slate-700'>Add to Cart</p>
            </motion.div>
 
            <motion.div
@@ -223,7 +223,7 @@ const MainContainer = () => {
             className='flex flex-col gap-y-2 justify-center items-center'>
                <img src={checkout} alt="search" className='w-[100px] h-[100px] object-contain' />
                <span className='p-2 border-dotted border-2 rounded-full border-red-300 w-12 h-12 text-center font-bold'>03</span>
-               <p className='font-bold'>Proceed to Checkout</p>
+               <p className='font-bold text-slate-700'>Proceed to Checkout</p>
            </motion.div>
 
            <motion.div
@@ -235,7 +235,7 @@ const MainContainer = () => {
            className='flex flex-col gap-y-2 justify-center items-center'>
                <img src={payment} alt="search" className='w-[100px] h-[100px] object-contain' />
                <span className='p-2 border-dotted border-2 rounded-full border-red-300 w-12 h-12 flex justify-center  items-center font-bold'>04</span>
-               <p className='font-bold'>Make Payment</p>
+               <p className='font-bold text-slate-700'>Make Payment</p>
                
            </motion.div>
 
