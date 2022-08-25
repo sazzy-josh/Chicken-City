@@ -71,13 +71,13 @@ const FlutterModal = () => {
            
            <div className='flex flex-col h-3/4 '>
            <form className='flex flex-col  text-black gap-y-2'> 
-            <input type="text" name="fullName" placeholder='Idahosa Osaze' className='p-2 py-3 rounded-md outline-none  text-xs placeholder-slate-400 placeholder:opacity-3' required onChange={handleName} value={name} />
-            <input type="email" name="email" placeholder='idahosajoshua61@gmail.com' className='p-2 py-3 rounded-md  outline-none  text-xs placeholder-slate-400 placeholder:opacity-3' required onChange={(e)=> {setEmail(e.target.value)}} value={email}/>
-            <input type="tel" name="phone" placeholder="+234-700-000-0000" className='p-2 rounded-md py-3 outline-none  text-xs placeholder-slate-400 placeholder:opacity-3' required onChange={(e)=> {setPhone(e.target.value)}} value={phone} />
+            <input type="text" name="fullName" placeholder='Idahosa Osaze' className='p-2 py-3 rounded-md outline-none  text-xs placeholder-black placeholder:opacity-[35%]' required onChange={handleName} value={name} />
+            <input type="email" name="email" placeholder='idahosajoshua61@gmail.com' className='p-2 py-3 rounded-md  outline-none  text-xs placeholder-black placeholder:opacity-[40%]' required onChange={(e)=> {setEmail(e.target.value)}} value={email}/>
+            <input type="tel" name="phone" placeholder="+234-700-000-0000" className='p-2 rounded-md py-3 outline-none  text-xs placeholder-black placeholder:opacity-[35%]' required onChange={(e)=> {setPhone(e.target.value)}} value={phone} />
             
            </form>
             
-           <button className='bg-red-500 p-2 rounded-lg text-center my-4 font-bold tracking-wider sansPro'>
+           <button className='bg-yellow-400 p-2 rounded-lg text-center my-4 font-bold tracking-wider sansPro'>
                <FlutterWaveButton {...fwConfig} />
            </button>
 
