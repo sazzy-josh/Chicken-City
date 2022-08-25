@@ -66,7 +66,7 @@ const FlutterModal = () => {
         animate={{y:0}}
         transition={{duration:1 , type:"spring" ,stiffness:200 }}
         exit={{y:"-100vw"}}
-        className='inner_Flutter_Modal h-[40vh] w-[85vw]  sm:w-[45vw] sm:h-[50vh] lg:w-[30vw] lg:h-[50vh]  bg-slate-300 rounded-xl shadow-xl text-white p-4 flex flex-col'>
+        className='inner_Flutter_Modal h-[44vh] w-[85vw]  sm:w-[45vw] sm:h-[50vh] lg:w-[30vw] lg:h-[50vh]  bg-slate-300 rounded-xl shadow-xl text-white p-4 flex flex-col'>
          <div className='flex justify-between h-1/4'> <div className='flex'><div className='rounded-full w-12 h-12 p-1 bg-slate-800 flex items-center justify-center'><img src={logo} alt="flutter" className='sm:w-8 sm:h-8'/></div> </div> <span  className='w-12 p-1 h-12 cursor-pointer flex justify-center items-center' onClick={flutterModal}><MdCancel className="w-8 h-8 text-red-500" /> </span> </div>
            
            <div className='flex flex-col h-3/4 '>
@@ -77,11 +77,11 @@ const FlutterModal = () => {
             
            </form>
             
-           <button className='bg-yellow-500 p-2 rounded-lg text-center my-4 font-bold tracking-wider sansPro'>
+           <button className='bg-red-500 p-2 rounded-lg text-center my-4 font-bold tracking-wider sansPro'>
                <FlutterWaveButton {...fwConfig} />
            </button>
 
-        
+           <p className='md:hidden  text-[12px] text-center sansPro text-red-500'>Warning:Do not make payment with your real card</p>
 
            </div>
   
