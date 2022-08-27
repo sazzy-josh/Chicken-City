@@ -4,7 +4,8 @@ const storage = localStorage.getItem("cartItems")
 
 
 export const initialState = {
-    user : null
+    user : null,
+    authService : 'LOGIN'
 }
 
 export const cartState = {
@@ -12,6 +13,7 @@ export const cartState = {
   showCart : false,
   showModal : false,
   showCheckout: false,
+  
 }
 
 
@@ -24,6 +26,14 @@ export function AuthReducer (state = initialState, {payload , type }) {
     case "LOGOUT_USER":
     return { ...state, 
        user : null
+    } ;
+    case "SIGNUP_USER":
+    return { ...state, 
+      authService  : 'SIGNUP'
+    } ;
+    case "LOGIN_USER":
+    return { ...state, 
+      authService  : 'LOGIN'
     } ;
 
   default:

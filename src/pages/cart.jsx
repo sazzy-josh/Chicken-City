@@ -4,18 +4,31 @@ import { useCartsContext } from '../context/CartContext'
 import empty from "./../components/assets/svg/empty.svg"
 import { HiPlus , HiMinus , HiOutlineArrowNarrowLeft, HiOutlineArrowNarrowRight } from 'react-icons/hi'
 import { MdOutlinePayment } from 'react-icons/md'
-import { Link } from 'react-router-dom'
+import { Link , useNavigate } from 'react-router-dom'
+import { useAuthsContext } from "../context/authContext"
+
+
+
 
 const Cart = () => {
-
+    const { User , loginState } = useAuthsContext()
     const { clearCart , total ,increase, decrease , removeFromCart  , state: {cartItems} , flutterModal ,handleFee , fee ,subTotal } = useCartsContext()
-  return (
+  
+ const navigate = useNavigate()
+
+    const handleLogin = () =>{
+      loginState()
+      navigate('/auth')
+     }
+
+
+    return (
     <AnimatePresence exitBeforeEnter>
       <motion.div 
-      initial={{x:"-100vw"}}
-      animate={{x:0}}
-      exit={{x:"100vw"}}
-      transition={{duration:0.5 , type:"easeInout" , stiffness:120 }}
+        initial={{opacity:0 ,x:-350}}
+        animate={{opacity:1 , x: 0}}
+        exit={{x:1000  }}
+        transition={{type:'spring' , stiffness:100  ,ease:'easeOut' }}
        className="w-full md:hidden bg-white p-3 mobile-cart flex flex-col sansPro my-2 mb-4">
         <div className="flex justify-between items-center">
          <Link to='/'><HiOutlineArrowNarrowLeft className="w-6 h-6"/> </Link> <span
@@ -105,15 +118,17 @@ const Cart = () => {
          
          <div className="sansPro relative">
          <input type="text" name="Promocode"  placeholder="Enter your code" className="sansPro border-slate-200 border-2 rounded-md p-2 w-full outline-none" />
-         <HiOutlineArrowNarrowRight  className="absolute right-3 top-4" onClick={()=> {alert("Ooops!!Invalid promo code")}}/>
+         <HiOutlineArrowNarrowRight  className="absolute right-3 top-4 cursor-pointer" onClick={()=> {alert("Ooops!!Invalid promo code")}}/>
          </div>
        
 
        </div>
 
-       <span className="w-full rounded-full my-2 p-3 flex justify-center items-center sansPro bg-slate-800 text-white gap-x-1" onClick={flutterModal}>
+       {User ? (<span className="w-full rounded-full mb-8 my-2 p-3 flex justify-center items-center sansPro bg-slate-800 text-white gap-x-1" onClick={flutterModal}>
         <p className="sansPro ">Checkout </p>< MdOutlinePayment className="mt-1" />
-       </span>
+       </span>) : (<span className="w-full rounded-full mb-8 my-2 p-3 flex justify-center items-center sansPro bg-slate-800 text-white gap-x-1" onClick={handleLogin}>
+        <p className="sansPro ">Checkout </p>< MdOutlinePayment className="mt-1" />
+       </span>) }
        </>}
 
      </motion.div>

@@ -1,4 +1,4 @@
-import { createContext , useState } from "react";
+import { createContext , useState , useContext } from "react";
 import React from 'react'
 import { useReducer } from "react";
 import { initialState } from "./reducer"; 
@@ -17,27 +17,31 @@ const AuthContextProvider = ({ children }) => {
  }
  
  function loginUser(user){
-  dispatch(
-    {
-      type: "SET_USER",
-      payload : user 
-    }
-  )
+  dispatch({type: "SET_USER", payload : user })
  }
 
  function logoutUser(){
-  dispatch(
-    {
-      type: "LOGOUT_USER",
-    }
-  )
+  dispatch( {type: "LOGOUT_USER"})
  }
 
+ function loginState(){
+  dispatch({type:"LOGIN_USER"})
+ }
+
+ function signUpState(){
+  dispatch({type:"SIGNUP_USER"})
+ }
+
+
   return (
-    <AuthContext.Provider value = {{User: state.user , RemoveNav , loginUser ,logoutUser , openMenu }}  >
+    <AuthContext.Provider value = {{User: state.user , AuthServices :state.authService , openMenu  , RemoveNav , loginUser ,logoutUser  , loginState , signUpState }}  >
       {children}
     </AuthContext.Provider>
   )
 }
+
+export const useAuthsContext = () => {
+  return useContext(AuthContext)
+} 
 
 export default AuthContextProvider

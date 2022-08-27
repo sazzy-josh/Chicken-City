@@ -5,8 +5,7 @@ import {Routes , Route ,useLocation  } from 'react-router-dom'
 import Header from './components/header'
 import Footer from './components/footer'
 import Home from './pages/Home'
-import Login from './pages/Login.jsx'
-import SignUp from './pages/SignUp'
+import Auth from './pages/Auth.jsx'
 import {AnimatePresence } from 'framer-motion'
 import AuthContextProvider from './context/authContext'
 import AboutUs from './pages/aboutUs'
@@ -25,7 +24,7 @@ const contextClass = {
   success: "bg-green-700",
   error: "bg-red-600",
   info: "bg-gray-800",
-  warning: "bg-orange-400",
+  warning: "bg-red-600",
   default: "bg-indigo-600",
   dark: "bg-white-600 font-gray-300",
 };
@@ -38,7 +37,7 @@ function App() {
     
      
      <AuthContextProvider >
-          <AnimatePresence exitBeforeEnter>
+          <AnimatePresence mode='wait'>
        
         <div className="flex flex-col w-screen relative">
         {/* <CartContainer /> */}
@@ -56,21 +55,18 @@ function App() {
                     <Home />    
                 </Helmet>
               } />
-              <Route path='/login' element={ <Helmet title="Login">
-                    <Login /> 
-                </Helmet> } />
               <Route path='/foods' element={ <Helmet title="foods">
                     <Food /> 
                 </Helmet> } />
-              <Route path='/Sign-up' element={<Helmet title="Sign-up">
-                    <SignUp /> 
+              <Route path='/auth' element={<Helmet title="Sign-up/login ">
+                    <Auth /> 
                 </Helmet>} />
               <Route path='/aboutus' element={<Helmet title="About-us">
                     <AboutUs /> 
                 </Helmet>} />
 
               <Route path='/payment-successful/:tx' element={<CheckoutSuccessful />} />
-              <Route path='/cartItems3qPzZ26PeuhwEyCdgWWBXK2vGNF7' element={<Cart /> } />
+              <Route path='/cartItems3qPzZ26PeuhwEyCdgWWBXK2vGNF7' element={ <Cart /> } />
                
             </Routes>
             <Footer />

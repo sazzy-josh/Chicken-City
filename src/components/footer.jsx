@@ -14,7 +14,7 @@ import { MdOutlineEmail } from 'react-icons/md'
 const Footer = () => {
   return (
 
-    <div className='w-full bg-slate-500 flex flex-col items-center text-sm' >
+    <div className='w-full bg-slate-500 flex flex-col items-center text-sm relative bottom-0' >
       <div className='grid h-auto w-full lg:w-3/4 sm:w-full  gap-y-8 lg:gap-x-16 sm:grid-cols-2 md:grid-cols-4 text-white p-4 md:p-8'>
             {/* logo and contact goes here */}
       <div className='flex flex-col gap-y-4 md:items-center'>

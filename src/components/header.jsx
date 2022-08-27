@@ -2,7 +2,7 @@ import React from 'react'
 import { useEffect } from 'react'
 import logo from './assets/img/logo.png' 
 import Avatar from './assets/img/avatar.png'
-import { Link ,NavLink } from 'react-router-dom'
+import { Link ,NavLink  , useNavigate} from 'react-router-dom'
 import { BiChevronDown } from 'react-icons/bi'
 import { BiChevronUp } from 'react-icons/bi'
 import { IoMdCart } from 'react-icons/io'
@@ -13,18 +13,24 @@ import { SiInformatica } from 'react-icons/si'
 import { FaHome } from 'react-icons/fa'
 import { IoIosAdd } from 'react-icons/io'
 import  { motion } from 'framer-motion'
-import { GoogleAuthProvider ,signInWithPopup ,signOut } from "firebase/auth";
-import { useContext } from 'react'
-import { AuthContext } from '../context/authContext'
+import {  signOut } from "firebase/auth";
+import { useAuthsContext } from '../context/authContext'
 import { auth  } from '../firebase.config'
 import { onAuthStateChanged } from 'firebase/auth'
 import { AnimatePresence } from 'framer-motion'
 import { useCartsContext } from '../context/CartContext'
 
+
+
+
 const Header = () => {
   const {state : {cartItems} ,  openCart } = useCartsContext()
 
-  const { loginUser , logoutUser, User , RemoveNav , openMenu } = useContext(AuthContext) 
+  const navigate = useNavigate()
+
+  const { loginState , signUpState , loginUser , logoutUser, User , RemoveNav , openMenu } = useAuthsContext()
+
+
 
 
  useEffect(() => {
@@ -37,13 +43,18 @@ const Header = () => {
   };
  },[]);
 
- const googleAuth = async(e) => {
-     e.preventDefault()
-     RemoveNav()
-     const provider = new GoogleAuthProvider();
-     const { user } = await signInWithPopup(auth, provider)
-     loginUser(user)
+ const handleSignup = () =>{
+  signUpState()
+  navigate('/auth')
  }
+
+ const handleLogin = () =>{
+  loginState()
+  RemoveNav()
+  navigate('/auth')
+ }
+
+ 
 
 
  const LogOut = async (e) => {
@@ -52,6 +63,8 @@ const Header = () => {
   await signOut(auth)
   logoutUser()
  }
+
+
 
   return (
     <AnimatePresence>
@@ -63,7 +76,7 @@ const Header = () => {
       initial={{ y:'-50vw', opacity: 0.5 }}
       animate={{ y: 0  ,opacity: 1 }}   
       transition={{ type:'spring', duration: 0.1 , stiffness:150 }}
-    className="hidden sm:flex lg:ml-6 pl-5 px-10 p-3 justify-between">
+    className="hidden md:flex lg:ml-6 pl-5 px-10 p-3 justify-between">
       <div className='w-3/5'>
 
         {/* Logo goes here */}
@@ -99,9 +112,9 @@ const Header = () => {
           }}
            className={`relative  flex items-center gap-x-2  (navData) => (navData.isActive ? 'active' : '')`} >About Us <SiInformatica /> </motion.li>
          </NavLink>
-          {!User && <Link to="sign-up">
-            <li className='hover:bg-slate-600 hover:font-semi-bold transition-all duration-300 ease-in-out hover:text-slate-100 border bg-slate-500 hover:shadow-lg   text-slate-50 rounded-lg px-2 p-1 min-w-[74px]' >Sign Up</li>
-          </Link>}
+          {!User && 
+            <li className='hover:bg-slate-600 hover:font-semi-bold transition-all duration-300 ease-in-out hover:text-slate-100 border bg-slate-500 hover:shadow-lg cursor-pointer  text-slate-50 rounded-lg px-2 p-1 min-w-[74px]' onClick={ handleSignup } >Sign Up</li>
+          }
          
 
         </motion.ul>
@@ -131,14 +144,14 @@ const Header = () => {
       animate={{ opacity: 1  }}
       transition={{  duration: 0.5 ,type:'spring' }}
         className='transition-all ease-in-out duration-300'>
-              <p className='border bg-slate-100 rounded flex justify-center items-center  text-sm p-1 px-1 absolute right-5  w-1/6 transition-all ease-in-out duration-600 font-semibold m-2  mt-8' onClick={googleAuth }>
+              <p className='border bg-slate-100 rounded flex justify-center items-center  text-sm p-1 px-1 absolute right-5  w-1/6 transition-all ease-in-out duration-600 font-semibold m-2  mt-8' onClick={ handleLogin }>
                 <p className=' flex justify-center rounded hover:bg-slate-300 cursor-pointer p-1 items-center w-full'>Login <span className='px-1'><TbLogin/></span> </p>
               </p>
         </motion.div>}
           {/* When User is Authenticated*/}
         </div>
         {User && <div className='flex justify-center items-center  cursor-pointer' onClick={RemoveNav}>
-            <motion.img src={User.providerData[0].photoURL} whileTap={{scale:0.7}} className="w-8 h-8 cursor-pointer hover:border-2 rounded-full hover:shadow-lg  border-cyan-600 " alt="" />
+            <motion.img src={User.providerData[0].photoURL || Avatar } whileTap={{scale:0.7}} className="w-8 h-8 cursor-pointer hover:border-2 rounded-full hover:shadow-lg  border-cyan-600 " alt="" />
             {openMenu ? <BiChevronDown  className='min-w-[12px]' /> : <BiChevronUp  className='min-w-[12px]'/> }
         </div>}
         <div>
@@ -153,13 +166,16 @@ const Header = () => {
          <p className='flex m-1 items-center justify-center  p-1 rounded cursor-pointer hover:bg-slate-300'  onClick={LogOut} >Logout <span className='mx-2'><MdOutlineLogout/></span> </p>
            
              
-        </motion.div>}
+        </motion.div>} 
 
 
         {/* Welcome Guest or User Here */}
         </div>
         <div className='text-xs text-emerald-900" overflow-hidden max-w-[134px] max-h-[20px] flex justify-center  absolute top-12 p-1 font-semibold right-18 '>
-          {User? " Hi,"+ User.displayName.slice(0,8) + "." : "Welcome, Guest"}!
+          {/* {User? "Hi," + User.displayName.slice(0,8) + "." || " Hi," : "Welcome, Guest"}! */}
+          {!User && "Welcome, Guest"}
+          {User && <p>{User.displayName ?"Hi! "+ User.displayName.slice(0,9) + "." :"Hi!"+ User.email.slice(0,9) + "." }</p>}
+          {/* {User? "Hi!"+ User?.displayName?.slice(0,8) + "." || User.email : "Welcome,Guest"}! */}
         </div>
         </div>
       </div>
@@ -170,7 +186,7 @@ const Header = () => {
     {/*Nav Section for Mobile and Small Screens */}
 
 
-    <div className="sm:hidden flex justify-between w-screen p-5 py- relative z-20">
+    <div className="md:hidden flex justify-between w-screen p-5 py- relative z-20">
       
 
       {/* Cart section for mobile screens  */}
@@ -214,8 +230,8 @@ const Header = () => {
         animate={{opacity:1 , x: -10}}
         exit={{x:1000  }}
         transition={{type:'spring' , stiffness:280  ,ease:'easeOut' }}
-        className='flex flex-col justify-center w-3/4 h-screen  absolute top-0  index left-0 bottom-0 bg-slate-50 shadow-xl  font-semibold p-1 '>
-              <li className=' flex justify-center items-center gap-x-3 text-sm p-8 px-2 transition-all rounded ease-in-out duration-600 hover:bg-slate-200 cursor-pointer hover:rounded   hover:border-gray-400 ' onClick={googleAuth } > <TbLogin/>Login <span 
+        className='flex flex-col justify-center w-3/4 h-screen fixed top-0  index left-0 bottom-0 bg-slate-50 shadow-xl  font-semibold p-1 '>
+              <li className=' flex justify-center items-center gap-x-3 text-sm p-8 px-2 transition-all rounded ease-in-out duration-600 hover:bg-slate-200 cursor-pointer hover:rounded   hover:border-gray-400 ' onClick={ handleLogin } > <TbLogin/>Login <span 
               ></span> </li>
               <hr />
 
@@ -253,7 +269,7 @@ const Header = () => {
         {User && 
         <motion.div
         className='flex justify-center items-center cursor-pointer z-10'  onClick={RemoveNav}>
-            <motion.img src={User.providerData[0].photoURL} whileTap={{scale:0.7}} className="w-8 h-8 cursor-pointer hover:border-2 rounded-full hover:shadow-lg  border-cyan-600 " alt="Avatar" />
+            <motion.img src={User.providerData[0].photoURL || Avatar } whileTap={{scale:0.7}} className="w-8 h-8 cursor-pointer hover:border-2 rounded-full hover:shadow-lg  border-cyan-600 " alt="Avatar" />
             {openMenu ? <BiChevronDown /> : <BiChevronUp /> }
         </motion.div>}
        
@@ -266,7 +282,7 @@ const Header = () => {
         animate={{opacity:1 , x: -10}}
         exit={{x:1050 ,  }}
         transition={{type:'spring' , stiffness:240 , ease:'easeOut' }}
-        className=' font-semibold  bg-slate-100 top-0 bottom-0 right-0 left-0 absolute text-sm flex flex-col  border-slate-400 rounded justify-center  w-3/4 h-screen'>
+        className=' font-semibold  bg-slate-100 top-0 bottom-0 right-0 left-0 fixed text-sm flex flex-col  border-slate-400 rounded justify-center  w-3/4 h-screen'>
         
           {User && User.email === "idahosajoshua61@gmail.com" && <li
            onClick={RemoveNav} className='flex m-1 justify-center p-8 rounded items-center cursor-pointer hover:bg-slate-300' >New Item 
@@ -308,7 +324,10 @@ const Header = () => {
         </AnimatePresence>
         </div>
         <div className='text-[10px] overflow-hidden max-w-[134px] max-h-[20px] flex justify-center  absolute top-14 p-1 font-semibold right-6 '>
-          Hi, {User? User.displayName.slice(0,9) + "." : "Guest"}!
+        {/* {User?"Hi!"+ User?.displayName.slice(0,8) + "." || User.email : "Welcome,Guest"}! */}
+        {/* {User? "Hi,Logged In" || " Hi," : "Hi, Guest"}! */}
+        {!User && "Hi, Guest"}
+       {User && <p>{User.displayName ?"Hi! "+ User.displayName.slice(0,9) + "." :"Hi!"+ User.email.slice(0,9) + "." }</p>}
         </div>
         </div>
 

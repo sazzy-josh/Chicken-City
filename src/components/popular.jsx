@@ -126,7 +126,7 @@ const Popular = () => {
          }
 
              return (
-                <div className='flex items-center justify-center'>
+                <div className='flex items-center justify-center' key={id}>
                   
                   <motion.div
                    initial={{opacity:0}}
