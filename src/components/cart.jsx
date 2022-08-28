@@ -6,7 +6,7 @@ import { HiPlus , HiMinus , HiOutlineArrowNarrowLeft ,HiOutlineArrowNarrowRight 
 import { MdOutlinePayment } from 'react-icons/md'
 import { useAuthsContext } from "../context/authContext"
 import { useNavigate } from "react-router-dom"
-
+import { toast } from 'react-toastify';
 
 
 
@@ -21,6 +21,7 @@ const CartContainer = () => {
       loginState()
       openCart()
       navigate('/auth')
+      toast.warning("Login to proceed to checkout")
      }
 
   return (

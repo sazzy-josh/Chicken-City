@@ -55,7 +55,7 @@ const Auth = () => {
           throw new Error("Passwords do not match")
         }
       } catch (error) {
-       toast.warning(`${error.message}`)
+       toast.error(`${error.message}`)
       } 
     
   }
@@ -67,8 +67,9 @@ const Auth = () => {
     try{
       const { user } = await signInWithEmailAndPassword(auth , loginValues.email , loginValues.password  )
       loginUser(user)
+      navigate('/')
     }catch(err){
-      toast.warning(`${err.message}`)
+      toast.error(`${err.message}`)
     }
 
   }
@@ -83,9 +84,9 @@ const Auth = () => {
              <h3 className='font-bold text-xl my-4 text-center'>YOUR ACCOUNT FOR EVERYTHING FOOD</h3> 
 
              <form className='flex flex-col justify-center w-full my-2 gap-y-3' >
-              <input type="email" name="email" placeholder='Email address' className='w-full rounded-md p-2 outline-none border placeholder:text-sm border-slate-200' onChange={handleLoginDetails} />
+              <input type="email" name="email" placeholder='Email address' className='w-full rounded-md p-2 outline-none border placeholder:text-sm border-slate-200' required title="Enter a valid email" onChange={handleLoginDetails} />
 
-              <input type="password" name="password" placeholder='Password' className='w-full p-2 outline-none border rounded-md  placeholder:text-sm border-slate-200' onChange={handleLoginDetails}  />
+              <input type="password" name="password" placeholder='Password' className='w-full p-2 outline-none border rounded-md  placeholder:text-sm border-slate-200' required title="Enter your Password!!" onChange={handleLoginDetails}  />
 
               <span className='flex w-full justify-end underline text-slate-400 cursor-pointer'>Forgot Password?</span>
 
@@ -107,19 +108,19 @@ const Auth = () => {
           <div className='w-full sm:w-[50vw]  lg:w-[30vw] h-full  flex flex-col gap-y-3 items-center p-4 sm:p-8'>
           <h3 className='font-bold text-[26px] sm:tracking-wide md:my-4 text-center'>BECOME A MEMBER</h3> 
 
-            <form className='flex flex-col justify-center w-full my-2 gap-y-3'>
+            <form className='flex flex-col justify-center w-full my-2 gap-y-3' onSubmit={signup}>
 
-            <input type="text" name="firstName" placeholder='First Name' className='w-full p-2 outline-none border rounded-md placeholder:text-sm border-slate-200' onChange={ handleSignupDetails } />
+            <input type="text" name="firstName" placeholder='First Name' className='w-full p-2 outline-none border rounded-md placeholder:text-sm border-slate-200' required title="Enter your first name" onChange={ handleSignupDetails } />
 
-            <input type="text" name="lastName" placeholder='Last Name' className='w-full p-2 outline-none border rounded-md placeholder:text-sm border-slate-200' onChange={ handleSignupDetails } />
+            <input type="text" name="lastName" placeholder='Last Name' className='w-full p-2 outline-none border rounded-md placeholder:text-sm border-slate-200' required title="Enter your last name" onChange={ handleSignupDetails } />
 
-            <input type="email" name="email" placeholder='Email address' className='w-full p-2 outline-none border rounded-md placeholder:text-sm border-slate-200' onChange={ handleSignupDetails } />
+            <input type="email" name="email" placeholder='Email address' className='w-full p-2 outline-none border rounded-md placeholder:text-sm border-slate-200' required title="Enter a valid email" onChange={ handleSignupDetails } />
 
-            <input type="password" name="password" placeholder='Password' className='w-full p-2 outline-none border rounded-md  placeholder:text-sm border-slate-200' onChange={ handleSignupDetails }  />
+            <input type="password" name="password" placeholder='Password' className='w-full p-2 outline-none border rounded-md  placeholder:text-sm border-slate-200' pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" onChange={ handleSignupDetails }  />
             
-            <input type="password" name="confirmPassword" placeholder='Confirm Password' className='w-full p-2 outline-none border rounded-md placeholder:text-sm border-slate-200' onChange={ handleSignupDetails } />
+            <input type="password" name="confirmPassword" placeholder='Confirm Password' className='w-full p-2 outline-none border rounded-md placeholder:text-sm border-slate-200' required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" onChange={ handleSignupDetails } />
 
-            <input type="submit" value="JOIN US" className='bg-black text-white text-center p-2 border rounded-lg cursor-pointer' onClick={signup}/>
+            <input type="submit" value="JOIN US" className='bg-black text-white text-center p-2 border rounded-lg cursor-pointer' />
             </form>
                 
           </div>
