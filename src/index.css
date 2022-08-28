@@ -125,6 +125,20 @@ body{
 
     
 }
+
+input:invalid{
+    border-color: red;
+}
+
+input:valid{
+    border-color: rgb(10, 207, 10);
+}
+
+input:valid ~ span{
+   display: none;
+}
+
+
 .test-mode{
     position: fixed;
     top: 0;

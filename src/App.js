@@ -47,7 +47,7 @@ function App() {
         " relative flex p-2 min-h-10 w-3/4 sm:w-auto rounded-xl sm:rounded-xl justify-around overflow-hidden cursor-pointer my-2"
       }
       bodyClassName={() => "text-[14px]  font-slate-50 flex items-center overflow-hidden p-1"}
-      autoClose={500} />
+      autoClose={600} />
             <Header />
             <Routes location={location} key={location.key}>      
               <Route path='/' element={
