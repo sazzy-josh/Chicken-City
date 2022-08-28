@@ -95,7 +95,7 @@ const Auth = () => {
 
              <div className='rounded-lg bg-slate-200 w-full flex gap-x-1 justify-center items-center font-semibold border-slate-200 border p-2 cursor-pointer'>
               <img src={google} alt="google" className='w-6 h-6 ' />
-              <p className='text-slate-700 text-sm' onClick={googleAuth}>Signin with Google</p>
+              <p className='text-slate-700 text-sm flex items-center gap-x-1' onClick={googleAuth}>Signin with <p className='semibold'>Google</p></p>
              </div>
 
              <span className='flex justify-center my-0 text-sm tracking-wider text-slate-400'>Not a Member? <p className='underline text-black cursor-pointer mx-1' onClick={ signUpState }>Signup</p> </span>
