@@ -174,7 +174,7 @@ const Header = () => {
         <div className='text-xs text-emerald-900" overflow-hidden max-w-[134px] max-h-[20px] flex justify-center  absolute top-12 p-1 font-semibold right-18 '>
           {/* {User? "Hi," + User.displayName.slice(0,8) + "." || " Hi," : "Welcome, Guest"}! */}
           {!User && "Welcome, Guest"}
-          {User && <p>{User.displayName ?"Hi! "+ User.displayName.slice(0,9) + "." :"Hi!"+ User.email.slice(0,9) + "." }</p>}
+          {User && <p className='z-99'>{User.displayName ?"Hi! "+ User.displayName.slice(0,9) + "." :"Hi! "+ User.email.slice(0,15) + "." }</p>}
           {/* {User? "Hi!"+ User?.displayName?.slice(0,8) + "." || User.email : "Welcome,Guest"}! */}
         </div>
         </div>
@@ -327,7 +327,7 @@ const Header = () => {
         {/* {User?"Hi!"+ User?.displayName.slice(0,8) + "." || User.email : "Welcome,Guest"}! */}
         {/* {User? "Hi,Logged In" || " Hi," : "Hi, Guest"}! */}
         {!User && "Hi, Guest"}
-       {User && <p>{User.displayName ?"Hi! "+ User.displayName.slice(0,9) + "." :"Hi!"+ User.email.slice(0,9) + "." }</p>}
+       {User && <p>{User.displayName ?"Hi! "+ User.displayName.slice(0,9) + "." :"Hi! "+ User.email.slice(0,12) + ".." }</p>}
         </div>
         </div>
 

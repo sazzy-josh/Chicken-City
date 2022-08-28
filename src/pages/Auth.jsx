@@ -26,6 +26,7 @@ const Auth = () => {
     confirmPassword: "", 
    })
 
+ 
    const handleSignupDetails = (e) => {
     const { name , value } = e.target
     setSignupValues({...SignupValues , [name]:value})
@@ -46,6 +47,7 @@ const Auth = () => {
 
   const signup = async(e) => {
      e.preventDefault()
+  
       try {
         if(SignupValues.password === SignupValues.confirmPassword){
           await createUserWithEmailAndPassword(auth, SignupValues.email, SignupValues.password)
@@ -57,7 +59,7 @@ const Auth = () => {
       } catch (error) {
        toast.error(`${error.message}`)
       } 
-    
+      e.target.reset()
   }
 
 
@@ -66,12 +68,13 @@ const Auth = () => {
     e.preventDefault()
     try{
       const { user } = await signInWithEmailAndPassword(auth , loginValues.email , loginValues.password  )
+     
       loginUser(user)
       navigate('/')
     }catch(err){
       toast.error(`${err.message}`)
     }
-
+    e.target.reset()
   }
   
    
