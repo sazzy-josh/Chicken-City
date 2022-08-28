@@ -217,7 +217,7 @@ const Header = () => {
         {/*Authentication section goes here for  small and mobile screens*/}
 
         <div className='flex'>
-        {!User && <div className='flex justify-center relative cursor-pointer items-center' onClick={RemoveNav }>
+        {!User && <div className='flex justify-center relative cursor-pointer items-center' onClick={RemoveNav }  > 
             <motion.img src={Avatar} whileTap={{scale:0.8}} className="w-9 h-9 cursor-pointer hover:border-2 rounded-full hover:shadow-lg  border-cyan-600 z-10" alt="Avatar"  />
            {openMenu ? <BiChevronDown  className='min-w-[12px] z-99'/> : <BiChevronUp className='z-10' /> }
         </div>}
@@ -230,7 +230,7 @@ const Header = () => {
         animate={{opacity:1 , x: -10}}
         exit={{x:1000  }}
         transition={{type:'spring' , stiffness:280  ,ease:'easeOut' }}
-        className='flex flex-col justify-center w-3/4 h-screen fixed top-0  index left-0 bottom-0 bg-slate-50 shadow-xl  font-semibold p-1 '>
+        className='flex flex-col justify-center w-3/4 h-screen fixed top-0  index left-0 bottom-0 bg-slate-50 shadow-xl  font-semibold p-1 ' onMouseOut={RemoveNav}  >
               <li className=' flex justify-center items-center gap-x-3 text-sm p-8 px-2 transition-all rounded ease-in-out duration-600 hover:bg-slate-200 cursor-pointer hover:rounded   hover:border-gray-400 ' onClick={ handleLogin } > <TbLogin/>Login <span 
               ></span> </li>
               <hr />

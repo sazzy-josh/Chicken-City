@@ -138,6 +138,15 @@ input:valid ~ span{
    display: none;
 }
 
+.promo{
+   
+    border: 1px solid rgb(226 232 240);
+    outline: none;
+}
+
+.promo:valid{
+    border: 1px solid rgb(226 232 240);
+}
 
 .test-mode{
     position: fixed;

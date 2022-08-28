@@ -118,7 +118,7 @@ const Cart = () => {
        <div className="flex flex-col gap-y-2 my-4">
          
          <div className="sansPro relative">
-         <input type="text" name="Promocode"  placeholder="Enter your code" className="sansPro border-slate-200 border-2 rounded-md p-2 w-full outline-none" />
+         <input type="text" name="Promocode"  placeholder="Enter your code" className="sansPro border-slate-200 border-2 promo rounded-md p-2 w-full outline-none " />
          <HiOutlineArrowNarrowRight  className="absolute right-3 top-4 cursor-pointer" onClick={()=> {alert("Ooops!!Invalid promo code")}}/>
          </div>
        

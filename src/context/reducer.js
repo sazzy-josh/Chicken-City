@@ -19,7 +19,7 @@ export const cartState = {
 
 export function AuthReducer (state = initialState, {payload , type }) {
   switch (type) {
-  case "SET_USER":
+    case "SET_USER":
     return { ...state, 
        user : payload
     } ;
