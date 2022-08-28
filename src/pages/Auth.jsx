@@ -90,10 +90,10 @@ const Auth = () => {
              <h3 className='font-bold text-xl my-4 text-center'>YOUR ACCOUNT FOR EVERYTHING FOOD</h3> 
 
              <form className='flex flex-col justify-center w-full my-2 gap-y-3' >
-              <input type="email" name="email" placeholder='Email address' className='w-full rounded-md p-2 outline-none border placeholder:text-sm border-slate-200' required title="Enter a valid email" onChange={handleLoginDetails}  onBlur={handleValidity}/>
+              <input type="email" name="email" placeholder='Email address' className='w-full rounded-md p-2 outline-none border placeholder:text-sm border-slate-200 text-sm' required title="Enter a valid email" onChange={handleLoginDetails}  onBlur={handleValidity}/>
               {isValid && <span className='text-xs text-red-400'>Enter a valid email address</span>}
 
-              <input type="password" name="password" placeholder='Password' className='w-full p-2 outline-none border rounded-md  placeholder:text-sm border-slate-200' required title="Enter your Password!!" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" onChange={handleLoginDetails} onBlur={handleValidity} />
+              <input type="password" name="password" placeholder='Password' className='w-full p-2 outline-none border rounded-md  placeholder:text-sm border-slate-200 text-sm' required title="Enter your Password!!" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" onChange={handleLoginDetails} onBlur={handleValidity} />
               {isValid && <span className='text-xs text-red-400'>Password must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters</span>}
 
               <span className='flex w-full justify-end underline text-slate-400 cursor-pointer'>Forgot Password?</span>
@@ -118,17 +118,17 @@ const Auth = () => {
 
             <form className='flex flex-col justify-center w-full my-2 gap-y-3' onSubmit={signup}>
 
-            <input type="text" name="firstName" placeholder='First Name' className='w-full p-2 outline-none border rounded-md placeholder:text-sm border-slate-200' required title="Enter your first name" onChange={ handleSignupDetails } />
+            <input type="text" name="firstName" placeholder='First Name' className='w-full text-sm p-2 outline-none border rounded-md placeholder:text-sm border-slate-200' required title="Enter your first name" onChange={ handleSignupDetails } />
 
-            <input type="text" name="lastName" placeholder='Last Name' className='w-full p-2 outline-none border rounded-md placeholder:text-sm border-slate-200' required title="Enter your last name" onChange={ handleSignupDetails } />
+            <input type="text" name="lastName" placeholder='Last Name' className='w-full text-sm p-2 outline-none border rounded-md placeholder:text-sm border-slate-200' required title="Enter your last name" onChange={ handleSignupDetails } />
 
-            <input type="email" name="email" placeholder='Email address' className='w-full p-2 outline-none border rounded-md placeholder:text-sm border-slate-200' required title="Enter a valid email" onChange={ handleSignupDetails } onBlur={handleValidity}/>
+            <input type="email" name="email" placeholder='Email address' className='w-full text-sm p-2 outline-none border rounded-md placeholder:text-sm border-slate-200' required title="Enter a valid email" onChange={ handleSignupDetails } onBlur={handleValidity}/>
             
 
-            <input type="password" name="password" placeholder='Password' className='w-full p-2 outline-none border rounded-md  placeholder:text-sm border-slate-200' pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" onChange={ handleSignupDetails }  />
+            <input type="password" name="password" placeholder='Password' className='w-full p-2 outline-none border rounded-md text-sm  placeholder:text-sm border-slate-200' pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" onChange={ handleSignupDetails }  />
             {isValid && <span className='text-xs text-red-400'>Password must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters</span>}
             
-            <input type="password" name="confirmPassword" placeholder='Confirm Password' className='w-full p-2 outline-none border rounded-md placeholder:text-sm border-slate-200' required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" onChange={ handleSignupDetails } />
+            <input type="password" name="confirmPassword" placeholder='Confirm Password' className='w-full p-2 outline-none border rounded-md placeholder:text-sm border-slate-200 text-sm' required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" onChange={ handleSignupDetails } />
 
             <input type="submit" value="JOIN US" className='bg-black text-white text-center p-2 border rounded-lg cursor-pointer border-none' />
             </form>
