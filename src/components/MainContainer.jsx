@@ -4,6 +4,7 @@ import Bike from '../components/assets/img/delivery.png'
 import { BsArrowRight } from 'react-icons/bs'
 import HeroBg from '../components/assets/images/heroo.png'
 import { motion } from 'framer-motion'
+import { Link } from 'react-router-dom'
 import C1 from "./assets/images/chicken_1.2.png"
 import C2 from "./assets/images/burger_1.1.png"
 import C3 from "./assets/images/fish_2.1.png"
@@ -112,13 +113,15 @@ const MainContainer = () => {
          animate={{opacity:1 }}
          transition={{ ease: "easeInOut", duration: 0.4 }}
         className='text-white  text-bold gap-2 p-3 my-8 text-xs cursor-pointer rounded-full bg-red-500 w-[120px] shadow-lg md:max-w-[140px] max-h-[80px] border-2 border-red-200 font-bold flex justify-center items-center' href='#popular' >Order Now </motion.a>
-        
+         
+         <Link to='/foods'>
         <motion.p 
          whileHover={{scale:0.9 ,  }}
          initial={{opacity:0.3  }}
          animate={{opacity:1  }}
          transition={{ duration: 0.4 ,type:"spring" , stiffness:200 }}
         className='border border-red-400 text-bold gap-1 text-xs p-3 my-8 cursor-pointer rounded-full  text-red-500 w-[120px]  sm:max-w-[160px] max-h-[80px]  font-bold flex justify-center items-center hover:bg-gradient-to-t hover:from-slate-50 hover:to-red-300 shadow-lg'>All Foods <BsArrowRight className='font-bold' /></motion.p>
+         </Link>
         <div className='flex justify-center text-xs items-center  p-1 font-bold text-red-700'>
         
         </div>

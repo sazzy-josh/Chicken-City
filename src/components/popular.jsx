@@ -1,6 +1,7 @@
 import React from 'react'
 import { useState ,useEffect } from 'react'
 import products from './assets/fake-data/products'
+import { Link } from 'react-router-dom'
 import breadClip from "./assets/images/bread_CLIPART.png"
 import chickenClip from './assets/images/chicken_CLIPART.png'
 import pizzaClip from './assets/images/pizza.png'
@@ -155,11 +156,13 @@ const Popular = () => {
          </div>
 
           <div className='flex justify-center'>
-          <span className=' cursor-pointer border-2 border-red-400 shadow-xl rounded-full p-1 gap-x-2 bg-red-400 text-xs px-2 text-white flex justify-center items-center font-semibold '>See all foods 
-           <div className="bg-white text-red-400 font-bold rounded-full p-[2px] text-lg ">
+            <Link to='/foods'>
+               <span className=' cursor-pointer border-2 border-red-400 shadow-xl rounded-full p-1 gap-x-2 bg-red-400 text-xs px-2 text-white flex justify-center items-center font-semibold '>See all foods 
+               <div className="bg-white text-red-400 font-bold rounded-full p-[2px] text-lg ">
              <MdKeyboardArrowRight/>
-           </div> 
-         </span>
+              </div> 
+            </span>
+            </Link>
           </div>
     </div>
   )
