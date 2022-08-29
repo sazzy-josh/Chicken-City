@@ -37,7 +37,7 @@ function App() {
     
      
      <AuthContextProvider >
-          <AnimatePresence mode='wait'>
+          <AnimatePresence mode='sync'>
        
         <div className="flex flex-col w-screen relative">
         {/* <CartContainer /> */}
