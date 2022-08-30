@@ -6,12 +6,24 @@ import products from '../components/assets/fake-data/products'
 import { useCartsContext } from '../context/CartContext'
 import { toast } from 'react-toastify';
 import { TiDelete} from 'react-icons/ti'
+import { IoMdStarOutline , IoMdStar } from 'react-icons/io'
+
 
 const Foods = () => {
  
   const {removeFromCart, addToCart , state:{ cartItems }   } = useCartsContext()
   const [searchTerm , setSearchTerm ] = useState("")
-  console.log(searchTerm)
+  // const [productsData , setProductData] = useState(products) 
+
+
+  const filteredItems = products.filter((food) => {
+     if(searchTerm.value === "") return food ;
+     if(food.title.toLowerCase().includes(searchTerm.toLocaleLowerCase())) return food
+   }) 
+  
+  
+
+ 
   return (
     
       <motion.div
@@ -24,7 +36,7 @@ const Foods = () => {
      <CommonSection title='All Foods'></CommonSection>
      <div className='my-2 flex justify-between p-5 sm:p-10 lg:px-28 w-full'>
         <div className='relative '>
-        <input type="search" name="searchTerm" value={searchTerm}  onChange={ (e) => setSearchTerm(e.target.value) } className="promo placeholder:text-black placeholder:text-xs border-2 border-t-0 p-1 rounded-md" placeholder='Search for food..' />
+        <input type="text" name="searchTerm" value={searchTerm}  onChange={ (e) => setSearchTerm(e.target.value) } className="promo placeholder:text-black placeholder:text-xs border-2 border-t-0 p-1 rounded-md" placeholder='Search for food..' />
         <div className='w-6 h-6 absolute top-2 right-2'><MdSearch /></div>
         </div>
        
@@ -41,7 +53,7 @@ const Foods = () => {
     
          <motion.div className='cards p-5 sm:p-10 lg:px-28 '>
 
-         {products.map(({ id, price ,image01 , title , quantity , category}) => {
+         { filteredItems.map(({ id, price ,image01 , title , quantity , category , rating}) => {
 
           const addItem = () => {
             addToCart({ id , price , title ,image01 , quantity , category})
@@ -77,7 +89,12 @@ const Foods = () => {
             >+</span>)  :(<span disabled onClick={remove} className='text-lg px-2 rounded  text-white bg-red-300  hover:bg-white hover:text-red-400' 
             ><TiDelete className='w-6 h-6' /></span>)} 
             </div>
-         {/* <div className='absolute top-0 text-slate-900 right-0 bg-gradient-to-br from-slate-50 to-red-300 font-semibold rounded-tr-lg rounded-bl-lg text-xs overflow-hidden p-1'>10% OFF</div> */}
+         <div className='absolute top-0 text-slate-900 right-0 bg-gradient-to-br from-slate-50 to-red-200 font-semibold rounded-tr-lg rounded-bl-lg text-xs overflow-hidden p-1 flex '>
+         { [...Array(5)].map((_ , i) => (
+           <span className='flex '> {rating > i ? <IoMdStar className=' text-yellow-400' /> : <IoMdStarOutline className=' text-slate-700' />  }  </span> 
+         ))
+         }
+          </div>
         </motion.div>
        </div>
     )

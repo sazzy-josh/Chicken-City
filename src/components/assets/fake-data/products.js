@@ -83,13 +83,14 @@ import product_18_image_03 from "../images/fish_2.3.png";
 
 const products = [
   {
-    id: "01",
+    id: "01111",
     quantity : 1,
     title: "Chicken Burger",
     price: 1599.99,
     image01: product_01_image_01,
     image02: product_01_image_02,
     image03: product_01_image_03,
+    rating: 4,
     category: "Burger",
 
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ad et est, fugiat repudiandae neque illo delectus commodi magnam explicabo autem voluptates eaque velit vero facere mollitia. Placeat rem, molestiae error obcaecati enim doloribus impedit aliquam, maiores qui minus neque. ",
@@ -102,19 +103,21 @@ const products = [
     image01: product_12_image_01,
     image02: product_09_image_01,
     image03: product_09_image_02,
+    rating: 5,
     category: "Chicken",
 
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ad et est, fugiat repudiandae neque illo delectus commodi magnam explicabo autem voluptates eaque velit vero facere mollitia. Placeat rem, molestiae error obcaecati enim doloribus impedit aliquam, maiores qui minus neque.",
   } ,
 
   {
-    id: "02",
+    id: "057572",
     quantity : 1,
     title: "Vegetarian Pizza",
     price: 2699.99,
     image01: product_02_image_01,
     image02: product_02_image_02,
     image03: product_02_image_03,
+    rating: 2,
     category: "Pizza",
 
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ad et est, fugiat repudiandae neque illo delectus commodi magnam explicabo autem voluptates eaque velit vero facere mollitia. Placeat rem, molestiae error obcaecati enim doloribus impedit aliquam, maiores qui minus neque.",
@@ -127,19 +130,21 @@ const products = [
     image01: product_11_image_01,
     image02: product_11_image_02,
     image03: product_11_image_03,
+    rating: 5,
     category: "Fish",
 
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ad et est, fugiat repudiandae neque illo delectus commodi magnam explicabo autem voluptates eaque velit vero facere mollitia. Placeat rem, molestiae error obcaecati enim doloribus impedit aliquam, maiores qui minus neque.",
   } ,
 
   {
-    id: "03",
+    id: "067673",
     quantity : 1,
     title: "Double Cheese Margherita",
     price: 1999.99,
     image01: product_03_image_01,
     image02: product_03_image_02,
     image03: product_03_image_03,
+    rating: 3,
     category: "Pizza",
 
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ad et est, fugiat repudiandae neque illo delectus commodi magnam explicabo autem voluptates eaque velit vero facere mollitia. Placeat rem, molestiae error obcaecati enim doloribus impedit aliquam, maiores qui minus neque.",
@@ -152,6 +157,7 @@ const products = [
     image01: product_08_image_01,
     image02: product_08_image_02,
     image03: product_06_image_03,
+    rating: 4,
     category: "Bread",
 
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ad et est, fugiat repudiandae neque illo delectus commodi magnam explicabo autem voluptates eaque velit vero facere mollitia. Placeat rem, molestiae error obcaecati enim doloribus impedit aliquam, maiores qui minus neque.",
@@ -167,18 +173,20 @@ const products = [
     image01: product_05_image_01,
     image02: product_05_image_02,
     image03: product_05_image_03,
+    rating: 5,
     category: "Burger",
 
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ad et est, fugiat repudiandae neque illo delectus commodi magnam explicabo autem voluptates eaque velit vero facere mollitia. Placeat rem, molestiae error obcaecati enim doloribus impedit aliquam, maiores qui minus neque.",
   },
   {
-    id: "30",
+    id: "3089",
     quantity : 1,
-    title: "Sandwich",
+    title: "Creamed Sandwich",
     price: 1799.59,
     image01: product_14_image_03,
     image02: product_14_image_01,
     image03: product_14_image_02,
+    rating: 3,
     category: "Sandwich",
 
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ad et est, fugiat repudiandae neque illo delectus commodi magnam explicabo autem voluptates eaque velit vero facere mollitia. Placeat rem, molestiae error obcaecati enim doloribus impedit aliquam, maiores qui minus neque.",
@@ -192,18 +200,20 @@ const products = [
     image01: product_17_image_01,
     image02: product_17_image_02,
     image03: product_17_image_03,
+    rating: 3,
     category: "Burger",
 
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ad et est, fugiat repudiandae neque illo delectus commodi magnam explicabo autem voluptates eaque velit vero facere mollitia. Placeat rem, molestiae error obcaecati enim doloribus impedit aliquam, maiores qui minus neque.",
   },
   {
-    id: "30.99",
+    id: "30799",
     quantity : 1,
     title: "Slider Cheeseburger",
     price: 2699.99,
     image01: product_17_image_03,
     image02: product_17_image_04,
     image03: product_17_image_02,
+    rating: 2,
     category: "Burger",
 
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ad et est, fugiat repudiandae neque illo delectus commodi magnam explicabo autem voluptates eaque velit vero facere mollitia. Placeat rem, molestiae error obcaecati enim doloribus impedit aliquam, maiores qui minus neque.",
@@ -216,6 +226,7 @@ const products = [
     image01: product_17_image_04,
     image02: product_17_image_02,
     image03: product_17_image_03,
+    rating: 5,
     category: "Burger",
 
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ad et est, fugiat repudiandae neque illo delectus commodi magnam explicabo autem voluptates eaque velit vero facere mollitia. Placeat rem, molestiae error obcaecati enim doloribus impedit aliquam, maiores qui minus neque.",
@@ -228,6 +239,7 @@ const products = [
     image01: product_12_image_03,
     image02: product_12_image_02,
     image03: product_09_image_02,
+    rating: 2,
     category: "Chicken",
 
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ad et est, fugiat repudiandae neque illo delectus commodi magnam explicabo autem voluptates eaque velit vero facere mollitia. Placeat rem, molestiae error obcaecati enim doloribus impedit aliquam, maiores qui minus neque.",
@@ -240,6 +252,7 @@ const products = [
     image01: product_01_image_01,
     image02: product_01_image_02,
     image03: product_01_image_03,
+    rating: 3,
     category: "Burger",
 
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ad et est, fugiat repudiandae neque illo delectus commodi magnam explicabo autem voluptates eaque velit vero facere mollitia. Placeat rem, molestiae error obcaecati enim doloribus impedit aliquam, maiores qui minus neque.",
@@ -253,6 +266,7 @@ const products = [
     image01: product_02_image_02,
     image02: product_02_image_01,
     image03: product_02_image_03,
+    rating: 3,
     category: "Pizza",
 
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ad et est, fugiat repudiandae neque illo delectus commodi magnam explicabo autem voluptates eaque velit vero facere mollitia. Placeat rem, molestiae error obcaecati enim doloribus impedit aliquam, maiores qui minus neque.",
@@ -266,6 +280,7 @@ const products = [
     image01: product_03_image_02,
     image02: product_03_image_01,
     image03: product_03_image_03,
+    rating: 4,
     category: "Pizza",
 
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ad et est, fugiat repudiandae neque illo delectus commodi magnam explicabo autem voluptates eaque velit vero facere mollitia. Placeat rem, molestiae error obcaecati enim doloribus impedit aliquam, maiores qui minus neque.",
@@ -279,6 +294,7 @@ const products = [
     image01: product_04_image_02,
     image02: product_04_image_01,
     image03: product_04_image_03,
+    rating: 4,
     category: "Pizza",
 
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ad et est, fugiat repudiandae neque illo delectus commodi magnam explicabo autem voluptates eaque velit vero facere mollitia. Placeat rem, molestiae error obcaecati enim doloribus impedit aliquam, maiores qui minus neque.",
@@ -292,6 +308,7 @@ const products = [
     image01: product_05_image_02,
     image02: product_05_image_01,
     image03: product_05_image_03,
+    rating: 4,
     category: "Burger",
 
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ad et est, fugiat repudiandae neque illo delectus commodi magnam explicabo autem voluptates eaque velit vero facere mollitia. Placeat rem, molestiae error obcaecati enim doloribus impedit aliquam, maiores qui minus neque.",
@@ -305,6 +322,7 @@ const products = [
     image01: product_15_image_02,
     image02: product_15_image_01,
     image03: product_06_image_03,
+    rating: 2,
     category: "Bread",
 
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ad et est, fugiat repudiandae neque illo delectus commodi magnam explicabo autem voluptates eaque velit vero facere mollitia. Placeat rem, molestiae error obcaecati enim doloribus impedit aliquam, maiores qui minus neque.",
@@ -318,6 +336,7 @@ const products = [
     image01: product_06_image_02,
     image02: product_06_image_01,
     image03: product_06_image_03,
+    rating: 4,
     category: "Bread",
 
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ad et est, fugiat repudiandae neque illo delectus commodi magnam explicabo autem voluptates eaque velit vero facere mollitia. Placeat rem, molestiae error obcaecati enim doloribus impedit aliquam, maiores qui minus neque.",
@@ -331,18 +350,20 @@ const products = [
     image01: product_15_image_03,
     image02: product_15_image_02,
     image03: product_06_image_03,
+    rating: 2,
     category: "Bread",
 
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ad et est, fugiat repudiandae neque illo delectus commodi magnam explicabo autem voluptates eaque velit vero facere mollitia. Placeat rem, molestiae error obcaecati enim doloribus impedit aliquam, maiores qui minus neque.",
   },
   {
-    id: "04",
+    id: "05664",
     quantity : 1,
     title: "Maxican Green Wave",
     price: 1999.99,
     image01: product_04_image_01,
     image02: product_04_image_02,
     image03: product_04_image_03,
+    rating: 5,
     category: "Pizza",
 
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ad et est, fugiat repudiandae neque illo delectus commodi magnam explicabo autem voluptates eaque velit vero facere mollitia. Placeat rem, molestiae error obcaecati enim doloribus impedit aliquam, maiores qui minus neque.",
@@ -355,6 +376,7 @@ const products = [
     image01: product_09_image_01,
     image02: product_09_image_02,
     image03: product_09_image_03,
+    rating: 4,
     category: "Chicken",
 
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ad et est, fugiat repudiandae neque illo delectus commodi magnam explicabo autem voluptates eaque velit vero facere mollitia. Placeat rem, molestiae error obcaecati enim doloribus impedit aliquam, maiores qui minus neque.",
@@ -367,6 +389,7 @@ const products = [
     image01: product_09_image_03,
     image02: product_12_image_02,
     image03: product_10_image_03,
+    rating: 5,
     category: "Chicken",
 
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ad et est, fugiat repudiandae neque illo delectus commodi magnam explicabo autem voluptates eaque velit vero facere mollitia. Placeat rem, molestiae error obcaecati enim doloribus impedit aliquam, maiores qui minus neque.",
@@ -379,6 +402,7 @@ const products = [
     image01: product_07_image_03,
     image02: product_07_image_02,
     image03: product_07_image_01,
+    rating: 4,
     category: "Bread",
 
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ad et est, fugiat repudiandae neque illo delectus commodi magnam explicabo autem voluptates eaque velit vero facere mollitia. Placeat rem, molestiae error obcaecati enim doloribus impedit aliquam, maiores qui minus neque.",
@@ -391,6 +415,7 @@ const products = [
     image01: product_06_image_02,
     image02: product_06_image_01,
     image03: product_06_image_03,
+    rating: 2,
     category: "Bread",
 
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ad et est, fugiat repudiandae neque illo delectus commodi magnam explicabo autem voluptates eaque velit vero facere mollitia. Placeat rem, molestiae error obcaecati enim doloribus impedit aliquam, maiores qui minus neque.",
@@ -404,6 +429,7 @@ const products = [
     image01: product_06_image_01,
     image02: product_06_image_01,
     image03: product_06_image_03,
+    rating: 1,
     category: "Bread",
 
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ad et est, fugiat repudiandae neque illo delectus commodi magnam explicabo autem voluptates eaque velit vero facere mollitia. Placeat rem, molestiae error obcaecati enim doloribus impedit aliquam, maiores qui minus neque.",
@@ -417,6 +443,7 @@ const products = [
     image01: product_08_image_02,
     image02: product_08_image_01,
     image03: product_06_image_03,
+    rating: 4,
     category: "Bread",
 
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ad et est, fugiat repudiandae neque illo delectus commodi magnam explicabo autem voluptates eaque velit vero facere mollitia. Placeat rem, molestiae error obcaecati enim doloribus impedit aliquam, maiores qui minus neque.",
@@ -430,6 +457,7 @@ const products = [
     image01: product_16_image_01,
     image02: product_15_image_01,
     image03: product_06_image_03,
+    rating: 3,
     category: "Bread",
 
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ad et est, fugiat repudiandae neque illo delectus commodi magnam explicabo autem voluptates eaque velit vero facere mollitia. Placeat rem, molestiae error obcaecati enim doloribus impedit aliquam, maiores qui minus neque.",
@@ -442,6 +470,7 @@ const products = [
     image01: product_09_image_02,
     image02: product_10_image_03,
     image03: product_10_image_01,
+    rating: 4,
     category: "Chicken",
 
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ad et est, fugiat repudiandae neque illo delectus commodi magnam explicabo autem voluptates eaque velit vero facere mollitia. Placeat rem, molestiae error obcaecati enim doloribus impedit aliquam, maiores qui minus neque.",
@@ -456,6 +485,7 @@ const products = [
     image01: product_12_image_02,
     image02: product_12_image_01,
     image03: product_09_image_02,
+    rating: 3,
     category: "Chicken",
 
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ad et est, fugiat repudiandae neque illo delectus commodi magnam explicabo autem voluptates eaque velit vero facere mollitia. Placeat rem, molestiae error obcaecati enim doloribus impedit aliquam, maiores qui minus neque.",
@@ -470,6 +500,7 @@ const products = [
     image01: product_11_image_01,
     image02: product_11_image_02,
     image03: product_11_image_03,
+    rating: 2,
     category: "Fish",
 
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ad et est, fugiat repudiandae neque illo delectus commodi magnam explicabo autem voluptates eaque velit vero facere mollitia. Placeat rem, molestiae error obcaecati enim doloribus impedit aliquam, maiores qui minus neque.",
@@ -483,6 +514,7 @@ const products = [
     image01: product_18_image_01,
     image02: product_18_image_02,
     image03: product_18_image_03,
+    rating: 4,
     category: "Fish",
 
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ad et est, fugiat repudiandae neque illo delectus commodi magnam explicabo autem voluptates eaque velit vero facere mollitia. Placeat rem, molestiae error obcaecati enim doloribus impedit aliquam, maiores qui minus neque.",
@@ -496,6 +528,7 @@ const products = [
     image01: product_18_image_02,
     image02: product_18_image_01,
     image03: product_18_image_03,
+    rating: 5,
     category: "Fish",
 
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ad et est, fugiat repudiandae neque illo delectus commodi magnam explicabo autem voluptates eaque velit vero facere mollitia. Placeat rem, molestiae error obcaecati enim doloribus impedit aliquam, maiores qui minus neque.",
@@ -508,6 +541,7 @@ const products = [
     image01: product_18_image_03,
     image02: product_18_image_01,
     image03: product_18_image_02,
+    rating: 4,
     category: "Fish",
 
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ad et est, fugiat repudiandae neque illo delectus commodi magnam explicabo autem voluptates eaque velit vero facere mollitia. Placeat rem, molestiae error obcaecati enim doloribus impedit aliquam, maiores qui minus neque.",
@@ -520,6 +554,7 @@ const products = [
     image01: product_11_image_02,
     image02: product_11_image_01,
     image03: product_11_image_03,
+    rating: 3,
     category: "Fish",
 
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ad et est, fugiat repudiandae neque illo delectus commodi magnam explicabo autem voluptates eaque velit vero facere mollitia. Placeat rem, molestiae error obcaecati enim doloribus impedit aliquam, maiores qui minus neque.",
@@ -533,6 +568,7 @@ const products = [
     image01: product_13_image_01,
     image02: product_13_image_02,
     image03: product_13_image_03,
+    rating: 4,
     category: "Chicken",
 
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ad et est, fugiat repudiandae neque illo delectus commodi magnam explicabo autem voluptates eaque velit vero facere mollitia. Placeat rem, molestiae error obcaecati enim doloribus impedit aliquam, maiores qui minus neque.",
@@ -545,6 +581,7 @@ const products = [
     image01: product_13_image_02,
     image02: product_13_image_01,
     image03: product_13_image_03,
+    rating: 5,
     category: "Chicken",
 
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ad et est, fugiat repudiandae neque illo delectus commodi magnam explicabo autem voluptates eaque velit vero facere mollitia. Placeat rem, molestiae error obcaecati enim doloribus impedit aliquam, maiores qui minus neque.",
@@ -557,6 +594,7 @@ const products = [
     image01: product_13_image_03,
     image02: product_13_image_01,
     image03: product_13_image_02,
+    rating: 4,
     category: "Chicken",
 
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ad et est, fugiat repudiandae neque illo delectus commodi magnam explicabo autem voluptates eaque velit vero facere mollitia. Placeat rem, molestiae error obcaecati enim doloribus impedit aliquam, maiores qui minus neque.",
@@ -564,11 +602,12 @@ const products = [
   {
     id: "30",
     quantity : 1,
-    title: "Sandwich",
+    title: " Doughnut Sandwich",
     price: 1799.99,
     image01: product_14_image_03,
     image02: product_14_image_01,
     image03: product_14_image_02,
+    rating: 3,
     category: "Sandwich",
 
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ad et est, fugiat repudiandae neque illo delectus commodi magnam explicabo autem voluptates eaque velit vero facere mollitia. Placeat rem, molestiae error obcaecati enim doloribus impedit aliquam, maiores qui minus neque.",
@@ -581,6 +620,7 @@ const products = [
     image01: product_14_image_02,
     image02: product_14_image_01,
     image03: product_14_image_03,
+    rating: 3,
     category: "Sandwich",
 
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ad et est, fugiat repudiandae neque illo delectus commodi magnam explicabo autem voluptates eaque velit vero facere mollitia. Placeat rem, molestiae error obcaecati enim doloribus impedit aliquam, maiores qui minus neque.",
