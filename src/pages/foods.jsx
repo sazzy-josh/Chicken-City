@@ -36,8 +36,8 @@ const Foods = () => {
      <CommonSection title='All Foods'></CommonSection>
      <div className='my-2 md:flex justify-between p-5 sm:p-10 lg:px-28 w-full'>
         <div className='relative w-full md:w-auto'>
-        <input type="text" name="searchTerm" value={searchTerm}  onChange={ (e) => setSearchTerm(e.target.value) } className="promo placeholder:text-black placeholder:text-xs border-2 border-t-0 p-1 rounded-md w-full md:w-auto my-2 sm:my-0" placeholder='Search for food..' />
-        <div className='w-6 h-6 absolute top-[40%] sm:top-2 right-2 box-border'><MdSearch /></div>
+        <input type="text" name="searchTerm" value={searchTerm}  onChange={ (e) => setSearchTerm(e.target.value) } className="promo placeholder:text-black placeholder:text-xs border-2 border-t-0 p-1 text-xs rounded-md w-full md:w-auto my-2 sm:my-0" placeholder="I'm looking for ..." />
+        <div className='w-6 h-6 absolute top-[40%] sm:top-1 right-2 box-border '><MdSearch /></div>
         </div>
        
         <div className=' w-full md:w-auto'>
