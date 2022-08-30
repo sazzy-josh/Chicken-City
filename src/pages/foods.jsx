@@ -34,14 +34,14 @@ const Foods = () => {
       className='-my-2 w-["100vw"]'
       >
      <CommonSection title='All Foods'></CommonSection>
-     <div className='my-2 flex justify-between p-5 sm:p-10 lg:px-28 w-full'>
-        <div className='relative '>
-        <input type="text" name="searchTerm" value={searchTerm}  onChange={ (e) => setSearchTerm(e.target.value) } className="promo placeholder:text-black placeholder:text-xs border-2 border-t-0 p-1 rounded-md" placeholder='Search for food..' />
-        <div className='w-6 h-6 absolute top-2 right-2'><MdSearch /></div>
+     <div className='my-2 md:flex justify-between p-5 sm:p-10 lg:px-28 w-full'>
+        <div className='relative w-full md:w-auto'>
+        <input type="text" name="searchTerm" value={searchTerm}  onChange={ (e) => setSearchTerm(e.target.value) } className="promo placeholder:text-black placeholder:text-xs border-2 border-t-0 p-1 rounded-md w-full md:w-auto my-2 sm:my-0" placeholder='Search for food..' />
+        <div className='w-6 h-6 absolute top-[40%] sm:top-2 right-2 box-border'><MdSearch /></div>
         </div>
        
-        <div>
-          <select placeholder='default' className='p-2 promo rounded-md placeholder:text-black placeholder:text-xs text-xs'>
+        <div className=' w-full md:w-auto'>
+          <select placeholder='default' className='p-2 promo rounded-md placeholder:text-black placeholder:text-xs text-xs w-full md:w-auto my-2 sm:my-0'>
             <option value="1">Higest To Lowest</option>
             <option value="2">Lowest to Highest</option>
             <option value="3">Alphabetically A-Z</option>
