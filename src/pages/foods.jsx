@@ -7,13 +7,13 @@ import { useCartsContext } from '../context/CartContext'
 import { toast } from 'react-toastify';
 import { TiDelete} from 'react-icons/ti'
 import { IoMdStarOutline , IoMdStar } from 'react-icons/io'
-
+import ReactPaginate from 'react-paginate';
 
 const Foods = () => {
  
   const {removeFromCart, addToCart , state:{ cartItems }   } = useCartsContext()
   const [searchTerm , setSearchTerm ] = useState("")
-  // const [productsData , setProductData] = useState(products) 
+  const [pageNumber , setPageNumber] = useState(0) 
 
 
   const filteredItems = products.filter((food) => {
@@ -21,8 +21,16 @@ const Foods = () => {
      if(food.title.toLowerCase().includes(searchTerm.toLocaleLowerCase())) return food
    }) 
   
-  
+   const productsPerPage = 8;
+   const pageVisted = productsPerPage * pageNumber
 
+   const displayPage = filteredItems.slice( pageVisted , pageVisted + productsPerPage  )
+  
+  const pageCount = Math.ceil(filteredItems.length / productsPerPage )
+  
+  const changePage = ({selected}) => {
+    setPageNumber(selected)
+  }
  
   return (
     
@@ -53,11 +61,10 @@ const Foods = () => {
     
          <motion.div className='cards p-5 sm:p-10 lg:px-28 '>
 
-         { filteredItems.map(({ id, price ,image01 , title , quantity , category , rating}) => {
+         { displayPage.map(({ id, price ,image01 , title , quantity , category , rating}) => {
 
           const addItem = () => {
             addToCart({ id , price , title ,image01 , quantity , category})
-            // toast.success("Item Added to Cart!")
             toast.success(`${title} added to cart!`, {
                 position: toast.POSITION.TOP_RIGHT, 
           });
@@ -97,15 +104,23 @@ const Foods = () => {
           </div>
         </motion.div>
        </div>
-    )
-      })}
-
-
-
+      )}
+     )
+   }
 
          </motion.div>
 
-      
+      <span className='flex justify-center mt-1 mb-6 sm:-mt-2 sm:mb-12'>
+      <ReactPaginate
+        breakLabel="..."
+        nextLabel="Next"
+        onPageChange={changePage}
+        pageCount={pageCount}
+        previousLabel="Prev"
+        renderOnZeroPageCount={null}
+        containerClassName="paginationBtns"
+      />
+      </span>
 
       </motion.div>
    

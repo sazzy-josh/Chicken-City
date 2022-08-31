@@ -126,6 +126,24 @@ body{
     
 }
 
+.paginationBtns{
+   display: flex;
+   justify-content: center;
+   gap: 4px;
+
+}
+
+.paginationBtns a{
+    background:  rgb(248 113 113);
+    font-size: 14px;
+    border-radius: 4px;
+    padding: 5px 10px;
+}
+
+.paginationBtns a:hover{
+    background: rgb(68, 65, 65);
+    color:white
+}
 input:invalid{
     border-color: red;
 }
@@ -272,6 +290,12 @@ height: 90%;
         gap:  10px;
         
     }
+    .paginationBtns a{
+    background:  rgb(248 113 113);
+    font-size: 12px;
+    border-radius: 4px;
+    padding: 4px 7px;
+}
      
    
         
