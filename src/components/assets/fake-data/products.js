@@ -103,7 +103,7 @@ const products = [
     image01: product_12_image_01,
     image02: product_09_image_01,
     image03: product_09_image_02,
-    rating: 5,
+    rating: 2,
     category: "Chicken",
 
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ad et est, fugiat repudiandae neque illo delectus commodi magnam explicabo autem voluptates eaque velit vero facere mollitia. Placeat rem, molestiae error obcaecati enim doloribus impedit aliquam, maiores qui minus neque.",
@@ -144,7 +144,7 @@ const products = [
     image01: product_03_image_01,
     image02: product_03_image_02,
     image03: product_03_image_03,
-    rating: 3,
+    rating: 2  ,
     category: "Pizza",
 
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ad et est, fugiat repudiandae neque illo delectus commodi magnam explicabo autem voluptates eaque velit vero facere mollitia. Placeat rem, molestiae error obcaecati enim doloribus impedit aliquam, maiores qui minus neque.",

@@ -129,19 +129,20 @@ body{
 .paginationBtns{
    display: flex;
    justify-content: center;
-   gap: 4px;
+   gap: 6px;
 
 }
 
 .paginationBtns a{
-    background:  rgb(248 113 113);
+    background: white;
+    border: 1px solid rgb(248 113 113);
     font-size: 14px;
     border-radius: 4px;
     padding: 5px 10px;
 }
 
 .paginationBtns a:hover{
-    background: rgb(68, 65, 65);
+    background: rgb(248 113 113);
     color:white
 }
 input:invalid{
@@ -198,7 +199,7 @@ input:valid ~ span{
     position: relative;
     /* background-color: rgba(241, 22, 7, 0.3) */
     background: rgb(189, 3, 3);
-background: linear-gradient(180deg, rgba(150, 1, 1, 0.3) 0%, rgba(255,255,255,1) 100%);
+    background: linear-gradient(180deg, rgba(150, 1, 1, 0.3) 0%, rgba(255,255,255,1) 100%);
   }
   
   .common-section::after {
@@ -284,18 +285,24 @@ height: 90%;
         color: rgb(239 68 68);
         opacity: 1;
      }
+
      .cards{
         display: grid;
         grid-template-columns: repeat(2, minmax(0, 1fr));
         gap:  10px;
         
     }
+
     .paginationBtns a{
-    background:  rgb(248 113 113);
+    /* background:  rgb(248 113 113); */
+    background-color: white;
+
+    border: 1px solid rgb(248 113 113);
+    opacity: 1;
     font-size: 12px;
     border-radius: 4px;
     padding: 4px 7px;
-}
+   }
      
    
         
