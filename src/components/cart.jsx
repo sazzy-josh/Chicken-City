@@ -10,7 +10,6 @@ import { toast } from 'react-toastify';
 
 
 
-
 const CartContainer = () => {
     const { clearCart , total ,increase, decrease , removeFromCart , openCart , state: {cartItems} , flutterModal ,handleFee , fee ,subTotal } = useCartsContext()
     const { User , loginState } = useAuthsContext()
@@ -23,6 +22,8 @@ const CartContainer = () => {
       navigate('/auth')
       toast.warning("Login to proceed to checkout")
      }
+
+     
 
   return (
     // Cart Section for Desktop and Large screens
@@ -51,6 +52,12 @@ const CartContainer = () => {
                   <div className="flex flex-col items-center justify-center sansPro"> <img src={empty} alt="no-item" className="w-[250px] h-[250px]"/> <p className="text-center sansPro">No item in cart</p></div>
                 ) : (
                  cartItems.map(({ id, quantity , price , image , title ,category }) => {
+                   
+                  const productDetails = () => {
+                    openCart()
+                    return navigate(`/food-details/${id}`)
+                   }
+
                   return (
                     <div key={id}>
                       <hr />
@@ -60,7 +67,10 @@ const CartContainer = () => {
                 </div>
                 <div className="sm:w-2/6 flex flex-col">
                 <span className="text-md sansPro text-slate-500">{category}</span>
-                <span className="font-semibold text-sm sansPro">{title}</span>
+                 
+                <span className="font-semibold text-sm sansPro hover:underline cursor-pointer" onClick={productDetails}>{title}</span>
+               
+               
                 </div>
                 <div className="sm:w-1/6 lg:w-2/6 flex sm:gap-x-1 lg:gap-x-4 items-center text-sm">
                   {quantity > 1 ? (<motion.span

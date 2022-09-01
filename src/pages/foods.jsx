@@ -8,6 +8,8 @@ import { toast } from 'react-toastify';
 import { TiDelete} from 'react-icons/ti'
 import { IoMdStarOutline , IoMdStar } from 'react-icons/io'
 import ReactPaginate from 'react-paginate';
+import { Link } from 'react-router-dom'
+
 
 const Foods = () => {
  
@@ -89,7 +91,10 @@ const Foods = () => {
             <motion.img 
             whileHover={{scale:1.2}}
             src={image01} alt={title} className="sm:w-[90px] sm:h-[90px] w-[80px] h-[80px] object-contain py-1 "/>
-            <span className='lg:text-sm text-xs text-center py-2 font-bold'>{title}</span>
+            <Link to = {`/food-details/${id}`} >
+            <span className='lg:text-sm text-xs text-center py-2 font-bold hover:underline'>{title}
+            </span>
+            </Link>
             <div className='flex text-sm text-center py-2 font-bold justify-between items-center w-full p-2 '><p className=' p-1 rounded-lg text-slate-800'>₦{price.toLocaleString()}</p> {cartItems && !cartItems.some((item) => item.id === id ) ? (<span onClick={() => {
                addItem({ id , price , title ,image01 , quantity ,category})
             }} className='text-lg px-2 rounded text-white bg-red-300  hover:bg-white hover:text-red-400' 

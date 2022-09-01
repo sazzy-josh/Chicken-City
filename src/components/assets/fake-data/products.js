@@ -38,7 +38,7 @@ import product_09_image_03 from "../images/chicken_1.3.png";
 
 import product_10_image_01 from "../images/chicken_2.1.png";
 import product_10_image_02 from "../images/chicken_2.2.png";
-import product_10_image_03 from "../images/chicken_2.3.png";
+
 
 import product_11_image_01 from "../images/product_07_image_0.png";
 import product_11_image_02 from "../images/product_07_image_01.png";
@@ -61,6 +61,9 @@ import product_15_image_01 from "../images/bread_4.1.png";
 import product_15_image_02 from "../images/bread_4.2.png";
 import product_15_image_03 from "../images/bread_5.1.png";
 import product_16_image_01 from "../images/bread_5.2.png";
+import product_16_image_02 from "../images/bread111.png";
+import product_16_image_03 from "../images/bread1111.png";
+
 
 import product_17_image_01 from "../images/burger_1.1.png";
 import product_17_image_02 from "../images/burger_1.2.png";
@@ -113,7 +116,7 @@ const products = [
     id: "057572",
     quantity : 1,
     title: "Vegetarian Pizza",
-    price: 2699.99,
+    price: 3699.99,
     image01: product_02_image_01,
     image02: product_02_image_02,
     image03: product_02_image_03,
@@ -320,8 +323,8 @@ const products = [
     title: "Chocolate Bread ",
     price: 1899.99,
     image01: product_15_image_02,
-    image02: product_15_image_01,
-    image03: product_06_image_03,
+    image02: product_16_image_02,
+    image03: product_16_image_03,
     rating: 2,
     category: "Bread",
 
@@ -388,7 +391,7 @@ const products = [
     price: 4999.99,
     image01: product_09_image_03,
     image02: product_12_image_02,
-    image03: product_10_image_03,
+    image03: product_10_image_01,
     rating: 5,
     category: "Chicken",
 
@@ -455,7 +458,7 @@ const products = [
     title: "Chinese Coconut Bread ",
     price: 799.99,
     image01: product_16_image_01,
-    image02: product_15_image_01,
+    image02: product_15_image_03,
     image03: product_06_image_03,
     rating: 3,
     category: "Bread",
@@ -468,7 +471,7 @@ const products = [
     title: "Mixed chicken Kebabs",
     price: 5299.99,
     image01: product_09_image_02,
-    image02: product_10_image_03,
+    image02: product_10_image_02,
     image03: product_10_image_01,
     rating: 4,
     category: "Chicken",
@@ -523,7 +526,7 @@ const products = [
   {
     id: "159",
     quantity : 1,
-    title: "grilled fish with tomatoes ",
+    title: "Grilled fish with tomatoes",
     price: 2899.99,
     image01: product_18_image_02,
     image02: product_18_image_01,
