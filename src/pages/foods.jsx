@@ -52,6 +52,7 @@ const Foods = () => {
        
         <div className=' w-full md:w-auto'>
           <select placeholder='default' className='p-2 promo rounded-md placeholder:text-black placeholder:text-xs text-xs w-full md:w-auto my-2 sm:my-0'>
+          <option value="1">Default</option>
             <option value="1">Higest To Lowest</option>
             <option value="2">Lowest to Highest</option>
             <option value="3">Alphabetically A-Z</option>

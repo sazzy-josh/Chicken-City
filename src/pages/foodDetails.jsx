@@ -1,36 +1,49 @@
-import React, { useState , useEffect } from 'react'
 import { motion } from 'framer-motion'
-import CommonSection from '../components/commonSection'
+import React, { useEffect, useState } from 'react'
+import { IoMdStar, IoMdStarOutline } from 'react-icons/io'
 import { useParams } from 'react-router-dom'
 import products from '../components/assets/fake-data/products'
-import { IoMdStarOutline , IoMdStar } from 'react-icons/io'
-import { HiPlus , HiMinus  } from 'react-icons/hi'
+import CommonSection from '../components/commonSection'
+import { useCartsContext } from '../context/CartContext'
+import { toast } from 'react-toastify';
+
+
 
 const FoodDetails = () => {
+  const {  flutterModal ,  addToCart  , state:{ cartItems } } = useCartsContext() 
   const { id }= useParams()
+
+ 
 
   const foodDetails = products.find((item) => {
     return item.id === id    
   })
 
-   const { image01 , image02, image03, quantity , category , rating , price , title , desc } = foodDetails
+   const { image01 , image02, image03, quantity , rating , price , title , desc ,  category } = foodDetails
+   
+    // useEffect(() => {  
+     
+    // }, []);
    
    const [ showSize  , setSize] = useState('small')
    const [ showDescription  , setShowDescription] = useState('desc')
     const [ showcaseImage  , setShowcaseImage] = useState(image01)
     const [ activeImage  , setActiveImage] = useState(1)
     
+ 
+    const addNewItem = () => {
+      const existingItem = cartItems.find((item) => item.id === id )
+      if(!existingItem){
+        toast.success(`${title} added to cart!`, {
+          position: toast.POSITION.TOP_RIGHT })
+        return  addToCart({ id , price , title ,image01 , quantity , category})
+      } else{
+        toast.warning(`${title} already exist in cart!`, {
+          position: toast.POSITION.TOP_RIGHT })
+      }
 
-   
-
-    useEffect(() => {  
-     
-    
-
-    }, [foodDetails]);
-    
-
-    console.log(foodDetails)
+    }
+       
 
   return (
     <motion.div>
@@ -59,7 +72,7 @@ const FoodDetails = () => {
       </div>
 
       {/* Products Details section */}
-      <div className='flex flex-col gap-y-1'>
+      <div className='flex flex-col gap-y-2 '>
         <h3 className='md:text-xl text-md font-bold'>{title}</h3>
         {/* <h3 className='md:text-xl text-sm font-semibold text-slate-500'>Category:{category}</h3> */}
         <span className='flex gap-x-1'>{<> 
@@ -76,28 +89,28 @@ const FoodDetails = () => {
          </div>
 
           <>{ 
-         showDescription === "desc" ? (<div className='flex flex-col gap-x-1 py-1 mb-1'>
+         showDescription === "desc" ? (<div className='flex flex-col gap-x-1 py-1 mb-1 gap-y-1'>
            <p className='text-[14px] tracking-wide'>{desc}</p>
-          <div className='sm:flex justify-between'>
-         <div>  
+          <div className='sm:flex justify-between my-2'>
+          <div>  
         <p className='font-semibold my-1  text-md'>Select size</p> 
 
         <div className='flex gap-y-1 sm:gap-y-0  gap-x-1 text-xs items-center'> 
 
-        <span onClick={() => setSize("small")} className={`rounded-lg p-2 border border-slate-300 shadow-md cursor-pointer  ${showSize === 'small' ? "border-slate-600 border-2" : "" }`}>Small</span>
-        <span  onClick={() => setSize("medium")} className={`rounded-lg p-2 border border-slate-300 shadow-md cursor-pointer ${showSize === 'medium' ? "border-slate-600 border-2" : "" } `}>Medium</span>
-        <span   onClick={() => setSize("large")} className={`rounded-lg p-2  border border-slate-300 shadow-md cursor-pointer ${showSize === 'large' ? "border-slate-600 border-2" : "" } `}>Large</span>
+        <span onClick={() => setSize("small")} className={`rounded-lg p-2 border border-slate-300 shadow-md cursor-pointer  ${showSize === 'small' ? "border-slate-600 border" : "" }`}>Small</span>
+        <span  onClick={() => setSize("medium")} className={`rounded-lg p-2 border border-slate-300 shadow-md cursor-pointer ${showSize === 'medium' ? "border-slate-600 border" : "" } `}>Medium</span>
+        <span   onClick={() => setSize("large")} className={`rounded-lg p-2  border border-slate-300 shadow-md cursor-pointer ${showSize === 'large' ? "border-slate-600 border" : "" } `}>Large</span>
 
          </div>
         </div>
-         <div className='flex flex-col sm:justify-center sm:px-8'> <span className='font-semibold text-md my-1 w-full flex'>Quantity</span> <span className='flex gap-y-1 sm:gap-y-0 gap-x-1 items-center'>
-          <span className='font-semibold flex items-center gap-x-2'>
-           <span className='border rounded-full border-slate-300 p-2'> <HiMinus /> </span>
-           <span>{quantity}</span>
-           <span className='border rounded-full border-slate-300 p-2'> <HiPlus />  </span>
-          </span>
-          </span>
-           </div>
+        
+          </div>
+          <div className='flex gap-x-4'>
+            <span className='rounded-full border bg-slate-500 shadow-lg  text-white  p-3 px-12 cursor-pointer  font-semibold'  >Buy Now</span>
+           { <motion.span
+           whileTap={{scale:0.8}}
+           transition={{duration:0.3}}
+           className='rounded-full border text-red-400 font-semibold tracking-wider shadow-lg p-3 cursor-pointer px-12 border-red-400 hover:bg-red-100' onClick={ addNewItem } >Add to cart</motion.span>}
           </div>
         </div>) :
          (<div className='w-full flex'>
