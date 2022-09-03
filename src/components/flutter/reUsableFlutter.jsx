@@ -7,13 +7,11 @@ import { motion  , AnimatePresence} from 'framer-motion'
 import { MdCancel } from 'react-icons/md'
 import { useNavigate } from 'react-router-dom'
 
-const FlutterModal = () => {
+const ReusableFlutterBtn = () => {
 
-      const navigate = useNavigate()
+        const navigate = useNavigate()
     
-    const {clearCart,openCart,flutterModal, subTotal,setFee , name ,handleName  } = useCartsContext()
-
-        let totalValue = subTotal()
+        const { singleCheckout , name , handleName , state:{ priceForSingleItem }  } = useCartsContext()
      
         const [phone, setPhone] = useState("");
         const [email, setEmail] = useState("");
@@ -21,7 +19,7 @@ const FlutterModal = () => {
         const config = {
             public_key: 'FLWPUBK_TEST-fcd450bbe39e4078a50213a06e5fb0a6-X',
             tx_ref: Date.now(),
-            amount: totalValue,
+            amount:priceForSingleItem,
             currency: 'NGN',
             payment_options:'card,mobilemoney,ussd',
             customer: {
@@ -38,14 +36,10 @@ const FlutterModal = () => {
 
           const fwConfig = {
             ...config,
-            text: `PAY ₦${totalValue.toLocaleString()} NOW!`,
+            text: `PAY ₦${priceForSingleItem.toLocaleString()} NOW!`,
             callback: (response) => {
-               console.log(response);
                navigate(`/payment-successful/${name}`)
-               clearCart()
-               openCart()
-               setFee(0.00)
-               flutterModal()
+               singleCheckout()
                closePaymentModal()
               
              
@@ -65,7 +59,7 @@ const FlutterModal = () => {
         transition={{duration:1 , type:"spring" ,stiffness:200 }}
         exit={{y:"-100vw"}}
         className='inner_Flutter_Modal h-[44vh] w-[85vw]  sm:w-[45vw] sm:h-[50vh] lg:w-[30vw] lg:h-[50vh]  bg-slate-300 rounded-xl shadow-xl text-white p-4 flex flex-col'>
-         <div className='flex justify-between h-1/4'> <div className='flex'><div className='rounded-full w-12 h-12 p-1 bg-slate-800 flex items-center justify-center'><img src={logo} alt="flutter" className='sm:w-8 sm:h-8'/></div> </div> <span  className='w-12 p-1 h-12 cursor-pointer flex justify-center items-center' onClick={flutterModal}><MdCancel className="w-8 h-8 text-red-500" /> </span> </div>
+         <div className='flex justify-between h-1/4'> <div className='flex'><div className='rounded-full w-12 h-12 p-1 bg-slate-800 flex items-center justify-center'><img src={logo} alt="flutter" className='sm:w-8 sm:h-8'/></div> </div> <span  className='w-12 p-1 h-12 cursor-pointer flex justify-center items-center' onClick={ singleCheckout }><MdCancel className="w-8 h-8 text-red-500" /> </span> </div>
            
            <div className='flex flex-col h-3/4 '>
            <form className='flex flex-col  text-black gap-y-2'> 
@@ -90,4 +84,4 @@ const FlutterModal = () => {
   )
 }
 
-export default FlutterModal
+export default ReusableFlutterBtn

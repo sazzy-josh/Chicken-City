@@ -13,6 +13,8 @@ export const cartState = {
   showCart : false,
   showModal : false,
   showCheckout: false,
+  singleCheckout:false,
+  priceForSingleItem : 0,
   
 }
 
@@ -56,6 +58,9 @@ export function CartReducer (state = cartState , {payload , type}){
 
         case "SHOW_MODAL":
         return {...state , showModal : !state.showModal} ;
+
+        case "SHOW_SINGLE_CHECKOUT":
+          return {...state , singleCheckout : !state.singleCheckout ,  priceForSingleItem : payload.price  } ;
 
         case "SHOW_CHECKOUT":
           return {...state , showCheckout : !state.showCheckout} ;

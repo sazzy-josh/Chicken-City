@@ -72,6 +72,14 @@ useEffect(() => {
     dispatch({type: "SHOW_MODAL"})
   }
 
+//function to show Modal for single checkout
+
+  const singleCheckout = (payload) => {
+    dispatch({type: "SHOW_SINGLE_CHECKOUT" , payload})
+  }
+
+
+
   //handle onchange event of delivery options
   const handleFee = (e) => {
     setFee(e.target.value)
@@ -88,7 +96,7 @@ const handleName = (e) => {
  
 
   return (
-   <CartContext.Provider value={{ state , total , fee , name ,clearCart, addToCart  , removeFromCart , openCart , increase , decrease , flutterModal ,handleFee , subTotal, setFee , handleName ,checkout  }}>
+   <CartContext.Provider value={{ state , total , fee , name ,clearCart, addToCart  , removeFromCart , openCart , increase , decrease , flutterModal ,handleFee , subTotal, setFee , handleName , checkout , singleCheckout}}>
     {children}
    </CartContext.Provider>
   )

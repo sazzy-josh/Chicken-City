@@ -29,9 +29,6 @@ const FlutterBtn = (props) => {
         ...config,
         text: 'Pay with Flutterwave!',
         callback: (response) => {
-           console.log(response);
-           clearCart()
-           openCart()
           closePaymentModal()
          // this will close the modal programmatically
         },

@@ -19,19 +19,20 @@ import FlutterModal from './components/flutter/flutterModal';
 import CheckoutSuccessful from './components/checkoutSuccessful';
 import Cart from './pages/cart';
 import FoodDetails from './pages/foodDetails';
+import ReusableFlutterBtn from './components/flutter/reUsableFlutter';
 
 
 const contextClass = {
   success: "bg-green-700",
   error: "bg-red-600",
   info: "bg-gray-800",
-  warning: "bg-red-600",
+  warning: "bg-red-500",
   default: "bg-indigo-600",
   dark: "bg-white-600 font-gray-300",
 };
 
 function App() {
-   const { state: {showCart} , state : {showModal}  } = useCartsContext() 
+   const { state: {showCart} , state : {showModal} , state: { singleCheckout }  } = useCartsContext() 
    const location = useLocation()
 
   return (
@@ -41,9 +42,10 @@ function App() {
           <AnimatePresence mode='sync'>
        
         <div className="flex flex-col w-screen relative">
-        {/* <CartContainer /> */}
+        { singleCheckout && <ReusableFlutterBtn  /> }
         {showCart && <CartContainer />}
         {showModal && <FlutterModal /> } 
+
         <ToastContainer limit={5} toastClassName={({ type }) => contextClass[type || "default"] + 
         " relative flex p-2 min-h-10 w-3/4 sm:w-auto rounded-xl sm:rounded-xl justify-around overflow-hidden cursor-pointer my-2"
       }

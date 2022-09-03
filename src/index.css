@@ -167,6 +167,30 @@ input:valid ~ span{
     border: 1px solid rgb(226 232 240);
 }
 
+.description{
+    color: rgb(194 65 12);
+    font-weight: 700;
+    position: relative;
+    opacity: 0.9;
+    /* letter-spacing:1px; */
+
+}
+
+.description::after{
+    content: "";
+    width: 80%;
+    height: 2px;
+    position: absolute;
+    background-color: rgb(194 65 12);
+    opacity: 0.9;
+    bottom:0;
+    left: 1px;
+    /* border-radius: 30%; */
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+
+}
+
 .test-mode{
     position: fixed;
     top: 0;
