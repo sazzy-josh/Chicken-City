@@ -169,9 +169,10 @@ input:valid ~ span{
 
 .description{
     color: rgb(194 65 12);
-    font-weight: 700;
+    font-weight: 600;
     position: relative;
     opacity: 0.9;
+    font-family:'Lato', sans-serif;
     /* letter-spacing:1px; */
 
 }
