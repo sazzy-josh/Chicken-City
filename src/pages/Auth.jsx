@@ -1,4 +1,4 @@
-import React , { useState } from 'react'
+import React , { useState , useEffect } from 'react'
 import { useAuthsContext } from '../context/authContext'
 import google from '../components/assets/images/g-logo.png'
 import { auth } from "../firebase.config";
@@ -9,6 +9,10 @@ import { toast } from 'react-toastify';
 const Auth = () => {
   const { AuthServices ,loginState , signUpState  ,logoutUser , loginUser } = useAuthsContext()
   const navigate = useNavigate()
+
+  useEffect(() => {  
+    window.scrollTo(0 , 0)
+   }, []);
 
    const [isValid , setIsValid] = useState(false) 
 

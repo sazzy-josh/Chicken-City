@@ -1,4 +1,4 @@
-import React , {useState} from 'react'
+import React , {useState , useEffect} from 'react'
 import { motion  } from 'framer-motion'
 import CommonSection from '../components/commonSection'
 import { MdSearch } from 'react-icons/md'
@@ -17,6 +17,10 @@ const Foods = () => {
   const [searchTerm , setSearchTerm ] = useState("")
   const [pageNumber , setPageNumber] = useState(0) 
 
+
+  useEffect(() => {  
+    window.scrollTo(0 , 0)
+   }, []);
 
   const filteredItems = products.filter((food) => {
      if(searchTerm.value === "") return food ;
