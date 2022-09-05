@@ -93,7 +93,7 @@ const Footer = () => {
 
       </div>
 
-      <span className='text-white text-[12px] flex justify-center py-2 text-center'> &copy;2022-website made by Idahosa Joshua. All right Reserved </span>
+      <span className='text-white text-[12px] flex justify-center py-2 text-center'> &copy; Made with 💖 by Idahosa Joshua. All right Reserved </span>
 
     </div>
     
