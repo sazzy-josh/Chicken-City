@@ -16,6 +16,8 @@ const CartContainer = () => {
     
    const navigate = useNavigate() 
 
+
+   //handles login and routing logic
     const handleLogin = () =>{
       loginState()
       openCart()
