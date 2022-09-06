@@ -62,6 +62,9 @@ export function CartReducer (state = cartState , {payload , type}){
         case "SHOW_SINGLE_CHECKOUT":
           return {...state , singleCheckout : !state.singleCheckout ,  priceForSingleItem : payload.price  } ;
 
+        case "CLOSE_SINGLE_CHECKOUT":
+          return {...state , singleCheckout : !state.singleCheckout  } ;
+
         case "SHOW_CHECKOUT":
           return {...state , showCheckout : !state.showCheckout} ;
 

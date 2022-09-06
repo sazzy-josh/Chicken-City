@@ -50,7 +50,9 @@ useEffect(() => {
     dispatch({ type : "SHOW_CART" })
   }
 
+  
 
+  
 
   //Function to remove an item from the cart
   const removeFromCart = (payload) => {
@@ -78,7 +80,9 @@ useEffect(() => {
     dispatch({type: "SHOW_SINGLE_CHECKOUT" , payload})
   }
 
-
+  const closeCheckout = () => {
+    dispatch({ type : "CLOSE_SINGLE_CHECKOUT" })
+  }
 
   //handle onchange event of delivery options
   const handleFee = (e) => {
@@ -96,7 +100,7 @@ const handleName = (e) => {
  
 
   return (
-   <CartContext.Provider value={{ state , total , fee , name ,clearCart, addToCart  , removeFromCart , openCart , increase , decrease , flutterModal ,handleFee , subTotal, setFee , handleName , checkout , singleCheckout}}>
+   <CartContext.Provider value={{ state , total , fee , name ,clearCart, addToCart  , removeFromCart , openCart , increase , decrease , flutterModal ,handleFee , subTotal, setFee , handleName , checkout , singleCheckout , closeCheckout}}>
     {children}
    </CartContext.Provider>
   )

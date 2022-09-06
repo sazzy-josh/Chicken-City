@@ -20,6 +20,7 @@ import CheckoutSuccessful from './components/checkoutSuccessful';
 import Cart from './pages/cart';
 import FoodDetails from './pages/foodDetails';
 import ReusableFlutterBtn from './components/flutter/reUsableFlutter';
+import CheckoutSuccessfull from './components/checkoutSuccessfull';
 
 
 const contextClass = {
@@ -42,7 +43,7 @@ function App() {
           <AnimatePresence mode='sync'>
        
         <div className="flex flex-col w-screen relative">
-        { singleCheckout && <ReusableFlutterBtn  /> }
+        {singleCheckout && <ReusableFlutterBtn /> }
         {showCart && <CartContainer />}
         {showModal && <FlutterModal /> } 
 
@@ -67,7 +68,6 @@ function App() {
               <Route path='/aboutus' element={<Helmet title="About-us">
                     <AboutUs /> 
                 </Helmet>} />
-
               <Route path='/payment-successful/:tx' element={<CheckoutSuccessful />} />
               <Route path='/food-details/:id' element={ <FoodDetails />} />
               <Route path='/cartItems3qPzZ26PeuhwEyCdgWWBXK2vGNF7' element={ <Cart /> } />

@@ -5,16 +5,20 @@ import { FlutterWaveButton, closePaymentModal } from 'flutterwave-react-v3';
 import { useCartsContext } from '../../context/CartContext';
 import { motion  , AnimatePresence} from 'framer-motion'
 import { MdCancel } from 'react-icons/md'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate  } from 'react-router-dom'
 
 const ReusableFlutterBtn = () => {
 
-        const navigate = useNavigate()
+         const redirect = useNavigate()
     
-        const { singleCheckout , name , handleName , state:{ priceForSingleItem } , flutterModal } = useCartsContext()
+        const { singleCheckout , name , handleName , state:{ priceForSingleItem } , closeCheckout } = useCartsContext()
      
         const [phone, setPhone] = useState("");
         const [email, setEmail] = useState("");
+
+        const successPage = () => {
+          return redirect(`/payment-successful/${name}`)
+        }
 
         const config = {
             public_key: 'FLWPUBK_TEST-fcd450bbe39e4078a50213a06e5fb0a6-X',
@@ -38,10 +42,10 @@ const ReusableFlutterBtn = () => {
             ...config,
             text: `PAY ₦${priceForSingleItem.toLocaleString()} NOW!`,
             callback: (response) => { 
-               closePaymentModal()
-               flutterModal()
-               navigate(`/payment-successful/${name}`) 
-             // this will close the modal programmatically
+              closeCheckout()
+              successPage()   
+              closePaymentModal()   // this will close the modal programmatically
+             
             },
             onClose: () => {},
           };
@@ -57,7 +61,7 @@ const ReusableFlutterBtn = () => {
         transition={{duration:1 , type:"spring" ,stiffness:200 }}
         exit={{y:"-100vw"}}
         className='inner_Flutter_Modal h-[44vh] w-[85vw]  sm:w-[45vw] sm:h-[50vh] lg:w-[30vw] lg:h-[50vh]  bg-slate-300 rounded-xl shadow-xl text-white p-4 flex flex-col'>
-         <div className='flex justify-between h-1/4'> <div className='flex'><div className='rounded-full w-12 h-12 p-1 bg-slate-800 flex items-center justify-center'><img src={logo} alt="flutter" className='sm:w-8 sm:h-8'/></div> </div> <span  className='w-12 p-1 h-12 cursor-pointer flex justify-center items-center' onClick={ singleCheckout }><MdCancel className="w-8 h-8 text-red-500" /> </span> </div>
+         <div className='flex justify-between h-1/4'> <div className='flex'><div className='rounded-full w-12 h-12 p-1 bg-slate-800 flex items-center justify-center'><img src={logo} alt="flutter" className='sm:w-8 sm:h-8'/></div> </div> <span  className='w-12 p-1 h-12 cursor-pointer flex justify-center items-center' onClick={ closeCheckout }><MdCancel className="w-8 h-8 text-red-500" /> </span> </div>
            
            <div className='flex flex-col h-3/4 '>
            <form className='flex flex-col  text-black gap-y-2'> 

@@ -19,7 +19,7 @@ const FlutterModal = () => {
         const [email, setEmail] = useState("");
 
         const config = {
-            public_key: 'FLWPUBK_TEST-fcd450bbe39e4078a50213a06e5fb0a6-X',
+            public_key: 'FLWPUBK_TEST-32c59dc989b3b26fe9cbfdd274cd00b1-X',
             tx_ref: Date.now(),
             amount: totalValue,
             currency: 'NGN',

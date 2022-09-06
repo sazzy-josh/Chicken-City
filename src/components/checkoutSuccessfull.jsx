@@ -6,7 +6,7 @@ import confettii from "./assets/json/confetti.json"
 import { Link } from 'react-router-dom'
 import { HiOutlineArrowNarrowLeft } from 'react-icons/hi'
 
-const CheckoutSuccessful = () => {
+const CheckoutSuccessfull = () => {
     const { tx } = useParams()
 
     const defaultOptions = {
@@ -32,7 +32,7 @@ const CheckoutSuccessful = () => {
 
 
   return (
-    <div className='flex flex-col overflow-x-hidden z-100'>
+    <div className='flex flex-col overflow-x-hidden'>
     
 
         <div className='success flex justify-center items-center flex-col'>
@@ -59,4 +59,4 @@ const CheckoutSuccessful = () => {
   )
 }
 
-export default CheckoutSuccessful
+export default CheckoutSuccessfull
