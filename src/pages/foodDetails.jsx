@@ -161,8 +161,49 @@ const FoodDetails = () => {
            }
           </div>
         </div>) :
-         (<div className='w-full flex'>
+         (<div className='w-full flex flex-col'>
+           <div className='flex flex-col gap-y-2 my-1 w-full bg-slate-200 rounded-md p-2'>
+            <span className='flex  gap-y-1'>
+             <div className='flex  justify-between w-full sm:w-[20vw] items-center'>
+             <div className='flex gap-x-[1px]'><IoMdStar className='text-yellow-500 '/> <IoMdStar className='text-yellow-500'/><IoMdStar className='text-yellow-500'/> <IoMdStar className='text-yellow-500'/> <IoMdStar className='text-yellow-500'/></div> <div>2/04/2021</div>
+             </div>
+            </span>
+            <div>Great meal,Highly recommend this to anyone looking to satisfy their tastebud</div>
+            <div className='font-bold'>Henry Smith</div>
+          </div>
+
+          <div className='flex flex-col gap-y-2 my-1 w-full bg-slate-200 rounded-md p-2'>
+            <span className='flex  gap-y-1'>
+             <div className='flex  justify-between w-full sm:w-[20vw] items-center'>
+             <div className='flex gap-x-[1px]'><IoMdStar className='text-yellow-500 '/> <IoMdStar className='text-yellow-500'/><IoMdStar className='text-yellow-500'/> < IoMdStarOutline /> < IoMdStarOutline /></div> <div>7/23/2022</div>
+             </div>
+            </span>
+            <div>This is one of my favorite meal from foodcity.Trust me,you should give this a try as well</div>
+            <div  className='font-bold'>Idahosa Joshua</div>
+          </div>
+
           
+
+          <div className='flex flex-col gap-y-2 my-1 w-full bg-slate-200 rounded-md p-2'>
+            <span className='flex  gap-y-1'>
+             <div className='flex  justify-between w-full sm:w-[20vw] items-center'>
+             <div className='flex gap-x-[1px]'><IoMdStar className='text-yellow-500 '/> <IoMdStar className='text-yellow-500'/><IoMdStar className='text-yellow-500'/> < IoMdStarOutline /> < IoMdStarOutline /></div> <div>9/05/2022</div>
+             </div>
+            </span>
+            <div>I think i want some more..😉😁</div>
+            <div className='font-bold'>Dr Trevor O.</div>
+          </div>
+
+
+          <div className='flex flex-col gap-y-2 my-1 w-full bg-slate-200 rounded-md p-2'>
+            <span className='flex  gap-y-1'>
+             <div className='flex  justify-between w-full sm:w-[20vw] items-center'>
+             <div className='flex gap-x-[1px]'><IoMdStar className='text-yellow-500 '/> <IoMdStar className='text-yellow-500'/>< IoMdStarOutline /> < IoMdStarOutline /> < IoMdStarOutline /></div> <div>4/13/2022</div>
+             </div>
+            </span>
+            <div>Love it,but took too long before it got delivered</div>
+            <div className='font-bold'>Ivan Harris</div>
+          </div>
           </div>)
         } </>
          </div>
