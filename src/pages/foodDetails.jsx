@@ -187,7 +187,7 @@ const FoodDetails = () => {
           <div className='flex flex-col gap-y-2 my-1 w-full bg-slate-200 rounded-md p-2'>
             <span className='flex  gap-y-1'>
              <div className='flex  justify-between w-full sm:w-[20vw] items-center'>
-             <div className='flex gap-x-[1px]'><IoMdStar className='text-yellow-500 '/> <IoMdStar className='text-yellow-500'/><IoMdStar className='text-yellow-500'/> < IoMdStarOutline /> < IoMdStarOutline /></div> <div>9/05/2022</div>
+             <div className='flex gap-x-[1px]'><IoMdStar className='text-yellow-500 '/> <IoMdStar className='text-yellow-500'/><IoMdStar className='text-yellow-500'/> < IoMdStarOutline /> < IoMdStarOutline /></div> <div>9/01/2022</div>
              </div>
             </span>
             <div>I think i want some more..😉😁</div>
@@ -198,12 +198,14 @@ const FoodDetails = () => {
           <div className='flex flex-col gap-y-2 my-1 w-full bg-slate-200 rounded-md p-2'>
             <span className='flex  gap-y-1'>
              <div className='flex  justify-between w-full sm:w-[20vw] items-center'>
-             <div className='flex gap-x-[1px]'><IoMdStar className='text-yellow-500 '/> <IoMdStar className='text-yellow-500'/>< IoMdStarOutline /> < IoMdStarOutline /> < IoMdStarOutline /></div> <div>4/13/2022</div>
+             <div className='flex gap-x-[1px]'><IoMdStar className='text-yellow-500 '/> <IoMdStar className='text-yellow-500'/>< IoMdStarOutline /> < IoMdStarOutline /> < IoMdStarOutline /></div> <div>9/06/2022</div>
              </div>
             </span>
             <div>Love it,but took too long before it got delivered</div>
             <div className='font-bold'>Ivan Harris</div>
           </div>
+
+          <div className='rounded-full p-2 bg-red-500 item-center flex justify-center mx-auto font-semibold my-2 text-white w-[100px] shadow-md'>See More</div>
           </div>)
         } </>
          </div>
