@@ -44,7 +44,6 @@ const FlutterModal = () => {
                clearCart()
                openCart()
                setFee(0.00)
-               flutterModal()
                closePaymentModal()
               
              

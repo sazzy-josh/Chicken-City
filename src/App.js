@@ -68,6 +68,7 @@ function App() {
               <Route path='/aboutus' element={<Helmet title="About-us">
                     <AboutUs /> 
                 </Helmet>} />
+                <Route path='/payment-successfull/:tx' element={<CheckoutSuccessfull />} />
               <Route path='/payment-successful/:tx' element={<CheckoutSuccessful />} />
               <Route path='/food-details/:id' element={ <FoodDetails />} />
               <Route path='/cartItems3qPzZ26PeuhwEyCdgWWBXK2vGNF7' element={ <Cart /> } />

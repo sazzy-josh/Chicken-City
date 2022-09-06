@@ -11,17 +11,17 @@ const ReusableFlutterBtn = () => {
 
          const redirect = useNavigate()
     
-        const { singleCheckout , name , handleName , state:{ priceForSingleItem } , closeCheckout } = useCartsContext()
+        const {  name , handleName , state:{ priceForSingleItem } , closeCheckout } = useCartsContext()
      
         const [phone, setPhone] = useState("");
         const [email, setEmail] = useState("");
 
         const successPage = () => {
-          return redirect(`/payment-successful/${name}`)
+          return redirect(`/payment-successfull/${name}`)
         }
 
         const config = {
-            public_key: 'FLWPUBK_TEST-fcd450bbe39e4078a50213a06e5fb0a6-X',
+            public_key: 'FLWPUBK_TEST-32c59dc989b3b26fe9cbfdd274cd00b1-X',
             tx_ref: Date.now(),
             amount:priceForSingleItem,
             currency: 'NGN',
@@ -42,9 +42,9 @@ const ReusableFlutterBtn = () => {
             ...config,
             text: `PAY ₦${priceForSingleItem.toLocaleString()} NOW!`,
             callback: (response) => { 
-              closeCheckout()
+              
               successPage()   
-              closePaymentModal()   // this will close the modal programmatically
+              closePaymentModal()  // this will close the modal programmatically
              
             },
             onClose: () => {},
