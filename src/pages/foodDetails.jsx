@@ -84,7 +84,7 @@ const FoodDetails = () => {
   return (
     <motion.div>
    <CommonSection  title={title}></CommonSection>
-      <div className='grid md:grid-cols-2 p-5 sm:p-10 lg:px-28 sm:h-[60vh] w-full'>
+      <div className='grid md:grid-cols-2 p-5 sm:p-10 lg:px-28 sm:h-[60vh] w-full mb-2'>
         {/* Image Section */}
       <div className='w-full flex justify-between mb-4'>
         <div className='w-1/6'>
@@ -161,7 +161,7 @@ const FoodDetails = () => {
            }
           </div>
         </div>) :
-         (<div className='w-full flex flex-col'>
+         (<div className='w-full flex flex-col '>
            <div className='flex flex-col gap-y-2 my-1 w-full bg-slate-200 rounded-md p-2'>
             <span className='flex  gap-y-1'>
              <div className='flex  justify-between w-full sm:w-[20vw] items-center'>
@@ -205,7 +205,7 @@ const FoodDetails = () => {
             <div className='font-bold'>Ivan Harris</div>
           </div>
 
-          <div className='rounded-full p-2 bg-red-500 item-center flex justify-center mx-auto font-semibold my-2 text-white w-[100px] shadow-md'>See More</div>
+          {/* <div className='rounded-full p-2 bg-red-500 item-center flex justify-center mx-auto font-semibold my-2 text-white w-[100px] shadow-md'>See More</div> */}
           </div>)
         } </>
          </div>

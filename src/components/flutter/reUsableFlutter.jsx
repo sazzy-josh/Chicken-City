@@ -11,7 +11,7 @@ const ReusableFlutterBtn = () => {
 
         const navigate = useNavigate()
     
-        const { singleCheckout , name , handleName , state:{ priceForSingleItem }  } = useCartsContext()
+        const { singleCheckout , name , handleName , state:{ priceForSingleItem } , flutterModal } = useCartsContext()
      
         const [phone, setPhone] = useState("");
         const [email, setEmail] = useState("");
@@ -37,12 +37,10 @@ const ReusableFlutterBtn = () => {
           const fwConfig = {
             ...config,
             text: `PAY ₦${priceForSingleItem.toLocaleString()} NOW!`,
-            callback: (response) => {
-               navigate(`/payment-successful/${name}`)
-               singleCheckout()
+            callback: (response) => { 
                closePaymentModal()
-              
-             
+               flutterModal()
+               navigate(`/payment-successful/${name}`) 
              // this will close the modal programmatically
             },
             onClose: () => {},

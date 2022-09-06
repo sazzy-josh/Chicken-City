@@ -40,7 +40,6 @@ const FlutterModal = () => {
             ...config,
             text: `PAY ₦${totalValue.toLocaleString()} NOW!`,
             callback: (response) => {
-               console.log(response);
                navigate(`/payment-successful/${name}`)
                clearCart()
                openCart()
