@@ -30,7 +30,7 @@ import product_06_image_03 from "../images/bread_2.3.png";
 
 import product_08_image_01 from "../images/bread_3.1.png";
 import product_08_image_02 from "../images/bread_3.2.png";
-import product_08_image_03 from "../images/bread_2.1.png";
+
 
 import product_09_image_01 from "../images/chicken_1.1.png";
 import product_09_image_02 from "../images/chicken_1.2.png";
@@ -57,7 +57,6 @@ import product_14_image_02 from "../images/sanwich_1.2.png";
 import product_14_image_03 from "../images/sanwich_1.3.png";
 
 
-import product_15_image_01 from "../images/bread_4.1.png";
 import product_15_image_02 from "../images/bread_4.2.png";
 import product_15_image_03 from "../images/bread_5.1.png";
 import product_16_image_01 from "../images/bread_5.2.png";
@@ -74,10 +73,18 @@ import product_18_image_01 from "../images/fish_2.1.png";
 import product_18_image_02 from "../images/fish_2.2.png";
 import product_18_image_03 from "../images/fish_2.3.png";
 
+import product_19_image_01 from "../images/coca_1.png";
+import product_19_image_02 from "../images/coca_3.png";
+import product_19_image_03 from "../images/coca_3.png";
 
 
+import product_20_image_01 from "../images/fanta_2.png";
+import product_20_image_02 from "../images/fanta_1.png";
+import product_20_image_03 from "../images/fanta_1.png";
 
-
+import product_21_image_01 from "../images/sprite_1.png";
+import product_21_image_02 from "../images/sprite_2.png";
+import product_21_image_03 from "../images/sprite_1.png";
 
 
 
@@ -629,6 +636,46 @@ const products = [
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ad et est, fugiat repudiandae neque illo delectus commodi magnam explicabo autem voluptates eaque velit vero facere mollitia. Placeat rem, molestiae error obcaecati enim doloribus impedit aliquam, maiores qui minus neque.",
   } ,
   
+  {
+    id: "12s",
+    quantity : 1,
+    title: "Coca-cola",
+    price: 499.99,
+    image01: product_19_image_02,
+    image02: product_19_image_01,
+    image03: product_19_image_03,
+    rating: 3,
+    category: "Drinks",
+
+    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ad et est, fugiat repudiandae neque illo delectus commodi magnam explicabo autem voluptates eaque velit vero facere mollitia. Placeat rem, molestiae error obcaecati enim doloribus impedit aliquam, maiores qui minus neque.",
+  } ,
+  {
+    id: "14s",
+    quantity : 1,
+    title: "Fanta",
+    price: 499.99,
+    image01: product_20_image_02,
+    image02: product_20_image_01,
+    image03: product_20_image_03,
+    rating: 3,
+    category: "Drinks",
+
+    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ad et est, fugiat repudiandae neque illo delectus commodi magnam explicabo autem voluptates eaque velit vero facere mollitia. Placeat rem, molestiae error obcaecati enim doloribus impedit aliquam, maiores qui minus neque.",
+  } ,
+  
+  {
+    id: "19s",
+    quantity : 1,
+    title: "Sprite",
+    price: 399.99,
+    image01: product_21_image_02,
+    image02: product_21_image_01,
+    image03: product_21_image_03,
+    rating: 3,
+    category: "Drinks",
+
+    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ad et est, fugiat repudiandae neque illo delectus commodi magnam explicabo autem voluptates eaque velit vero facere mollitia. Placeat rem, molestiae error obcaecati enim doloribus impedit aliquam, maiores qui minus neque.",
+  } ,
 
 
 
