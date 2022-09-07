@@ -41,8 +41,7 @@ const ReusableFlutterBtn = () => {
           const fwConfig = {
             ...config,
             text: `PAY ₦${priceForSingleItem.toLocaleString()} NOW!`,
-            callback: (response) => { 
-              
+            callback: (response) => {  
               successPage()   
               closePaymentModal()  // this will close the modal programmatically
              
