@@ -59,7 +59,7 @@ Redux , flutterwave SDK as payment gateway ,framer-motion and firebase as its ba
  </table>
 <br />
 
-## 📱 Screens ( All screens are responsive along with Dark Mode)
+## 📱 Screens ( All screens are responsive along with smooth and seamless transition between pages)
 - Homepage / Landing Page
 - Product Listing Page with Search Filter
 - Product Description Page
@@ -93,9 +93,8 @@ Redux , flutterwave SDK as payment gateway ,framer-motion and firebase as its ba
 
 <br />
 
-## Glimpses of Nike-Clone 🙈 :
-
-
+<h4  align="center"> Sneak peak of Chicken City 🙈 </h4>
+<hr />
 <table>
   <tr>
     <td><img src="https://user-images.githubusercontent.com/31415089/189323390-665aa9c7-c9b0-4381-b913-d78297cd9b0b.png" alt="home" /></td>
@@ -107,20 +106,19 @@ Redux , flutterwave SDK as payment gateway ,framer-motion and firebase as its ba
   </tr>
   <tr>
     <td><img src="https://user-images.githubusercontent.com/31415089/189323939-bf7e67da-1899-42e8-b5e9-a7d01164d431.png" alt="allProducts" /></td>
-    <td><img src="![foods2](https://user-images.githubusercontent.com/31415089/189324049-1cc0da53-2181-4f9d-a485-63a8d7c85021.png)
-" alt="foods" /></td>
+    <td><img src="https://user-images.githubusercontent.com/31415089/189324049-1cc0da53-2181-4f9d-a485-63a8d7c85021.png" alt="foods" /></td>
   </tr>
   <tr>
-    <td><img src="https://user-images.githubusercontent.com/91532881/175955114-1090036d-2e73-46fa-8aca-8ef9ffab1724.jpeg" alt="description" /></td>
-    <td><img src="https://user-images.githubusercontent.com/91532881/175955117-edff5eaf-7507-4580-b3b8-3aea6c089840.jpeg" alt="descriptionDark" /></td>
+    <td><img src="https://user-images.githubusercontent.com/31415089/189325649-86273b79-6a54-43c0-811d-ccf213c0fd72.png" alt="description" /></td>
+    <td><img src="https://user-images.githubusercontent.com/31415089/189325748-8a5e79fe-25db-4124-9787-48aa2de41d13.png" /></td>
   </tr>
   <tr>
-    <td><img src="https://user-images.githubusercontent.com/91532881/175955106-867749b1-4838-40dc-b184-145f10d1eec2.jpeg" alt="cart" /></td>
-    <td><img src="https://user-images.githubusercontent.com/91532881/175955107-f93e13a0-6c50-46e8-a5f3-09d15421e97b.jpeg" alt="checkout" /></td>
+    <td><img src="https://user-images.githubusercontent.com/31415089/189325944-f21cc3b8-f751-4360-8afb-2da099e60f09.png" alt="cart" /></td>
+    <td><img src="https://user-images.githubusercontent.com/31415089/189325997-66188673-ec9c-405b-86b7-3f707204c7a8.png" alt="checkout" /></td>
   </tr>
   <tr>
-    <td><img src="https://user-images.githubusercontent.com/91532881/175955137-828f89b2-648e-4a68-885a-fa3f3f29b55c.png" alt="razorpay" /></td>
-    <td><img src="https://user-images.githubusercontent.com/91532881/175955133-96792a4b-7e70-4e1e-a5cf-999da70a9c95.jpeg" alt="orders" /></td>
+    <td><img src="https://user-images.githubusercontent.com/31415089/189326107-24419a6a-7eea-4b68-b56f-3fbcf46d62a1.png" alt="flutterwave" /></td>
+    <td><img src="https://user-images.githubusercontent.com/31415089/189326216-dd0d71ac-8da3-4d8d-9bcb-4bf399ad6b74.png" alt="successfulpayment-page" /></td>
   </tr>
 </table>
 
