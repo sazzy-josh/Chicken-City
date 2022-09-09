@@ -32,8 +32,8 @@
 <h4 align="center">Deployed On:</h4>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Netlify-00C7B7?style=for-the-badge&logo=netlify&logoColor=white" alt="vercel" />
-  <img src="https://img.shields.io/badge/Heroku-430098?style=for-the-badge&logo=heroku&logoColor=white" alt="heroku" />
+  <img src="https://img.shields.io/badge/Netlify-00C7B7?style=for-the-badge&logo=netlify&logoColor=white" alt="netlify" />
+  <img src="https://img.shields.io/badge/Vercel-430098?style=for-the-badge&logo=vercel&logoColor=white" alt="vercel" />
 </p>
 
 <h3 align="center"><a href="https://chickencity.vercel.app/"><strong>Want to see live preview »</strong></a></h3>
