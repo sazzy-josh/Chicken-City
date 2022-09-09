@@ -26,7 +26,7 @@
 <h4 align="center">Payment Gateway:</h4>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/FlutterWave-02042B?style=for-the-badge&logo=flutterwave&logoColor=yellow" alt="flutterwavw" />
+  <img src="https://img.shields.io/badge/FlutterWave-d5d547?style=for-the-badge&logo=flutterwave&logoColor=yellow" alt="flutterwave" />
 </p>
 
 
@@ -47,3 +47,51 @@
   <a href="#Install">Installing</a> &#10023;
   <a href="#Contact">Author</a> &#10023;
 </p>
+  
+ Chicken City is a food delivery E-commerce web application built with React.js , Tailwind CSS ,
+Redux , flutterwave SDK as payment gateway ,framer-motion and firebase as its backend.
+ 
+ <table>
+  <tr>
+    <td><img src="https://user-images.githubusercontent.com/31415089/189311340-7d6db60e-e7d2-4711-bafe-519bd33c1088.png" alt="home" /></td>
+    <td><img src="https://user-images.githubusercontent.com/31415089/189320334-8576ffd7-1f7d-4c08-b9cb-20bce4c968c5.png" alt="small-home" /></td>
+  </tr>
+ </table>
+<br />
+
+## 📱 Screens ( All screens are responsive along with Dark Mode)
+- Homepage / Landing Page
+- Product Listing Page with Search Filter
+- Product Description Page
+- Cart Management Page
+- Payer Checkout info
+- Checkout with Flutterwave
+- Login / Logout Page
+- Signup Page
+- Order Summary Page
+- Successfull payment Page
+
+
+<br />
+
+
+## 🚀 Features
+- Login and Signup User Account
+- Google Authentication with Firebase 
+- Products Search Filter
+- Shopping Cart
+- Have an option to change the quantity and remove items from Cart 
+- Cart Update Quantities 
+- Address Management
+- Order Summary
+- Coupons provided for discount
+- Secure Payment Checkout with Flutterwave
+- User-Friendly Navigation and seamless transitions between pages
+- Shipping method (offer low shipping cost)
+- Secure Payment Checkout with Flutter-wave
+- Single Item Checkout
+
+<br />
+
+
+
