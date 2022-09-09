@@ -1,4 +1,4 @@
-<h1 align="center">Nike Clone</h1>
+<h1 align="center">ChickenCity</h1>
 
 <br />
 
