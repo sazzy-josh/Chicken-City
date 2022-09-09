@@ -19,14 +19,31 @@
 
 
 <h4 align="center">Backend:</h4>
-
+<p align="center">
   <img src="https://img.shields.io/badge/Firebase-3bc7bd?style=for-the-badge&logo=firebase&logoColor=yellow" alt="firebase" />
+</p>
+
+<h4 align="center">Payment Gateway:</h4>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Razorpay-02042B?style=for-the-badge&logo=razorpay&logoColor=3395FF" alt="razorpay" />
+</p>
 
 
+<h4 align="center">Deployed On:</h4>
 
+<p align="center">
+  <img src="https://img.shields.io/badge/Netlify-00C7B7?style=for-the-badge&logo=netlify&logoColor=white" alt="vercel" />
+  <img src="https://img.shields.io/badge/Heroku-430098?style=for-the-badge&logo=heroku&logoColor=white" alt="heroku" />
+</p>
 
+<h3 align="center"><a href="https://chickencity.vercel.app/"><strong>Want to see live preview »</strong></a></h3>
 
-
-
-
-
+<p align="center">
+  <br />&#10023;
+  <a href="#Demo">View Demo</a> &#10023;
+  <a href="https://github.com/sazzy-josh/Full_Stack_React_Project/issues">Report Bug</a> &#10023;
+  <a href="#Getting-Started">Getting Started</a> &#10023; 
+  <a href="#Install">Installing</a> &#10023;
+  <a href="#Contact">Author</a> &#10023;
+</p>
