@@ -122,5 +122,41 @@ Redux , flutterwave SDK as payment gateway ,framer-motion and firebase as its ba
   </tr>
 </table>
 
+<br />
+
+## Flutterwave Test Cards
+
+<table>
+  <tr>
+    <th>Type</th>
+    <th>Card number</th>
+    <th>CVV</th>
+    <th>PIN</th>
+    <th>Expiry</th>
+    <th>OTP</th>
+  </tr>
+  
+  <tr>
+    <td>MasterCard PIN authentication</td>
+    <td>5531886652142950</td>
+    <td>564</td>
+    <td>3310</td>
+    <td>09/32</td>
+    <td>12345</td>
+  </tr>
+  
+  <tr>
+    <td>Visa Card 3DS authentication</td>
+    <td>4187427415564246</td>
+    <td>828</td>
+    <td>3310</td>
+    <td>09/32</td>
+    <td>12345</td>
+  </tr>
+  
+  
+</table>
+
+
 
 
