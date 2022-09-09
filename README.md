@@ -26,7 +26,7 @@
 <h4 align="center">Payment Gateway:</h4>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Razorpay-02042B?style=for-the-badge&logo=razorpay&logoColor=3395FF" alt="razorpay" />
+  <img src="https://img.shields.io/badge/Flutterwave-02042B?style=for-the-badge&logo=flutterwave&logoColor=yellow" alt="razorpay" />
 </p>
 
 
