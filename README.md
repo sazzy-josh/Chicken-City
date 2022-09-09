@@ -11,7 +11,6 @@
   <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="reactjs" />
   <img src="https://img.shields.io/badge/Redux-593D88?style=for-the-badge&logo=redux&logoColor=white" alt="redux" />
   <img src="https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=yellow" alt="javascript" />
-  <img src="https://img.shields.io/badge/Rest_API-02303A?style=for-the-badge&logo=react-router&logoColor=white" alt="restAPI" />
   <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="css3" />
   <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="html5" />
    <img src="https://img.shields.io/badge/Framer_motion-E34F26?style=for-the-badge&logo=framer-motion&logoColor=white" alt="html5" />
@@ -156,6 +155,56 @@ Redux , flutterwave SDK as payment gateway ,framer-motion and firebase as its ba
   
   
 </table>
+
+
+<br />
+
+
+<h2>Demo</h2>
+
+[Click here to see the presentation video of this project](https://www.linkedin.com/posts/idahosa-joshua_hey-hey-hey-wait-a-minute-and-check-activity-6973190290610229248-8DFs?utm_source=share&utm_medium=member_desktop)
+
+
+<br />
+
+## Getting Started
+
+This project was built using React, Redux,Tailwind CSS,  CSS, React-slick , JavaScript, Framer motion, Firebase, and Flutterwave SDK. It is a food delivery e-commerce web application and for running on your local environment you should follow these guidelines.
+
+
+### Prerequisites
+
+- NPM
+- Node JS
+
+
+### Setup
+
+
+The project repository can be found in [GitHub link](https://github.com/sazzy-josh/Full_Stack_React_Project) or just clone the project using this command.
+
+
+```
+Using HTTPS
+
+# git clone https://github.com/sazzy-josh/Full_Stack_React_Project.git
+```
+
++ Open terminal on your workspace with
+
+```
+cd Full_Stack_React_Project
+```
+
+
+## Install
+
+Install NPM
+
+Check that you have node and npm installed
+
+To check if you have Node.js installed, run this command in your terminal:
+
 
 
 
