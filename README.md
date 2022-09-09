@@ -10,7 +10,6 @@
 <p align="center">
   <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="reactjs" />
   <img src="https://img.shields.io/badge/Redux-593D88?style=for-the-badge&logo=redux&logoColor=white" alt="redux" />
-  <img src="https://img.shields.io/badge/Firebase-3bc7bd?style=for-the-badge&logo=Firebase&logoColor=yellow" alt="chakra-ui" />
   <img src="https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E" alt="javascript" />
   <img src="https://img.shields.io/badge/Rest_API-02303A?style=for-the-badge&logo=react-router&logoColor=white" alt="restAPI" />
   <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="css3" />
@@ -19,6 +18,8 @@
 
 
 <h4 align="center">Backend:</h4>
+
+  <img src="https://img.shields.io/badge/Firebase-3bc7bd?style=for-the-badge&logo=firebase&logoColor=yellow" alt="firebase" />
 
 
 
