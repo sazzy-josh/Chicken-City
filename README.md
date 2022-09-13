@@ -25,7 +25,7 @@
 <h4 align="center">Payment Gateway:</h4>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/FlutterWave-d5d547?style=for-the-badge&logo=flutterwave&logoColor=yellow" alt="flutterwave" />
+  <img src="https://img.shields.io/badge/FlutterWave-d5d549?style=for-the-badge&logo=flutterwave&logoColor=yellow" alt="flutterwave" />
 </p>
 
 
