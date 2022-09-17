@@ -19,7 +19,7 @@
 
 <h4 align="center">Backend:</h4>
 <p align="center">
-  <img src="https://img.shields.io/badge/Firebase-3bc7bd?style=for-the-badge&logo=firebase&logoColor=yellow" alt="firebase" />
+  <img src="https://img.shields.io/badge/Firebase-1f90c7?style=for-the-badge&logo=firebase&logoColor=yellow" alt="firebase" />
 </p>
 
 <h4 align="center">Payment Gateway:</h4>
