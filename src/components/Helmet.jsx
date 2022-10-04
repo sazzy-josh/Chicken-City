@@ -1,7 +1,7 @@
 //This componet helps keep track of the document title
 const Helmet = ({ children , title}) => {
 
-  document.title = "🐔City-" + title;
+  document.title = "City-" + title;
 
   return children
 }
