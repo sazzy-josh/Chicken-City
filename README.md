@@ -181,13 +181,13 @@ This project was built using React, Redux,Tailwind CSS,  CSS, React-slick , Java
 ### Setup
 
 
-The project repository can be found in [GitHub link](https://github.com/sazzy-josh/Full_Stack_React_Project) or just clone the project using this command.
+The project repository can be found in [GitHub link](https://github.com/sazzy-josh/Chicken-city) or just clone the project using this command.
 
 
 ```
 Using HTTPS
 
-# git clone https://github.com/sazzy-josh/Full_Stack_React_Project.git
+# git clone https://github.com/sazzy-josh/Chicken-city.git
 ```
 
 + Open terminal on your workspace with
